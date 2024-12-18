@@ -1,4 +1,6 @@
 ## GoviShakthi AI Application (CS-105) Main Repository
+
+- **How to get started? (Frontend)**
      
 - **How to get started? (Backend)**
     ```bash
