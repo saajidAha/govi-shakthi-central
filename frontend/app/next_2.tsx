@@ -6,7 +6,7 @@ const Next2Screen: React.FC = () => {
   const router = useRouter();
 
   const handleNext = () => {
-    router.push('/finalStep'); // Navigate to the final step
+    router.push('/mainpage'); // Navigate to the main page
   };
 
   return (
