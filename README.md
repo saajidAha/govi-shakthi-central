@@ -129,11 +129,9 @@ The server will be running on `http://localhost:5000` (or a different port if yo
 
 ```
 /govishakthi-app/backend
-├── /controllers      # API route handlers
-├── /models           # Mongoose models for MongoDB (if using MongoDB)
-├── /routes           # API routes
-├── /middlewares      # Middleware functions (e.g., authentication)
-├── server.js         # Main entry point for the Node.js server
+├── /src              # All the TypeScript files
+├── /dist             # All the compiled JavaScript files (run 'tsc' command)
+├── /src/server.ts    # Main entry point for the Node.js server
 ├── /config           # Database and server configuration
 ├── package.json      # Backend dependencies and scripts
 ```
@@ -154,9 +152,6 @@ The server will be running on `http://localhost:5000` (or a different port if yo
 - **Node.js**: JavaScript runtime environment.
 - **Express.js**: Web framework for Node.js.
 - **MongoDB/Mongoose**: Database solution (optional, modify as needed).
-- **JWT**: For JSON Web Token-based authentication (optional).
-- **Bcrypt.js**: For password hashing (if implementing authentication).
-
 ---
 
 ## Contributing
