@@ -101,7 +101,8 @@ This will open the Expo development server. You can scan the QR code with the **
 To start the backend server, navigate to the **backend** directory and run:
 ```bash
 cd backend
-npm start
+npm start // Run TypeScript files directly (Option 1)
+npm run build // Compiles the .ts files to .js and run (Option 2)
 ```
 
 The server will be running on `http://localhost:5000` (or a different port if you configure it). You can test the API using tools like **Postman** or integrate it with the frontend app.
