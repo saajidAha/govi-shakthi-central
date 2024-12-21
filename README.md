@@ -105,7 +105,7 @@ npm start // Run TypeScript files directly (Option 1)
 npm run build // Compiles the .ts files to .js and run (Option 2)
 ```
 
-The server will be running on `http://localhost:5000` (or a different port if you configure it). You can test the API using tools like **Postman** or integrate it with the frontend app.
+The server will be running on `http://localhost:7000` (or a different port if you configure it). You can test the API using tools like **Postman** or integrate it with the frontend app.
 
 ---
 
