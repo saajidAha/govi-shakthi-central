@@ -3,7 +3,11 @@ export class LLMService {
     // DO NOT MISUSE OR SHARE THIS API_KEY.
     private static API_KEY: string = "AIzaSyDe-S97dRNGO0BbZkvf8Vov14metv1xjzo";
 
-    async computeResponse(prompt: string){
+    /**
+     * Contacts the Gemini API and retruns a Promise based on the prompt
+     * @param prompt The prompt message to send to the LLM
+     */
+    async computeResponse(prompt: string): Promise<string>{
         const genAI = new GoogleGenerativeAI(LLMService.API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         try{
