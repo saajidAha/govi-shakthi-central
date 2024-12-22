@@ -6,9 +6,9 @@ export class MainController{
     readonly port: number;
     readonly mainService: MainService;
 
-    constructor(port: number) {
+    constructor(port: number, mainService: MainService) {
         this.port = port;
-        this.mainService = new MainService();
+        this.mainService = mainService;
     }
 
     // starts the

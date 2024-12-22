@@ -1,4 +1,4 @@
 import {MainController} from "./MainController";
+import {MainService} from "./MainService";
 // initialize the RESTful Controller to handle HTTP Requests
-const mainController: MainController = new MainController(7000);
-mainController.start();
+new MainController(7000, new MainService()).start();
