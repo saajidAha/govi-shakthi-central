@@ -23,14 +23,14 @@ export class MainController{
         })
 
         // Get predicted prices
-        app.post("/api/prices", (req, res) => {
-            let prediction: string = this.mainService.getPricePrediction(req.body.fruitName);
+        app.post("/api/prices", async(req, res) => {
+            let prediction: string = await this.mainService.getPricePrediction(req.body.fruitName);
             res.send(prediction);
         });
 
         // Get alternative product suggestions
-        app.post("/api/alternatives", (req, res) => {
-            let product: string = this.mainService.getAlternativeProductSuggestion(req.body.fruitName)
+        app.post("/api/alternatives", async(req, res) => {
+            let product: string = await this.mainService.getAlternativeProductSuggestion(req.body.fruitName)
             res.send(product)
         })
 
@@ -59,14 +59,4 @@ export class MainController{
         })
 
     }
-
-
-    getApiKey(): any{
-        dotenv.config();
-        // store the API Key in a .env file in this format: " API_KEY= "ENTER YOUR KEY HERE" and use it. Or request the key from the developer of this code"
-        return process.env.API_KEY;
-    }
-
-
-
 }
