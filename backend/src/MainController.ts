@@ -1,17 +1,26 @@
 import express from 'express';
-import * as dotenv from 'dotenv';
 import {MainService} from "./MainService";
 
+/**
+ * RESTful Controller Class Responsible for the Listening of HTTP requests
+ */
 export class MainController{
     readonly port: number;
     readonly mainService: MainService;
 
+    /**
+     * Constructor to initialize Controller
+     * @param port Port that the server should run on
+     * @param mainService Service class that would perform logic
+     */
     constructor(port: number, mainService: MainService) {
         this.port = port;
         this.mainService = mainService;
     }
 
-    // starts the
+    /**
+     * Initializes the endpoints
+     */
     start(): void{
         let app = express();
         app.use(express.json());
@@ -52,8 +61,7 @@ export class MainController{
             registered? res.sendStatus(200) : res.sendStatus(404);
         } )
 
-
-        // listen for http requests
+        // listen at specified port
         app.listen(this.port, ()=> {
             console.log(`Server listening on port ${this.port}`);
         })
