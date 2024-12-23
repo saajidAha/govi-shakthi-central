@@ -11,7 +11,7 @@ export class MainController{
     /**
      * Constructor to initialize Controller
      * @param port Port that the server should run on
-     * @param mainService Service class that would perform logic
+     * @param mainService Service class that would perform/ delegate the business logic
      */
     constructor(port: number, mainService: MainService) {
         this.port = port;

@@ -1,5 +1,8 @@
 import {GenerativeModel, GoogleGenerativeAI} from "@google/generative-ai"
 
+/**
+ * Class responsible for communication with the Google Gemini API
+ */
 export class LLMService {
     // DO NOT MISUSE OR SHARE THIS API_KEY.
     private static API_KEY: string = "AIzaSyDe-S97dRNGO0BbZkvf8Vov14metv1xjzo";
