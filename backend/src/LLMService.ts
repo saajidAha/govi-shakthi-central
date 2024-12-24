@@ -14,7 +14,7 @@ export class LLMService {
      */
     static initModel(): GenerativeModel{
         const genAI = new GoogleGenerativeAI(LLMService.API_KEY);
-        return genAI.getGenerativeModel({model: "gemini-1.5-flash"});
+        return genAI.getGenerativeModel({model: "gemini-1.5-flash-8b"});
     }
 
     /**
