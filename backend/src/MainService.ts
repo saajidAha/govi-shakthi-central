@@ -2,19 +2,23 @@ import {LLMService} from "./LLMService";
 import fruit_dataset from "./../datasets/sri_lanka_fruit_data.json";
 import market_dataset from "./../datasets/fruit_marketplace_data.json";
 import raw_material_market_dataset from "./../datasets/fruit_raw_material_marketplace_data.json";
+import {MainRepository} from "./MainRepository";
 
 /**
  * Main Service class that handles the delegation and execution of all services and business logic
  */
 export class MainService{
     private llmService: LLMService;
+    private mainRepository: MainRepository;
 
     /**
      * Constructor to initalize service class
      * @param llmService service object to be used to contact the LLM
+     * @param mainRepository repository object to handle database operations
      */
-    constructor(llmService: LLMService) {
+    constructor(llmService: LLMService, mainRepository: MainRepository) {
         this.llmService = llmService;
+        this.mainRepository = mainRepository;
     }
 
     /**
@@ -53,12 +57,18 @@ export class MainService{
     }
 
     /**
-     * FEATURE STILL IN DEVELOPMENT
-     * Registers a user
-     * @param username username
-     * @param password password
+     * Registers a user in the database
+     * @param credentials object containing the username & password of the user
      */
-    registerUser( username: string, password: string): boolean{
-        return false;
+    async registerUser(credentials: { username: string, password: string }){
+        await this.mainRepository.add(credentials);
+    }
+
+    /**
+     * Checks credentials
+     * @param credentials object containing the username & password of the user
+     */
+    async checkCredentials(credentials: { username: string, password: string }){
+        return await this.mainRepository.findOne(credentials);
     }
 }
