@@ -4,7 +4,10 @@ node_modules
 !/dist/.gitkeep
 
 # api key
-.env
+src/.env
 
 # redundandant file
 src/server.js
+
+# test file
+test.ts

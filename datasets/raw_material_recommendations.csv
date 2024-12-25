@@ -1,0 +1,2000 @@
+Raw Material Name,Supplier,Location,Price Per Unit (LKR),Delivery Options,Quality Rating,Contact Number
+Banana,Ceylon Fruit Suppliers,Matara,292.46,Pickup,B,+94757416683
+Papaya,Hill Country Harvest,Kandy,233.31,Pickup,C,+94773659076
+Papaya,Farm Direct,Negombo,132.73,Pickup,C,+94719210724
+Durian,Royal Fruit Exports,Kandy,288.1,Courier,B,+94741894261
+Durian,Exotic Fruits Lanka,Jaffna,462.31,Courier,C,+94798574200
+Durian,Southern Fruits & Veggies,Badulla,207.89,Pickup,C,+94733405868
+Pineapple,Sunripe Fruits,Puttalam,91.66,Courier,C,+94752529265
+Pineapple,Farm Direct,Kandy,346.82,Courier,A,+94760058682
+Pineapple,Coconut Grove Farms,Puttalam,305.06,Courier,A,+94737821215
+Beli,Ceylon Fruit Suppliers,Negombo,291.24,Courier,A,+94707186400
+Beli,Eastern Produce Co.,Matara,491.86,Delivery,C,+94710912378
+Beli,Exotic Fruits Lanka,Trincomalee,257.61,Courier,B,+94771814511
+Lychee,Hill Country Harvest,Galle,464.55,Delivery,C,+94707821826
+Lychee,Jaffna Agro Products,Kurunegala,81.67,Courier,C,+94768546121
+Lychee,Coconut Grove Farms,Ratnapura,152.9,Pickup,B,+94745065667
+Banana,Ceylon Fruit Suppliers,Galle,240.19,Courier,B,+94724226873
+Banana,Jaffna Agro Products,Jaffna,487.0,Delivery,A,+94758022897
+Ambarella,Green Valley Orchards,Negombo,97.26,Pickup,A,+94734591668
+Ambarella,Royal Fruit Exports,Matara,129.15,Courier,B,+94797765158
+Ambarella,Exotic Fruits Lanka,Matara,281.21,Delivery,A,+94782306871
+Guava,Harvest Moon,Anuradhapura,50.87,Pickup,A,+94710432328
+Guava,Fresh Picks,Colombo,293.88,Courier,B,+94786841356
+Guava,Exotic Fruits Lanka,Kurunegala,360.06,Courier,C,+94727294935
+Strawberry,Nature's Bounty,Jaffna,215.36,Courier,B,+94774429901
+Strawberry,Island Fresh Produce,Kurunegala,240.21,Delivery,A,+94786194629
+Strawberry,Green Valley Orchards,Colombo,202.34,Delivery,B,+94772024501
+Woodapple,Fresh Picks,Trincomalee,189.58,Courier,B,+94730487917
+Woodapple,Jaffna Agro Products,Negombo,58.46,Pickup,C,+94729980848
+Woodapple,Nature's Bounty,Batticaloa,394.81,Delivery,A,+94712985894
+Custard Apple,Hill Country Harvest,Colombo,486.62,Pickup,C,+94779994517
+Custard Apple,Island Fresh Produce,Badulla,200.79,Delivery,C,+94746009441
+Beli,Island Fresh Produce,Jaffna,181.05,Delivery,B,+94764237893
+Lychee,Fresh Picks,Kurunegala,65.66,Pickup,A,+94710484354
+Watermelon,Harvest Moon,Galle,414.02,Delivery,A,+94717809022
+Woodapple,Island Fresh Produce,Kandy,377.18,Pickup,B,+94742367704
+Woodapple,Ceylon Fruit Suppliers,Galle,104.63,Delivery,C,+94759770547
+Pineapple,Jaffna Agro Products,Anuradhapura,362.97,Pickup,A,+94763277060
+Strawberry,Harvest Moon,Puttalam,382.19,Pickup,B,+94769416222
+Strawberry,Farm Direct,Puttalam,74.14,Delivery,A,+94768027591
+Soursop,Organic Lanka,Puttalam,288.53,Delivery,C,+94795670441
+Mangosteen,Island Fresh Produce,Kurunegala,310.46,Delivery,B,+94771392632
+Mangosteen,Organic Lanka,Kandy,132.31,Delivery,C,+94730664800
+Mangosteen,Eastern Produce Co.,Jaffna,314.82,Pickup,B,+94700953181
+Pineapple,Harvest Moon,Jaffna,405.35,Courier,B,+94767892212
+Pineapple,Farm Direct,Puttalam,328.39,Courier,B,+94739235549
+Durian,Farm Direct,Puttalam,290.32,Delivery,B,+94700044759
+Durian,Nature's Bounty,Trincomalee,423.8,Pickup,C,+94773734829
+Durian,Golden Mango Traders,Kandy,190.41,Delivery,A,+94705270072
+Custard Apple,Island Fresh Produce,Matara,103.18,Courier,A,+94773347326
+Custard Apple,Jaffna Agro Products,Galle,410.32,Courier,C,+94773287328
+Rambutan,Ceylon Fruit Suppliers,Badulla,117.77,Courier,A,+94760849627
+Rambutan,Tropical Harvest Co.,Kurunegala,393.3,Pickup,B,+94787435704
+Rambutan,Jaffna Agro Products,Matara,233.27,Pickup,C,+94753887496
+Ambarella,Exotic Fruits Lanka,Kurunegala,89.69,Courier,B,+94741212788
+Kiwi,Green Valley Orchards,Trincomalee,454.11,Courier,B,+94748254219
+Beli,Coconut Grove Farms,Badulla,81.46,Delivery,C,+94728479966
+Beli,Spice Garden Exports,Colombo,416.71,Courier,A,+94731469088
+Durian,Farm Direct,Jaffna,259.52,Delivery,A,+94707155344
+Durian,Hill Country Harvest,Puttalam,413.82,Delivery,C,+94735859597
+Durian,Organic Lanka,Anuradhapura,482.06,Pickup,B,+94726193316
+Grapes,Island Fresh Produce,Colombo,401.07,Pickup,B,+94772734834
+Grapes,Tropical Harvest Co.,Puttalam,474.43,Delivery,C,+94755735027
+Grapes,Royal Fruit Exports,Jaffna,85.73,Delivery,C,+94741138036
+Jackfruit,Ceylon Fruit Suppliers,Trincomalee,415.67,Courier,B,+94753427155
+Jackfruit,Golden Mango Traders,Trincomalee,204.2,Courier,A,+94745393216
+Jackfruit,Farm Direct,Puttalam,112.12,Pickup,C,+94702568514
+Mangosteen,Sunripe Fruits,Matara,179.13,Courier,B,+94797910051
+Blueberry,Fresh Picks,Kurunegala,491.35,Delivery,A,+94734903513
+Guava,Organic Lanka,Batticaloa,142.75,Pickup,C,+94700407449
+Guava,Sunripe Fruits,Negombo,165.95,Pickup,C,+94788474568
+Guava,Tropical Harvest Co.,Galle,272.41,Delivery,A,+94739300196
+Woodapple,Tropical Harvest Co.,Batticaloa,316.41,Delivery,C,+94789997605
+Woodapple,Jaffna Agro Products,Kandy,387.24,Delivery,B,+94721291585
+Woodapple,Spice Garden Exports,Ratnapura,184.48,Delivery,B,+94750238722
+Mangosteen,Golden Mango Traders,Badulla,436.14,Courier,C,+94711001231
+Peach,Hill Country Harvest,Negombo,182.97,Delivery,A,+94751525816
+Peach,Sunripe Fruits,Galle,175.43,Courier,B,+94796433606
+Peach,Golden Mango Traders,Matara,387.22,Pickup,C,+94701654599
+Soursop,Harvest Moon,Matara,425.49,Pickup,B,+94715215428
+Soursop,Nature's Bounty,Kandy,65.93,Delivery,A,+94771038212
+Soursop,Island Fresh Produce,Negombo,318.5,Pickup,B,+94767399329
+Banana,Island Fresh Produce,Anuradhapura,409.41,Delivery,B,+94728710959
+Banana,Fresh Picks,Batticaloa,161.86,Courier,A,+94721589484
+Ambarella,Exotic Fruits Lanka,Trincomalee,333.94,Delivery,B,+94792877537
+Ambarella,Spice Garden Exports,Ratnapura,361.34,Pickup,C,+94724520135
+Papaya,Golden Mango Traders,Kandy,72.87,Pickup,C,+94720820195
+Papaya,Royal Fruit Exports,Badulla,59.43,Delivery,A,+94799672940
+Papaya,Exotic Fruits Lanka,Jaffna,169.29,Courier,B,+94799408588
+Papaya,Island Fresh Produce,Kurunegala,392.91,Delivery,A,+94705425953
+Beli,Green Valley Orchards,Ratnapura,498.85,Courier,C,+94721702407
+Soursop,Southern Fruits & Veggies,Galle,463.17,Courier,C,+94709640036
+Soursop,Fresh Picks,Matara,61.09,Pickup,B,+94766368618
+Orange,Green Valley Orchards,Negombo,93.82,Pickup,C,+94773868399
+Orange,Hill Country Harvest,Galle,106.62,Pickup,A,+94739464126
+Lychee,Farm Direct,Anuradhapura,341.99,Delivery,B,+94791548350
+Lychee,Nature's Bounty,Galle,288.42,Delivery,A,+94788411905
+Watermelon,Harvest Moon,Galle,169.68,Courier,C,+94735008374
+Watermelon,Nature's Bounty,Galle,140.87,Delivery,B,+94721670563
+Grapes,Organic Lanka,Galle,267.62,Courier,A,+94725970697
+Grapes,Eastern Produce Co.,Galle,91.12,Courier,A,+94748790444
+Soursop,Farm Direct,Badulla,121.66,Delivery,B,+94751371032
+Watermelon,Green Valley Orchards,Kurunegala,256.99,Pickup,B,+94719047577
+Watermelon,Nature's Bounty,Kandy,464.81,Pickup,C,+94713596132
+Woodapple,Jaffna Agro Products,Matara,84.51,Pickup,C,+94779036935
+Blueberry,Sunripe Fruits,Jaffna,61.61,Courier,C,+94741506187
+Blueberry,Golden Mango Traders,Batticaloa,259.5,Courier,A,+94744245249
+Plum,Tropical Harvest Co.,Kandy,323.63,Pickup,B,+94789256799
+Plum,Green Valley Orchards,Jaffna,327.37,Delivery,C,+94721123761
+Plum,Jaffna Agro Products,Kandy,298.52,Courier,B,+94797225049
+Guava,Southern Fruits & Veggies,Jaffna,305.42,Pickup,A,+94774642621
+Guava,Harvest Moon,Badulla,490.91,Delivery,A,+94788281716
+Custard Apple,Eastern Produce Co.,Kurunegala,349.9,Delivery,B,+94732689597
+Woodapple,Fresh Picks,Colombo,141.3,Courier,B,+94743039821
+Soursop,Eastern Produce Co.,Ratnapura,304.04,Delivery,A,+94751010439
+Pomegranate,Island Fresh Produce,Anuradhapura,175.33,Pickup,A,+94763063065
+Pomegranate,Fresh Picks,Ratnapura,97.34,Courier,A,+94726206049
+Pomegranate,Sunripe Fruits,Kurunegala,368.43,Pickup,B,+94724596715
+Kiwi,Golden Mango Traders,Colombo,495.8,Delivery,A,+94780840870
+Strawberry,Kandyan Fruits Ltd.,Colombo,416.33,Delivery,B,+94756756544
+Strawberry,Ceylon Fruit Suppliers,Ratnapura,218.89,Delivery,C,+94724238560
+Avocado,Green Valley Orchards,Anuradhapura,159.8,Pickup,B,+94751052751
+Avocado,Kandyan Fruits Ltd.,Galle,338.2,Delivery,A,+94780215614
+Avocado,Nature's Bounty,Anuradhapura,318.21,Courier,A,+94790737447
+Lemon,Golden Mango Traders,Galle,350.0,Courier,A,+94710235341
+Soursop,Organic Lanka,Matara,160.83,Courier,B,+94796042126
+Soursop,Eastern Produce Co.,Colombo,70.29,Courier,C,+94747696223
+Soursop,Farm Direct,Trincomalee,348.98,Courier,A,+94759029561
+Watermelon,Ceylon Fruit Suppliers,Negombo,417.15,Pickup,B,+94702151053
+Lychee,Farm Direct,Anuradhapura,295.09,Courier,B,+94736215135
+Papaya,Golden Mango Traders,Badulla,456.91,Delivery,A,+94734001812
+Blueberry,Golden Mango Traders,Trincomalee,363.61,Courier,A,+94741161580
+Strawberry,Island Fresh Produce,Kurunegala,264.91,Courier,C,+94786322855
+Mangosteen,Harvest Moon,Kurunegala,203.59,Delivery,C,+94707223335
+Mangosteen,Organic Lanka,Jaffna,330.84,Delivery,C,+94748088329
+Kiwi,Exotic Fruits Lanka,Puttalam,286.16,Pickup,A,+94714468114
+Kiwi,Green Valley Orchards,Batticaloa,303.46,Courier,C,+94781680671
+Watermelon,Golden Mango Traders,Puttalam,73.7,Pickup,C,+94784222520
+Watermelon,Royal Fruit Exports,Galle,314.72,Pickup,B,+94743071085
+Kiwi,Island Fresh Produce,Matara,478.92,Delivery,A,+94732984682
+Mango,Eastern Produce Co.,Puttalam,73.24,Delivery,B,+94721449847
+Soursop,Sunripe Fruits,Negombo,391.94,Courier,C,+94760652101
+Kiwi,Exotic Fruits Lanka,Kurunegala,348.25,Delivery,B,+94755753343
+Kiwi,Ceylon Fruit Suppliers,Colombo,495.1,Courier,B,+94730034874
+Kiwi,Spice Garden Exports,Anuradhapura,469.26,Pickup,B,+94737909117
+Woodapple,Organic Lanka,Batticaloa,415.59,Pickup,B,+94727155404
+Woodapple,Harvest Moon,Anuradhapura,423.48,Courier,A,+94723333601
+Woodapple,Island Fresh Produce,Ratnapura,181.41,Delivery,B,+94748130815
+Soursop,Organic Lanka,Badulla,445.14,Courier,A,+94730232840
+Soursop,Hill Country Harvest,Jaffna,79.82,Pickup,A,+94765359012
+Soursop,Tropical Harvest Co.,Puttalam,112.49,Pickup,C,+94795192091
+Ambarella,Hill Country Harvest,Anuradhapura,242.4,Delivery,A,+94717655492
+Ambarella,Island Fresh Produce,Kandy,445.57,Delivery,B,+94777217208
+Ambarella,Sunripe Fruits,Colombo,443.09,Pickup,A,+94705535176
+Avocado,Southern Fruits & Veggies,Matara,276.17,Courier,C,+94778380042
+Avocado,Island Fresh Produce,Puttalam,429.63,Delivery,A,+94798126444
+Pineapple,Tropical Harvest Co.,Ratnapura,149.44,Courier,A,+94778784583
+Pineapple,Nature's Bounty,Galle,420.36,Courier,C,+94739036199
+Strawberry,Ceylon Fruit Suppliers,Badulla,424.85,Delivery,A,+94757650472
+Strawberry,Sunripe Fruits,Puttalam,111.51,Pickup,C,+94715910315
+Strawberry,Kandyan Fruits Ltd.,Batticaloa,196.54,Pickup,C,+94740160398
+Pear,Exotic Fruits Lanka,Trincomalee,94.29,Pickup,C,+94739719329
+Pear,Golden Mango Traders,Puttalam,422.82,Pickup,A,+94747640067
+Kiwi,Coconut Grove Farms,Kurunegala,237.14,Pickup,A,+94745430627
+Pomegranate,Fresh Picks,Kurunegala,110.4,Pickup,A,+94739251905
+Pomegranate,Nature's Bounty,Matara,383.46,Courier,A,+94737950019
+Pomegranate,Golden Mango Traders,Negombo,193.29,Courier,C,+94707800737
+Rambutan,Organic Lanka,Badulla,319.75,Pickup,A,+94701057848
+Rambutan,Eastern Produce Co.,Ratnapura,139.42,Pickup,C,+94711748438
+Lychee,Green Valley Orchards,Batticaloa,66.86,Pickup,C,+94769026648
+Lychee,Golden Mango Traders,Colombo,220.1,Courier,B,+94763152456
+Pear,Harvest Moon,Negombo,465.04,Courier,C,+94754605020
+Pear,Hill Country Harvest,Kurunegala,156.66,Pickup,B,+94753587003
+Pear,Royal Fruit Exports,Negombo,208.32,Courier,B,+94726439921
+Kiwi,Green Valley Orchards,Anuradhapura,363.32,Pickup,C,+94713365666
+Kiwi,Green Valley Orchards,Kurunegala,385.33,Courier,A,+94738699805
+Peach,Coconut Grove Farms,Kandy,250.86,Courier,A,+94793532460
+Peach,Southern Fruits & Veggies,Matara,153.91,Courier,B,+94769685447
+Peach,Jaffna Agro Products,Colombo,186.19,Courier,B,+94730874729
+Mangosteen,Coconut Grove Farms,Anuradhapura,267.34,Delivery,B,+94792188674
+Coconut,Organic Lanka,Matara,358.46,Delivery,B,+94783252688
+Coconut,Farm Direct,Colombo,305.27,Courier,C,+94727632331
+Coconut,Royal Fruit Exports,Batticaloa,376.4,Courier,A,+94735589872
+Cherry,Green Valley Orchards,Anuradhapura,96.13,Delivery,C,+94726121393
+Beli,Jaffna Agro Products,Colombo,75.63,Delivery,B,+94734062035
+Beli,Southern Fruits & Veggies,Negombo,192.62,Courier,A,+94736300439
+Beli,Coconut Grove Farms,Kurunegala,338.77,Pickup,B,+94728227981
+Papaya,Green Valley Orchards,Matara,286.49,Pickup,C,+94727288856
+Papaya,Farm Direct,Anuradhapura,319.15,Courier,C,+94794167207
+Papaya,Exotic Fruits Lanka,Colombo,306.72,Delivery,A,+94725685856
+Cherry,Nature's Bounty,Ratnapura,280.63,Delivery,C,+94767966745
+Cherry,Southern Fruits & Veggies,Ratnapura,319.01,Delivery,A,+94750164305
+Cherry,Fresh Picks,Ratnapura,207.27,Delivery,C,+94789040638
+Papaya,Coconut Grove Farms,Badulla,368.64,Delivery,C,+94770357112
+Grapes,Royal Fruit Exports,Colombo,404.88,Pickup,A,+94792377816
+Plum,Farm Direct,Anuradhapura,244.76,Delivery,B,+94730037426
+Peach,Ceylon Fruit Suppliers,Trincomalee,213.91,Pickup,A,+94759306764
+Guava,Organic Lanka,Puttalam,446.04,Pickup,A,+94737814415
+Blueberry,Organic Lanka,Kandy,344.85,Pickup,A,+94780129507
+Blueberry,Harvest Moon,Jaffna,81.7,Pickup,A,+94709964342
+Blueberry,Jaffna Agro Products,Puttalam,395.84,Courier,C,+94731413184
+Mango,Fresh Picks,Colombo,329.77,Pickup,B,+94717285081
+Mango,Nature's Bounty,Jaffna,222.2,Delivery,A,+94798737179
+Lychee,Ceylon Fruit Suppliers,Matara,96.04,Pickup,C,+94711272141
+Papaya,Southern Fruits & Veggies,Colombo,375.72,Courier,B,+94719613490
+Papaya,Sunripe Fruits,Puttalam,114.66,Courier,A,+94769438440
+Peach,Fresh Picks,Anuradhapura,496.43,Courier,B,+94729110960
+Peach,Eastern Produce Co.,Jaffna,264.17,Delivery,B,+94790290123
+Pomegranate,Harvest Moon,Kurunegala,345.04,Courier,A,+94707134375
+Pomegranate,Golden Mango Traders,Kurunegala,165.85,Pickup,B,+94771639861
+Pomegranate,Nature's Bounty,Kandy,169.89,Pickup,B,+94791338720
+Soursop,Organic Lanka,Kandy,83.79,Delivery,C,+94736256957
+Lychee,Organic Lanka,Negombo,94.89,Delivery,A,+94764661725
+Papaya,Exotic Fruits Lanka,Ratnapura,257.07,Courier,A,+94711868896
+Papaya,Coconut Grove Farms,Kandy,335.94,Courier,B,+94701258722
+Papaya,Farm Direct,Ratnapura,96.84,Courier,C,+94740221216
+Avocado,Coconut Grove Farms,Jaffna,276.93,Delivery,B,+94767325019
+Cherry,Exotic Fruits Lanka,Galle,195.52,Delivery,C,+94795195222
+Cherry,Jaffna Agro Products,Galle,183.95,Delivery,C,+94718728041
+Cherry,Royal Fruit Exports,Galle,51.06,Delivery,C,+94722225295
+Pomegranate,Southern Fruits & Veggies,Ratnapura,402.46,Delivery,B,+94715673199
+Pomegranate,Eastern Produce Co.,Colombo,396.41,Delivery,B,+94753576816
+Pomegranate,Green Valley Orchards,Jaffna,284.05,Delivery,C,+94777840134
+Blueberry,Ceylon Fruit Suppliers,Trincomalee,118.25,Delivery,A,+94715816887
+Blueberry,Golden Mango Traders,Badulla,463.98,Courier,B,+94768517513
+Blueberry,Tropical Harvest Co.,Kurunegala,203.81,Delivery,B,+94708527421
+Avocado,Nature's Bounty,Anuradhapura,406.63,Delivery,A,+94717887874
+Avocado,Kandyan Fruits Ltd.,Kandy,121.33,Delivery,B,+94755209273
+Beli,Eastern Produce Co.,Negombo,107.81,Delivery,A,+94701543732
+Beli,Exotic Fruits Lanka,Trincomalee,110.55,Courier,A,+94765957922
+Avocado,Spice Garden Exports,Badulla,105.82,Courier,B,+94761013382
+Avocado,Fresh Picks,Matara,214.82,Pickup,C,+94787489253
+Avocado,Hill Country Harvest,Trincomalee,349.58,Pickup,C,+94729070131
+Coconut,Nature's Bounty,Kurunegala,166.62,Courier,B,+94731827393
+Coconut,Harvest Moon,Galle,239.55,Delivery,A,+94702811802
+Coconut,Spice Garden Exports,Galle,315.82,Pickup,A,+94759540617
+Peach,Coconut Grove Farms,Galle,80.79,Delivery,B,+94740652830
+Peach,Sunripe Fruits,Negombo,472.73,Delivery,C,+94761390405
+Peach,Southern Fruits & Veggies,Batticaloa,471.47,Pickup,B,+94765778846
+Lychee,Royal Fruit Exports,Matara,301.46,Courier,C,+94725653806
+Lychee,Farm Direct,Negombo,287.39,Delivery,A,+94714711171
+Lychee,Harvest Moon,Puttalam,448.21,Pickup,A,+94728348371
+Strawberry,Jaffna Agro Products,Kandy,233.9,Delivery,B,+94707605185
+Mangosteen,Farm Direct,Batticaloa,314.69,Courier,A,+94724466791
+Mangosteen,Harvest Moon,Matara,360.63,Delivery,B,+94705564142
+Pear,Eastern Produce Co.,Galle,156.48,Delivery,A,+94724142286
+Pear,Royal Fruit Exports,Ratnapura,123.58,Pickup,A,+94741659567
+Grapes,Royal Fruit Exports,Trincomalee,265.8,Delivery,B,+94700480448
+Cherry,Fresh Picks,Galle,393.92,Courier,B,+94795799229
+Cherry,Royal Fruit Exports,Batticaloa,270.59,Courier,C,+94737980623
+Blueberry,Jaffna Agro Products,Trincomalee,87.46,Delivery,B,+94771752958
+Mangosteen,Hill Country Harvest,Trincomalee,177.55,Pickup,B,+94747740566
+Orange,Green Valley Orchards,Ratnapura,464.32,Courier,C,+94713318522
+Rambutan,Harvest Moon,Kurunegala,460.32,Courier,B,+94743768724
+Rambutan,Tropical Harvest Co.,Badulla,363.8,Courier,C,+94744457707
+Soursop,Royal Fruit Exports,Negombo,60.06,Pickup,A,+94713368658
+Pomegranate,Green Valley Orchards,Batticaloa,58.58,Delivery,B,+94786363883
+Peach,Organic Lanka,Kurunegala,348.94,Pickup,C,+94777180981
+Soursop,Island Fresh Produce,Badulla,62.87,Courier,A,+94739602123
+Soursop,Exotic Fruits Lanka,Kurunegala,463.71,Pickup,A,+94739733692
+Pineapple,Golden Mango Traders,Batticaloa,463.97,Courier,C,+94724953094
+Pineapple,Nature's Bounty,Anuradhapura,111.47,Pickup,B,+94766474802
+Pineapple,Royal Fruit Exports,Anuradhapura,235.11,Courier,C,+94749324293
+Beli,Golden Mango Traders,Jaffna,492.85,Delivery,C,+94724437435
+Beli,Eastern Produce Co.,Puttalam,432.43,Pickup,A,+94769487326
+Beli,Farm Direct,Trincomalee,154.04,Delivery,A,+94701527831
+Woodapple,Nature's Bounty,Trincomalee,141.9,Pickup,A,+94713090047
+Woodapple,Sunripe Fruits,Trincomalee,183.05,Courier,A,+94737216790
+Woodapple,Spice Garden Exports,Negombo,498.77,Delivery,B,+94768109547
+Papaya,Jaffna Agro Products,Colombo,448.69,Delivery,C,+94746255314
+Papaya,Organic Lanka,Badulla,402.32,Courier,C,+94791157249
+Pear,Tropical Harvest Co.,Batticaloa,114.74,Pickup,A,+94737797975
+Pear,Hill Country Harvest,Kurunegala,263.39,Courier,B,+94706897774
+Pear,Golden Mango Traders,Matara,352.02,Pickup,B,+94701908320
+Apple,Golden Mango Traders,Kurunegala,131.31,Delivery,B,+94709563154
+Apple,Coconut Grove Farms,Matara,455.6,Delivery,B,+94768194040
+Apple,Nature's Bounty,Jaffna,260.25,Pickup,A,+94772287449
+Grapes,Harvest Moon,Kurunegala,193.91,Delivery,C,+94751589855
+Grapes,Island Fresh Produce,Ratnapura,300.41,Courier,A,+94737151436
+Grapes,Jaffna Agro Products,Galle,129.36,Delivery,B,+94711038158
+Rambutan,Nature's Bounty,Badulla,292.53,Courier,A,+94761454892
+Watermelon,Golden Mango Traders,Puttalam,294.68,Delivery,C,+94752314242
+Guava,Farm Direct,Kurunegala,111.22,Pickup,A,+94798494036
+Kiwi,Tropical Harvest Co.,Galle,341.5,Delivery,B,+94792399707
+Lemon,Hill Country Harvest,Colombo,425.3,Delivery,B,+94780589497
+Pineapple,Hill Country Harvest,Batticaloa,443.07,Courier,A,+94717940286
+Pineapple,Island Fresh Produce,Batticaloa,212.18,Courier,B,+94749616064
+Rambutan,Sunripe Fruits,Ratnapura,483.3,Delivery,A,+94793483629
+Rambutan,Southern Fruits & Veggies,Ratnapura,251.36,Courier,C,+94737585164
+Mango,Royal Fruit Exports,Kandy,115.48,Pickup,A,+94778160672
+Mango,Kandyan Fruits Ltd.,Colombo,436.73,Delivery,C,+94729585848
+Banana,Fresh Picks,Colombo,182.29,Pickup,C,+94718456697
+Banana,Hill Country Harvest,Puttalam,246.96,Delivery,B,+94734986086
+Strawberry,Hill Country Harvest,Galle,246.29,Pickup,B,+94760833547
+Strawberry,Jaffna Agro Products,Kurunegala,375.74,Delivery,B,+94723629988
+Strawberry,Southern Fruits & Veggies,Badulla,432.6,Delivery,B,+94752522210
+Pomegranate,Ceylon Fruit Suppliers,Badulla,268.34,Pickup,B,+94738380681
+Pomegranate,Fresh Picks,Colombo,59.4,Courier,B,+94798454442
+Pomegranate,Island Fresh Produce,Jaffna,347.92,Delivery,A,+94798199595
+Papaya,Hill Country Harvest,Batticaloa,104.18,Pickup,C,+94797552642
+Guava,Farm Direct,Kandy,233.64,Pickup,C,+94743015075
+Guava,Harvest Moon,Kandy,235.77,Delivery,B,+94735431060
+Guava,Southern Fruits & Veggies,Puttalam,360.08,Courier,C,+94726065725
+Beli,Coconut Grove Farms,Kandy,203.84,Courier,B,+94773355665
+Beli,Jaffna Agro Products,Negombo,305.43,Delivery,B,+94761516004
+Cherry,Nature's Bounty,Kurunegala,438.8,Pickup,A,+94724083096
+Cherry,Farm Direct,Trincomalee,223.72,Pickup,B,+94717568206
+Cherry,Island Fresh Produce,Anuradhapura,120.6,Pickup,C,+94718810251
+Woodapple,Sunripe Fruits,Negombo,445.45,Delivery,C,+94725533510
+Woodapple,Hill Country Harvest,Matara,111.82,Pickup,C,+94786707407
+Woodapple,Kandyan Fruits Ltd.,Puttalam,315.51,Pickup,B,+94702971629
+Papaya,Harvest Moon,Trincomalee,405.45,Courier,C,+94754313881
+Papaya,Green Valley Orchards,Puttalam,154.27,Delivery,A,+94726938549
+Papaya,Farm Direct,Negombo,274.26,Pickup,C,+94751239371
+Watermelon,Golden Mango Traders,Badulla,88.23,Courier,A,+94702389053
+Watermelon,Farm Direct,Batticaloa,278.87,Pickup,A,+94705109690
+Custard Apple,Royal Fruit Exports,Kandy,478.84,Pickup,A,+94736688591
+Custard Apple,Fresh Picks,Puttalam,161.43,Pickup,C,+94701145184
+Custard Apple,Exotic Fruits Lanka,Ratnapura,308.83,Pickup,B,+94701627959
+Ambarella,Hill Country Harvest,Colombo,153.95,Pickup,A,+94747534866
+Ambarella,Tropical Harvest Co.,Colombo,285.9,Courier,C,+94788749321
+Ambarella,Kandyan Fruits Ltd.,Batticaloa,347.86,Pickup,B,+94738326234
+Strawberry,Coconut Grove Farms,Colombo,300.56,Delivery,C,+94719932287
+Strawberry,Nature's Bounty,Galle,69.89,Delivery,A,+94706224231
+Strawberry,Green Valley Orchards,Galle,138.38,Pickup,C,+94716633676
+Lychee,Exotic Fruits Lanka,Colombo,188.57,Pickup,C,+94713431219
+Pear,Farm Direct,Anuradhapura,383.22,Delivery,C,+94772997448
+Blueberry,Organic Lanka,Galle,414.97,Pickup,B,+94727992853
+Blueberry,Fresh Picks,Trincomalee,482.92,Delivery,A,+94783228731
+Blueberry,Ceylon Fruit Suppliers,Negombo,223.7,Courier,A,+94773112174
+Apple,Royal Fruit Exports,Jaffna,412.37,Courier,C,+94727626580
+Kiwi,Spice Garden Exports,Galle,256.11,Delivery,C,+94739683311
+Kiwi,Royal Fruit Exports,Matara,311.52,Pickup,B,+94794786543
+Kiwi,Sunripe Fruits,Jaffna,118.03,Pickup,C,+94732598839
+Watermelon,Island Fresh Produce,Badulla,275.97,Courier,C,+94756387836
+Coconut,Golden Mango Traders,Badulla,389.85,Pickup,A,+94703895594
+Coconut,Spice Garden Exports,Matara,175.56,Courier,A,+94706332261
+Grapes,Coconut Grove Farms,Trincomalee,472.83,Courier,A,+94750163261
+Peach,Jaffna Agro Products,Jaffna,423.74,Pickup,A,+94730983422
+Peach,Green Valley Orchards,Negombo,126.19,Delivery,B,+94799128981
+Peach,Kandyan Fruits Ltd.,Colombo,316.8,Courier,A,+94794851930
+Pineapple,Coconut Grove Farms,Colombo,112.33,Pickup,B,+94773404211
+Pineapple,Ceylon Fruit Suppliers,Puttalam,338.22,Courier,C,+94777545000
+Strawberry,Sunripe Fruits,Anuradhapura,208.62,Pickup,C,+94743892145
+Strawberry,Fresh Picks,Trincomalee,390.04,Pickup,A,+94712193117
+Strawberry,Coconut Grove Farms,Kandy,217.71,Delivery,C,+94753372263
+Kiwi,Golden Mango Traders,Batticaloa,56.4,Delivery,B,+94715981093
+Kiwi,Sunripe Fruits,Colombo,383.83,Pickup,B,+94795005466
+Kiwi,Nature's Bounty,Anuradhapura,338.82,Delivery,C,+94775184098
+Grapes,Southern Fruits & Veggies,Batticaloa,379.96,Delivery,A,+94758278069
+Grapes,Green Valley Orchards,Batticaloa,139.98,Delivery,A,+94763277808
+Orange,Royal Fruit Exports,Batticaloa,355.44,Courier,B,+94725634923
+Orange,Hill Country Harvest,Puttalam,410.44,Pickup,C,+94782957546
+Orange,Organic Lanka,Galle,457.71,Pickup,B,+94779573163
+Pomegranate,Tropical Harvest Co.,Anuradhapura,81.87,Courier,C,+94740056701
+Pomegranate,Hill Country Harvest,Trincomalee,488.62,Courier,B,+94756942142
+Pomegranate,Green Valley Orchards,Badulla,62.0,Pickup,A,+94746580390
+Soursop,Coconut Grove Farms,Anuradhapura,247.75,Delivery,C,+94787908249
+Soursop,Harvest Moon,Badulla,411.76,Pickup,A,+94742631226
+Soursop,Sunripe Fruits,Puttalam,392.48,Courier,A,+94757269759
+Plum,Eastern Produce Co.,Colombo,351.33,Courier,B,+94726400565
+Plum,Harvest Moon,Puttalam,172.1,Delivery,C,+94738285959
+Plum,Farm Direct,Anuradhapura,307.0,Pickup,B,+94783289502
+Grapes,Coconut Grove Farms,Negombo,51.13,Pickup,B,+94719352055
+Grapes,Nature's Bounty,Badulla,396.76,Delivery,C,+94787038288
+Grapes,Ceylon Fruit Suppliers,Galle,180.47,Delivery,C,+94792251056
+Beli,Fresh Picks,Ratnapura,439.02,Pickup,A,+94791560999
+Beli,Farm Direct,Anuradhapura,149.81,Pickup,A,+94703374943
+Beli,Sunripe Fruits,Jaffna,452.4,Pickup,B,+94737443330
+Beli,Tropical Harvest Co.,Jaffna,374.74,Courier,A,+94729246364
+Beli,Exotic Fruits Lanka,Kandy,429.16,Courier,C,+94722601833
+Watermelon,Jaffna Agro Products,Galle,356.78,Delivery,B,+94768099820
+Rambutan,Organic Lanka,Badulla,485.04,Pickup,B,+94781793299
+Ambarella,Eastern Produce Co.,Colombo,251.64,Courier,B,+94763162113
+Avocado,Jaffna Agro Products,Kandy,420.56,Delivery,A,+94772022378
+Mango,Harvest Moon,Galle,399.09,Courier,A,+94700447593
+Mango,Nature's Bounty,Colombo,466.84,Courier,C,+94799680577
+Peach,Eastern Produce Co.,Matara,212.39,Courier,B,+94750910085
+Peach,Jaffna Agro Products,Kandy,401.99,Pickup,A,+94780251416
+Kiwi,Fresh Picks,Negombo,414.27,Delivery,B,+94704316383
+Coconut,Golden Mango Traders,Galle,58.1,Delivery,A,+94786645954
+Coconut,Eastern Produce Co.,Galle,431.96,Courier,A,+94706670705
+Kiwi,Royal Fruit Exports,Kurunegala,246.03,Delivery,A,+94749668546
+Coconut,Sunripe Fruits,Jaffna,111.57,Courier,C,+94791190578
+Coconut,Island Fresh Produce,Anuradhapura,471.78,Pickup,A,+94748756469
+Pear,Harvest Moon,Trincomalee,418.0,Pickup,B,+94798622195
+Rambutan,Southern Fruits & Veggies,Kandy,268.52,Pickup,B,+94706898877
+Peach,Harvest Moon,Batticaloa,373.63,Pickup,A,+94717787572
+Mangosteen,Organic Lanka,Badulla,275.06,Delivery,C,+94711078837
+Pear,Golden Mango Traders,Puttalam,343.56,Delivery,C,+94700248962
+Pineapple,Sunripe Fruits,Puttalam,168.26,Delivery,A,+94793620398
+Pineapple,Fresh Picks,Badulla,443.12,Delivery,C,+94731453924
+Coconut,Green Valley Orchards,Anuradhapura,415.65,Delivery,A,+94717327537
+Coconut,Eastern Produce Co.,Kurunegala,186.86,Delivery,B,+94795822760
+Coconut,Tropical Harvest Co.,Batticaloa,450.45,Pickup,C,+94769075961
+Jackfruit,Sunripe Fruits,Jaffna,497.75,Courier,A,+94759537770
+Avocado,Sunripe Fruits,Galle,180.6,Delivery,C,+94793441706
+Avocado,Coconut Grove Farms,Matara,210.49,Courier,A,+94789517121
+Avocado,Royal Fruit Exports,Jaffna,191.7,Delivery,C,+94717867223
+Soursop,Fresh Picks,Batticaloa,155.3,Pickup,C,+94772875758
+Soursop,Sunripe Fruits,Kurunegala,487.34,Courier,A,+94704764581
+Orange,Ceylon Fruit Suppliers,Jaffna,437.46,Delivery,B,+94766194245
+Avocado,Organic Lanka,Negombo,330.58,Delivery,A,+94752954193
+Avocado,Golden Mango Traders,Puttalam,104.04,Delivery,A,+94719486617
+Avocado,Harvest Moon,Jaffna,357.68,Delivery,C,+94787400862
+Lychee,Ceylon Fruit Suppliers,Jaffna,92.04,Courier,B,+94796410984
+Lychee,Hill Country Harvest,Jaffna,340.23,Pickup,B,+94703175894
+Guava,Kandyan Fruits Ltd.,Batticaloa,77.96,Delivery,A,+94787218034
+Guava,Green Valley Orchards,Jaffna,287.53,Pickup,A,+94743376607
+Rambutan,Tropical Harvest Co.,Kandy,373.63,Delivery,C,+94792115962
+Apple,Ceylon Fruit Suppliers,Batticaloa,321.32,Pickup,B,+94736604390
+Apple,Tropical Harvest Co.,Negombo,289.68,Pickup,B,+94782113699
+Watermelon,Eastern Produce Co.,Colombo,373.95,Delivery,C,+94700823386
+Peach,Organic Lanka,Matara,102.09,Pickup,A,+94783237210
+Peach,Hill Country Harvest,Galle,114.88,Courier,C,+94764129564
+Rambutan,Nature's Bounty,Kurunegala,242.63,Pickup,C,+94723153851
+Rambutan,Ceylon Fruit Suppliers,Trincomalee,300.44,Courier,C,+94744082543
+Rambutan,Kandyan Fruits Ltd.,Jaffna,229.2,Courier,C,+94724589870
+Coconut,Harvest Moon,Matara,265.77,Delivery,B,+94717114396
+Woodapple,Tropical Harvest Co.,Anuradhapura,240.09,Delivery,B,+94744893617
+Strawberry,Spice Garden Exports,Trincomalee,54.91,Pickup,C,+94738331772
+Ambarella,Island Fresh Produce,Batticaloa,451.22,Courier,C,+94738634067
+Ambarella,Kandyan Fruits Ltd.,Trincomalee,378.18,Pickup,B,+94722685654
+Papaya,Island Fresh Produce,Colombo,461.01,Courier,B,+94725404799
+Papaya,Kandyan Fruits Ltd.,Jaffna,283.05,Delivery,A,+94787137422
+Avocado,Ceylon Fruit Suppliers,Ratnapura,448.34,Courier,B,+94786181936
+Rambutan,Ceylon Fruit Suppliers,Ratnapura,353.56,Delivery,A,+94773342034
+Rambutan,Exotic Fruits Lanka,Negombo,462.58,Pickup,A,+94774290221
+Rambutan,Harvest Moon,Kurunegala,154.94,Courier,A,+94728131451
+Mangosteen,Eastern Produce Co.,Ratnapura,470.65,Delivery,B,+94756918511
+Banana,Eastern Produce Co.,Badulla,368.82,Delivery,C,+94788969948
+Banana,Organic Lanka,Kurunegala,235.91,Pickup,C,+94717630131
+Banana,Golden Mango Traders,Batticaloa,142.41,Courier,B,+94705375210
+Strawberry,Island Fresh Produce,Badulla,256.82,Courier,B,+94734756627
+Durian,Royal Fruit Exports,Kandy,438.19,Delivery,C,+94738882414
+Durian,Eastern Produce Co.,Kandy,103.37,Courier,C,+94737339448
+Mango,Ceylon Fruit Suppliers,Kurunegala,324.58,Pickup,A,+94774774582
+Mango,Island Fresh Produce,Badulla,377.56,Courier,B,+94742941517
+Pineapple,Organic Lanka,Puttalam,66.02,Delivery,C,+94705042895
+Lemon,Nature's Bounty,Badulla,454.17,Delivery,C,+94754330197
+Lemon,Ceylon Fruit Suppliers,Colombo,408.45,Courier,B,+94702614030
+Plum,Kandyan Fruits Ltd.,Kandy,71.17,Delivery,A,+94723403999
+Plum,Hill Country Harvest,Batticaloa,143.64,Pickup,C,+94790709908
+Plum,Spice Garden Exports,Kandy,66.07,Delivery,A,+94759886211
+Watermelon,Hill Country Harvest,Puttalam,199.8,Pickup,A,+94766143233
+Watermelon,Tropical Harvest Co.,Kandy,127.2,Pickup,B,+94745410381
+Strawberry,Royal Fruit Exports,Negombo,310.63,Pickup,A,+94705832523
+Strawberry,Southern Fruits & Veggies,Anuradhapura,303.72,Courier,A,+94796729240
+Strawberry,Exotic Fruits Lanka,Ratnapura,335.81,Courier,C,+94757854660
+Orange,Exotic Fruits Lanka,Jaffna,295.35,Pickup,C,+94790319894
+Orange,Golden Mango Traders,Kurunegala,421.06,Courier,A,+94770421618
+Peach,Spice Garden Exports,Colombo,265.49,Delivery,A,+94740212363
+Jackfruit,Kandyan Fruits Ltd.,Negombo,137.15,Delivery,A,+94750230548
+Pomegranate,Fresh Picks,Puttalam,372.12,Courier,A,+94792939300
+Pomegranate,Hill Country Harvest,Kurunegala,91.31,Pickup,C,+94740086497
+Pomegranate,Green Valley Orchards,Badulla,300.26,Courier,C,+94755512140
+Ambarella,Island Fresh Produce,Kurunegala,408.95,Courier,A,+94782708923
+Ambarella,Fresh Picks,Ratnapura,150.01,Pickup,A,+94761590467
+Coconut,Island Fresh Produce,Anuradhapura,231.77,Courier,A,+94777071320
+Coconut,Southern Fruits & Veggies,Trincomalee,124.51,Pickup,A,+94780040558
+Coconut,Organic Lanka,Puttalam,342.65,Pickup,B,+94749193555
+Beli,Green Valley Orchards,Kandy,499.38,Pickup,A,+94789332995
+Beli,Eastern Produce Co.,Ratnapura,259.12,Courier,A,+94714653327
+Orange,Hill Country Harvest,Ratnapura,271.86,Delivery,A,+94754632145
+Woodapple,Island Fresh Produce,Anuradhapura,490.21,Courier,C,+94769798771
+Woodapple,Nature's Bounty,Ratnapura,390.89,Courier,C,+94767759873
+Papaya,Jaffna Agro Products,Jaffna,395.69,Pickup,A,+94786631780
+Papaya,Southern Fruits & Veggies,Anuradhapura,242.19,Courier,C,+94763598983
+Guava,Farm Direct,Kandy,280.21,Pickup,C,+94708096603
+Guava,Ceylon Fruit Suppliers,Trincomalee,432.13,Pickup,C,+94743996714
+Rambutan,Spice Garden Exports,Colombo,278.6,Pickup,A,+94797019901
+Rambutan,Eastern Produce Co.,Badulla,50.94,Courier,B,+94721886922
+Rambutan,Island Fresh Produce,Trincomalee,158.43,Delivery,B,+94746603565
+Orange,Harvest Moon,Badulla,65.57,Pickup,B,+94766718566
+Orange,Coconut Grove Farms,Puttalam,215.5,Courier,C,+94712174626
+Beli,Tropical Harvest Co.,Trincomalee,381.85,Courier,A,+94736986414
+Beli,Farm Direct,Anuradhapura,209.96,Delivery,B,+94795554063
+Grapes,Eastern Produce Co.,Puttalam,135.11,Courier,A,+94758111080
+Grapes,Island Fresh Produce,Jaffna,323.65,Delivery,C,+94774237856
+Grapes,Hill Country Harvest,Ratnapura,387.15,Delivery,C,+94778936454
+Apple,Harvest Moon,Matara,429.8,Pickup,C,+94789796470
+Apple,Royal Fruit Exports,Matara,434.26,Pickup,C,+94739551677
+Lychee,Royal Fruit Exports,Colombo,418.14,Delivery,C,+94775461768
+Lychee,Organic Lanka,Colombo,179.88,Courier,B,+94787739567
+Lychee,Hill Country Harvest,Anuradhapura,452.64,Courier,C,+94799934970
+Ambarella,Nature's Bounty,Anuradhapura,363.3,Pickup,C,+94709327618
+Ambarella,Kandyan Fruits Ltd.,Ratnapura,261.4,Courier,A,+94767731400
+Ambarella,Ceylon Fruit Suppliers,Galle,115.01,Delivery,B,+94710425649
+Custard Apple,Royal Fruit Exports,Negombo,264.27,Pickup,A,+94778081317
+Custard Apple,Green Valley Orchards,Kandy,290.5,Delivery,B,+94743791167
+Kiwi,Kandyan Fruits Ltd.,Colombo,368.09,Pickup,A,+94728632754
+Kiwi,Hill Country Harvest,Badulla,335.46,Courier,C,+94713541495
+Kiwi,Green Valley Orchards,Puttalam,357.98,Pickup,C,+94772807773
+Blueberry,Exotic Fruits Lanka,Badulla,212.46,Courier,B,+94767900915
+Blueberry,Coconut Grove Farms,Puttalam,170.28,Courier,B,+94727741274
+Apple,Harvest Moon,Galle,483.69,Courier,A,+94741097828
+Apple,Tropical Harvest Co.,Puttalam,448.11,Courier,C,+94737926550
+Apple,Coconut Grove Farms,Colombo,67.21,Courier,B,+94747994040
+Watermelon,Green Valley Orchards,Kandy,341.05,Courier,B,+94792827710
+Watermelon,Tropical Harvest Co.,Negombo,166.05,Delivery,B,+94729401458
+Pear,Spice Garden Exports,Ratnapura,73.29,Pickup,A,+94777371865
+Pear,Coconut Grove Farms,Trincomalee,299.22,Pickup,A,+94758700626
+Pear,Royal Fruit Exports,Ratnapura,393.53,Courier,A,+94703798126
+Coconut,Coconut Grove Farms,Puttalam,253.97,Delivery,C,+94747539503
+Guava,Fresh Picks,Anuradhapura,272.02,Pickup,C,+94719893532
+Guava,Tropical Harvest Co.,Galle,364.31,Pickup,B,+94782371377
+Guava,Green Valley Orchards,Kandy,251.93,Delivery,B,+94785429044
+Orange,Sunripe Fruits,Puttalam,165.52,Pickup,A,+94782724092
+Orange,Eastern Produce Co.,Trincomalee,407.79,Delivery,A,+94743418470
+Orange,Hill Country Harvest,Ratnapura,244.48,Delivery,A,+94747780534
+Rambutan,Fresh Picks,Negombo,498.7,Delivery,A,+94735177348
+Rambutan,Exotic Fruits Lanka,Jaffna,361.31,Pickup,A,+94736683250
+Beli,Farm Direct,Galle,468.32,Delivery,B,+94734548164
+Papaya,Organic Lanka,Batticaloa,188.49,Pickup,C,+94785045242
+Papaya,Southern Fruits & Veggies,Trincomalee,235.85,Pickup,B,+94700432280
+Avocado,Southern Fruits & Veggies,Trincomalee,239.72,Courier,B,+94795454329
+Avocado,Eastern Produce Co.,Batticaloa,154.57,Pickup,B,+94726099817
+Guava,Coconut Grove Farms,Jaffna,394.64,Courier,B,+94769445828
+Guava,Ceylon Fruit Suppliers,Puttalam,173.06,Courier,C,+94727842140
+Plum,Golden Mango Traders,Matara,380.39,Delivery,C,+94744245624
+Plum,Tropical Harvest Co.,Kandy,294.05,Pickup,B,+94799512557
+Pineapple,Harvest Moon,Colombo,215.98,Pickup,C,+94791001888
+Pineapple,Tropical Harvest Co.,Batticaloa,109.91,Delivery,A,+94753770098
+Plum,Kandyan Fruits Ltd.,Puttalam,163.73,Pickup,C,+94706883291
+Plum,Golden Mango Traders,Kandy,110.47,Delivery,A,+94722974980
+Apple,Jaffna Agro Products,Batticaloa,57.85,Courier,B,+94709379683
+Apple,Island Fresh Produce,Anuradhapura,217.63,Pickup,A,+94795484835
+Pear,Island Fresh Produce,Kurunegala,232.45,Courier,A,+94758832346
+Strawberry,Eastern Produce Co.,Jaffna,53.77,Courier,B,+94797540836
+Pear,Coconut Grove Farms,Anuradhapura,393.58,Delivery,A,+94708795863
+Woodapple,Harvest Moon,Ratnapura,438.36,Delivery,C,+94794946120
+Woodapple,Farm Direct,Matara,246.26,Delivery,A,+94759882967
+Custard Apple,Exotic Fruits Lanka,Puttalam,351.45,Courier,B,+94705886902
+Custard Apple,Southern Fruits & Veggies,Colombo,203.17,Pickup,B,+94747772749
+Custard Apple,Nature's Bounty,Galle,89.59,Courier,C,+94701219878
+Ambarella,Exotic Fruits Lanka,Anuradhapura,346.64,Delivery,A,+94769789458
+Ambarella,Coconut Grove Farms,Matara,403.91,Courier,B,+94735821722
+Ambarella,Royal Fruit Exports,Anuradhapura,394.14,Pickup,B,+94789159884
+Beli,Spice Garden Exports,Galle,258.17,Pickup,A,+94712445444
+Beli,Southern Fruits & Veggies,Matara,74.16,Pickup,B,+94744413072
+Beli,Farm Direct,Jaffna,468.55,Courier,B,+94775112892
+Jackfruit,Golden Mango Traders,Batticaloa,130.88,Delivery,A,+94785134293
+Jackfruit,Coconut Grove Farms,Kandy,275.52,Delivery,A,+94742269322
+Jackfruit,Fresh Picks,Colombo,396.06,Delivery,A,+94772451325
+Mango,Royal Fruit Exports,Colombo,354.65,Pickup,B,+94739818335
+Kiwi,Farm Direct,Batticaloa,290.65,Delivery,A,+94733323216
+Strawberry,Organic Lanka,Colombo,92.75,Courier,C,+94738711273
+Strawberry,Jaffna Agro Products,Matara,378.07,Courier,C,+94708390429
+Strawberry,Spice Garden Exports,Kurunegala,459.19,Delivery,A,+94798247726
+Lemon,Nature's Bounty,Jaffna,144.8,Delivery,C,+94711438816
+Lemon,Eastern Produce Co.,Colombo,242.14,Courier,A,+94727609162
+Lemon,Farm Direct,Matara,382.91,Pickup,C,+94773311551
+Mangosteen,Coconut Grove Farms,Negombo,62.91,Pickup,B,+94770695379
+Mangosteen,Golden Mango Traders,Puttalam,338.74,Pickup,A,+94752423536
+Mangosteen,Organic Lanka,Anuradhapura,468.4,Delivery,B,+94778893631
+Rambutan,Harvest Moon,Galle,92.11,Delivery,C,+94786865756
+Rambutan,Golden Mango Traders,Kurunegala,183.97,Delivery,C,+94752200758
+Apple,Ceylon Fruit Suppliers,Negombo,182.03,Delivery,C,+94700891386
+Apple,Farm Direct,Jaffna,299.68,Delivery,C,+94708155484
+Custard Apple,Tropical Harvest Co.,Anuradhapura,169.54,Pickup,A,+94781238665
+Apple,Green Valley Orchards,Kandy,381.74,Delivery,B,+94722343062
+Apple,Ceylon Fruit Suppliers,Jaffna,239.78,Pickup,A,+94734306527
+Banana,Exotic Fruits Lanka,Matara,92.53,Pickup,A,+94742750547
+Banana,Tropical Harvest Co.,Batticaloa,348.1,Pickup,B,+94735838230
+Coconut,Eastern Produce Co.,Kurunegala,332.68,Delivery,B,+94780656752
+Peach,Spice Garden Exports,Negombo,442.66,Pickup,B,+94707313366
+Banana,Coconut Grove Farms,Batticaloa,417.2,Delivery,B,+94730354115
+Beli,Tropical Harvest Co.,Matara,276.01,Courier,C,+94730131361
+Apple,Southern Fruits & Veggies,Puttalam,386.66,Courier,C,+94737908911
+Apple,Royal Fruit Exports,Negombo,314.78,Courier,A,+94757646077
+Apple,Spice Garden Exports,Anuradhapura,202.13,Delivery,B,+94722556886
+Lemon,Fresh Picks,Badulla,142.4,Pickup,A,+94779057569
+Pineapple,Golden Mango Traders,Anuradhapura,324.96,Pickup,A,+94751970410
+Papaya,Eastern Produce Co.,Galle,402.3,Pickup,B,+94733125458
+Papaya,Tropical Harvest Co.,Jaffna,390.13,Pickup,C,+94776973569
+Woodapple,Coconut Grove Farms,Negombo,494.71,Delivery,B,+94717263064
+Woodapple,Island Fresh Produce,Jaffna,484.92,Pickup,C,+94739928765
+Woodapple,Tropical Harvest Co.,Anuradhapura,439.28,Delivery,A,+94765286543
+Beli,Coconut Grove Farms,Galle,406.86,Pickup,A,+94713427530
+Blueberry,Coconut Grove Farms,Badulla,171.91,Pickup,A,+94766488480
+Jackfruit,Southern Fruits & Veggies,Anuradhapura,183.37,Delivery,C,+94750360893
+Jackfruit,Organic Lanka,Trincomalee,457.39,Pickup,A,+94707733367
+Plum,Hill Country Harvest,Jaffna,98.32,Delivery,C,+94776649916
+Lemon,Nature's Bounty,Anuradhapura,269.44,Courier,A,+94757693386
+Lemon,Farm Direct,Jaffna,357.35,Pickup,B,+94793383680
+Lemon,Green Valley Orchards,Ratnapura,345.92,Delivery,C,+94724530628
+Mangosteen,Organic Lanka,Badulla,72.93,Delivery,B,+94790482763
+Mangosteen,Golden Mango Traders,Negombo,348.4,Delivery,A,+94782252049
+Plum,Fresh Picks,Jaffna,279.25,Courier,A,+94713633070
+Plum,Southern Fruits & Veggies,Batticaloa,378.17,Delivery,B,+94762422184
+Grapes,Southern Fruits & Veggies,Batticaloa,424.54,Pickup,C,+94743130227
+Grapes,Golden Mango Traders,Ratnapura,137.21,Delivery,A,+94785315295
+Grapes,Eastern Produce Co.,Kandy,122.11,Delivery,B,+94792687608
+Lychee,Fresh Picks,Kurunegala,282.08,Courier,C,+94773880955
+Pineapple,Harvest Moon,Ratnapura,456.73,Delivery,B,+94787498402
+Pineapple,Eastern Produce Co.,Jaffna,164.96,Delivery,A,+94724598906
+Pineapple,Kandyan Fruits Ltd.,Kurunegala,265.21,Delivery,B,+94775743340
+Mango,Exotic Fruits Lanka,Galle,190.33,Delivery,C,+94792915275
+Mango,Island Fresh Produce,Colombo,312.2,Delivery,A,+94744124799
+Pear,Island Fresh Produce,Kurunegala,404.34,Courier,C,+94794092029
+Pear,Spice Garden Exports,Jaffna,91.92,Courier,B,+94710715794
+Rambutan,Green Valley Orchards,Galle,129.05,Pickup,A,+94778253856
+Coconut,Eastern Produce Co.,Kandy,167.95,Courier,B,+94763230185
+Coconut,Tropical Harvest Co.,Jaffna,378.12,Delivery,A,+94730851946
+Pomegranate,Spice Garden Exports,Galle,112.16,Delivery,B,+94717699726
+Peach,Tropical Harvest Co.,Ratnapura,490.64,Delivery,A,+94789771886
+Avocado,Tropical Harvest Co.,Galle,127.77,Courier,C,+94795358070
+Avocado,Island Fresh Produce,Batticaloa,164.89,Pickup,A,+94741121710
+Avocado,Southern Fruits & Veggies,Anuradhapura,76.89,Delivery,A,+94767918073
+Jackfruit,Sunripe Fruits,Galle,391.76,Courier,C,+94764749657
+Jackfruit,Spice Garden Exports,Kurunegala,64.0,Pickup,C,+94794883684
+Jackfruit,Green Valley Orchards,Negombo,71.86,Courier,A,+94713571580
+Pineapple,Kandyan Fruits Ltd.,Matara,356.58,Delivery,A,+94758651065
+Plum,Southern Fruits & Veggies,Badulla,325.66,Delivery,A,+94789492079
+Plum,Hill Country Harvest,Kurunegala,416.36,Courier,C,+94753245920
+Plum,Nature's Bounty,Puttalam,254.38,Pickup,C,+94780226558
+Watermelon,Organic Lanka,Badulla,252.03,Courier,B,+94754292912
+Watermelon,Harvest Moon,Kurunegala,453.58,Delivery,B,+94772958339
+Watermelon,Sunripe Fruits,Kandy,328.67,Pickup,B,+94722864668
+Blueberry,Tropical Harvest Co.,Colombo,112.39,Courier,B,+94738503064
+Ambarella,Island Fresh Produce,Matara,153.77,Pickup,C,+94786597073
+Ambarella,Southern Fruits & Veggies,Galle,435.57,Pickup,A,+94726528630
+Lemon,Nature's Bounty,Batticaloa,336.91,Pickup,C,+94771865471
+Lemon,Jaffna Agro Products,Puttalam,297.25,Pickup,C,+94751623834
+Lychee,Royal Fruit Exports,Puttalam,364.39,Pickup,C,+94728061715
+Lychee,Hill Country Harvest,Colombo,206.38,Courier,B,+94755383914
+Orange,Exotic Fruits Lanka,Batticaloa,57.9,Delivery,A,+94758018631
+Orange,Eastern Produce Co.,Matara,310.15,Courier,C,+94748744201
+Plum,Eastern Produce Co.,Kurunegala,250.66,Courier,A,+94712734630
+Plum,Spice Garden Exports,Kandy,181.33,Pickup,C,+94787889163
+Plum,Fresh Picks,Kandy,187.26,Delivery,A,+94745385162
+Rambutan,Exotic Fruits Lanka,Anuradhapura,263.05,Delivery,B,+94706686462
+Rambutan,Fresh Picks,Kurunegala,197.35,Pickup,C,+94711099138
+Custard Apple,Hill Country Harvest,Jaffna,314.86,Delivery,C,+94758058834
+Custard Apple,Green Valley Orchards,Galle,72.33,Pickup,A,+94771496092
+Custard Apple,Fresh Picks,Jaffna,364.75,Courier,C,+94733238631
+Peach,Fresh Picks,Kurunegala,495.41,Courier,A,+94773798246
+Jackfruit,Green Valley Orchards,Trincomalee,250.64,Courier,C,+94767613338
+Jackfruit,Coconut Grove Farms,Anuradhapura,116.29,Courier,C,+94744664965
+Jackfruit,Island Fresh Produce,Negombo,114.0,Pickup,C,+94700747746
+Jackfruit,Organic Lanka,Jaffna,157.0,Pickup,A,+94725284161
+Durian,Hill Country Harvest,Batticaloa,318.04,Pickup,A,+94782510390
+Rambutan,Golden Mango Traders,Matara,382.65,Delivery,B,+94763023747
+Rambutan,Sunripe Fruits,Ratnapura,373.72,Courier,A,+94794394333
+Peach,Island Fresh Produce,Batticaloa,156.68,Delivery,C,+94710045876
+Peach,Coconut Grove Farms,Badulla,103.16,Courier,C,+94718997605
+Peach,Nature's Bounty,Colombo,326.75,Courier,C,+94718983236
+Pineapple,Sunripe Fruits,Jaffna,115.19,Pickup,B,+94726999792
+Coconut,Eastern Produce Co.,Kandy,356.85,Pickup,C,+94767893458
+Coconut,Jaffna Agro Products,Galle,84.3,Delivery,A,+94743233811
+Coconut,Eastern Produce Co.,Galle,231.16,Delivery,A,+94775721445
+Coconut,Harvest Moon,Kurunegala,285.59,Delivery,C,+94719939306
+Coconut,Coconut Grove Farms,Trincomalee,140.28,Courier,C,+94730988636
+Lemon,Sunripe Fruits,Ratnapura,259.17,Pickup,C,+94707309245
+Lemon,Coconut Grove Farms,Kandy,205.17,Delivery,B,+94762476751
+Lemon,Hill Country Harvest,Trincomalee,55.54,Courier,A,+94719240291
+Jackfruit,Royal Fruit Exports,Badulla,424.79,Courier,B,+94791654484
+Jackfruit,Nature's Bounty,Galle,281.08,Delivery,C,+94718277673
+Jackfruit,Tropical Harvest Co.,Galle,175.56,Pickup,C,+94746865586
+Beli,Green Valley Orchards,Puttalam,226.39,Delivery,A,+94724755588
+Woodapple,Tropical Harvest Co.,Colombo,137.88,Pickup,B,+94701536347
+Woodapple,Spice Garden Exports,Galle,176.89,Delivery,B,+94756520379
+Lychee,Organic Lanka,Negombo,87.09,Pickup,A,+94711408848
+Banana,Spice Garden Exports,Puttalam,67.39,Courier,C,+94727355090
+Banana,Hill Country Harvest,Kandy,304.98,Pickup,C,+94747211650
+Strawberry,Jaffna Agro Products,Negombo,308.44,Delivery,A,+94710533049
+Strawberry,Island Fresh Produce,Batticaloa,177.16,Courier,A,+94717416523
+Banana,Hill Country Harvest,Badulla,220.94,Delivery,A,+94701437261
+Banana,Farm Direct,Badulla,437.75,Courier,A,+94787662561
+Banana,Organic Lanka,Matara,104.97,Courier,A,+94740966440
+Coconut,Organic Lanka,Negombo,248.9,Courier,B,+94781070713
+Coconut,Green Valley Orchards,Galle,256.29,Delivery,A,+94763388997
+Coconut,Eastern Produce Co.,Kurunegala,389.43,Delivery,B,+94764425428
+Mangosteen,Island Fresh Produce,Galle,182.23,Pickup,A,+94728693768
+Kiwi,Hill Country Harvest,Matara,418.36,Pickup,A,+94728252363
+Kiwi,Exotic Fruits Lanka,Batticaloa,265.5,Pickup,A,+94716905884
+Custard Apple,Kandyan Fruits Ltd.,Galle,402.05,Pickup,A,+94737381959
+Custard Apple,Sunripe Fruits,Kurunegala,430.79,Delivery,A,+94727845886
+Custard Apple,Nature's Bounty,Jaffna,307.49,Pickup,A,+94762561171
+Jackfruit,Coconut Grove Farms,Puttalam,271.31,Pickup,A,+94716009851
+Jackfruit,Southern Fruits & Veggies,Galle,294.92,Pickup,B,+94751316873
+Kiwi,Ceylon Fruit Suppliers,Puttalam,301.78,Pickup,B,+94778236752
+Kiwi,Island Fresh Produce,Kurunegala,338.53,Delivery,B,+94781464338
+Strawberry,Nature's Bounty,Badulla,294.51,Pickup,A,+94725874429
+Watermelon,Tropical Harvest Co.,Negombo,117.55,Pickup,C,+94731047513
+Watermelon,Eastern Produce Co.,Puttalam,194.76,Pickup,C,+94798007541
+Watermelon,Spice Garden Exports,Negombo,427.48,Pickup,B,+94761218668
+Apple,Tropical Harvest Co.,Badulla,112.34,Courier,C,+94703237294
+Peach,Spice Garden Exports,Trincomalee,204.98,Courier,C,+94778059931
+Peach,Farm Direct,Matara,299.97,Courier,B,+94778461386
+Peach,Kandyan Fruits Ltd.,Puttalam,375.78,Courier,B,+94720725966
+Soursop,Tropical Harvest Co.,Batticaloa,246.01,Delivery,C,+94786393781
+Soursop,Organic Lanka,Kurunegala,101.56,Courier,C,+94761853486
+Soursop,Royal Fruit Exports,Kandy,260.06,Delivery,C,+94761621492
+Plum,Royal Fruit Exports,Badulla,271.35,Courier,A,+94710072763
+Plum,Hill Country Harvest,Matara,311.24,Pickup,A,+94747479745
+Plum,Exotic Fruits Lanka,Kandy,142.24,Delivery,A,+94759900410
+Lemon,Golden Mango Traders,Badulla,419.98,Delivery,C,+94759015755
+Lemon,Farm Direct,Batticaloa,136.5,Pickup,C,+94712050686
+Mangosteen,Nature's Bounty,Badulla,317.65,Courier,C,+94701307617
+Mangosteen,Coconut Grove Farms,Kurunegala,272.31,Pickup,B,+94751625565
+Mangosteen,Tropical Harvest Co.,Colombo,291.92,Pickup,B,+94710506615
+Blueberry,Hill Country Harvest,Anuradhapura,70.81,Delivery,C,+94794042287
+Pineapple,Sunripe Fruits,Trincomalee,180.98,Courier,A,+94711074754
+Pineapple,Green Valley Orchards,Galle,371.57,Delivery,A,+94770251888
+Pineapple,Nature's Bounty,Batticaloa,139.39,Courier,B,+94750749758
+Apple,Farm Direct,Kandy,407.75,Delivery,A,+94726558209
+Apple,Tropical Harvest Co.,Jaffna,262.52,Delivery,C,+94710947383
+Watermelon,Exotic Fruits Lanka,Kandy,197.26,Courier,C,+94770701763
+Watermelon,Nature's Bounty,Colombo,473.03,Delivery,B,+94750861092
+Watermelon,Harvest Moon,Jaffna,388.71,Courier,B,+94712120631
+Cherry,Jaffna Agro Products,Puttalam,431.04,Pickup,A,+94703565581
+Cherry,Island Fresh Produce,Batticaloa,405.43,Courier,C,+94777166608
+Durian,Spice Garden Exports,Negombo,55.87,Courier,B,+94770184577
+Durian,Southern Fruits & Veggies,Jaffna,286.63,Courier,A,+94764722989
+Apple,Fresh Picks,Kandy,253.06,Pickup,B,+94749121517
+Apple,Eastern Produce Co.,Trincomalee,180.28,Pickup,B,+94792105020
+Apple,Jaffna Agro Products,Negombo,334.71,Delivery,B,+94770941280
+Beli,Tropical Harvest Co.,Badulla,98.43,Pickup,B,+94754346181
+Beli,Farm Direct,Jaffna,273.31,Delivery,B,+94742888768
+Beli,Coconut Grove Farms,Jaffna,373.2,Delivery,A,+94742491780
+Rambutan,Harvest Moon,Colombo,99.58,Pickup,A,+94721975989
+Kiwi,Tropical Harvest Co.,Colombo,232.15,Delivery,C,+94758671038
+Kiwi,Southern Fruits & Veggies,Kandy,242.98,Courier,C,+94719201321
+Kiwi,Hill Country Harvest,Jaffna,298.8,Delivery,B,+94734766155
+Blueberry,Green Valley Orchards,Kandy,449.02,Courier,A,+94746616968
+Watermelon,Sunripe Fruits,Jaffna,185.09,Delivery,C,+94759518228
+Watermelon,Spice Garden Exports,Colombo,68.47,Delivery,B,+94748678557
+Watermelon,Southern Fruits & Veggies,Colombo,119.84,Courier,A,+94704069527
+Lemon,Spice Garden Exports,Kandy,54.16,Courier,A,+94785518992
+Rambutan,Harvest Moon,Ratnapura,334.88,Delivery,C,+94756840292
+Rambutan,Green Valley Orchards,Colombo,225.62,Delivery,C,+94731192931
+Mangosteen,Island Fresh Produce,Ratnapura,99.5,Delivery,A,+94774933090
+Peach,Harvest Moon,Batticaloa,410.62,Courier,C,+94759813110
+Guava,Ceylon Fruit Suppliers,Batticaloa,104.71,Courier,A,+94735702236
+Guava,Fresh Picks,Batticaloa,84.89,Delivery,C,+94712592295
+Guava,Hill Country Harvest,Trincomalee,71.18,Delivery,C,+94728935906
+Plum,Sunripe Fruits,Trincomalee,79.39,Courier,A,+94799354731
+Plum,Jaffna Agro Products,Galle,497.91,Delivery,C,+94798167714
+Plum,Southern Fruits & Veggies,Negombo,291.56,Delivery,C,+94766768345
+Jackfruit,Golden Mango Traders,Negombo,197.91,Delivery,C,+94789480237
+Jackfruit,Spice Garden Exports,Colombo,381.25,Pickup,A,+94740818554
+Jackfruit,Eastern Produce Co.,Colombo,473.84,Delivery,C,+94728254497
+Kiwi,Royal Fruit Exports,Puttalam,433.81,Pickup,C,+94718733680
+Kiwi,Island Fresh Produce,Anuradhapura,76.44,Pickup,C,+94798143769
+Kiwi,Spice Garden Exports,Anuradhapura,316.66,Courier,A,+94765663630
+Jackfruit,Hill Country Harvest,Trincomalee,187.86,Courier,A,+94731569563
+Mangosteen,Harvest Moon,Trincomalee,445.86,Courier,B,+94765879745
+Watermelon,Eastern Produce Co.,Jaffna,127.62,Courier,A,+94785684124
+Watermelon,Kandyan Fruits Ltd.,Jaffna,472.11,Courier,A,+94729243367
+Watermelon,Tropical Harvest Co.,Colombo,348.78,Pickup,A,+94703890889
+Orange,Harvest Moon,Puttalam,175.61,Delivery,C,+94789334733
+Orange,Organic Lanka,Trincomalee,90.43,Pickup,B,+94711200590
+Papaya,Coconut Grove Farms,Kandy,368.71,Courier,B,+94700850276
+Papaya,Spice Garden Exports,Ratnapura,295.84,Pickup,C,+94779589469
+Blueberry,Hill Country Harvest,Puttalam,136.04,Pickup,A,+94723414441
+Blueberry,Jaffna Agro Products,Puttalam,237.81,Delivery,A,+94786377620
+Blueberry,Harvest Moon,Kandy,338.15,Delivery,C,+94740937693
+Pineapple,Island Fresh Produce,Negombo,379.05,Courier,C,+94720169621
+Pineapple,Farm Direct,Anuradhapura,118.72,Delivery,B,+94700782188
+Strawberry,Exotic Fruits Lanka,Jaffna,78.4,Courier,B,+94771386851
+Watermelon,Tropical Harvest Co.,Ratnapura,147.41,Delivery,B,+94702863643
+Banana,Farm Direct,Kurunegala,284.51,Courier,B,+94782977714
+Banana,Island Fresh Produce,Trincomalee,332.64,Delivery,B,+94775563267
+Coconut,Coconut Grove Farms,Colombo,417.07,Courier,C,+94709594498
+Coconut,Fresh Picks,Negombo,148.1,Pickup,B,+94700383104
+Avocado,Fresh Picks,Ratnapura,332.23,Pickup,C,+94793764327
+Cherry,Island Fresh Produce,Negombo,344.53,Delivery,B,+94768652382
+Cherry,Exotic Fruits Lanka,Colombo,200.04,Delivery,A,+94713744835
+Cherry,Coconut Grove Farms,Negombo,251.35,Pickup,B,+94742711306
+Mangosteen,Eastern Produce Co.,Colombo,102.21,Courier,C,+94799311132
+Plum,Southern Fruits & Veggies,Negombo,238.95,Pickup,B,+94778516976
+Plum,Coconut Grove Farms,Ratnapura,409.68,Pickup,B,+94784316228
+Soursop,Coconut Grove Farms,Matara,115.59,Delivery,B,+94746305643
+Soursop,Island Fresh Produce,Trincomalee,320.97,Delivery,C,+94739733219
+Soursop,Farm Direct,Negombo,200.85,Pickup,C,+94791704290
+Durian,Jaffna Agro Products,Negombo,93.78,Delivery,B,+94781747341
+Pear,Organic Lanka,Matara,153.01,Delivery,A,+94742045407
+Guava,Green Valley Orchards,Anuradhapura,209.8,Delivery,A,+94760861963
+Plum,Hill Country Harvest,Negombo,214.98,Pickup,C,+94737468315
+Plum,Green Valley Orchards,Ratnapura,242.06,Delivery,A,+94765917232
+Plum,Eastern Produce Co.,Galle,411.94,Pickup,C,+94767375461
+Watermelon,Hill Country Harvest,Anuradhapura,157.8,Courier,A,+94714009118
+Watermelon,Exotic Fruits Lanka,Jaffna,173.9,Delivery,A,+94718998128
+Watermelon,Green Valley Orchards,Batticaloa,88.39,Pickup,B,+94750470610
+Blueberry,Ceylon Fruit Suppliers,Batticaloa,380.83,Pickup,A,+94741764412
+Blueberry,Exotic Fruits Lanka,Anuradhapura,113.59,Delivery,B,+94701612719
+Custard Apple,Green Valley Orchards,Puttalam,79.28,Courier,A,+94784207667
+Custard Apple,Exotic Fruits Lanka,Batticaloa,413.1,Pickup,A,+94736817637
+Orange,Royal Fruit Exports,Kandy,435.31,Pickup,C,+94738806091
+Orange,Sunripe Fruits,Colombo,306.66,Courier,C,+94781663182
+Plum,Green Valley Orchards,Jaffna,475.25,Delivery,B,+94765111853
+Plum,Spice Garden Exports,Kurunegala,282.36,Delivery,B,+94790630157
+Plum,Coconut Grove Farms,Puttalam,377.3,Courier,C,+94753645019
+Ambarella,Nature's Bounty,Puttalam,346.82,Delivery,C,+94758987334
+Ambarella,Exotic Fruits Lanka,Negombo,417.18,Pickup,B,+94783254827
+Strawberry,Organic Lanka,Colombo,138.26,Courier,A,+94757236715
+Watermelon,Hill Country Harvest,Kandy,65.42,Pickup,B,+94765570267
+Watermelon,Farm Direct,Anuradhapura,203.21,Courier,B,+94740072308
+Watermelon,Exotic Fruits Lanka,Anuradhapura,490.62,Pickup,C,+94785701480
+Coconut,Tropical Harvest Co.,Anuradhapura,467.8,Courier,B,+94708374345
+Coconut,Coconut Grove Farms,Galle,70.75,Pickup,A,+94713706311
+Mangosteen,Royal Fruit Exports,Ratnapura,279.8,Pickup,B,+94748354085
+Mangosteen,Fresh Picks,Batticaloa,217.88,Courier,A,+94788202950
+Mangosteen,Farm Direct,Anuradhapura,251.39,Courier,C,+94760629438
+Beli,Green Valley Orchards,Negombo,323.84,Pickup,A,+94726780067
+Pomegranate,Farm Direct,Matara,478.25,Courier,A,+94729569578
+Pomegranate,Harvest Moon,Galle,156.72,Pickup,B,+94736239926
+Pomegranate,Ceylon Fruit Suppliers,Jaffna,180.95,Delivery,A,+94721141615
+Lemon,Green Valley Orchards,Kandy,295.23,Pickup,C,+94728598307
+Lemon,Sunripe Fruits,Negombo,152.39,Pickup,A,+94787843297
+Lemon,Eastern Produce Co.,Batticaloa,89.82,Delivery,B,+94717884523
+Blueberry,Green Valley Orchards,Batticaloa,53.78,Pickup,A,+94708140224
+Blueberry,Organic Lanka,Ratnapura,161.24,Delivery,A,+94704108008
+Blueberry,Hill Country Harvest,Ratnapura,380.5,Delivery,B,+94761528934
+Papaya,Sunripe Fruits,Negombo,333.02,Delivery,A,+94714815644
+Papaya,Ceylon Fruit Suppliers,Matara,186.73,Courier,B,+94733913681
+Plum,Tropical Harvest Co.,Ratnapura,370.68,Delivery,C,+94783093404
+Plum,Exotic Fruits Lanka,Kurunegala,106.4,Delivery,B,+94707158615
+Plum,Organic Lanka,Jaffna,254.0,Delivery,A,+94743973292
+Banana,Southern Fruits & Veggies,Trincomalee,293.23,Courier,A,+94770796014
+Banana,Eastern Produce Co.,Galle,55.28,Courier,C,+94799403070
+Banana,Organic Lanka,Jaffna,150.63,Pickup,C,+94749363300
+Ambarella,Farm Direct,Trincomalee,139.69,Courier,B,+94701753612
+Ambarella,Royal Fruit Exports,Puttalam,80.25,Pickup,B,+94763292134
+Kiwi,Harvest Moon,Negombo,483.38,Delivery,B,+94756944537
+Kiwi,Royal Fruit Exports,Colombo,407.35,Pickup,A,+94758126895
+Kiwi,Tropical Harvest Co.,Jaffna,467.22,Pickup,B,+94751903024
+Mango,Nature's Bounty,Matara,389.01,Courier,A,+94754486425
+Mango,Harvest Moon,Kandy,464.56,Courier,C,+94765050289
+Rambutan,Fresh Picks,Badulla,315.76,Delivery,B,+94788417847
+Rambutan,Golden Mango Traders,Kandy,282.59,Delivery,A,+94796879412
+Mango,Nature's Bounty,Negombo,205.14,Delivery,C,+94795728343
+Mango,Southern Fruits & Veggies,Kurunegala,449.92,Pickup,C,+94750127504
+Blueberry,Sunripe Fruits,Ratnapura,78.18,Delivery,C,+94770275289
+Blueberry,Coconut Grove Farms,Colombo,290.3,Delivery,A,+94730439294
+Jackfruit,Green Valley Orchards,Trincomalee,249.78,Delivery,C,+94753376683
+Lemon,Farm Direct,Badulla,285.19,Pickup,B,+94718947579
+Lemon,Fresh Picks,Trincomalee,272.92,Courier,C,+94708826356
+Lemon,Eastern Produce Co.,Galle,288.59,Courier,C,+94727809987
+Durian,Nature's Bounty,Negombo,54.42,Courier,C,+94755252474
+Pomegranate,Jaffna Agro Products,Ratnapura,425.16,Courier,C,+94782978266
+Pomegranate,Southern Fruits & Veggies,Colombo,234.31,Pickup,A,+94778628387
+Pomegranate,Sunripe Fruits,Kandy,295.26,Pickup,A,+94700586398
+Lemon,Golden Mango Traders,Negombo,488.27,Courier,C,+94794322406
+Lemon,Nature's Bounty,Galle,233.67,Delivery,C,+94706013415
+Watermelon,Tropical Harvest Co.,Badulla,468.84,Delivery,C,+94767855325
+Custard Apple,Hill Country Harvest,Anuradhapura,413.79,Pickup,C,+94762105222
+Custard Apple,Eastern Produce Co.,Colombo,490.57,Delivery,A,+94791920708
+Custard Apple,Southern Fruits & Veggies,Negombo,470.36,Pickup,C,+94720242752
+Watermelon,Southern Fruits & Veggies,Badulla,116.13,Courier,B,+94707738952
+Pineapple,Ceylon Fruit Suppliers,Trincomalee,201.07,Delivery,A,+94749046580
+Pineapple,Jaffna Agro Products,Matara,139.88,Courier,C,+94713337703
+Pineapple,Nature's Bounty,Jaffna,247.39,Pickup,A,+94755775311
+Ambarella,Southern Fruits & Veggies,Negombo,156.61,Courier,C,+94775513641
+Lemon,Coconut Grove Farms,Trincomalee,273.2,Delivery,A,+94756242488
+Lemon,Hill Country Harvest,Galle,65.47,Delivery,C,+94747102307
+Lemon,Sunripe Fruits,Jaffna,261.31,Delivery,A,+94742818666
+Blueberry,Royal Fruit Exports,Ratnapura,167.1,Pickup,C,+94740689739
+Pomegranate,Kandyan Fruits Ltd.,Matara,392.12,Courier,B,+94759697543
+Pomegranate,Golden Mango Traders,Negombo,489.84,Delivery,B,+94708037799
+Coconut,Spice Garden Exports,Anuradhapura,73.12,Courier,C,+94768206339
+Coconut,Kandyan Fruits Ltd.,Badulla,496.39,Delivery,C,+94728480564
+Pear,Sunripe Fruits,Anuradhapura,488.37,Pickup,B,+94740115338
+Pear,Southern Fruits & Veggies,Colombo,136.79,Pickup,A,+94764046641
+Pear,Golden Mango Traders,Batticaloa,68.64,Courier,C,+94710455196
+Orange,Spice Garden Exports,Jaffna,146.07,Delivery,A,+94786260739
+Plum,Golden Mango Traders,Kurunegala,215.9,Pickup,B,+94795628097
+Plum,Spice Garden Exports,Negombo,178.46,Courier,B,+94721807782
+Coconut,Coconut Grove Farms,Kurunegala,75.94,Delivery,C,+94713367320
+Avocado,Fresh Picks,Batticaloa,394.07,Pickup,C,+94752709686
+Avocado,Hill Country Harvest,Kandy,205.93,Pickup,A,+94705749091
+Avocado,Island Fresh Produce,Puttalam,401.92,Pickup,B,+94777452183
+Beli,Ceylon Fruit Suppliers,Colombo,264.17,Pickup,A,+94731990325
+Pear,Kandyan Fruits Ltd.,Kandy,458.64,Pickup,A,+94752913977
+Ambarella,Nature's Bounty,Negombo,421.33,Pickup,A,+94751622200
+Ambarella,Royal Fruit Exports,Jaffna,269.52,Pickup,C,+94752923836
+Lemon,Golden Mango Traders,Colombo,430.21,Delivery,C,+94729803884
+Lemon,Island Fresh Produce,Puttalam,364.73,Courier,A,+94755819616
+Lemon,Ceylon Fruit Suppliers,Anuradhapura,180.04,Delivery,B,+94772330456
+Pineapple,Kandyan Fruits Ltd.,Anuradhapura,125.76,Pickup,B,+94712907268
+Coconut,Farm Direct,Colombo,378.07,Pickup,B,+94781707597
+Coconut,Kandyan Fruits Ltd.,Anuradhapura,295.7,Pickup,A,+94757767178
+Peach,Ceylon Fruit Suppliers,Badulla,239.81,Courier,C,+94779327251
+Pineapple,Tropical Harvest Co.,Trincomalee,151.39,Pickup,A,+94726257056
+Pineapple,Royal Fruit Exports,Negombo,181.79,Delivery,B,+94735776612
+Mango,Hill Country Harvest,Puttalam,282.32,Delivery,A,+94710146604
+Mango,Royal Fruit Exports,Batticaloa,53.52,Courier,B,+94751470572
+Mango,Organic Lanka,Kandy,117.14,Courier,C,+94762486997
+Papaya,Hill Country Harvest,Badulla,284.36,Delivery,B,+94779796370
+Papaya,Green Valley Orchards,Badulla,239.31,Delivery,B,+94709678251
+Papaya,Jaffna Agro Products,Batticaloa,245.12,Pickup,A,+94738760701
+Lemon,Kandyan Fruits Ltd.,Kurunegala,53.83,Courier,B,+94730985851
+Banana,Jaffna Agro Products,Badulla,487.96,Pickup,A,+94710719458
+Mangosteen,Golden Mango Traders,Kandy,158.07,Courier,C,+94716069381
+Mangosteen,Coconut Grove Farms,Kurunegala,203.7,Courier,C,+94710525262
+Avocado,Kandyan Fruits Ltd.,Batticaloa,275.94,Pickup,C,+94751214633
+Avocado,Coconut Grove Farms,Anuradhapura,435.18,Courier,A,+94731786541
+Avocado,Eastern Produce Co.,Batticaloa,185.1,Delivery,A,+94747474110
+Avocado,Fresh Picks,Negombo,386.14,Pickup,A,+94718760424
+Coconut,Southern Fruits & Veggies,Jaffna,145.23,Delivery,A,+94738907727
+Coconut,Royal Fruit Exports,Matara,277.39,Delivery,A,+94760078224
+Coconut,Sunripe Fruits,Badulla,205.59,Courier,A,+94738461325
+Peach,Spice Garden Exports,Colombo,200.54,Delivery,B,+94758764807
+Peach,Exotic Fruits Lanka,Anuradhapura,414.19,Courier,C,+94752369552
+Durian,Coconut Grove Farms,Colombo,417.13,Courier,A,+94753077246
+Durian,Spice Garden Exports,Kurunegala,411.35,Courier,C,+94750609246
+Watermelon,Fresh Picks,Matara,415.06,Courier,A,+94709221588
+Soursop,Nature's Bounty,Anuradhapura,225.67,Courier,C,+94779944956
+Mangosteen,Tropical Harvest Co.,Jaffna,352.82,Delivery,C,+94786249193
+Mangosteen,Golden Mango Traders,Badulla,100.33,Courier,B,+94712914496
+Pomegranate,Fresh Picks,Ratnapura,411.9,Pickup,C,+94704605837
+Pomegranate,Organic Lanka,Anuradhapura,53.74,Pickup,C,+94726040288
+Jackfruit,Sunripe Fruits,Matara,155.86,Pickup,B,+94746303597
+Jackfruit,Ceylon Fruit Suppliers,Kurunegala,489.01,Pickup,B,+94740943774
+Jackfruit,Organic Lanka,Galle,203.07,Delivery,A,+94755030443
+Peach,Golden Mango Traders,Matara,350.74,Delivery,C,+94764281196
+Peach,Fresh Picks,Kandy,359.4,Courier,B,+94741756204
+Peach,Organic Lanka,Ratnapura,355.46,Courier,A,+94747356915
+Grapes,Southern Fruits & Veggies,Negombo,273.1,Delivery,B,+94795755315
+Grapes,Fresh Picks,Batticaloa,214.7,Courier,C,+94722808230
+Woodapple,Hill Country Harvest,Kandy,332.62,Courier,B,+94747756726
+Woodapple,Farm Direct,Negombo,479.04,Pickup,C,+94778927044
+Woodapple,Organic Lanka,Colombo,430.69,Pickup,A,+94765469019
+Coconut,Organic Lanka,Anuradhapura,336.34,Courier,B,+94756127396
+Peach,Green Valley Orchards,Anuradhapura,285.08,Pickup,B,+94737896563
+Peach,Farm Direct,Negombo,317.0,Delivery,A,+94731057735
+Kiwi,Exotic Fruits Lanka,Ratnapura,398.85,Courier,B,+94792693387
+Kiwi,Hill Country Harvest,Galle,497.31,Delivery,C,+94702185328
+Kiwi,Jaffna Agro Products,Batticaloa,245.02,Courier,A,+94707067398
+Pear,Coconut Grove Farms,Negombo,73.88,Pickup,A,+94790781359
+Pear,Royal Fruit Exports,Negombo,483.79,Pickup,C,+94760104940
+Avocado,Island Fresh Produce,Jaffna,215.19,Pickup,B,+94751485409
+Pomegranate,Green Valley Orchards,Ratnapura,420.93,Courier,C,+94713179127
+Banana,Green Valley Orchards,Kandy,438.89,Pickup,B,+94769230760
+Banana,Kandyan Fruits Ltd.,Ratnapura,60.71,Courier,C,+94714617268
+Banana,Hill Country Harvest,Kurunegala,181.47,Delivery,C,+94718216939
+Durian,Tropical Harvest Co.,Negombo,370.94,Courier,B,+94783922049
+Durian,Royal Fruit Exports,Ratnapura,332.2,Pickup,C,+94720655206
+Durian,Harvest Moon,Negombo,127.37,Courier,A,+94749286252
+Custard Apple,Exotic Fruits Lanka,Kandy,56.43,Courier,A,+94751987332
+Lemon,Island Fresh Produce,Jaffna,315.67,Courier,B,+94788923778
+Lemon,Hill Country Harvest,Trincomalee,389.52,Pickup,B,+94767386323
+Lemon,Nature's Bounty,Jaffna,229.14,Courier,B,+94787065020
+Strawberry,Royal Fruit Exports,Anuradhapura,382.28,Delivery,B,+94717447243
+Strawberry,Green Valley Orchards,Puttalam,473.36,Courier,B,+94753371469
+Pear,Southern Fruits & Veggies,Jaffna,423.1,Pickup,A,+94709242387
+Pear,Kandyan Fruits Ltd.,Batticaloa,301.21,Pickup,B,+94713515446
+Pear,Coconut Grove Farms,Matara,445.09,Courier,B,+94747745201
+Cherry,Kandyan Fruits Ltd.,Negombo,429.97,Pickup,B,+94781940493
+Pineapple,Island Fresh Produce,Galle,348.95,Pickup,A,+94784041469
+Pineapple,Green Valley Orchards,Ratnapura,165.13,Courier,C,+94713658126
+Pineapple,Kandyan Fruits Ltd.,Anuradhapura,204.28,Courier,C,+94754873999
+Pineapple,Sunripe Fruits,Trincomalee,266.28,Delivery,B,+94757988068
+Pineapple,Hill Country Harvest,Puttalam,143.47,Pickup,C,+94799426784
+Avocado,Island Fresh Produce,Jaffna,303.36,Courier,B,+94798475983
+Avocado,Royal Fruit Exports,Puttalam,347.39,Courier,B,+94777368863
+Avocado,Ceylon Fruit Suppliers,Kandy,296.81,Pickup,B,+94713202038
+Kiwi,Island Fresh Produce,Badulla,252.76,Courier,A,+94777849972
+Mangosteen,Jaffna Agro Products,Jaffna,138.1,Delivery,B,+94745727082
+Lemon,Green Valley Orchards,Anuradhapura,74.51,Pickup,B,+94733212972
+Soursop,Spice Garden Exports,Kandy,170.01,Delivery,A,+94705403044
+Soursop,Hill Country Harvest,Kandy,261.74,Delivery,B,+94745621331
+Avocado,Coconut Grove Farms,Galle,188.94,Pickup,B,+94717638896
+Avocado,Nature's Bounty,Anuradhapura,491.44,Courier,A,+94761971335
+Avocado,Sunripe Fruits,Puttalam,193.14,Delivery,C,+94768167103
+Strawberry,Spice Garden Exports,Kurunegala,299.2,Courier,B,+94719720605
+Peach,Exotic Fruits Lanka,Ratnapura,479.95,Courier,C,+94782013898
+Peach,Golden Mango Traders,Ratnapura,53.14,Courier,C,+94789760152
+Peach,Southern Fruits & Veggies,Kandy,444.94,Courier,C,+94708719595
+Custard Apple,Hill Country Harvest,Badulla,216.65,Pickup,A,+94719746820
+Banana,Kandyan Fruits Ltd.,Ratnapura,92.26,Pickup,B,+94720743732
+Mango,Ceylon Fruit Suppliers,Jaffna,409.48,Delivery,A,+94740335186
+Mango,Southern Fruits & Veggies,Trincomalee,441.47,Delivery,A,+94706454451
+Mango,Spice Garden Exports,Puttalam,499.94,Pickup,B,+94730832309
+Kiwi,Farm Direct,Kurunegala,279.7,Delivery,B,+94722869240
+Kiwi,Royal Fruit Exports,Negombo,74.41,Courier,B,+94724643983
+Kiwi,Golden Mango Traders,Trincomalee,76.3,Delivery,A,+94702682727
+Guava,Harvest Moon,Trincomalee,286.34,Courier,B,+94763018964
+Guava,Eastern Produce Co.,Ratnapura,353.57,Courier,B,+94707593781
+Papaya,Jaffna Agro Products,Kandy,388.81,Delivery,C,+94778881624
+Papaya,Kandyan Fruits Ltd.,Badulla,59.72,Pickup,B,+94798597949
+Pomegranate,Jaffna Agro Products,Matara,489.96,Pickup,B,+94791064337
+Orange,Green Valley Orchards,Colombo,190.54,Delivery,A,+94753178200
+Jackfruit,Southern Fruits & Veggies,Anuradhapura,116.03,Delivery,A,+94734041225
+Jackfruit,Spice Garden Exports,Ratnapura,389.98,Delivery,B,+94738265909
+Orange,Southern Fruits & Veggies,Puttalam,320.56,Pickup,C,+94700578321
+Orange,Sunripe Fruits,Galle,170.61,Courier,B,+94721029000
+Orange,Spice Garden Exports,Colombo,468.01,Courier,C,+94777378735
+Woodapple,Hill Country Harvest,Trincomalee,470.63,Delivery,A,+94711996115
+Woodapple,Farm Direct,Trincomalee,97.52,Pickup,C,+94759835058
+Cherry,Coconut Grove Farms,Matara,121.79,Courier,C,+94762539712
+Cherry,Spice Garden Exports,Puttalam,322.87,Delivery,C,+94749070273
+Cherry,Fresh Picks,Jaffna,95.92,Courier,A,+94709136604
+Durian,Hill Country Harvest,Batticaloa,337.18,Pickup,C,+94723989462
+Durian,Royal Fruit Exports,Kandy,394.98,Delivery,C,+94720473243
+Durian,Green Valley Orchards,Negombo,141.39,Pickup,C,+94777778546
+Apple,Fresh Picks,Badulla,169.71,Pickup,C,+94702870241
+Apple,Exotic Fruits Lanka,Trincomalee,301.5,Pickup,A,+94767281409
+Apple,Eastern Produce Co.,Galle,183.84,Courier,C,+94797745939
+Rambutan,Green Valley Orchards,Negombo,176.96,Delivery,C,+94739901703
+Blueberry,Eastern Produce Co.,Colombo,258.4,Pickup,B,+94727906381
+Blueberry,Southern Fruits & Veggies,Badulla,477.58,Delivery,A,+94780616834
+Blueberry,Jaffna Agro Products,Galle,457.48,Delivery,A,+94717851207
+Lemon,Fresh Picks,Puttalam,416.79,Pickup,B,+94776345719
+Lemon,Golden Mango Traders,Anuradhapura,356.72,Courier,B,+94778845575
+Avocado,Eastern Produce Co.,Puttalam,393.88,Courier,C,+94728634570
+Avocado,Royal Fruit Exports,Batticaloa,497.22,Courier,C,+94762721590
+Custard Apple,Exotic Fruits Lanka,Batticaloa,305.12,Delivery,C,+94735381931
+Custard Apple,Tropical Harvest Co.,Trincomalee,172.45,Courier,A,+94745447857
+Custard Apple,Green Valley Orchards,Galle,421.7,Delivery,C,+94737096765
+Pear,Jaffna Agro Products,Galle,92.66,Pickup,A,+94714935831
+Apple,Coconut Grove Farms,Matara,225.65,Courier,B,+94755314055
+Apple,Farm Direct,Jaffna,174.32,Courier,C,+94742051179
+Apple,Sunripe Fruits,Jaffna,323.9,Pickup,C,+94785117255
+Coconut,Spice Garden Exports,Batticaloa,478.84,Pickup,B,+94725412687
+Coconut,Sunripe Fruits,Jaffna,254.59,Delivery,A,+94728194842
+Guava,Jaffna Agro Products,Kandy,217.02,Delivery,A,+94784422555
+Guava,Island Fresh Produce,Puttalam,131.6,Courier,C,+94765601635
+Guava,Golden Mango Traders,Kurunegala,123.82,Pickup,B,+94742329254
+Guava,Fresh Picks,Kurunegala,323.37,Pickup,B,+94778579672
+Guava,Island Fresh Produce,Anuradhapura,341.55,Courier,C,+94789997242
+Guava,Kandyan Fruits Ltd.,Batticaloa,476.38,Pickup,C,+94749697032
+Guava,Tropical Harvest Co.,Negombo,144.71,Pickup,A,+94797146421
+Cherry,Green Valley Orchards,Ratnapura,418.5,Courier,B,+94754396311
+Cherry,Fresh Picks,Jaffna,297.21,Pickup,B,+94778220836
+Cherry,Tropical Harvest Co.,Ratnapura,465.11,Courier,B,+94716268195
+Cherry,Ceylon Fruit Suppliers,Puttalam,349.71,Delivery,C,+94717815601
+Cherry,Harvest Moon,Colombo,62.45,Delivery,B,+94739912674
+Mangosteen,Royal Fruit Exports,Negombo,382.59,Pickup,C,+94767158469
+Plum,Spice Garden Exports,Galle,396.05,Delivery,C,+94775021582
+Plum,Farm Direct,Kurunegala,170.15,Pickup,B,+94762045709
+Custard Apple,Southern Fruits & Veggies,Ratnapura,128.64,Courier,A,+94744654895
+Custard Apple,Eastern Produce Co.,Anuradhapura,237.4,Pickup,A,+94795942377
+Soursop,Golden Mango Traders,Kandy,279.1,Courier,C,+94758367762
+Soursop,Nature's Bounty,Jaffna,382.45,Courier,A,+94761799929
+Plum,Harvest Moon,Anuradhapura,465.54,Delivery,A,+94744847850
+Plum,Royal Fruit Exports,Puttalam,410.35,Courier,C,+94749379477
+Plum,Tropical Harvest Co.,Negombo,187.45,Delivery,B,+94752700576
+Soursop,Exotic Fruits Lanka,Trincomalee,480.4,Courier,B,+94740633559
+Coconut,Green Valley Orchards,Negombo,267.95,Courier,B,+94736371250
+Coconut,Golden Mango Traders,Negombo,196.99,Courier,B,+94772600664
+Avocado,Green Valley Orchards,Kurunegala,461.67,Courier,C,+94705309320
+Papaya,Organic Lanka,Matara,341.04,Courier,C,+94775528007
+Papaya,Royal Fruit Exports,Anuradhapura,163.58,Delivery,B,+94760001540
+Papaya,Ceylon Fruit Suppliers,Badulla,285.7,Delivery,A,+94740729554
+Woodapple,Harvest Moon,Badulla,162.29,Delivery,A,+94749754867
+Watermelon,Nature's Bounty,Colombo,435.17,Delivery,B,+94798135332
+Custard Apple,Hill Country Harvest,Kurunegala,330.92,Delivery,B,+94715556933
+Custard Apple,Southern Fruits & Veggies,Puttalam,209.85,Courier,A,+94711324356
+Custard Apple,Sunripe Fruits,Matara,194.13,Courier,A,+94789604938
+Woodapple,Coconut Grove Farms,Kurunegala,212.28,Courier,C,+94798228305
+Lychee,Golden Mango Traders,Batticaloa,135.69,Pickup,A,+94789247781
+Orange,Hill Country Harvest,Kandy,235.8,Delivery,A,+94775965542
+Orange,Farm Direct,Jaffna,211.66,Pickup,A,+94711820770
+Orange,Spice Garden Exports,Matara,311.9,Pickup,C,+94770309020
+Beli,Ceylon Fruit Suppliers,Kandy,380.54,Courier,C,+94715523823
+Beli,Kandyan Fruits Ltd.,Kurunegala,108.16,Delivery,C,+94734000861
+Beli,Organic Lanka,Galle,65.06,Courier,A,+94758939923
+Peach,Eastern Produce Co.,Trincomalee,384.57,Delivery,C,+94715462940
+Pomegranate,Jaffna Agro Products,Batticaloa,171.3,Delivery,A,+94775299816
+Pomegranate,Hill Country Harvest,Puttalam,114.43,Pickup,B,+94710722544
+Pomegranate,Harvest Moon,Batticaloa,382.89,Pickup,B,+94722095397
+Blueberry,Southern Fruits & Veggies,Kurunegala,419.02,Courier,A,+94706093293
+Blueberry,Fresh Picks,Puttalam,479.76,Courier,C,+94751576925
+Banana,Golden Mango Traders,Badulla,187.31,Delivery,B,+94742215110
+Banana,Royal Fruit Exports,Trincomalee,163.23,Courier,B,+94757750970
+Banana,Harvest Moon,Matara,321.52,Pickup,C,+94771951920
+Mango,Exotic Fruits Lanka,Matara,270.86,Delivery,B,+94734939244
+Mango,Coconut Grove Farms,Kandy,460.38,Pickup,B,+94799298795
+Mango,Farm Direct,Galle,122.75,Delivery,B,+94794712364
+Mangosteen,Green Valley Orchards,Kurunegala,392.01,Delivery,B,+94706128522
+Mangosteen,Fresh Picks,Galle,274.05,Delivery,B,+94765116158
+Plum,Spice Garden Exports,Ratnapura,493.13,Pickup,A,+94788055174
+Kiwi,Island Fresh Produce,Trincomalee,471.21,Pickup,A,+94728202937
+Grapes,Jaffna Agro Products,Galle,90.78,Courier,A,+94742149169
+Watermelon,Southern Fruits & Veggies,Negombo,119.44,Delivery,C,+94794608273
+Watermelon,Green Valley Orchards,Ratnapura,79.48,Delivery,C,+94796459327
+Watermelon,Coconut Grove Farms,Negombo,371.03,Courier,A,+94719080228
+Coconut,Jaffna Agro Products,Negombo,353.43,Pickup,A,+94754777679
+Durian,Coconut Grove Farms,Kurunegala,226.13,Delivery,C,+94748015226
+Durian,Southern Fruits & Veggies,Jaffna,330.74,Delivery,A,+94787507433
+Mangosteen,Green Valley Orchards,Kandy,335.38,Courier,C,+94784967611
+Blueberry,Spice Garden Exports,Trincomalee,278.91,Delivery,C,+94758216861
+Blueberry,Jaffna Agro Products,Anuradhapura,351.25,Pickup,A,+94770966479
+Coconut,Kandyan Fruits Ltd.,Matara,83.03,Pickup,A,+94717444289
+Mango,Harvest Moon,Jaffna,453.9,Delivery,C,+94736217894
+Mango,Nature's Bounty,Badulla,67.59,Pickup,B,+94764836990
+Mango,Island Fresh Produce,Negombo,378.88,Pickup,B,+94792128491
+Grapes,Farm Direct,Batticaloa,409.98,Delivery,B,+94763622094
+Pear,Sunripe Fruits,Ratnapura,370.82,Pickup,A,+94714947763
+Pear,Green Valley Orchards,Matara,290.83,Delivery,A,+94767619771
+Pear,Kandyan Fruits Ltd.,Negombo,420.26,Pickup,B,+94795258151
+Guava,Eastern Produce Co.,Ratnapura,356.14,Delivery,A,+94791902636
+Mango,Organic Lanka,Trincomalee,493.65,Delivery,A,+94797927691
+Cherry,Exotic Fruits Lanka,Jaffna,121.57,Courier,C,+94706979928
+Coconut,Green Valley Orchards,Batticaloa,386.97,Courier,A,+94781974270
+Avocado,Sunripe Fruits,Badulla,417.71,Pickup,B,+94783501805
+Grapes,Royal Fruit Exports,Puttalam,141.99,Pickup,B,+94721984858
+Grapes,Island Fresh Produce,Batticaloa,424.41,Courier,B,+94796656100
+Grapes,Farm Direct,Colombo,347.99,Courier,C,+94735913989
+Orange,Jaffna Agro Products,Badulla,243.83,Delivery,C,+94746359407
+Durian,Eastern Produce Co.,Negombo,98.31,Pickup,C,+94755680667
+Durian,Harvest Moon,Negombo,254.6,Courier,A,+94730754400
+Durian,Sunripe Fruits,Kurunegala,490.35,Pickup,A,+94741294450
+Apple,Farm Direct,Badulla,448.62,Courier,A,+94735560904
+Apple,Eastern Produce Co.,Kurunegala,86.45,Delivery,A,+94744931919
+Guava,Southern Fruits & Veggies,Kandy,486.04,Courier,C,+94756619059
+Pineapple,Harvest Moon,Trincomalee,314.91,Courier,B,+94712872233
+Pineapple,Hill Country Harvest,Puttalam,58.26,Courier,C,+94769352225
+Pineapple,Ceylon Fruit Suppliers,Batticaloa,203.83,Delivery,A,+94736337326
+Avocado,Organic Lanka,Ratnapura,277.52,Courier,C,+94789967545
+Avocado,Golden Mango Traders,Ratnapura,82.28,Delivery,B,+94713792686
+Apple,Green Valley Orchards,Negombo,332.03,Courier,C,+94736594378
+Apple,Fresh Picks,Kandy,179.48,Courier,C,+94772248409
+Kiwi,Organic Lanka,Jaffna,318.23,Delivery,B,+94725100270
+Kiwi,Jaffna Agro Products,Anuradhapura,81.63,Courier,B,+94740148979
+Kiwi,Exotic Fruits Lanka,Ratnapura,357.88,Pickup,C,+94777744192
+Coconut,Fresh Picks,Kurunegala,233.42,Pickup,A,+94749338676
+Coconut,Green Valley Orchards,Colombo,233.72,Courier,A,+94746157336
+Coconut,Organic Lanka,Anuradhapura,427.97,Courier,C,+94765631665
+Kiwi,Tropical Harvest Co.,Badulla,246.12,Pickup,A,+94773050721
+Kiwi,Royal Fruit Exports,Jaffna,476.68,Pickup,C,+94762036305
+Orange,Farm Direct,Batticaloa,245.62,Delivery,B,+94706257192
+Orange,Spice Garden Exports,Jaffna,306.93,Courier,C,+94756968713
+Blueberry,Nature's Bounty,Puttalam,341.43,Courier,C,+94742400186
+Blueberry,Ceylon Fruit Suppliers,Badulla,172.33,Pickup,C,+94747095519
+Blueberry,Farm Direct,Trincomalee,243.69,Courier,C,+94756382877
+Strawberry,Kandyan Fruits Ltd.,Jaffna,458.48,Delivery,C,+94768584226
+Strawberry,Southern Fruits & Veggies,Galle,79.74,Pickup,A,+94762591164
+Ambarella,Hill Country Harvest,Kandy,78.08,Delivery,B,+94781161510
+Ambarella,Golden Mango Traders,Kurunegala,233.59,Delivery,A,+94787485600
+Ambarella,Ceylon Fruit Suppliers,Galle,428.15,Courier,A,+94780775031
+Watermelon,Green Valley Orchards,Galle,210.44,Courier,A,+94788172177
+Strawberry,Hill Country Harvest,Ratnapura,315.21,Delivery,A,+94793536093
+Cherry,Farm Direct,Jaffna,63.38,Courier,B,+94778705276
+Cherry,Green Valley Orchards,Jaffna,186.19,Courier,A,+94736990289
+Rambutan,Coconut Grove Farms,Kandy,485.07,Pickup,C,+94709392992
+Plum,Jaffna Agro Products,Ratnapura,153.06,Pickup,C,+94777959844
+Plum,Organic Lanka,Kurunegala,118.1,Courier,A,+94711025845
+Plum,Farm Direct,Negombo,125.77,Delivery,B,+94777182600
+Pear,Southern Fruits & Veggies,Matara,52.15,Pickup,B,+94776024750
+Avocado,Farm Direct,Jaffna,485.16,Delivery,A,+94784877898
+Watermelon,Green Valley Orchards,Anuradhapura,103.85,Delivery,A,+94779214407
+Durian,Exotic Fruits Lanka,Colombo,332.58,Courier,A,+94788688361
+Durian,Hill Country Harvest,Colombo,395.03,Pickup,A,+94729504918
+Durian,Spice Garden Exports,Batticaloa,476.39,Pickup,B,+94708315785
+Pineapple,Eastern Produce Co.,Ratnapura,250.42,Pickup,A,+94791678063
+Custard Apple,Ceylon Fruit Suppliers,Batticaloa,414.82,Delivery,A,+94746186722
+Custard Apple,Jaffna Agro Products,Jaffna,187.5,Pickup,B,+94719387480
+Custard Apple,Southern Fruits & Veggies,Galle,407.1,Courier,A,+94776604916
+Pineapple,Jaffna Agro Products,Jaffna,273.55,Pickup,B,+94720276256
+Pineapple,Royal Fruit Exports,Batticaloa,60.13,Pickup,B,+94781098365
+Pineapple,Hill Country Harvest,Kandy,280.88,Pickup,A,+94708318242
+Soursop,Exotic Fruits Lanka,Batticaloa,488.2,Delivery,A,+94709385384
+Soursop,Spice Garden Exports,Jaffna,407.71,Pickup,B,+94745474065
+Blueberry,Jaffna Agro Products,Galle,430.02,Delivery,B,+94722340566
+Cherry,Hill Country Harvest,Kurunegala,152.61,Delivery,B,+94721440880
+Lemon,Royal Fruit Exports,Badulla,208.04,Courier,A,+94792944507
+Lychee,Royal Fruit Exports,Matara,235.56,Pickup,B,+94778640576
+Lychee,Southern Fruits & Veggies,Badulla,87.99,Delivery,C,+94788156328
+Guava,Royal Fruit Exports,Matara,129.58,Pickup,B,+94795259262
+Guava,Coconut Grove Farms,Galle,222.11,Pickup,C,+94717136545
+Guava,Spice Garden Exports,Ratnapura,252.02,Pickup,B,+94771920792
+Peach,Ceylon Fruit Suppliers,Kandy,186.99,Delivery,A,+94789541915
+Peach,Kandyan Fruits Ltd.,Batticaloa,346.89,Courier,C,+94750135430
+Peach,Coconut Grove Farms,Galle,351.08,Delivery,B,+94788102583
+Lychee,Golden Mango Traders,Negombo,192.56,Pickup,A,+94704339565
+Lychee,Tropical Harvest Co.,Negombo,291.66,Courier,B,+94771708760
+Lychee,Exotic Fruits Lanka,Galle,176.78,Pickup,A,+94703386803
+Soursop,Organic Lanka,Negombo,167.74,Delivery,A,+94727810928
+Soursop,Farm Direct,Matara,402.26,Pickup,B,+94715238139
+Rambutan,Farm Direct,Batticaloa,245.58,Pickup,C,+94786227338
+Rambutan,Ceylon Fruit Suppliers,Galle,178.17,Pickup,B,+94797624387
+Rambutan,Harvest Moon,Kandy,350.78,Pickup,B,+94782715537
+Lemon,Kandyan Fruits Ltd.,Anuradhapura,405.37,Courier,C,+94723924622
+Kiwi,Royal Fruit Exports,Jaffna,496.31,Pickup,A,+94749905846
+Kiwi,Golden Mango Traders,Negombo,325.16,Courier,C,+94783993586
+Orange,Southern Fruits & Veggies,Kurunegala,342.39,Pickup,C,+94727775195
+Durian,Ceylon Fruit Suppliers,Colombo,288.09,Courier,B,+94758342652
+Durian,Green Valley Orchards,Matara,408.84,Delivery,A,+94744012950
+Durian,Golden Mango Traders,Kurunegala,398.96,Courier,A,+94747936320
+Ambarella,Jaffna Agro Products,Puttalam,93.51,Courier,A,+94755153711
+Ambarella,Farm Direct,Anuradhapura,408.77,Pickup,C,+94703886565
+Banana,Hill Country Harvest,Badulla,475.52,Delivery,B,+94778076721
+Orange,Farm Direct,Ratnapura,219.87,Courier,C,+94733000556
+Orange,Exotic Fruits Lanka,Trincomalee,203.03,Delivery,A,+94730791561
+Orange,Jaffna Agro Products,Anuradhapura,457.0,Pickup,C,+94712269021
+Pear,Island Fresh Produce,Kandy,96.57,Delivery,A,+94712694202
+Pear,Green Valley Orchards,Matara,438.45,Delivery,C,+94711703216
+Pear,Southern Fruits & Veggies,Negombo,469.52,Courier,A,+94762672805
+Grapes,Hill Country Harvest,Anuradhapura,332.31,Delivery,A,+94776406120
+Grapes,Fresh Picks,Matara,243.92,Pickup,C,+94799169890
+Grapes,Southern Fruits & Veggies,Anuradhapura,418.1,Pickup,B,+94732009637
+Lychee,Sunripe Fruits,Kandy,295.78,Courier,B,+94724967329
+Lychee,Golden Mango Traders,Negombo,197.02,Delivery,B,+94794666320
+Lychee,Royal Fruit Exports,Jaffna,166.73,Courier,C,+94797449293
+Kiwi,Jaffna Agro Products,Kurunegala,457.28,Pickup,B,+94775495251
+Kiwi,Royal Fruit Exports,Badulla,172.81,Courier,A,+94799235049
+Peach,Golden Mango Traders,Jaffna,375.65,Delivery,B,+94723610839
+Mangosteen,Southern Fruits & Veggies,Kandy,91.89,Pickup,C,+94723511534
+Lychee,Southern Fruits & Veggies,Ratnapura,402.87,Pickup,C,+94775803346
+Lychee,Tropical Harvest Co.,Jaffna,436.24,Courier,B,+94754743865
+Lychee,Jaffna Agro Products,Trincomalee,307.75,Courier,B,+94781607847
+Orange,Exotic Fruits Lanka,Anuradhapura,239.3,Pickup,A,+94729224188
+Orange,Golden Mango Traders,Galle,153.87,Delivery,C,+94772703050
+Orange,Jaffna Agro Products,Kandy,324.51,Delivery,B,+94740294631
+Pineapple,Organic Lanka,Batticaloa,489.13,Courier,C,+94775298930
+Pineapple,Nature's Bounty,Anuradhapura,443.3,Delivery,A,+94742728398
+Pineapple,Fresh Picks,Matara,156.95,Courier,A,+94771994331
+Soursop,Southern Fruits & Veggies,Matara,147.69,Delivery,A,+94770457219
+Soursop,Sunripe Fruits,Colombo,104.5,Courier,A,+94773769442
+Soursop,Nature's Bounty,Puttalam,305.15,Courier,B,+94784207497
+Durian,Nature's Bounty,Kandy,481.0,Delivery,B,+94738404683
+Durian,Southern Fruits & Veggies,Galle,426.48,Courier,C,+94798058663
+Apple,Golden Mango Traders,Jaffna,227.54,Pickup,A,+94734847298
+Apple,Exotic Fruits Lanka,Puttalam,242.15,Pickup,A,+94719765517
+Apple,Nature's Bounty,Jaffna,461.66,Pickup,A,+94790532731
+Jackfruit,Organic Lanka,Trincomalee,371.64,Pickup,B,+94747577416
+Jackfruit,Coconut Grove Farms,Galle,445.79,Delivery,A,+94787358552
+Jackfruit,Southern Fruits & Veggies,Badulla,311.57,Pickup,B,+94789990266
+Woodapple,Royal Fruit Exports,Galle,248.79,Pickup,B,+94751767968
+Coconut,Sunripe Fruits,Puttalam,489.2,Delivery,C,+94763813181
+Plum,Southern Fruits & Veggies,Puttalam,155.73,Delivery,A,+94795070645
+Plum,Coconut Grove Farms,Badulla,387.02,Pickup,A,+94745128937
+Plum,Sunripe Fruits,Colombo,423.85,Delivery,A,+94762930618
+Peach,Harvest Moon,Matara,470.87,Pickup,A,+94741430315
+Peach,Eastern Produce Co.,Batticaloa,192.71,Courier,A,+94738820465
+Peach,Exotic Fruits Lanka,Ratnapura,196.17,Courier,A,+94760838209
+Coconut,Farm Direct,Jaffna,435.5,Courier,A,+94709999677
+Soursop,Golden Mango Traders,Trincomalee,231.62,Delivery,A,+94789662363
+Soursop,Jaffna Agro Products,Colombo,256.04,Pickup,C,+94793029410
+Soursop,Exotic Fruits Lanka,Badulla,283.41,Delivery,A,+94766945689
+Durian,Harvest Moon,Trincomalee,227.43,Pickup,A,+94788507129
+Papaya,Sunripe Fruits,Jaffna,383.8,Delivery,A,+94740140422
+Papaya,Golden Mango Traders,Batticaloa,234.87,Pickup,B,+94721165174
+Pomegranate,Royal Fruit Exports,Matara,352.93,Pickup,C,+94784240779
+Blueberry,Coconut Grove Farms,Jaffna,194.23,Pickup,B,+94745364736
+Blueberry,Tropical Harvest Co.,Kandy,262.92,Delivery,B,+94780739708
+Pomegranate,Royal Fruit Exports,Matara,420.8,Delivery,C,+94728963355
+Papaya,Coconut Grove Farms,Ratnapura,464.08,Delivery,C,+94760031690
+Papaya,Sunripe Fruits,Galle,343.87,Pickup,A,+94771092211
+Avocado,Exotic Fruits Lanka,Galle,471.9,Delivery,C,+94747050727
+Avocado,Kandyan Fruits Ltd.,Batticaloa,444.83,Pickup,A,+94734867519
+Avocado,Spice Garden Exports,Galle,410.13,Delivery,B,+94728665974
+Peach,Exotic Fruits Lanka,Batticaloa,327.64,Courier,C,+94792229924
+Blueberry,Green Valley Orchards,Trincomalee,147.36,Delivery,A,+94771063701
+Blueberry,Eastern Produce Co.,Colombo,243.59,Courier,A,+94769329176
+Pineapple,Harvest Moon,Negombo,360.71,Delivery,A,+94780893179
+Pineapple,Jaffna Agro Products,Jaffna,350.42,Pickup,B,+94737546385
+Strawberry,Island Fresh Produce,Galle,481.92,Pickup,C,+94709250012
+Guava,Harvest Moon,Kandy,181.93,Pickup,C,+94785426502
+Apple,Eastern Produce Co.,Negombo,401.55,Delivery,B,+94724760648
+Plum,Golden Mango Traders,Kurunegala,205.58,Courier,A,+94776676398
+Mango,Eastern Produce Co.,Anuradhapura,158.49,Courier,A,+94717290350
+Mango,Sunripe Fruits,Kurunegala,138.9,Pickup,A,+94772228992
+Mango,Hill Country Harvest,Batticaloa,277.3,Pickup,A,+94770942042
+Apple,Kandyan Fruits Ltd.,Ratnapura,409.33,Courier,C,+94796008873
+Apple,Eastern Produce Co.,Anuradhapura,228.0,Delivery,A,+94765725056
+Apple,Harvest Moon,Colombo,354.27,Courier,B,+94710128299
+Pomegranate,Nature's Bounty,Trincomalee,144.11,Courier,A,+94754506250
+Pomegranate,Spice Garden Exports,Badulla,127.49,Courier,C,+94782259342
+Kiwi,Tropical Harvest Co.,Negombo,361.3,Pickup,A,+94748678740
+Kiwi,Green Valley Orchards,Kurunegala,56.1,Delivery,B,+94761366984
+Lemon,Southern Fruits & Veggies,Kurunegala,188.73,Pickup,B,+94712337191
+Lemon,Green Valley Orchards,Kandy,174.07,Delivery,C,+94728702857
+Lemon,Harvest Moon,Matara,363.41,Courier,B,+94767183190
+Coconut,Kandyan Fruits Ltd.,Puttalam,60.06,Delivery,A,+94790486004
+Coconut,Tropical Harvest Co.,Negombo,129.24,Delivery,C,+94792365663
+Coconut,Green Valley Orchards,Negombo,408.84,Pickup,C,+94788517311
+Lemon,Farm Direct,Kandy,365.44,Delivery,B,+94798225540
+Lemon,Harvest Moon,Matara,368.87,Courier,B,+94755974135
+Durian,Eastern Produce Co.,Badulla,370.73,Delivery,A,+94790550205
+Durian,Kandyan Fruits Ltd.,Colombo,165.51,Delivery,C,+94714131620
+Rambutan,Royal Fruit Exports,Negombo,356.76,Pickup,A,+94783351198
+Rambutan,Kandyan Fruits Ltd.,Ratnapura,480.55,Courier,B,+94779232214
+Rambutan,Ceylon Fruit Suppliers,Puttalam,220.94,Pickup,B,+94714688595
+Strawberry,Harvest Moon,Negombo,252.76,Pickup,B,+94708386227
+Strawberry,Fresh Picks,Ratnapura,153.56,Courier,C,+94733687885
+Strawberry,Golden Mango Traders,Anuradhapura,111.16,Courier,A,+94703456446
+Mango,Farm Direct,Ratnapura,142.99,Delivery,B,+94758925621
+Mango,Southern Fruits & Veggies,Matara,60.63,Delivery,B,+94739212613
+Mango,Exotic Fruits Lanka,Badulla,338.09,Pickup,B,+94775293012
+Woodapple,Spice Garden Exports,Badulla,76.22,Pickup,A,+94795662259
+Woodapple,Ceylon Fruit Suppliers,Matara,211.61,Delivery,C,+94787995213
+Pear,Southern Fruits & Veggies,Kandy,474.18,Courier,B,+94786661792
+Pear,Farm Direct,Batticaloa,479.78,Pickup,A,+94746170782
+Peach,Royal Fruit Exports,Matara,202.95,Pickup,C,+94792547357
+Peach,Sunripe Fruits,Negombo,162.18,Courier,C,+94721887215
+Guava,Sunripe Fruits,Ratnapura,230.73,Courier,A,+94703945976
+Avocado,Exotic Fruits Lanka,Trincomalee,141.43,Delivery,C,+94749928065
+Durian,Southern Fruits & Veggies,Negombo,130.65,Courier,B,+94788422365
+Durian,Ceylon Fruit Suppliers,Negombo,119.87,Pickup,B,+94737658839
+Grapes,Sunripe Fruits,Puttalam,229.77,Courier,A,+94779009608
+Grapes,Harvest Moon,Anuradhapura,116.85,Courier,B,+94714722711
+Grapes,Kandyan Fruits Ltd.,Anuradhapura,60.36,Courier,A,+94793615725
+Jackfruit,Eastern Produce Co.,Jaffna,372.61,Delivery,C,+94722277003
+Beli,Exotic Fruits Lanka,Trincomalee,412.13,Delivery,C,+94776740092
+Beli,Coconut Grove Farms,Galle,66.02,Delivery,B,+94722491160
+Strawberry,Hill Country Harvest,Badulla,483.44,Courier,C,+94727737714
+Strawberry,Harvest Moon,Galle,464.79,Delivery,C,+94706094980
+Cherry,Fresh Picks,Kurunegala,81.52,Pickup,A,+94781886178
+Cherry,Harvest Moon,Kandy,198.78,Pickup,C,+94722242741
+Cherry,Southern Fruits & Veggies,Negombo,348.86,Pickup,B,+94778102801
+Watermelon,Nature's Bounty,Jaffna,325.49,Pickup,A,+94766441472
+Rambutan,Tropical Harvest Co.,Kandy,351.38,Courier,B,+94745995430
+Rambutan,Organic Lanka,Anuradhapura,129.28,Delivery,A,+94765488665
+Rambutan,Farm Direct,Jaffna,246.64,Courier,B,+94713586988
+Coconut,Southern Fruits & Veggies,Colombo,222.57,Pickup,B,+94772325738
+Pomegranate,Harvest Moon,Trincomalee,55.87,Delivery,B,+94719143562
+Blueberry,Spice Garden Exports,Batticaloa,411.68,Pickup,C,+94795068709
+Blueberry,Harvest Moon,Trincomalee,492.69,Delivery,B,+94789107987
+Rambutan,Green Valley Orchards,Matara,336.25,Courier,B,+94735849660
+Grapes,Sunripe Fruits,Puttalam,243.67,Courier,B,+94712680265
+Grapes,Coconut Grove Farms,Matara,152.53,Pickup,A,+94710450687
+Strawberry,Golden Mango Traders,Galle,266.49,Delivery,B,+94731940471
+Mangosteen,Organic Lanka,Colombo,490.58,Courier,A,+94752861812
+Mangosteen,Kandyan Fruits Ltd.,Ratnapura,112.22,Courier,A,+94781438412
+Lemon,Exotic Fruits Lanka,Colombo,286.55,Pickup,C,+94796809843
+Lemon,Spice Garden Exports,Puttalam,262.72,Delivery,A,+94779987581
+Coconut,Sunripe Fruits,Galle,193.26,Delivery,C,+94718326935
+Orange,Sunripe Fruits,Batticaloa,137.16,Delivery,A,+94792108168
+Orange,Ceylon Fruit Suppliers,Ratnapura,94.26,Pickup,B,+94771746687
+Orange,Nature's Bounty,Jaffna,171.28,Delivery,B,+94725676233
+Custard Apple,Island Fresh Produce,Galle,315.59,Delivery,B,+94771375792
+Custard Apple,Southern Fruits & Veggies,Batticaloa,116.84,Delivery,C,+94785841027
+Grapes,Coconut Grove Farms,Kurunegala,196.6,Delivery,C,+94757279532
+Grapes,Kandyan Fruits Ltd.,Batticaloa,312.01,Courier,C,+94775162962
+Woodapple,Harvest Moon,Trincomalee,203.65,Courier,B,+94779000097
+Woodapple,Ceylon Fruit Suppliers,Batticaloa,396.56,Courier,C,+94768263868
+Woodapple,Hill Country Harvest,Colombo,158.28,Pickup,A,+94702558936
+Pomegranate,Coconut Grove Farms,Matara,205.51,Delivery,A,+94764527439
+Pomegranate,Golden Mango Traders,Matara,386.93,Delivery,B,+94700167524
+Cherry,Fresh Picks,Jaffna,70.49,Pickup,C,+94755888934
+Cherry,Sunripe Fruits,Kurunegala,161.5,Delivery,C,+94779183810
+Cherry,Ceylon Fruit Suppliers,Kandy,176.06,Delivery,C,+94738785096
+Pomegranate,Fresh Picks,Matara,469.31,Delivery,A,+94767121073
+Papaya,Nature's Bounty,Colombo,54.61,Courier,C,+94733619591
+Papaya,Jaffna Agro Products,Colombo,278.62,Delivery,C,+94715296485
+Jackfruit,Fresh Picks,Badulla,96.51,Pickup,B,+94742147883
+Jackfruit,Southern Fruits & Veggies,Colombo,465.16,Pickup,C,+94797361898
+Coconut,Ceylon Fruit Suppliers,Ratnapura,227.21,Pickup,C,+94713718219
+Coconut,Farm Direct,Puttalam,484.89,Delivery,C,+94757929173
+Rambutan,Golden Mango Traders,Kurunegala,190.19,Courier,A,+94774644796
+Rambutan,Exotic Fruits Lanka,Batticaloa,128.77,Pickup,C,+94744193673
+Rambutan,Kandyan Fruits Ltd.,Matara,199.75,Delivery,B,+94761575847
+Apple,Exotic Fruits Lanka,Kandy,139.56,Pickup,B,+94742676485
+Apple,Tropical Harvest Co.,Galle,159.53,Pickup,A,+94757607076
+Mango,Sunripe Fruits,Matara,417.43,Pickup,C,+94766876604
+Pomegranate,Organic Lanka,Kurunegala,337.71,Delivery,A,+94723625128
+Pomegranate,Coconut Grove Farms,Ratnapura,337.88,Pickup,B,+94746866504
+Pomegranate,Hill Country Harvest,Jaffna,289.1,Pickup,B,+94767525327
+Woodapple,Southern Fruits & Veggies,Jaffna,256.05,Delivery,C,+94789149858
+Strawberry,Kandyan Fruits Ltd.,Puttalam,421.8,Pickup,B,+94792222458
+Strawberry,Eastern Produce Co.,Matara,499.24,Pickup,A,+94737187080
+Strawberry,Coconut Grove Farms,Puttalam,408.36,Courier,C,+94775398631
+Plum,Hill Country Harvest,Puttalam,58.23,Delivery,C,+94752857590
+Plum,Golden Mango Traders,Trincomalee,171.55,Delivery,B,+94764967403
+Apple,Kandyan Fruits Ltd.,Colombo,482.51,Pickup,C,+94705852092
+Pear,Royal Fruit Exports,Negombo,417.83,Courier,B,+94771445579
+Pomegranate,Kandyan Fruits Ltd.,Batticaloa,281.68,Delivery,B,+94735318528
+Woodapple,Coconut Grove Farms,Matara,173.38,Pickup,B,+94799919418
+Woodapple,Farm Direct,Colombo,468.29,Delivery,C,+94760900417
+Lemon,Jaffna Agro Products,Anuradhapura,453.51,Pickup,C,+94743170557
+Lemon,Kandyan Fruits Ltd.,Matara,393.65,Courier,A,+94700568647
+Kiwi,Spice Garden Exports,Matara,375.24,Delivery,C,+94740833646
+Kiwi,Organic Lanka,Negombo,70.81,Delivery,C,+94732339812
+Orange,Southern Fruits & Veggies,Matara,310.68,Pickup,B,+94740814046
+Lemon,Farm Direct,Colombo,250.16,Delivery,A,+94711844088
+Lemon,Southern Fruits & Veggies,Colombo,69.98,Courier,C,+94785402987
+Banana,Farm Direct,Galle,55.32,Courier,B,+94726247597
+Banana,Coconut Grove Farms,Galle,243.67,Courier,A,+94738653480
+Banana,Exotic Fruits Lanka,Galle,104.56,Pickup,B,+94766873049
+Grapes,Organic Lanka,Colombo,224.29,Courier,A,+94729893476
+Grapes,Harvest Moon,Batticaloa,159.13,Delivery,B,+94771483188
+Peach,Fresh Picks,Anuradhapura,419.06,Pickup,B,+94707280932
+Peach,Eastern Produce Co.,Kurunegala,415.26,Delivery,B,+94717529603
+Peach,Jaffna Agro Products,Kandy,240.86,Pickup,B,+94718224429
+Cherry,Green Valley Orchards,Puttalam,457.73,Pickup,A,+94701399103
+Cherry,Ceylon Fruit Suppliers,Colombo,281.42,Courier,B,+94715412167
+Cherry,Spice Garden Exports,Jaffna,484.92,Delivery,C,+94715711944
+Rambutan,Organic Lanka,Ratnapura,461.45,Pickup,C,+94729846522
+Banana,Island Fresh Produce,Jaffna,344.11,Delivery,C,+94706798931
+Pineapple,Exotic Fruits Lanka,Trincomalee,66.53,Pickup,B,+94707091393
+Pineapple,Nature's Bounty,Anuradhapura,287.06,Pickup,B,+94789616395
+Pineapple,Organic Lanka,Matara,321.67,Delivery,A,+94777532827
+Pear,Royal Fruit Exports,Negombo,400.35,Courier,B,+94751151003
+Pear,Fresh Picks,Matara,143.69,Courier,C,+94738045232
+Lemon,Spice Garden Exports,Ratnapura,440.16,Courier,B,+94718891588
+Lemon,Coconut Grove Farms,Galle,194.97,Delivery,A,+94735548084
+Lemon,Nature's Bounty,Kurunegala,87.68,Delivery,C,+94761485268
+Lemon,Fresh Picks,Ratnapura,378.59,Pickup,B,+94784307703
+Orange,Hill Country Harvest,Negombo,211.97,Delivery,C,+94755087399
+Orange,Green Valley Orchards,Puttalam,294.44,Delivery,C,+94766763243
+Orange,Coconut Grove Farms,Puttalam,235.41,Delivery,B,+94714849474
+Beli,Island Fresh Produce,Batticaloa,314.44,Delivery,A,+94763090770
+Beli,Kandyan Fruits Ltd.,Ratnapura,384.86,Courier,A,+94727407536
+Beli,Royal Fruit Exports,Kurunegala,487.51,Pickup,B,+94791697631
+Lemon,Hill Country Harvest,Negombo,450.51,Courier,C,+94776026556
+Lemon,Exotic Fruits Lanka,Jaffna,135.62,Courier,A,+94720500189
+Watermelon,Golden Mango Traders,Badulla,114.35,Delivery,A,+94702599512
+Watermelon,Organic Lanka,Trincomalee,492.51,Courier,A,+94726532284
+Kiwi,Southern Fruits & Veggies,Puttalam,267.83,Courier,A,+94716033230
+Soursop,Green Valley Orchards,Ratnapura,92.78,Pickup,C,+94732098179
+Soursop,Harvest Moon,Colombo,491.67,Courier,A,+94702478273
+Soursop,Southern Fruits & Veggies,Puttalam,436.52,Courier,C,+94758091213
+Guava,Green Valley Orchards,Puttalam,250.37,Delivery,A,+94718948754
+Guava,Eastern Produce Co.,Puttalam,167.62,Courier,C,+94703800251
+Coconut,Island Fresh Produce,Batticaloa,135.85,Delivery,A,+94787367386
+Coconut,Royal Fruit Exports,Negombo,204.48,Courier,A,+94784225060
+Apple,Ceylon Fruit Suppliers,Batticaloa,295.76,Pickup,C,+94704371822
+Apple,Sunripe Fruits,Ratnapura,192.02,Delivery,B,+94791400713
+Apple,Organic Lanka,Puttalam,189.46,Delivery,B,+94751046494
+Watermelon,Coconut Grove Farms,Matara,187.15,Pickup,B,+94735630887
+Orange,Nature's Bounty,Batticaloa,437.27,Courier,C,+94789965215
+Orange,Green Valley Orchards,Colombo,109.47,Courier,A,+94774566129
+Mango,Tropical Harvest Co.,Jaffna,454.78,Courier,C,+94734008990
+Mango,Spice Garden Exports,Negombo,168.36,Pickup,C,+94709126579
+Orange,Harvest Moon,Kurunegala,131.49,Delivery,A,+94742736179
+Orange,Nature's Bounty,Ratnapura,239.27,Delivery,A,+94717937364
+Orange,Golden Mango Traders,Jaffna,120.54,Pickup,A,+94772213999
+Pomegranate,Island Fresh Produce,Negombo,107.3,Delivery,C,+94709485551
+Pomegranate,Fresh Picks,Galle,134.23,Delivery,C,+94713776244
+Pomegranate,Golden Mango Traders,Galle,205.42,Pickup,A,+94757261807
+Grapes,Ceylon Fruit Suppliers,Kurunegala,100.9,Pickup,C,+94725996386
+Mango,Organic Lanka,Galle,76.56,Courier,C,+94705363401
+Blueberry,Eastern Produce Co.,Jaffna,88.82,Pickup,A,+94762113226
+Blueberry,Harvest Moon,Anuradhapura,352.34,Delivery,C,+94703419946
+Papaya,Jaffna Agro Products,Jaffna,115.41,Courier,B,+94732754581
+Kiwi,Hill Country Harvest,Kurunegala,483.25,Delivery,C,+94760132850
+Guava,Royal Fruit Exports,Galle,104.79,Delivery,C,+94710923039
+Banana,Exotic Fruits Lanka,Negombo,167.12,Courier,A,+94703729773
+Banana,Green Valley Orchards,Batticaloa,244.54,Pickup,C,+94775933271
+Rambutan,Nature's Bounty,Matara,273.4,Delivery,B,+94795650202
+Pomegranate,Sunripe Fruits,Kurunegala,437.52,Delivery,C,+94777668552
+Pomegranate,Royal Fruit Exports,Matara,430.39,Courier,B,+94776238914
+Cherry,Tropical Harvest Co.,Anuradhapura,326.21,Delivery,B,+94777347290
+Cherry,Farm Direct,Galle,183.66,Pickup,B,+94703978130
+Cherry,Jaffna Agro Products,Kurunegala,208.24,Courier,A,+94741728601
+Blueberry,Spice Garden Exports,Anuradhapura,260.16,Delivery,C,+94747328077
+Guava,Spice Garden Exports,Kurunegala,283.68,Pickup,A,+94762691539
+Grapes,Ceylon Fruit Suppliers,Trincomalee,284.97,Courier,C,+94777308509
+Grapes,Southern Fruits & Veggies,Anuradhapura,108.56,Pickup,B,+94793996263
+Orange,Ceylon Fruit Suppliers,Galle,98.48,Delivery,C,+94725041800
+Pineapple,Eastern Produce Co.,Anuradhapura,348.53,Delivery,A,+94711735658
+Blueberry,Island Fresh Produce,Colombo,275.11,Delivery,A,+94769208868
+Blueberry,Eastern Produce Co.,Ratnapura,77.14,Courier,B,+94770323890
+Grapes,Jaffna Agro Products,Negombo,348.07,Courier,C,+94783584908
+Grapes,Nature's Bounty,Ratnapura,264.3,Courier,A,+94797557345
+Grapes,Harvest Moon,Matara,258.54,Delivery,C,+94742413327
+Avocado,Spice Garden Exports,Matara,229.45,Courier,B,+94761771718
+Avocado,Island Fresh Produce,Negombo,142.78,Courier,B,+94722788208
+Apple,Ceylon Fruit Suppliers,Jaffna,265.84,Pickup,A,+94796055595
+Apple,Jaffna Agro Products,Puttalam,251.38,Pickup,C,+94738224245
+Apple,Harvest Moon,Matara,388.58,Delivery,B,+94778438202
+Lychee,Ceylon Fruit Suppliers,Matara,266.58,Pickup,B,+94770257564
+Lychee,Hill Country Harvest,Batticaloa,386.06,Courier,A,+94786193235
+Pomegranate,Farm Direct,Negombo,94.53,Pickup,A,+94711326587
+Pomegranate,Ceylon Fruit Suppliers,Batticaloa,209.48,Delivery,A,+94787400454
+Ambarella,Kandyan Fruits Ltd.,Jaffna,265.92,Pickup,A,+94707821485
+Ambarella,Coconut Grove Farms,Galle,459.71,Courier,C,+94790210089
+Ambarella,Jaffna Agro Products,Trincomalee,344.0,Delivery,A,+94757630662
+Woodapple,Spice Garden Exports,Kandy,126.52,Delivery,A,+94736674187
+Woodapple,Harvest Moon,Puttalam,134.16,Delivery,C,+94709164796
+Woodapple,Jaffna Agro Products,Trincomalee,393.99,Delivery,C,+94710285566
+Beli,Exotic Fruits Lanka,Batticaloa,309.19,Pickup,B,+94768881627
+Beli,Coconut Grove Farms,Jaffna,433.29,Courier,A,+94768930764
+Strawberry,Fresh Picks,Kandy,414.74,Pickup,B,+94713678844
+Jackfruit,Kandyan Fruits Ltd.,Matara,468.72,Delivery,A,+94700185288
+Soursop,Golden Mango Traders,Anuradhapura,288.68,Pickup,B,+94736162608
+Soursop,Exotic Fruits Lanka,Anuradhapura,353.56,Pickup,C,+94707716094
+Soursop,Island Fresh Produce,Jaffna,179.98,Pickup,C,+94796073701
+Custard Apple,Exotic Fruits Lanka,Trincomalee,488.38,Delivery,C,+94789991063
+Custard Apple,Green Valley Orchards,Batticaloa,480.88,Courier,A,+94797274802
+Plum,Kandyan Fruits Ltd.,Matara,297.6,Pickup,A,+94772074848
+Plum,Royal Fruit Exports,Galle,199.42,Delivery,B,+94739913771
+Grapes,Royal Fruit Exports,Anuradhapura,393.38,Pickup,C,+94754947998
+Grapes,Farm Direct,Galle,341.86,Delivery,A,+94774447621
+Grapes,Hill Country Harvest,Kurunegala,168.36,Delivery,A,+94713583535
+Custard Apple,Sunripe Fruits,Kandy,93.23,Pickup,A,+94758449134
+Custard Apple,Exotic Fruits Lanka,Badulla,428.35,Delivery,A,+94780627107
+Custard Apple,Island Fresh Produce,Matara,295.05,Courier,B,+94708904378
+Plum,Jaffna Agro Products,Negombo,488.34,Courier,B,+94751430862
+Plum,Exotic Fruits Lanka,Kandy,328.02,Delivery,B,+94747940189
+Plum,Royal Fruit Exports,Galle,222.64,Delivery,C,+94787383379
+Woodapple,Green Valley Orchards,Jaffna,177.33,Delivery,B,+94735976017
+Pear,Tropical Harvest Co.,Colombo,111.25,Courier,C,+94787921799
+Pear,Sunripe Fruits,Colombo,188.67,Pickup,C,+94713019244
+Pear,Southern Fruits & Veggies,Kurunegala,276.74,Pickup,B,+94724447114
+Strawberry,Sunripe Fruits,Batticaloa,120.97,Courier,C,+94793723876
+Strawberry,Royal Fruit Exports,Puttalam,60.33,Pickup,A,+94743001622
+Strawberry,Exotic Fruits Lanka,Badulla,391.51,Courier,C,+94794797261
+Pear,Farm Direct,Kandy,253.76,Delivery,A,+94714932439
+Mango,Green Valley Orchards,Matara,82.67,Delivery,B,+94731318567
+Mango,Ceylon Fruit Suppliers,Anuradhapura,57.65,Courier,B,+94743736677
+Woodapple,Kandyan Fruits Ltd.,Jaffna,482.1,Delivery,B,+94799372822
+Woodapple,Harvest Moon,Galle,435.62,Pickup,B,+94772748109
+Woodapple,Golden Mango Traders,Anuradhapura,357.68,Pickup,C,+94711382378
+Papaya,Farm Direct,Kurunegala,118.02,Pickup,C,+94749820459
+Papaya,Spice Garden Exports,Matara,78.67,Delivery,A,+94709293632
+Papaya,Sunripe Fruits,Negombo,192.82,Courier,B,+94737822737
+Custard Apple,Jaffna Agro Products,Puttalam,141.58,Courier,C,+94728491566
+Custard Apple,Sunripe Fruits,Puttalam,184.03,Pickup,A,+94714169401
+Custard Apple,Farm Direct,Badulla,146.33,Pickup,A,+94724408192
+Blueberry,Eastern Produce Co.,Trincomalee,198.53,Pickup,C,+94783990013
+Ambarella,Royal Fruit Exports,Badulla,430.87,Delivery,A,+94783576853
+Ambarella,Exotic Fruits Lanka,Kandy,121.72,Pickup,C,+94786630976
+Ambarella,Organic Lanka,Negombo,340.59,Delivery,B,+94780626636
+Banana,Harvest Moon,Kandy,460.22,Pickup,C,+94714802623
+Coconut,Southern Fruits & Veggies,Anuradhapura,457.17,Pickup,A,+94784318157
+Coconut,Harvest Moon,Puttalam,385.18,Pickup,A,+94711872479
+Coconut,Hill Country Harvest,Jaffna,239.77,Courier,B,+94717439637
+Woodapple,Harvest Moon,Matara,107.13,Courier,A,+94771791430
+Woodapple,Organic Lanka,Ratnapura,262.97,Delivery,A,+94757755103
+Woodapple,Island Fresh Produce,Negombo,209.86,Courier,A,+94764331954
+Coconut,Royal Fruit Exports,Ratnapura,443.64,Pickup,B,+94750173479
+Coconut,Coconut Grove Farms,Galle,338.31,Pickup,C,+94752497435
+Banana,Jaffna Agro Products,Puttalam,88.0,Pickup,A,+94739515879
+Banana,Southern Fruits & Veggies,Kandy,309.14,Delivery,C,+94709472703
+Banana,Golden Mango Traders,Negombo,398.85,Courier,B,+94781894868
+Strawberry,Ceylon Fruit Suppliers,Negombo,129.54,Delivery,A,+94715107655
+Woodapple,Fresh Picks,Anuradhapura,160.02,Pickup,A,+94749032435
+Woodapple,Coconut Grove Farms,Negombo,57.33,Delivery,C,+94778284493
+Banana,Kandyan Fruits Ltd.,Batticaloa,411.88,Delivery,C,+94704038845
+Banana,Nature's Bounty,Negombo,167.25,Courier,B,+94705121841
+Banana,Harvest Moon,Trincomalee,297.13,Courier,C,+94713185525
+Banana,Jaffna Agro Products,Puttalam,242.81,Courier,C,+94783117561
+Banana,Organic Lanka,Galle,104.95,Delivery,A,+94714955356
+Banana,Green Valley Orchards,Anuradhapura,377.67,Pickup,A,+94751123534
+Beli,Island Fresh Produce,Negombo,283.92,Pickup,C,+94780033947
+Beli,Farm Direct,Negombo,497.49,Pickup,A,+94748140218
+Papaya,Eastern Produce Co.,Badulla,494.0,Pickup,A,+94787596908
+Custard Apple,Nature's Bounty,Jaffna,447.83,Courier,A,+94779932031
+Custard Apple,Kandyan Fruits Ltd.,Colombo,440.13,Delivery,A,+94715433041
+Avocado,Green Valley Orchards,Negombo,287.28,Courier,C,+94749473581
+Jackfruit,Fresh Picks,Badulla,147.07,Delivery,B,+94786986955
+Grapes,Island Fresh Produce,Matara,437.73,Pickup,B,+94783903213
+Ambarella,Ceylon Fruit Suppliers,Jaffna,392.97,Courier,A,+94751366186
+Ambarella,Golden Mango Traders,Matara,429.03,Delivery,C,+94794141921
+Ambarella,Royal Fruit Exports,Ratnapura,455.17,Pickup,A,+94722979840
+Ambarella,Spice Garden Exports,Badulla,115.11,Pickup,C,+94799166588
+Ambarella,Eastern Produce Co.,Trincomalee,80.83,Courier,A,+94726496593
+Ambarella,Kandyan Fruits Ltd.,Ratnapura,155.56,Delivery,A,+94709599519
+Peach,Nature's Bounty,Matara,393.05,Courier,C,+94751933121
+Kiwi,Golden Mango Traders,Batticaloa,127.55,Delivery,A,+94707681604
+Kiwi,Harvest Moon,Trincomalee,327.83,Pickup,C,+94730612084
+Kiwi,Farm Direct,Jaffna,297.56,Pickup,C,+94747204624
+Lemon,Southern Fruits & Veggies,Batticaloa,204.09,Courier,C,+94770656486
+Avocado,Jaffna Agro Products,Matara,212.37,Courier,C,+94711060832
+Guava,Nature's Bounty,Kurunegala,385.95,Courier,B,+94701477918
+Pear,Fresh Picks,Kurunegala,128.54,Courier,B,+94750420527
+Kiwi,Nature's Bounty,Badulla,66.72,Pickup,C,+94735340601
+Kiwi,Jaffna Agro Products,Puttalam,487.09,Pickup,A,+94752082772
+Soursop,Royal Fruit Exports,Matara,184.94,Delivery,A,+94708637725
+Soursop,Fresh Picks,Puttalam,365.63,Delivery,B,+94787411916
+Soursop,Eastern Produce Co.,Batticaloa,90.46,Pickup,C,+94741402527
+Jackfruit,Southern Fruits & Veggies,Ratnapura,238.82,Courier,C,+94748336823
+Jackfruit,Island Fresh Produce,Colombo,273.57,Courier,B,+94717034768
+Jackfruit,Eastern Produce Co.,Trincomalee,331.16,Pickup,C,+94743839644
+Grapes,Sunripe Fruits,Ratnapura,349.43,Courier,A,+94728677180
+Grapes,Island Fresh Produce,Negombo,234.64,Courier,A,+94750890245
+Grapes,Nature's Bounty,Badulla,114.7,Pickup,A,+94704809369
+Guava,Spice Garden Exports,Matara,247.46,Courier,A,+94759151379
+Guava,Royal Fruit Exports,Jaffna,163.82,Pickup,A,+94735411719
+Lemon,Nature's Bounty,Trincomalee,458.72,Courier,A,+94725877970
+Mango,Kandyan Fruits Ltd.,Anuradhapura,84.67,Pickup,A,+94785567341
+Mango,Island Fresh Produce,Galle,99.38,Courier,A,+94728884725
+Woodapple,Nature's Bounty,Badulla,79.74,Delivery,B,+94788469733
+Custard Apple,Royal Fruit Exports,Batticaloa,183.83,Pickup,A,+94791916908
+Custard Apple,Spice Garden Exports,Matara,297.51,Delivery,B,+94716866531
+Lemon,Ceylon Fruit Suppliers,Colombo,177.72,Delivery,C,+94739013136
+Lychee,Farm Direct,Puttalam,484.42,Courier,B,+94738535917
+Papaya,Hill Country Harvest,Colombo,438.95,Pickup,C,+94744304842
+Cherry,Hill Country Harvest,Puttalam,164.63,Pickup,C,+94753354170
+Cherry,Sunripe Fruits,Galle,296.69,Pickup,A,+94738762783
+Avocado,Sunripe Fruits,Badulla,200.06,Courier,C,+94700716501
+Blueberry,Exotic Fruits Lanka,Colombo,338.49,Courier,C,+94758004444
+Blueberry,Jaffna Agro Products,Colombo,487.88,Pickup,C,+94768871194
+Ambarella,Harvest Moon,Ratnapura,490.4,Courier,C,+94728710347
+Ambarella,Tropical Harvest Co.,Kurunegala,153.0,Delivery,C,+94719617596
+Rambutan,Fresh Picks,Galle,154.75,Pickup,C,+94744374278
+Rambutan,Harvest Moon,Batticaloa,430.46,Courier,A,+94725043519
+Rambutan,Nature's Bounty,Kandy,147.44,Delivery,C,+94712893166
+Papaya,Spice Garden Exports,Colombo,79.24,Courier,C,+94761703618
+Papaya,Nature's Bounty,Trincomalee,53.66,Courier,C,+94791975760
+Papaya,Jaffna Agro Products,Negombo,93.62,Delivery,B,+94702300759
+Watermelon,Jaffna Agro Products,Puttalam,103.91,Delivery,B,+94769146847
+Watermelon,Fresh Picks,Badulla,57.39,Courier,B,+94790601665
+Plum,Organic Lanka,Badulla,102.69,Delivery,B,+94748068126
+Plum,Royal Fruit Exports,Anuradhapura,269.46,Pickup,C,+94749894629
+Orange,Farm Direct,Badulla,212.16,Pickup,C,+94754922956
+Orange,Ceylon Fruit Suppliers,Matara,331.37,Courier,A,+94741837305
+Orange,Fresh Picks,Matara,334.95,Pickup,B,+94719954709
+Watermelon,Exotic Fruits Lanka,Badulla,184.08,Delivery,B,+94794996318
+Watermelon,Island Fresh Produce,Matara,299.27,Pickup,C,+94742312331
+Watermelon,Farm Direct,Kandy,107.18,Pickup,B,+94796992837
+Papaya,Tropical Harvest Co.,Batticaloa,268.9,Pickup,C,+94779474272
+Papaya,Southern Fruits & Veggies,Trincomalee,89.18,Delivery,A,+94715614957
+Cherry,Jaffna Agro Products,Negombo,110.92,Courier,C,+94767064973
+Coconut,Jaffna Agro Products,Badulla,132.37,Pickup,A,+94705876193
+Banana,Hill Country Harvest,Batticaloa,486.46,Delivery,B,+94735246993
+Banana,Exotic Fruits Lanka,Colombo,218.51,Pickup,A,+94785131206
+Avocado,Hill Country Harvest,Anuradhapura,209.16,Courier,B,+94722497478
+Avocado,Spice Garden Exports,Kandy,422.3,Courier,B,+94751493473
+Avocado,Jaffna Agro Products,Kurunegala,418.89,Delivery,A,+94780762101
+Cherry,Green Valley Orchards,Colombo,264.47,Delivery,A,+94775580634
+Coconut,Southern Fruits & Veggies,Anuradhapura,265.73,Courier,B,+94773669185
+Coconut,Coconut Grove Farms,Kandy,274.63,Courier,B,+94769392634
+Coconut,Ceylon Fruit Suppliers,Batticaloa,235.15,Courier,B,+94754518724
+Coconut,Hill Country Harvest,Jaffna,499.68,Courier,A,+94792306718
+Beli,Nature's Bounty,Galle,220.56,Pickup,B,+94722119057
+Beli,Island Fresh Produce,Colombo,462.24,Courier,C,+94701401527
+Beli,Jaffna Agro Products,Trincomalee,459.06,Delivery,B,+94704558842
+Grapes,Harvest Moon,Batticaloa,409.4,Pickup,C,+94721223824
+Grapes,Southern Fruits & Veggies,Badulla,242.93,Delivery,C,+94701872130
+Grapes,Fresh Picks,Trincomalee,485.54,Delivery,B,+94785486170
+Kiwi,Fresh Picks,Anuradhapura,136.45,Delivery,C,+94741446125
+Pomegranate,Harvest Moon,Kurunegala,175.79,Delivery,C,+94761437079
+Grapes,Nature's Bounty,Ratnapura,276.2,Delivery,C,+94797023028
+Grapes,Golden Mango Traders,Jaffna,363.11,Pickup,B,+94780727758
+Grapes,Tropical Harvest Co.,Colombo,283.79,Pickup,A,+94784545464
+Coconut,Green Valley Orchards,Batticaloa,340.36,Courier,B,+94704498307
+Banana,Southern Fruits & Veggies,Negombo,110.36,Courier,A,+94788236528
+Banana,Hill Country Harvest,Ratnapura,273.33,Delivery,B,+94717846993
+Banana,Nature's Bounty,Negombo,139.93,Delivery,C,+94702400532
+Mango,Nature's Bounty,Colombo,103.03,Courier,A,+94735530509
+Mango,Harvest Moon,Batticaloa,246.11,Pickup,B,+94725375454
+Banana,Hill Country Harvest,Kandy,205.86,Delivery,B,+94797372573
+Banana,Nature's Bounty,Anuradhapura,475.04,Pickup,C,+94734482973
+Pomegranate,Spice Garden Exports,Negombo,82.52,Courier,B,+94798625448
+Guava,Exotic Fruits Lanka,Puttalam,312.72,Courier,A,+94706899110
+Guava,Nature's Bounty,Kandy,96.85,Delivery,C,+94718154650
+Guava,Golden Mango Traders,Kurunegala,136.46,Delivery,B,+94796292041
+Guava,Exotic Fruits Lanka,Trincomalee,412.5,Courier,B,+94758528907
+Watermelon,Farm Direct,Badulla,81.27,Courier,B,+94797702802
+Coconut,Spice Garden Exports,Negombo,482.35,Delivery,C,+94710071265
+Plum,Fresh Picks,Badulla,429.88,Pickup,C,+94759005543
+Plum,Organic Lanka,Matara,130.97,Pickup,B,+94767446534
+Papaya,Green Valley Orchards,Matara,460.32,Pickup,C,+94776763988
+Papaya,Farm Direct,Kandy,202.28,Delivery,A,+94761321996
+Papaya,Harvest Moon,Kurunegala,353.93,Delivery,C,+94721041458
+Rambutan,Organic Lanka,Galle,202.16,Pickup,A,+94751973568
+Rambutan,Exotic Fruits Lanka,Negombo,257.6,Delivery,B,+94735559283
+Mango,Fresh Picks,Kurunegala,310.06,Pickup,B,+94781702730
+Mango,Green Valley Orchards,Badulla,236.0,Pickup,C,+94742765985
+Mango,Sunripe Fruits,Kandy,344.51,Pickup,C,+94755985851
+Durian,Spice Garden Exports,Negombo,385.36,Delivery,C,+94778427103
+Durian,Kandyan Fruits Ltd.,Negombo,397.73,Courier,A,+94735208541
+Papaya,Harvest Moon,Trincomalee,109.76,Pickup,C,+94707915544
+Apple,Eastern Produce Co.,Matara,424.71,Courier,C,+94736281133
+Apple,Kandyan Fruits Ltd.,Colombo,118.29,Courier,A,+94774230905
+Apple,Golden Mango Traders,Puttalam,180.03,Courier,C,+94714751782
+Papaya,Tropical Harvest Co.,Kurunegala,487.24,Delivery,C,+94796043390
+Papaya,Farm Direct,Anuradhapura,248.05,Pickup,C,+94765760400
+Papaya,Exotic Fruits Lanka,Kurunegala,346.65,Delivery,B,+94787853538
+Lemon,Fresh Picks,Negombo,452.36,Pickup,A,+94729285067
+Lemon,Harvest Moon,Batticaloa,386.09,Courier,B,+94733184828
+Strawberry,Ceylon Fruit Suppliers,Colombo,462.43,Pickup,C,+94702499071
+Strawberry,Golden Mango Traders,Negombo,398.37,Courier,C,+94713605007
+Strawberry,Sunripe Fruits,Jaffna,489.85,Delivery,B,+94740899471
+Grapes,Farm Direct,Galle,208.16,Pickup,A,+94787931120
+Grapes,Ceylon Fruit Suppliers,Kurunegala,121.38,Courier,C,+94759495955
+Grapes,Coconut Grove Farms,Jaffna,305.3,Pickup,C,+94745781042
+Ambarella,Ceylon Fruit Suppliers,Matara,168.62,Delivery,A,+94788613057
+Ambarella,Harvest Moon,Kandy,352.3,Courier,C,+94705053700
+Ambarella,Sunripe Fruits,Ratnapura,83.34,Courier,C,+94724636735
+Woodapple,Tropical Harvest Co.,Batticaloa,262.94,Delivery,A,+94710235726
+Cherry,Ceylon Fruit Suppliers,Negombo,412.56,Delivery,C,+94778949848
+Cherry,Golden Mango Traders,Anuradhapura,122.99,Delivery,B,+94797918360
+Cherry,Tropical Harvest Co.,Negombo,227.02,Courier,A,+94720518198
+Avocado,Eastern Produce Co.,Ratnapura,311.73,Pickup,B,+94770497962
+Avocado,Harvest Moon,Batticaloa,382.09,Courier,C,+94786372441
+Durian,Green Valley Orchards,Batticaloa,490.67,Courier,A,+94760049514
+Avocado,Eastern Produce Co.,Badulla,272.07,Pickup,A,+94749249913
+Avocado,Spice Garden Exports,Trincomalee,306.22,Delivery,C,+94766506225
+Pear,Coconut Grove Farms,Ratnapura,330.28,Pickup,A,+94760211982
+Pomegranate,Hill Country Harvest,Jaffna,109.31,Delivery,B,+94763655850
+Pomegranate,Jaffna Agro Products,Batticaloa,352.85,Pickup,A,+94781608267
+Pomegranate,Sunripe Fruits,Batticaloa,218.86,Courier,B,+94735083346
+Rambutan,Farm Direct,Galle,134.91,Pickup,A,+94720447721
+Rambutan,Spice Garden Exports,Kandy,142.66,Delivery,C,+94777808752
+Grapes,Spice Garden Exports,Jaffna,386.86,Pickup,A,+94789817021
+Grapes,Golden Mango Traders,Anuradhapura,86.87,Courier,C,+94752622086
+Papaya,Farm Direct,Jaffna,499.74,Delivery,B,+94766041921
+Papaya,Organic Lanka,Jaffna,152.91,Delivery,C,+94752428070
+Papaya,Ceylon Fruit Suppliers,Colombo,499.46,Courier,B,+94793446200
+Custard Apple,Tropical Harvest Co.,Batticaloa,50.85,Delivery,C,+94759569555
+Papaya,Exotic Fruits Lanka,Puttalam,116.58,Pickup,B,+94765121300
+Mangosteen,Coconut Grove Farms,Badulla,111.06,Delivery,A,+94744832329
+Soursop,Spice Garden Exports,Trincomalee,289.19,Delivery,A,+94741638349
+Custard Apple,Tropical Harvest Co.,Jaffna,56.44,Delivery,B,+94786472108
+Custard Apple,Coconut Grove Farms,Colombo,459.22,Courier,C,+94728175982
+Custard Apple,Farm Direct,Kurunegala,328.9,Pickup,A,+94757275013
+Durian,Nature's Bounty,Anuradhapura,231.61,Delivery,A,+94727496500
+Durian,Green Valley Orchards,Colombo,469.19,Delivery,C,+94700678321
+Durian,Ceylon Fruit Suppliers,Trincomalee,365.28,Pickup,C,+94700689356
+Woodapple,Kandyan Fruits Ltd.,Kurunegala,108.44,Courier,C,+94709305944
+Woodapple,Golden Mango Traders,Ratnapura,465.31,Pickup,A,+94730040649
+Woodapple,Nature's Bounty,Anuradhapura,228.48,Pickup,A,+94730584724
+Ambarella,Kandyan Fruits Ltd.,Ratnapura,86.6,Pickup,B,+94757977164
+Ambarella,Organic Lanka,Anuradhapura,407.04,Delivery,A,+94742710736
+Lemon,Island Fresh Produce,Matara,311.32,Courier,A,+94795156266
+Lemon,Fresh Picks,Jaffna,498.73,Pickup,C,+94786258716
+Watermelon,Ceylon Fruit Suppliers,Anuradhapura,387.28,Delivery,B,+94710021414
+Durian,Exotic Fruits Lanka,Batticaloa,52.28,Pickup,C,+94775296299
+Jackfruit,Hill Country Harvest,Badulla,130.19,Pickup,A,+94707841141
+Jackfruit,Island Fresh Produce,Negombo,495.79,Delivery,A,+94706368644
+Blueberry,Organic Lanka,Ratnapura,453.95,Delivery,B,+94762364335
+Custard Apple,Kandyan Fruits Ltd.,Matara,434.69,Delivery,B,+94794438263
+Custard Apple,Organic Lanka,Jaffna,72.99,Delivery,A,+94736640605
+Custard Apple,Fresh Picks,Negombo,79.83,Delivery,B,+94734518632
+Avocado,Organic Lanka,Puttalam,392.2,Delivery,B,+94780734202
+Avocado,Island Fresh Produce,Anuradhapura,475.8,Delivery,A,+94763290603
+Peach,Royal Fruit Exports,Negombo,497.41,Delivery,B,+94706826533
+Peach,Exotic Fruits Lanka,Puttalam,469.1,Courier,B,+94774206220
+Strawberry,Farm Direct,Kandy,374.61,Pickup,C,+94765650943
+Strawberry,Eastern Produce Co.,Kurunegala,145.37,Courier,C,+94707301607
+Lemon,Eastern Produce Co.,Kurunegala,205.73,Delivery,A,+94720781658
+Pear,Hill Country Harvest,Trincomalee,361.07,Courier,A,+94764542395
+Pear,Hill Country Harvest,Colombo,362.32,Pickup,A,+94726517948
+Woodapple,Ceylon Fruit Suppliers,Ratnapura,325.14,Delivery,B,+94721816479
+Woodapple,Eastern Produce Co.,Negombo,186.32,Pickup,C,+94735757298
+Woodapple,Royal Fruit Exports,Kurunegala,191.9,Delivery,A,+94765168632
+Pear,Sunripe Fruits,Anuradhapura,97.83,Pickup,A,+94761174509
+Ambarella,Coconut Grove Farms,Matara,377.71,Delivery,A,+94734410767
+Ambarella,Farm Direct,Negombo,455.56,Pickup,C,+94790675153
+Ambarella,Fresh Picks,Puttalam,418.43,Pickup,A,+94727460546
+Watermelon,Sunripe Fruits,Trincomalee,107.81,Delivery,B,+94707570563
+Watermelon,Kandyan Fruits Ltd.,Matara,369.2,Delivery,C,+94796817632
+Watermelon,Coconut Grove Farms,Jaffna,232.29,Courier,A,+94758117213
+Jackfruit,Tropical Harvest Co.,Batticaloa,141.79,Delivery,B,+94778789877
+Woodapple,Eastern Produce Co.,Colombo,471.67,Delivery,A,+94723964590
+Woodapple,Farm Direct,Puttalam,370.68,Delivery,C,+94720023037
+Woodapple,Tropical Harvest Co.,Kandy,407.52,Pickup,B,+94788136775
+Ambarella,Harvest Moon,Trincomalee,143.32,Pickup,A,+94792959442
+Ambarella,Golden Mango Traders,Negombo,484.54,Delivery,A,+94755562123
+Orange,Eastern Produce Co.,Ratnapura,240.49,Delivery,B,+94727734690
+Orange,Fresh Picks,Trincomalee,400.0,Delivery,B,+94733383633
+Beli,Coconut Grove Farms,Colombo,197.95,Pickup,C,+94736484908
+Ambarella,Golden Mango Traders,Badulla,432.78,Delivery,C,+94744992706
+Ambarella,Hill Country Harvest,Badulla,297.58,Courier,C,+94736155957
+Kiwi,Harvest Moon,Trincomalee,200.35,Pickup,B,+94766381423
+Custard Apple,Exotic Fruits Lanka,Batticaloa,364.83,Delivery,C,+94771454345
+Woodapple,Green Valley Orchards,Ratnapura,141.8,Courier,B,+94726891965
+Guava,Sunripe Fruits,Negombo,80.86,Delivery,A,+94759068427
+Guava,Tropical Harvest Co.,Badulla,486.44,Courier,B,+94731490003
+Guava,Nature's Bounty,Kandy,314.48,Courier,B,+94786789802
+Lemon,Island Fresh Produce,Kurunegala,130.15,Pickup,C,+94748997020
+Lemon,Harvest Moon,Negombo,178.75,Delivery,C,+94723633968
+Lemon,Kandyan Fruits Ltd.,Anuradhapura,162.65,Courier,C,+94748443350
+Coconut,Sunripe Fruits,Badulla,340.01,Delivery,A,+94788213242
+Coconut,Coconut Grove Farms,Kandy,357.47,Pickup,A,+94769498840
+Coconut,Hill Country Harvest,Kurunegala,85.55,Pickup,C,+94796867315
+Jackfruit,Harvest Moon,Kandy,148.07,Courier,A,+94761917560
+Jackfruit,Farm Direct,Badulla,404.89,Delivery,C,+94745098639
+Jackfruit,Sunripe Fruits,Trincomalee,485.19,Courier,A,+94755126732
+Blueberry,Organic Lanka,Colombo,104.66,Pickup,A,+94753620094
+Blueberry,Kandyan Fruits Ltd.,Badulla,222.47,Delivery,C,+94727438898
+Blueberry,Nature's Bounty,Kandy,458.52,Delivery,A,+94789921633
+Mango,Royal Fruit Exports,Negombo,61.48,Courier,C,+94788259680
+Mango,Fresh Picks,Jaffna,360.19,Courier,B,+94767289249
+Mango,Coconut Grove Farms,Jaffna,111.67,Courier,B,+94735108931
+Orange,Royal Fruit Exports,Colombo,227.67,Pickup,A,+94791850161
+Apple,Harvest Moon,Ratnapura,183.12,Courier,C,+94752887641
+Pomegranate,Green Valley Orchards,Anuradhapura,352.61,Pickup,A,+94744780150
+Pomegranate,Jaffna Agro Products,Batticaloa,398.81,Courier,A,+94748446115
+Pomegranate,Farm Direct,Ratnapura,226.29,Pickup,B,+94709040982
+Guava,Southern Fruits & Veggies,Galle,77.26,Pickup,B,+94759513925
+Pear,Exotic Fruits Lanka,Colombo,165.58,Delivery,B,+94774319446
+Pear,Island Fresh Produce,Kurunegala,120.45,Delivery,B,+94705712400
+Pear,Kandyan Fruits Ltd.,Batticaloa,189.37,Pickup,A,+94728239651
+Peach,Eastern Produce Co.,Trincomalee,313.08,Delivery,B,+94739936405
+Peach,Southern Fruits & Veggies,Negombo,116.93,Pickup,A,+94710215326
+Pineapple,Green Valley Orchards,Colombo,184.17,Delivery,A,+94797877681
+Pineapple,Exotic Fruits Lanka,Trincomalee,285.28,Pickup,C,+94776847285
+Pineapple,Nature's Bounty,Trincomalee,262.12,Pickup,A,+94738395949
+Pineapple,Coconut Grove Farms,Kandy,73.89,Pickup,C,+94784795937
+Peach,Organic Lanka,Jaffna,249.04,Courier,B,+94715134261
+Peach,Fresh Picks,Badulla,85.34,Courier,B,+94749334763
+Peach,Nature's Bounty,Matara,262.45,Pickup,B,+94724287633
+Strawberry,Harvest Moon,Colombo,96.99,Delivery,C,+94753191984
+Pomegranate,Spice Garden Exports,Anuradhapura,102.15,Courier,C,+94750507259
+Pomegranate,Golden Mango Traders,Kandy,470.44,Pickup,B,+94747936813
+Ambarella,Kandyan Fruits Ltd.,Trincomalee,74.55,Delivery,A,+94721595868
+Ambarella,Eastern Produce Co.,Colombo,370.55,Pickup,C,+94790496606
+Durian,Ceylon Fruit Suppliers,Ratnapura,118.18,Pickup,A,+94757786124
+Durian,Coconut Grove Farms,Kandy,159.39,Pickup,C,+94742439718
+Coconut,Green Valley Orchards,Kandy,200.13,Pickup,C,+94790172123
+Coconut,Island Fresh Produce,Ratnapura,338.27,Courier,A,+94766170826
+Plum,Sunripe Fruits,Galle,371.65,Courier,C,+94739873614
+Plum,Ceylon Fruit Suppliers,Puttalam,290.32,Pickup,A,+94771461347
+Kiwi,Organic Lanka,Anuradhapura,303.9,Courier,A,+94701273147
+Kiwi,Exotic Fruits Lanka,Anuradhapura,177.78,Courier,A,+94780422632
+Kiwi,Kandyan Fruits Ltd.,Jaffna,333.83,Courier,B,+94711096720
+Rambutan,Organic Lanka,Badulla,233.52,Pickup,C,+94715752834
+Rambutan,Royal Fruit Exports,Badulla,109.16,Delivery,B,+94760335140
+Rambutan,Ceylon Fruit Suppliers,Trincomalee,264.96,Courier,C,+94701057501
+Guava,Island Fresh Produce,Matara,229.82,Pickup,B,+94735377232
+Guava,Ceylon Fruit Suppliers,Kurunegala,368.59,Courier,A,+94708205187
+Watermelon,Nature's Bounty,Badulla,143.71,Pickup,B,+94798401001
+Pomegranate,Nature's Bounty,Trincomalee,158.32,Courier,B,+94797666755
+Pomegranate,Island Fresh Produce,Batticaloa,295.05,Pickup,B,+94765659751
+Custard Apple,Golden Mango Traders,Badulla,336.46,Courier,B,+94736889479
+Custard Apple,Ceylon Fruit Suppliers,Galle,232.42,Courier,B,+94779674080
+Plum,Harvest Moon,Galle,306.93,Courier,C,+94779044589
+Custard Apple,Organic Lanka,Jaffna,140.73,Pickup,C,+94707355079
+Custard Apple,Spice Garden Exports,Matara,139.96,Delivery,B,+94721692356
+Custard Apple,Sunripe Fruits,Jaffna,118.06,Delivery,A,+94700528598
+Mangosteen,Royal Fruit Exports,Trincomalee,367.24,Pickup,B,+94754801423
+Mangosteen,Harvest Moon,Batticaloa,464.77,Courier,B,+94779589297
+Mangosteen,Jaffna Agro Products,Negombo,142.97,Delivery,C,+94763611408
+Soursop,Green Valley Orchards,Puttalam,257.01,Courier,A,+94788828970
+Soursop,Jaffna Agro Products,Batticaloa,123.24,Pickup,B,+94724685295
+Mangosteen,Ceylon Fruit Suppliers,Negombo,141.66,Pickup,B,+94762945349
+Durian,Sunripe Fruits,Kurunegala,213.79,Pickup,B,+94785315586
+Durian,Green Valley Orchards,Trincomalee,101.7,Pickup,B,+94787657164
+Durian,Coconut Grove Farms,Batticaloa,62.62,Delivery,C,+94709863743
+Blueberry,Eastern Produce Co.,Matara,192.83,Courier,C,+94756332334
+Watermelon,Harvest Moon,Kurunegala,227.47,Delivery,B,+94758331550
+Ambarella,Royal Fruit Exports,Galle,246.49,Courier,B,+94754281598
+Ambarella,Spice Garden Exports,Anuradhapura,180.79,Courier,C,+94731510817
+Ambarella,Golden Mango Traders,Negombo,475.22,Courier,C,+94732638463
+Plum,Farm Direct,Badulla,121.44,Courier,A,+94701317075
+Plum,Tropical Harvest Co.,Kandy,450.07,Courier,A,+94784437056
+Plum,Kandyan Fruits Ltd.,Ratnapura,65.02,Courier,C,+94727986870
+Pear,Coconut Grove Farms,Jaffna,163.56,Pickup,B,+94796188733
+Guava,Sunripe Fruits,Galle,332.53,Delivery,B,+94707899065
+Guava,Kandyan Fruits Ltd.,Galle,315.45,Pickup,C,+94754927217
+Lemon,Kandyan Fruits Ltd.,Puttalam,396.53,Courier,C,+94752462695
+Lemon,Green Valley Orchards,Ratnapura,349.53,Delivery,A,+94764287852
+Avocado,Golden Mango Traders,Badulla,426.91,Delivery,B,+94782583815
+Avocado,Hill Country Harvest,Puttalam,308.2,Courier,A,+94772403356
+Pineapple,Harvest Moon,Anuradhapura,433.04,Pickup,A,+94753449883
+Pineapple,Organic Lanka,Kurunegala,460.79,Delivery,A,+94746129628
+Beli,Tropical Harvest Co.,Matara,75.94,Courier,C,+94750644018
+Watermelon,Nature's Bounty,Batticaloa,380.27,Pickup,C,+94725987135
+Watermelon,Harvest Moon,Ratnapura,231.31,Courier,A,+94762003387
+Kiwi,Eastern Produce Co.,Matara,146.35,Courier,A,+94790146494
+Kiwi,Sunripe Fruits,Matara,421.06,Pickup,C,+94753198186
+Kiwi,Royal Fruit Exports,Negombo,463.98,Pickup,C,+94726513826
+Mangosteen,Farm Direct,Matara,227.17,Courier,C,+94760751641
+Mangosteen,Royal Fruit Exports,Colombo,156.29,Delivery,C,+94784728887
+Mangosteen,Island Fresh Produce,Batticaloa,58.25,Pickup,C,+94779100315
+Pear,Harvest Moon,Matara,373.0,Courier,A,+94757534181
+Pear,Farm Direct,Kandy,169.93,Delivery,A,+94718270567
+Durian,Jaffna Agro Products,Puttalam,204.31,Pickup,C,+94734996610
+Pineapple,Southern Fruits & Veggies,Kandy,218.55,Delivery,B,+94756708972
+Rambutan,Golden Mango Traders,Puttalam,295.78,Delivery,B,+94735587052
+Rambutan,Southern Fruits & Veggies,Ratnapura,387.8,Courier,A,+94738599971
+Ambarella,Exotic Fruits Lanka,Kurunegala,135.37,Pickup,C,+94782520175
+Peach,Organic Lanka,Matara,323.72,Courier,C,+94701402169
+Peach,Island Fresh Produce,Ratnapura,303.51,Delivery,C,+94719044379
+Peach,Golden Mango Traders,Matara,220.31,Courier,C,+94750186148
+Kiwi,Royal Fruit Exports,Negombo,425.15,Pickup,A,+94781055386
+Kiwi,Tropical Harvest Co.,Kandy,356.44,Pickup,B,+94733289460
+Peach,Southern Fruits & Veggies,Trincomalee,413.78,Courier,B,+94732505754
+Papaya,Exotic Fruits Lanka,Anuradhapura,395.32,Courier,B,+94735977158
+Mango,Tropical Harvest Co.,Badulla,177.91,Delivery,A,+94745274948
+Mango,Kandyan Fruits Ltd.,Trincomalee,59.08,Courier,B,+94760748099
+Custard Apple,Island Fresh Produce,Puttalam,431.48,Delivery,A,+94710231461
+Custard Apple,Tropical Harvest Co.,Batticaloa,447.36,Delivery,C,+94787051001
+Custard Apple,Sunripe Fruits,Trincomalee,285.09,Pickup,B,+94757962693
+Custard Apple,Kandyan Fruits Ltd.,Batticaloa,297.55,Pickup,C,+94721306684
+Avocado,Island Fresh Produce,Negombo,327.96,Pickup,B,+94752442155
+Mangosteen,Island Fresh Produce,Anuradhapura,226.48,Courier,B,+94783252187
+Banana,Nature's Bounty,Negombo,97.78,Pickup,B,+94737865810
+Peach,Spice Garden Exports,Batticaloa,257.96,Courier,A,+94753981834
+Peach,Ceylon Fruit Suppliers,Kurunegala,474.11,Delivery,C,+94705399816
+Peach,Coconut Grove Farms,Kandy,420.08,Delivery,C,+94732680096
+Beli,Spice Garden Exports,Jaffna,180.66,Delivery,C,+94746428900
+Rambutan,Ceylon Fruit Suppliers,Badulla,135.9,Courier,C,+94791543203
+Rambutan,Southern Fruits & Veggies,Badulla,377.01,Pickup,B,+94798060856
+Jackfruit,Jaffna Agro Products,Kandy,358.1,Pickup,B,+94737028955
+Jackfruit,Spice Garden Exports,Galle,111.16,Delivery,A,+94749701906
+Jackfruit,Exotic Fruits Lanka,Trincomalee,135.59,Courier,C,+94738393736
+Watermelon,Royal Fruit Exports,Kurunegala,437.84,Pickup,A,+94790625571
+Watermelon,Nature's Bounty,Kandy,162.15,Courier,A,+94715957366
+Watermelon,Golden Mango Traders,Puttalam,465.69,Courier,A,+94738810755
+Strawberry,Green Valley Orchards,Colombo,110.38,Delivery,A,+94768441805
+Custard Apple,Harvest Moon,Ratnapura,489.16,Courier,C,+94781869582
+Custard Apple,Nature's Bounty,Negombo,373.79,Courier,A,+94720761779
+Custard Apple,Coconut Grove Farms,Galle,312.02,Courier,B,+94779816260
+Woodapple,Harvest Moon,Matara,473.45,Delivery,B,+94771594353
+Woodapple,Island Fresh Produce,Trincomalee,414.73,Delivery,A,+94729348244
+Coconut,Green Valley Orchards,Galle,51.45,Courier,A,+94742706750
+Coconut,Coconut Grove Farms,Jaffna,370.9,Courier,C,+94750597162
+Coconut,Royal Fruit Exports,Kandy,475.86,Courier,A,+94732908439
+Grapes,Nature's Bounty,Jaffna,102.74,Courier,A,+94742459603
+Grapes,Kandyan Fruits Ltd.,Kurunegala,461.91,Pickup,A,+94700951827
+Grapes,Organic Lanka,Matara,261.46,Delivery,A,+94764290385
+Lemon,Spice Garden Exports,Colombo,237.95,Pickup,C,+94784510697
+Lemon,Ceylon Fruit Suppliers,Matara,353.82,Courier,C,+94757899981
+Lemon,Hill Country Harvest,Puttalam,328.69,Courier,A,+94714490401
+Apple,Eastern Produce Co.,Anuradhapura,496.06,Courier,C,+94753568554
+Apple,Island Fresh Produce,Kandy,128.34,Delivery,A,+94783378487
+Jackfruit,Royal Fruit Exports,Ratnapura,484.79,Delivery,A,+94795479403
+Jackfruit,Jaffna Agro Products,Anuradhapura,319.65,Courier,A,+94712234149
+Jackfruit,Coconut Grove Farms,Badulla,391.68,Pickup,C,+94725655047
+Watermelon,Kandyan Fruits Ltd.,Matara,396.16,Courier,C,+94713333883
+Watermelon,Nature's Bounty,Kandy,451.17,Delivery,A,+94773675168
+Watermelon,Coconut Grove Farms,Matara,241.79,Courier,C,+94772312772
+Ambarella,Hill Country Harvest,Jaffna,83.13,Delivery,C,+94791404375
+Ambarella,Harvest Moon,Colombo,359.3,Pickup,B,+94705851884
+Ambarella,Farm Direct,Anuradhapura,253.54,Courier,A,+94783979175
+Peach,Exotic Fruits Lanka,Kandy,195.93,Courier,A,+94728458114
+Peach,Kandyan Fruits Ltd.,Batticaloa,323.4,Courier,C,+94744016278
+Papaya,Kandyan Fruits Ltd.,Galle,256.49,Pickup,A,+94715480820
+Avocado,Green Valley Orchards,Negombo,494.54,Delivery,A,+94761056129
+Avocado,Fresh Picks,Galle,400.61,Pickup,C,+94746964941
+Avocado,Coconut Grove Farms,Galle,404.8,Delivery,C,+94780558835
+Jackfruit,Coconut Grove Farms,Batticaloa,182.55,Courier,C,+94776163059
+Jackfruit,Golden Mango Traders,Anuradhapura,165.85,Pickup,C,+94750402406
+Peach,Sunripe Fruits,Matara,480.13,Pickup,A,+94774474922
+Peach,Spice Garden Exports,Jaffna,220.23,Courier,C,+94728901949
+Peach,Ceylon Fruit Suppliers,Badulla,283.61,Pickup,C,+94799056921
+Plum,Green Valley Orchards,Batticaloa,207.38,Courier,A,+94718392162
+Lemon,Nature's Bounty,Trincomalee,391.89,Pickup,B,+94745256030
+Lemon,Organic Lanka,Kurunegala,380.88,Courier,A,+94729735743
+Lemon,Fresh Picks,Batticaloa,131.86,Pickup,B,+94724002484
+Jackfruit,Spice Garden Exports,Kandy,275.6,Pickup,C,+94741412435
+Jackfruit,Exotic Fruits Lanka,Galle,305.04,Courier,C,+94728922673
+Jackfruit,Royal Fruit Exports,Negombo,264.68,Pickup,A,+94752611868
+Custard Apple,Nature's Bounty,Colombo,492.74,Delivery,C,+94767925375
+Custard Apple,Green Valley Orchards,Galle,494.32,Pickup,B,+94752812645
+Ambarella,Golden Mango Traders,Badulla,409.7,Courier,B,+94752429020
+Ambarella,Tropical Harvest Co.,Kurunegala,473.37,Courier,B,+94797270852
+Ambarella,Eastern Produce Co.,Batticaloa,285.48,Pickup,C,+94739517267
+Coconut,Exotic Fruits Lanka,Anuradhapura,206.45,Pickup,C,+94785090580
+Strawberry,Royal Fruit Exports,Jaffna,411.66,Pickup,A,+94799966824
+Strawberry,Southern Fruits & Veggies,Galle,214.43,Courier,A,+94717957681
+Jackfruit,Nature's Bounty,Negombo,458.36,Courier,B,+94724030576
+Pear,Organic Lanka,Matara,253.58,Pickup,A,+94758833115
+Pear,Hill Country Harvest,Ratnapura,332.83,Delivery,B,+94777657095
+Papaya,Jaffna Agro Products,Kandy,312.6,Courier,B,+94745587965
+Papaya,Sunripe Fruits,Galle,234.15,Courier,B,+94753668429
+Papaya,Fresh Picks,Jaffna,169.08,Courier,C,+94760264180
+Coconut,Southern Fruits & Veggies,Batticaloa,119.78,Courier,B,+94732001528
+Coconut,Farm Direct,Jaffna,420.44,Delivery,B,+94764135374
+Ambarella,Golden Mango Traders,Puttalam,392.5,Pickup,B,+94732614101
+Banana,Organic Lanka,Matara,435.47,Courier,C,+94789678503
+Banana,Green Valley Orchards,Jaffna,425.26,Courier,C,+94761810685
+Banana,Eastern Produce Co.,Badulla,440.85,Courier,C,+94777315211
+Custard Apple,Sunripe Fruits,Kandy,128.82,Pickup,B,+94700425404
+Custard Apple,Exotic Fruits Lanka,Negombo,145.76,Delivery,A,+94797935460
+Custard Apple,Jaffna Agro Products,Negombo,466.7,Courier,A,+94766342121
+Orange,Green Valley Orchards,Galle,119.93,Delivery,C,+94764663378
+Orange,Sunripe Fruits,Kurunegala,50.8,Delivery,A,+94724954832
+Orange,Exotic Fruits Lanka,Badulla,386.31,Delivery,B,+94780242253
+Durian,Eastern Produce Co.,Matara,351.93,Pickup,A,+94738702462
+Durian,Green Valley Orchards,Jaffna,56.63,Courier,A,+94799039167
+Kiwi,Exotic Fruits Lanka,Anuradhapura,442.92,Courier,A,+94708748810
+Kiwi,Organic Lanka,Colombo,452.41,Courier,A,+94741249282
+Kiwi,Ceylon Fruit Suppliers,Anuradhapura,275.81,Delivery,B,+94716083904
+Pomegranate,Exotic Fruits Lanka,Colombo,261.79,Pickup,A,+94792807387
+Woodapple,Spice Garden Exports,Batticaloa,422.69,Pickup,B,+94700866425
+Woodapple,Spice Garden Exports,Puttalam,267.0,Courier,C,+94749756950
+Plum,Ceylon Fruit Suppliers,Matara,240.69,Courier,A,+94745630840
+Plum,Hill Country Harvest,Badulla,323.31,Pickup,A,+94786833794
+Plum,Tropical Harvest Co.,Ratnapura,57.99,Delivery,B,+94782046317
+Papaya,Jaffna Agro Products,Badulla,125.84,Courier,A,+94757851635
+Papaya,Island Fresh Produce,Puttalam,289.47,Delivery,A,+94726410667
+Papaya,Spice Garden Exports,Kurunegala,197.4,Courier,C,+94727186196
+Soursop,Jaffna Agro Products,Badulla,186.48,Pickup,A,+94746594857
+Kiwi,Farm Direct,Batticaloa,462.62,Courier,A,+94750067269
+Kiwi,Golden Mango Traders,Matara,199.91,Pickup,C,+94715535481
+Guava,Tropical Harvest Co.,Kandy,284.29,Delivery,C,+94708887332
+Guava,Eastern Produce Co.,Anuradhapura,239.74,Delivery,C,+94777613380
+Guava,Farm Direct,Batticaloa,409.21,Courier,A,+94728817555
+Strawberry,Southern Fruits & Veggies,Badulla,492.15,Delivery,A,+94714811623
+Custard Apple,Jaffna Agro Products,Kurunegala,169.63,Delivery,A,+94729688518
+Custard Apple,Farm Direct,Puttalam,483.87,Pickup,B,+94770028967
+Custard Apple,Sunripe Fruits,Puttalam,285.57,Pickup,C,+94720489310
+Plum,Southern Fruits & Veggies,Negombo,261.34,Pickup,C,+94723370577
+Plum,Royal Fruit Exports,Ratnapura,239.58,Pickup,C,+94738101089
+Lemon,Island Fresh Produce,Negombo,300.03,Courier,B,+94715610158
+Lemon,Hill Country Harvest,Kurunegala,59.22,Delivery,B,+94775502614
+Lemon,Exotic Fruits Lanka,Anuradhapura,445.43,Pickup,A,+94715901085
+Banana,Island Fresh Produce,Batticaloa,276.12,Courier,C,+94728266037
+Papaya,Eastern Produce Co.,Puttalam,89.31,Delivery,B,+94775020613
+Papaya,Exotic Fruits Lanka,Galle,145.7,Courier,A,+94725173834
+Mango,Coconut Grove Farms,Jaffna,317.92,Courier,A,+94735141724
+Mango,Southern Fruits & Veggies,Anuradhapura,114.18,Pickup,C,+94780697298
+Mango,Green Valley Orchards,Colombo,372.11,Pickup,A,+94767855368
+Plum,Royal Fruit Exports,Batticaloa,172.43,Delivery,C,+94706485539
+Plum,Golden Mango Traders,Kurunegala,333.37,Pickup,C,+94720433855
+Lychee,Exotic Fruits Lanka,Badulla,255.16,Delivery,B,+94744292787
+Lychee,Fresh Picks,Kandy,147.0,Delivery,A,+94761216608
+Lychee,Eastern Produce Co.,Kandy,407.57,Pickup,A,+94708878917
+Pomegranate,Nature's Bounty,Kurunegala,383.79,Pickup,B,+94737092259
+Guava,Sunripe Fruits,Trincomalee,283.87,Pickup,B,+94711131307
+Guava,Nature's Bounty,Anuradhapura,334.75,Courier,C,+94711765390
+Cherry,Sunripe Fruits,Badulla,431.83,Courier,B,+94704527740
+Guava,Kandyan Fruits Ltd.,Galle,246.0,Delivery,C,+94797256881
+Blueberry,Tropical Harvest Co.,Colombo,209.44,Pickup,C,+94775677472
+Blueberry,Sunripe Fruits,Matara,72.6,Delivery,C,+94719946149
+Woodapple,Kandyan Fruits Ltd.,Trincomalee,185.5,Courier,B,+94767141568
+Woodapple,Eastern Produce Co.,Jaffna,306.75,Courier,B,+94782108695
+Orange,Golden Mango Traders,Kurunegala,334.63,Delivery,A,+94721542815
+Orange,Kandyan Fruits Ltd.,Puttalam,473.72,Courier,C,+94773652583
+Orange,Fresh Picks,Kurunegala,164.58,Courier,B,+94701327296
