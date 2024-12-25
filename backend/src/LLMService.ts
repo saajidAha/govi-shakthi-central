@@ -1,15 +1,10 @@
 import {GenerativeModel, GoogleGenerativeAI} from "@google/generative-ai"
-import dotenv from "dotenv";
-
+import {API_KEY} from "./EnvKeyLoader";
 /**
  * Class responsible for communication with the Google Gemini API
  */
 export class LLMService {
-    // load .env files
-    static {dotenv.config();}
-
-    // .env files containing (API Keys) will not be pushed to git. Request it from the developer of this code.
-    private static API_KEY: string = String(process.env.API_KEY);
+    // private static API_KEY: string = EnvKeyLoader.API_KEY;
     private static model: GenerativeModel = LLMService.initModel();
 
     /**
@@ -17,7 +12,7 @@ export class LLMService {
      * @return GenerativeModel object
      */
     static initModel(): GenerativeModel{
-        const genAI = new GoogleGenerativeAI(LLMService.API_KEY);
+        const genAI = new GoogleGenerativeAI(API_KEY);
         return genAI.getGenerativeModel({model: "gemini-1.5-flash-8b"});
     }
 
