@@ -1,11 +1,10 @@
 import {GenerativeModel, GoogleGenerativeAI} from "@google/generative-ai"
-
+import {API_KEY} from "./EnvKeyLoader";
 /**
  * Class responsible for communication with the Google Gemini API
  */
 export class LLMService {
-    // DO NOT MISUSE OR SHARE THIS API_KEY.
-    private static API_KEY: string = "AIzaSyDe-S97dRNGO0BbZkvf8Vov14metv1xjzo";
+    // private static API_KEY: string = EnvKeyLoader.API_KEY;
     private static model: GenerativeModel = LLMService.initModel();
 
     /**
@@ -13,7 +12,7 @@ export class LLMService {
      * @return GenerativeModel object
      */
     static initModel(): GenerativeModel{
-        const genAI = new GoogleGenerativeAI(LLMService.API_KEY);
+        const genAI = new GoogleGenerativeAI(API_KEY);
         return genAI.getGenerativeModel({model: "gemini-1.5-flash-8b"});
     }
 

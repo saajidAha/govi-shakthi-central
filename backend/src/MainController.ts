@@ -1,5 +1,6 @@
 import express from 'express';
 import {MainService} from "./MainService";
+import {readvSync} from "node:fs";
 
 /**
  * RESTful Controller Class Responsible for the Listening of HTTP requests
@@ -56,11 +57,27 @@ export class MainController{
         })
 
         // register user
-        app.post("/api/register", (req, res) => {
+        app.post("/api/register", async(req, res) => {
             let {username, password} = req.body;
-            let registered: boolean = this.mainService.registerUser(username, password);
-            registered? res.sendStatus(200) : res.sendStatus(404);
+            try{
+                await this.mainService.registerUser({username, password});
+                console.log("User credentials saved sucessfully.");
+                res.sendStatus(200);
+            }catch (error) {
+                console.log("Could not register user");
+                res.sendStatus(404);
+            }
         } )
+
+        app.post("/api/login", async (req, res) => {
+            try{
+                const {username, password} = req.body;
+                let response = await this.mainService.checkCredentials({username, password});
+                if (response){res.sendStatus(200)} else res.sendStatus(500);
+            }catch (e){
+                console.log("Error while checking login credentials")
+            }
+        })
 
         // listen at specified port
         app.listen(this.port, ()=> {
