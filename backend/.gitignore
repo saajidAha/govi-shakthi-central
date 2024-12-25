@@ -4,7 +4,7 @@ node_modules
 !/dist/.gitkeep
 
 # api key
-src/.env
+.env
 
 # redundandant file
 src/server.js
