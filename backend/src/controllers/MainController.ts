@@ -1,6 +1,5 @@
 import express from 'express';
-import {MainService} from "./MainService";
-import {readvSync} from "node:fs";
+import {MainService} from "../services/MainService";
 
 /**
  * RESTful Controller Class Responsible for the Listening of HTTP requests
@@ -34,26 +33,41 @@ export class MainController{
 
         // Get predicted prices
         app.post("/api/prices", async(req, res) => {
-            let prediction: string = await this.mainService.getAllPricePrediction(req.body.fruitName);
+            let prediction: string = await this.mainService.getAllPricePrediction();
             res.send(prediction);
         });
 
         // Get alternative product suggestions
-        app.post("/api/alternatives", (req, res) => {
-            let product = this.mainService.getAlternativeProductSuggestion(req.body.fruitName)
-            res.json(product)
+        app.post("/api/alternatives", async(req, res) => {
+            try{
+                let product = await this.mainService.getAlternativeProductSuggestion({fruit_type: req.body.fruit_type})
+                res.json(product)
+            }catch (error) {
+                console.log("Error occured. Could not get result. : " + error)
+                res.sendStatus(500);
+            }
         })
 
         //  Get marketplace recommendations for the alternative product
-        app.post("/api/alternatives/market", (req, res) => {
-            let marketPlaces = this.mainService.getMarketPlaceRecommendation(req.body.alternativeProduct);
-            res.json(marketPlaces);
+        app.post("/api/alternatives/market", async(req, res) => {
+            try{
+                let marketPlaces = await this.mainService.getMarketPlaceRecommendation({alternative_product: req.body.alternative_product});
+                res.json(marketPlaces);
+            }catch (error) {
+                console.log("Error occured. Could not get result. : " + error)
+                res.sendStatus(500);
+            }
         })
 
         //  Get raw material marketplace recommendations for the alternative product
-        app.post("/api/alternatives/rawMaterialMarket", (req, res) => {
-            let marketPlaces = this.mainService.getRawMaterialMarketPlace(req.body.alternativeProduct);
-            res.json(marketPlaces);
+        app.post("/api/alternatives/rawMaterialMarket", async(req, res) => {
+            try{
+                let marketPlaces = await this.mainService.getRawMaterialMarketPlace({alternative_product: req.body.alternative_product});
+                res.json(marketPlaces);
+            }catch (error) {
+                console.log("Error occured. Could not get result. : " + error)
+                res.sendStatus(500);
+            }
         })
 
         // register user
@@ -73,7 +87,7 @@ export class MainController{
             try{
                 const {username, password} = req.body;
                 let response = await this.mainService.checkCredentials({username, password});
-                if (response){res.sendStatus(200)} else res.sendStatus(500);
+                response? res.sendStatus(200) : res.sendStatus(500);
             }catch (e){
                 console.log("Error while checking login credentials")
             }
