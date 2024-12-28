@@ -1,7 +1,7 @@
-import {MainController} from "./MainController";
-import {MainService} from "./MainService";
-import {LLMService} from "./LLMService";
-import {MainRepository} from "./MainRepository";
+import {MainController} from "./controllers/MainController";
+import {MainService} from "./services/MainService";
+import {LLMService} from "./services/LLMService";
+import {MainRepository} from "./repositories/MainRepository";
 
 // initialize the database connection
 MainRepository.init();

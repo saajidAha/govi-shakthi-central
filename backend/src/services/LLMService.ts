@@ -1,5 +1,5 @@
 import {GenerativeModel, GoogleGenerativeAI} from "@google/generative-ai"
-import {API_KEY} from "./EnvKeyLoader";
+import {API_KEY} from "./EnvLoaderService";
 /**
  * Class responsible for communication with the Google Gemini API
  */

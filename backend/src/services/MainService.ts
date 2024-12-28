@@ -1,8 +1,8 @@
 import {LLMService} from "./LLMService";
-import fruit_dataset from "./../datasets/sri_lanka_fruit_data.json";
-import market_dataset from "./../datasets/fruit_marketplace_data.json";
-import raw_material_market_dataset from "./../datasets/fruit_raw_material_marketplace_data.json";
-import {MainRepository} from "./MainRepository";
+import fruit_dataset from "../../datasets/sri_lanka_fruit_data.json";
+import market_dataset from "../../datasets/fruit_marketplace_data.json";
+import raw_material_market_dataset from "../../datasets/fruit_raw_material_marketplace_data.json";
+import {MainRepository} from "../repositories/MainRepository";
 
 /**
  * Main Service class that handles the delegation and execution of all services and business logic

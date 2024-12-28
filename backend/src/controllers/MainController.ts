@@ -1,5 +1,5 @@
 import express from 'express';
-import {MainService} from "./MainService";
+import {MainService} from "../services/MainService";
 import {readvSync} from "node:fs";
 
 /**

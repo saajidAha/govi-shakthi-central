@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import {MONGODB_URI} from "./EnvKeyLoader";
-import CredentialModel from "./models/CredentialModel";
+import {MONGODB_URI} from "../services/EnvLoaderService";
+import CredentialModel from "../models/CredentialModel";
 
 export class MainRepository {
     /**
