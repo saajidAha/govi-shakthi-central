@@ -1,7 +1,6 @@
 # Ignore node_modules folder (use npm i)
 node_modules
 /dist/*
-!/dist/.gitkeep
 
 # api key
 .env
