@@ -32,13 +32,13 @@ export class MainController{
         })
 
         // Get predicted prices
-        app.post("/api/prices", async(req, res) => {
+        app.get("/api/prices", async(req, res) => {
             let prediction: string = await this.mainService.getAllPricePrediction();
             res.send(prediction);
         });
 
         // Get alternative product suggestions
-        app.post("/api/alternatives", async(req, res) => {
+        app.get("/api/alternatives", async(req, res) => {
             try{
                 let product = await this.mainService.getAlternativeProductSuggestion({fruit_type: req.body.fruit_type})
                 res.json(product)
@@ -49,7 +49,7 @@ export class MainController{
         })
 
         //  Get marketplace recommendations for the alternative product
-        app.post("/api/alternatives/market", async(req, res) => {
+        app.get("/api/alternatives/market", async(req, res) => {
             try{
                 let marketPlaces = await this.mainService.getMarketPlaceRecommendation({alternative_product: req.body.alternative_product});
                 res.json(marketPlaces);
@@ -60,7 +60,7 @@ export class MainController{
         })
 
         //  Get raw material marketplace recommendations for the alternative product
-        app.post("/api/alternatives/rawMaterialMarket", async(req, res) => {
+        app.get("/api/alternatives/rawMaterialMarket", async(req, res) => {
             try{
                 let marketPlaces = await this.mainService.getRawMaterialMarketPlace({alternative_product: req.body.alternative_product});
                 res.json(marketPlaces);
@@ -83,7 +83,7 @@ export class MainController{
             }
         } )
 
-        app.post("/api/login", async (req, res) => {
+        app.get("/api/login", async (req, res) => {
             try{
                 const {username, password} = req.body;
                 let response = await this.mainService.checkCredentials({username, password});
