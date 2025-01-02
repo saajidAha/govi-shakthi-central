@@ -23,8 +23,8 @@ export class MainController{
      */
     start(): void{
         let app = express();
-        app.use(express.json());
         app.use( express.urlencoded( { extended: true } ));
+        app.use(express.json());
 
         // Default page
         app.get("/", (req, res) => {
@@ -32,15 +32,16 @@ export class MainController{
         })
 
         // Get predicted prices
-        app.post("/api/prices", async(req, res) => {
+        app.get("/api/prices", async(req, res) => {
             let prediction: string = await this.mainService.getAllPricePrediction();
             res.send(prediction);
         });
 
         // Get alternative product suggestions
-        app.post("/api/alternatives", async(req, res) => {
+        app.get("/api/alternatives", async(req, res) => {
             try{
-                let product = await this.mainService.getAlternativeProductSuggestion({fruit_type: req.body.fruit_type})
+                console.log(String(req.query.fruit_type))
+                let product = await this.mainService.getAlternativeProductSuggestion({fruit_type: String(req.query.fruit_type)})
                 res.json(product)
             }catch (error) {
                 console.log("Error occured. Could not get result. : " + error)
@@ -49,9 +50,9 @@ export class MainController{
         })
 
         //  Get marketplace recommendations for the alternative product
-        app.post("/api/alternatives/market", async(req, res) => {
+        app.get("/api/alternatives/market", async(req, res) => {
             try{
-                let marketPlaces = await this.mainService.getMarketPlaceRecommendation({alternative_product: req.body.alternative_product});
+                let marketPlaces = await this.mainService.getMarketPlaceRecommendation({alternative_product: String(req.query.alternative_product)});
                 res.json(marketPlaces);
             }catch (error) {
                 console.log("Error occured. Could not get result. : " + error)
@@ -60,9 +61,9 @@ export class MainController{
         })
 
         //  Get raw material marketplace recommendations for the alternative product
-        app.post("/api/alternatives/rawMaterialMarket", async(req, res) => {
+        app.get("/api/alternatives/rawMaterialMarket", async(req, res) => {
             try{
-                let marketPlaces = await this.mainService.getRawMaterialMarketPlace({alternative_product: req.body.alternative_product});
+                let marketPlaces = await this.mainService.getRawMaterialMarketPlace({alternative_product: String(req.query.alternative_product)});
                 res.json(marketPlaces);
             }catch (error) {
                 console.log("Error occured. Could not get result. : " + error)
@@ -83,13 +84,15 @@ export class MainController{
             }
         } )
 
-        app.post("/api/login", async (req, res) => {
+        app.get("/api/login", async (req, res) => {
+            const username = String(req.query.username);
+            const password = String(req.query.password);
             try{
-                const {username, password} = req.body;
                 let response = await this.mainService.checkCredentials({username, password});
-                response? res.sendStatus(200) : res.sendStatus(500);
+                response? res.sendStatus(200) : res.sendStatus(404);
             }catch (e){
                 console.log("Error while checking login credentials")
+                res.sendStatus(404);
             }
         })
 
