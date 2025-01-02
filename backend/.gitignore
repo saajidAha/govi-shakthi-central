@@ -2,6 +2,10 @@
 node_modules
 /dist/*
 
+# Ide/ editors
+.idea
+.vscode
+
 # api key
 .env
 
