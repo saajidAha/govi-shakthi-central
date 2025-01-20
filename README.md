@@ -101,8 +101,7 @@ This will open the Expo development server. You can scan the QR code with the **
 To start the backend server, navigate to the **backend** directory and run:
 ```bash
 cd backend
-npm start // Run TypeScript files directly (Option 1)
-npm run build // Compiles the .ts files to .js and run (Option 2)
+npm run dev // Compiles the .ts files to .js and run
 ```
 
 The server will be running on `http://localhost:7000` (or a different port if you configure it). You can test the API using tools like **Postman** or integrate it with the frontend app.
@@ -130,9 +129,9 @@ The server will be running on `http://localhost:7000` (or a different port if yo
 
 ```
 /govishakthi-app/backend
-├── /src              # All the TypeScript files
-├── /dist             # All the compiled JavaScript files (run 'tsc' command)
-├── /src/server.ts    # Main entry point for the Node.js server
+├── /src              # All the TypeScript files and directories
+├── /dist             # All the compiled JavaScript files
+├── /src/index.ts     # Main entry point for the Node.js server
 ├── /config           # Database and server configuration
 ├── package.json      # Backend dependencies and scripts
 ```

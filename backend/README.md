@@ -1,9 +1,9 @@
 ## Project Structure
 ```
 /govishakthi-app/backend
-├── /src              # All the TypeScript files
+├── /src              # All the TypeScript files and directories
 ├── /dist             # All the compiled JavaScript files
-├── /src/server.ts    # Main entry point for the Node.js server
+├── /src/index.ts     # Main entry point for the Node.js server
 ├── /config           # Database and server configuration
 ├── package.json      # Backend dependencies and scripts
 ```
