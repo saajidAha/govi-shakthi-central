@@ -1,6 +1,4 @@
-import {MainController} from "../controllers/MainController";
-import {LLMService} from "./LLMService";
-import {MainRepository} from "../repositories/MainRepository";
+import {Controller} from "../controllers/Controller";
 import dotenv from 'dotenv';
 
 /**
@@ -8,7 +6,7 @@ import dotenv from 'dotenv';
  */
 export class Server{
     private static instance: Server;
-    private controller: MainController;
+    private controller: Controller;
     public static API_KEY: any;
     public static MONGODB_URI: any;
 
@@ -20,11 +18,11 @@ export class Server{
     /**
      * @param controller Controller object 
      */
-    private constructor(controller: MainController){
+    private constructor(controller: Controller){
         this.controller = controller
     }
 
-    public static getInstance(controller: MainController): Server{
+    public static getInstance(controller: Controller): Server{
         Server.instance = Server.instance ?? new Server(controller);
         return Server.instance;
     }
@@ -66,8 +64,3 @@ export class Server{
         Server.MONGODB_URI = String(process.env.MONGODB_URI);
     }
 }
-
-// Inject controller with required dependencies
-const mainController: MainController = MainController.getInstance(MainRepository.getInstance(Server.MONGODB_URI), LLMService.getInstance(Server.API_KEY));
-// Start the server
-Server.getInstance(mainController).start();
