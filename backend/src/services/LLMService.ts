@@ -25,7 +25,7 @@ export class LLMService {
      */
     public initModel(): GenerativeModel{
         const genAI = new GoogleGenerativeAI(this.API_KEY);
-        return genAI.getGenerativeModel({model: "gemini-1.5-flash-8b"});
+        return genAI.getGenerativeModel({model: "gemini-1.5-flash"});
     }
 
     /**
@@ -35,6 +35,7 @@ export class LLMService {
     public async fetchLLMResponse(prompt: string): Promise<string>{
         try{
             const result = await this.model.generateContent(prompt);
+            console.log(result.response.text());
             return this.formatToJson( result.response.text() );
         }catch (error){
             console.log("Error while communication with the LLM", error)
@@ -47,7 +48,7 @@ export class LLMService {
      */
     public async fetchPricePrediction(repo: Repository): Promise<string>{
         let fruit_data = await repo.findAll();
-        return await this.fetchLLMResponse(`Analyse the contents of the JSON and give me a price prediction for every single fruit type in the JSON.  Include: - fruitType - retailPrice (in LKR) - wholesalePrice (in LKR) - predictedPrices - predictedTimeRange - predictionFactors Format the response strictly as valid JSON, without any extra text or explanations. : \n${JSON.stringify(fruit_data)}\n.`);
+        return await this.fetchLLMResponse(`Analyse the contents of the JSON and give me a price prediction for every single fruit type in the JSON.  Include: - fruitType - retailPrice (in LKR) - wholesalePrice (in LKR) - predictedPrices - predictedTimeRange - predictionFactors Format the response strictly as valid JSON, without any extra text or explanations. MAKE SURE THAT THE RESPONSE IS FORMATTED IN VALID JSON FORMAT. DO NOT ADD ANY SYMBOLS OR CHARACTERS OR COMMENTS THAT WOULD MAKE THE JSON INVALID.: \n${JSON.stringify(fruit_data)}\n.`);
     }
 
     /**
@@ -55,6 +56,6 @@ export class LLMService {
      * @param value string literal
      */
     public formatToJson(value: string){
-        return JSON.parse( value.replace(/```/g, "").replace(/json/g, "") );
+        return JSON.parse( value.replace(/```/g, "").replace(/json/g, "").trim() );
     }
  }
