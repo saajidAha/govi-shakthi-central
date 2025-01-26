@@ -6,7 +6,7 @@ const WelcomeScreen: React.FC = () => {
   const router = useRouter();
 
   const handleStart = () => {
-    router.push('/next'); // Navigate to 'next' screen
+    router.push('./landingPage_1'); // Navigate to 'next' screen
   };
 
   return (

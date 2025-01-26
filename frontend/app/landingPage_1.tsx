@@ -6,7 +6,7 @@ const NextScreen: React.FC = () => {
   const router = useRouter();
 
   const handleNext = () => {
-    router.push('/next_2'); // Navigate to the next step
+    router.push('.//next_2'); // Navigate to the next step
   };
 
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, SafeAreaView } from 'react-native';
-import WelcomeScreen from '../../components/WelcomeScreen';
+import WelcomeScreen from '../WelcomeScreen';
 
 
 
