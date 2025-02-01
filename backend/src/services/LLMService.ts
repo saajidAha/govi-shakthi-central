@@ -23,7 +23,7 @@ export class LLMService {
      * Initializes LLM model with API key
      * @return GenerativeModel object
      */
-    public initModel(): GenerativeModel{
+    private initModel(): GenerativeModel{
         const genAI = new GoogleGenerativeAI(this.API_KEY);
         return genAI.getGenerativeModel({model: "gemini-1.5-flash"});
     }
@@ -32,7 +32,7 @@ export class LLMService {
      * Contacts the Gemini API and retruns a Promise based on the prompt
      * @param prompt The prompt message to send to the LLM
      */
-    public async fetchLLMResponse(prompt: string): Promise<string>{
+    private async fetchLLMResponse(prompt: string): Promise<string>{
         try{
             const result = await this.model.generateContent(prompt);
             console.log(result.response.text());
@@ -47,15 +47,50 @@ export class LLMService {
      * Predicts prices based on the existing dataset and provides insights
      */
     public async fetchPricePrediction(repo: Repository): Promise<string>{
-        let fruit_data = await repo.findAll();
-        return await this.fetchLLMResponse(`Analyse the contents of the JSON and give me a price prediction for every single fruit type in the JSON.  Include: - fruitType - retailPrice (in LKR) - wholesalePrice (in LKR) - predictedPrices - predictedTimeRange - predictionFactors Format the response strictly as valid JSON, without any extra text or explanations. MAKE SURE THAT THE RESPONSE IS FORMATTED IN VALID JSON FORMAT. DO NOT ADD ANY SYMBOLS OR CHARACTERS OR COMMENTS THAT WOULD MAKE THE JSON INVALID.: \n${JSON.stringify(fruit_data)}\n.`);
+        let fruit_data = await repo.getFruitData();
+        return await this.fetchLLMResponse(
+            `\`\`\`json
+{
+  "instruction": "Analyze the following data and provide price predictions for every single fruit type separately. Use a simple machine learning algorithm. strictly format your response as JSON. Do not add any comments/disclaimers/notes. follow the json schema in your output that is provided under the "fields" below. The title of the object containing the array of all the fields below should be named as "predictions".,
+  "data": ${JSON.stringify(fruit_data)},
+  "fields": ["fruitType", "predictedPrice", "MachineLearningAlgorithmName"]
+}
+\`\`\``
+        );
+    }
+
+    public async fetchYieldPrediction(repo: Repository){
+        let market_data = await repo.getYieldData();
+        return await this.fetchLLMResponse(
+            `\`\`\`json
+{
+  "instruction": "Analyze the following data and provide yield predictions for every single fruit type separately. Use a simple machine learning algorithm. strictly format your response as JSON. Do not add any comments/disclaimers/notes. follow the json schema in your output that is provided under the "fields" below. The title of the object containing the array of the fields below should be named as "predictions".,
+  "data": ${JSON.stringify(market_data)},
+  "fields": ["fruitType", "yieldPredictionPerHectare_KG", "MachineLearningAlgorithmName"]
+}
+\`\`\``
+        );
+    }
+
+    public async fetchDemandPrediction(repo: Repository){
+        let demand_data = await repo.getDemandData();
+        return await this.fetchLLMResponse(
+            `\`\`\`json
+{
+  "instruction": "Analyze the following data and provide market demand predictions for every single fruit type separately. Use a simple machine learning algorithm. strictly format your response as JSON. Do not add any comments/disclaimers/notes. follow the json schema in your output that is provided under the "fields" below. The title of the object containing the array of the fields should be named as "predictions".,
+  "data": ${JSON.stringify(demand_data)},
+  "fields": ["fruitType", "MarketName", "demandPrediction (Units per day)", "MachineLearningAlgorithmName"]
+}
+\`\`\``
+        );
     }
 
     /**
-     * Removes unnecessary symbols from response returned from the llm & Formats and parses it to JSON
-     * @param value string literal
+     * Sanitized unformatted output from llm
+     * @param value response of the llm
      */
-    public formatToJson(value: string){
-        return JSON.parse( value.replace(/```/g, "").replace(/json/g, "").trim() );
+    private formatToJson(value: string){
+        return JSON.parse(value.replace(/```/g, "").replace(/json/g, "").trim());
     }
  }
+
