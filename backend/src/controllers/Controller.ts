@@ -7,7 +7,7 @@ import { LLMService } from '../services/LLMService';
  */
 export class Controller{
     private port: number = 7000;
-    private mainRepository: Repository;
+    private repository: Repository;
     private llmService: LLMService;
     private static instance: Controller;
 
@@ -17,7 +17,7 @@ export class Controller{
      * @param llmService Object to handle LLM operations
      */
     private constructor(mainRepository: Repository, llmService: LLMService) {
-        this.mainRepository = mainRepository;
+        this.repository = mainRepository;
         this.llmService = llmService;
     }
 
@@ -41,15 +41,27 @@ export class Controller{
 
         // Get predicted prices
         app.get("/api/prices", async(req, res) => {
-            let prediction = await this.llmService.fetchPricePrediction(this.mainRepository); 
+            let prediction = await this.llmService.fetchPricePrediction(this.repository);
             res.json(prediction);
         });
+
+        // Get demand prediction
+        app.get("/api/demandprediction", async (req,  res) => {
+            let prediction = await this.llmService.fetchDemandPrediction(this.repository);
+            res.json(prediction);
+        })
+
+        // Get yield prediction
+        app.get("/api/yieldprediction", async (req,  res) => {
+            let prediction = await this.llmService.fetchYieldPrediction(this.repository);
+            res.json(prediction);
+        })
 
         // Get alternative product suggestions
         app.get("/api/alternatives", async(req, res) => {
             try{
                 console.log(String(req.query.fruit_type))
-                let product = await this.mainRepository.findAlternatives({fruit_type: String(req.query.fruit_type)})
+                let product = await this.repository.findAlternatives({fruit_type: String(req.query.fruit_type)})
                 res.json(product)
             }catch (error) {
                 console.log("Error occured. Could not get result. : " + error)
@@ -60,7 +72,7 @@ export class Controller{
         //  Get marketplace recommendations for the alternative product
         app.get("/api/alternatives/market", async(req, res) => {
             try{
-                let marketPlaces = await this.mainRepository.findMarket({alternative_product: String(req.query.alternative_product)}, "fruit_raw_material_marketplace_data");
+                let marketPlaces = await this.repository.findMarket({alternative_product: String(req.query.alternative_product)}, "fruit_raw_material_marketplace_data");
                 res.json(marketPlaces);
             }catch (error) {
                 console.log("Error occured. Could not get result. : " + error)
@@ -71,7 +83,7 @@ export class Controller{
         //  Get raw material marketplace recommendations for the alternative product
         app.get("/api/alternatives/rawMaterialMarket", async(req, res) => {
             try{
-                let marketPlaces = await this.mainRepository.findMarket({alternative_product: String(req.query.alternative_product)}, "fruit_marketplace_data" );
+                let marketPlaces = await this.repository.findMarket({alternative_product: String(req.query.alternative_product)}, "fruit_marketplace_data" );
                 res.json(marketPlaces);
             }catch (error) {
                 console.log("Error occured. Could not get result. : " + error)
@@ -83,7 +95,7 @@ export class Controller{
         app.post("/api/register", async(req, res) => {
             let {username, password} = req.body;
             try{
-                await this.mainRepository.registerUser({username, password});
+                await this.repository.registerUser({username, password});
                 console.log("User credentials saved sucessfully.");
                 res.json({username: username, password: password});
             }catch (error) {
@@ -96,7 +108,7 @@ export class Controller{
             const username = String(req.query.username);
             const password = String(req.query.password);
             try{
-                let response = await this.mainRepository.checkCredentials({username, password});
+                let response = await this.repository.checkCredentials({username, password});
                 response? res.sendStatus(200) : res.sendStatus(404);
             }catch (e){
                 console.log("Error while checking login credentials")
@@ -113,6 +125,6 @@ export class Controller{
     
     // Return the repo object
     public getRepository(): Repository{
-        return this.mainRepository;
+        return this.repository;
     }
 }
