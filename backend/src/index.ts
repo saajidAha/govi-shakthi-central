@@ -7,4 +7,4 @@ import { LLMService } from "./services/LLMService";
 const mainController: Controller = Controller.getInstance(Repository.getInstance(Server.MONGODB_URI), LLMService.getInstance(Server.API_KEY));
 
 // Inject controller dependency and start the server
-Server.getInstance(mainController).start()
+Server.getInstance(mainController).start();
