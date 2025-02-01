@@ -44,17 +44,28 @@ export class Repository {
     }
 
     /**
-     * Returns all the documents from a collection
-     * @param collectionName
+     * Fetches fruit data
      */
-    public async findAll(){
+    public async getFruitData(){
         return await this.db.collection("sri_lanka_fruit_data").find({}).toArray();
+    }
+    /**
+     * Fetches market demand data
+     */
+    public async getDemandData(){
+        return await this.db.collection("market_demand_data").find({}).toArray();
+    }
+
+    /**
+     * Fetches crop yield data
+     */
+    public async getYieldData(){
+        return await this.db.collection("yield_prediction_data").find({}).toArray();
     }
 
     /**
      * finds specific info from a collection
      * @param criteria criteria in {}
-     * @param collectionName the name of the collection in the db
      */
     public async findAlternatives(criteria:{fruit_type: string}){
         return await this.db.collection("sri_lanka_fruit_data").find(criteria).toArray();
