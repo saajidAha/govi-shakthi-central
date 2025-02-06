@@ -7,6 +7,7 @@ export class LLMService {
     private model: GenerativeModel;
     private API_KEY: string;
     private static instance: LLMService;
+    private static generalInstruction: string = "Use a suitable machine learning algorithm. Make sure that the algorithm is a standard algorithm and is complex enough. strictly format your response as JSON. Do not add any comments/disclaimers/notes. follow the json schema in your output that is provided under the 'fields' below. The title of the object containing the array of all the fields below should be named as 'predictions'";
 
     // Enforces Singleton pattern
     private constructor(apiKey: string){
@@ -25,17 +26,16 @@ export class LLMService {
      */
     private initModel(): GenerativeModel{
         const genAI = new GoogleGenerativeAI(this.API_KEY);
-        return genAI.getGenerativeModel({model: "gemini-1.5-flash"});
+        return genAI.getGenerativeModel({model: "gemini-2.0-flash"});
     }
 
     /**
-     * Contacts the Gemini API and retruns a Promise based on the prompt
+     * Contacts the Gemini API and returns a Promise based on the prompt
      * @param prompt The prompt message to send to the LLM
      */
     private async fetchLLMResponse(prompt: string): Promise<string>{
         try{
             const result = await this.model.generateContent(prompt);
-            console.log(result.response.text());
             return this.formatToJson( result.response.text() );
         }catch (error){
             console.log("Error while communication with the LLM", error)
@@ -51,9 +51,9 @@ export class LLMService {
         return await this.fetchLLMResponse(
             `\`\`\`json
 {
-  "instruction": "Analyze the following data and provide price predictions for every single fruit type separately. Use a simple machine learning algorithm. strictly format your response as JSON. Do not add any comments/disclaimers/notes. follow the json schema in your output that is provided under the "fields" below. The title of the object containing the array of all the fields below should be named as "predictions".,
+  "instruction": "Analyze the following data and provide price predictions for every single fruit type separately based on location. ${LLMService.generalInstruction}",
   "data": ${JSON.stringify(fruit_data)},
-  "fields": ["fruitType", "predictedPrice", "MachineLearningAlgorithmName"]
+  "fields": ["fruitType", "location", "predictedPrice", "algorithmName"]
 }
 \`\`\``
         );
@@ -64,9 +64,9 @@ export class LLMService {
         return await this.fetchLLMResponse(
             `\`\`\`json
 {
-  "instruction": "Analyze the following data and provide yield predictions for every single fruit type separately. Use a simple machine learning algorithm. strictly format your response as JSON. Do not add any comments/disclaimers/notes. follow the json schema in your output that is provided under the "fields" below. The title of the object containing the array of the fields below should be named as "predictions".,
+  "instruction": "Analyze the following data and provide yield predictions per hectare in KG for every single fruit type, location & market name combination separately. ${LLMService.generalInstruction}",
   "data": ${JSON.stringify(market_data)},
-  "fields": ["fruitType", "yieldPredictionPerHectare_KG", "MachineLearningAlgorithmName"]
+  "fields": ["fruitType", "marketName", "location", "yieldPrediction", "algorithmName"]
 }
 \`\`\``
         );
@@ -77,9 +77,9 @@ export class LLMService {
         return await this.fetchLLMResponse(
             `\`\`\`json
 {
-  "instruction": "Analyze the following data and provide market demand predictions for every single fruit type separately. Use a simple machine learning algorithm. strictly format your response as JSON. Do not add any comments/disclaimers/notes. follow the json schema in your output that is provided under the "fields" below. The title of the object containing the array of the fields should be named as "predictions".,
+  "instruction": "Analyze the following data and provide market demand predictions in units per day for every single fruit type, location & market name combination separately. ${LLMService.generalInstruction}",
   "data": ${JSON.stringify(demand_data)},
-  "fields": ["fruitType", "MarketName", "demandPrediction (Units per day)", "MachineLearningAlgorithmName"]
+  "fields": ["fruitType", "marketName", "location", "demandPrediction", "algorithmName"]
 }
 \`\`\``
         );
