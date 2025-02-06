@@ -1,70 +1,76 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { useRouter } from 'expo-router';
+import { StyleSheet, View, Text, Image, TouchableOpacity, SafeAreaView, Dimensions } from 'react-native';
 
-const WelcomeScreen: React.FC = () => {
-  const router = useRouter();
-
-  const handleStart = () => {
-    router.push('./landingPage_1'); // Navigate to 'next' screen
-  };
-
+const LandingPage = () => {
   return (
-    <View style={styles.container}>
-      {/* Logo */}
-      <View style={styles.logoContainer}>
-        <Text style={styles.logoText}>🌱</Text>
-      </View>
-
-      {/* Title and Subtitle */}
-      <Text style={styles.title}>GoviShakthi</Text>
-      <Text style={styles.subtitle}>Your Smart Farming Companion</Text>
-
-      {/* Button */}
-      <TouchableOpacity style={styles.button} onPress={handleStart}>
-        <Text style={styles.buttonText}>Get started</Text>
-      </TouchableOpacity>
-    </View>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.content}>
+          <Image
+              source={require('../assets/images/GoviShakthi-removebg-preview.png')}
+              style={styles.logo}
+              resizeMode="contain"
+          />
+          <Text style={styles.tagline}>
+            Your Smart Farming Companion
+          </Text>
+        </View>
+        <View style={styles.bottomContent}>
+          <TouchableOpacity style={styles.button} onPress={() => {}}>
+            <Text style={styles.buttonText}>Explore More</Text>
+          </TouchableOpacity>
+        </View>
+      </SafeAreaView>
   );
 };
-
-export default WelcomeScreen;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#A9DFA3',
-    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+  },
+  content: {
+    flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
     paddingHorizontal: 20,
   },
-  logoContainer: {
-    marginBottom: 20,
+  logo: {
+    width: Dimensions.get('window').width * 0.8,
+    height: 400,
+    marginBottom: 15,
+    alignItems: 'center',
   },
-  logoText: {
-    fontSize: 50,
-  },
-  title: {
-    fontSize: 36,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 10,
-  },
-  subtitle: {
-    fontSize: 18,
-    color: '#555',
+  tagline: {
+    fontSize: 20,
+    fontStyle:"normal",
+    color: '#000000',
     textAlign: 'center',
-    marginBottom: 30,
+    marginTop: 8,
+  },
+  bottomContent: {
+    alignItems: 'center',
+    paddingBottom: 40,
   },
   button: {
-    backgroundColor: '#00A886',
-    paddingVertical: 12,
-    paddingHorizontal: 30,
-    borderRadius: 8,
+    backgroundColor: '#02C39A',
+    paddingVertical: 16,
+    paddingHorizontal: 32,
+    borderRadius: 25,
+    width: Dimensions.get('window').width - 40,
+    marginBottom: 20,
   },
   buttonText: {
+    color: '#FFFFFF',
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#fff',
+    textAlign: 'center',
+    fontWeight: '500',
+  },
+  paginationDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#000000',
   },
 });
+
+export default LandingPage;

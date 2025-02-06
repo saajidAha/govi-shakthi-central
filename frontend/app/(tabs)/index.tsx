@@ -20,3 +20,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#A9DFA3',
   },
 });
+
+// @ts-ignore
+export default WelcomeScreen;
