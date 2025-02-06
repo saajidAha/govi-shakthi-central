@@ -64,11 +64,11 @@ export class Repository {
     }
 
     /**
-     * finds specific info from a collection
+     * finds specific alternative product info from a collection
      * @param criteria criteria in {}
      */
     public async findAlternatives(criteria:{fruit_type: string}){
-        return await this.db.collection("sri_lanka_fruit_data").find(criteria).toArray();
+        return await this.db.collection("sri_lanka_fruit_data").find(criteria, { projection: { "fruit_type": 1, "alternative_product.name": 1 } }).toArray();
     }
 
     /**
