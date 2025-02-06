@@ -2,7 +2,7 @@ import {Controller} from "../controllers/Controller";
 import dotenv from 'dotenv';
 
 /**
- * Class to to handle logic to instantiate Server
+ * Class to handle logic to instantiate Server
  */
 export class Server{
     private static instance: Server;
