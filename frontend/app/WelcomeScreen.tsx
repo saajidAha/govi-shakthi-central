@@ -6,7 +6,7 @@ const LandingPage = () => {
       <SafeAreaView style={styles.container}>
         <View style={styles.content}>
           <Image
-              source={require('../assets/images/GoviShakthi-removebg-preview.png')}
+              source={require('../assets/images/GoviShakthi Logo (1).png')}
               style={styles.logo}
               resizeMode="contain"
           />
@@ -32,20 +32,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 20,
+    paddingHorizontal:50,
   },
   logo: {
     width: Dimensions.get('window').width * 0.8,
-    height: 400,
-    marginBottom: 15,
+    height: 90,
+    marginBottom: 3,
     alignItems: 'center',
   },
   tagline: {
-    fontSize: 20,
+    fontSize: 19,
     fontStyle:"normal",
     color: '#000000',
     textAlign: 'center',
-    marginTop: 8,
+    marginTop:0,
   },
   bottomContent: {
     alignItems: 'center',
