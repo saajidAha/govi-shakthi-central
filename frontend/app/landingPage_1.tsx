@@ -1,111 +1,182 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import { useRouter } from 'expo-router';
+"use client"
+import React from "react"
+import { StyleSheet, View, Text, TouchableOpacity, SafeAreaView, Image, Dimensions } from "react-native"
+import { useRouter } from "expo-router"
 
-const NextScreen: React.FC = () => {
-  const router = useRouter();
+const IMAGES = [
+  require("../assets/images/Farmers market-rafiki.png"),
+  require("../assets/images/farm tractor-rafiki.png"),
+  require("../assets/images/Farmer-rafiki.png"),
+  require("../assets/images/fruit basket-rafiki.png"),
+]
 
-  const handleNext = () => {
-    router.push('.//next_2'); // Navigate to the next step
-  };
+const { width: SCREEN_WIDTH } = Dimensions.get("window")
+
+const LandingPage1 = () => {
+  const router = useRouter()
 
   return (
-    <View style={styles.container}>
-      {/* Image */}
-      <Image
-        source={require('../assets/images/farming-illustration.png')} // Replace with your image path
-        style={styles.image}
-        resizeMode="contain"
-      />
+      <SafeAreaView style={styles.container}>
+        <View style={styles.content}>
+          <View style={styles.imageGrid}>
+            <View style={styles.imageRow}>
+              <View style={[styles.imageWrapper, styles.topLeftImage]}>
+                <Image source={IMAGES[0]} style={styles.image} resizeMode="contain" />
+              </View>
+              <View style={[styles.imageWrapper, styles.topRightImage]}>
+                <Image source={IMAGES[1]} style={styles.image} resizeMode="contain" />
+              </View>
+            </View>
+            <View style={styles.imageRow}>
+              <View style={[styles.imageWrapper, styles.bottomLeftImage]}>
+                <Image source={IMAGES[2]} style={styles.image} resizeMode="contain" />
+              </View>
+              <View style={[styles.imageWrapper, styles.bottomRightImage]}>
+                <Image source={IMAGES[3]} style={styles.image} resizeMode="contain" />
+              </View>
+            </View>
+          </View>
+        </View>
 
-      {/* Title and Subtitle */}
-      <View style={styles.textContainer}>
-        <Text style={styles.title}>Personalized Recommendations</Text>
-        
-        {/* Paragraph broken into 4 lines */}
-        <Text style={styles.subtitle}>Input your crop details,</Text>
-        <Text style={styles.subtitle}>and we'll guide you with</Text>
-        <Text style={styles.subtitle}>tailored recommendations</Text>
-        <Text style={styles.subtitle}>based on real-time data and analysis.</Text>
-      </View>
+        <View style={styles.bottomSection}>
+          <View style={styles.curvedBackground}>
+            <View style={styles.textContent}>
+              <Text style={styles.title}>Smart Solutions for Farmers to Maximize Their Profits</Text>
+              <Text style={styles.description}>
+                GoviShakthi empowers you with intelligent tools to create alternative products, access key markets, and
+                forecast prices effectively
+              </Text>
+            </View>
 
-      {/* Next Button */}
-      <TouchableOpacity style={styles.button} onPress={handleNext}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
-
-      {/* Pagination Indicator */}
-      <View style={styles.paginationContainer}>
-        <View style={styles.paginationDotActive} />
-        <View style={styles.paginationDotInactive} />
-      </View>
-    </View>
-  );
-};
-
-export default NextScreen;
+            <View style={styles.footer}>
+              <View style={styles.pagination}>
+                <View style={[styles.progressBar, styles.activeProgress]} />
+                <View style={styles.progressBar} />
+              </View>
+              <TouchableOpacity style={styles.button} onPress={() => router.push("/landingPage_2")}>
+                <Text style={styles.buttonText}>Next</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </SafeAreaView>
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 40,
+    backgroundColor: "#FFFFFF",
+  },
+  content: {
+    flex: 1,
+    padding: 16,
+  },
+  imageGrid: {
+    flex: 1,
+    justifyContent: "center",
+    gap: 20,
+    marginTop: 20,
+  },
+  imageRow: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 20,
+  },
+  imageWrapper: {
+    borderWidth: 1,
+    borderColor: "#E0E0E0",
+    backgroundColor: "#FFFFFF",
+    overflow: "hidden",
+  },
+  topLeftImage: {
+    width: SCREEN_WIDTH * 0.35,
+    height: SCREEN_WIDTH * 0.35,
+    borderRadius: 25,
+  },
+  topRightImage: {
+    width: SCREEN_WIDTH * 0.45,
+    height: SCREEN_WIDTH * 0.35,
+    borderRadius: 25,
+  },
+  bottomLeftImage: {
+    width: SCREEN_WIDTH * 0.45,
+    height: SCREEN_WIDTH * 0.35,
+    borderRadius: 25,
+  },
+  bottomRightImage: {
+    width: SCREEN_WIDTH * 0.35,
+    height: SCREEN_WIDTH * 0.35,
+    borderRadius: 25,
   },
   image: {
-    width: '100%',
-    height: 240,
-    marginBottom: 30, // Adds space between image and title
+    width: "100%",
+    height: "100%",
   },
-  textContainer: {
-    alignItems: 'center',
-    marginBottom: 40, // Space between text container and button
+  bottomSection: {
+    height: SCREEN_WIDTH * 0.8,
+    position: "relative",
+  },
+  curvedBackground: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: "100%",
+    backgroundColor: "#02C39A",
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+    padding: 24,
+  },
+  textContent: {
+    marginTop: 20,
   },
   title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#1E1E1E',
-    textAlign: 'center',
-    marginBottom: 20, // Increased space between title and subtitle
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#000000",
+    marginBottom: 16,
   },
-  subtitle: {
+  description: {
     fontSize: 16,
-    color: '#555',
-    textAlign: 'center',
+    color: "#FFFFFF",
+    opacity: 0.9,
     lineHeight: 24,
-    marginBottom: 5, // Space between subtitle lines
+  },
+  footer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    position: "absolute",
+    bottom: 24,
+    left: 24,
+    right: 24,
+  },
+  pagination: {
+    flexDirection: "row",
+    gap: 4,
+    width: 40,
+  },
+  progressBar: {
+    flex: 1,
+    height: 8,
+    backgroundColor: "#C0C0C0",
+    borderRadius: 100,
+  },
+  activeProgress: {
+    backgroundColor: "#000000",
   },
   button: {
-    backgroundColor: '#00A886',
+    backgroundColor: "#FFFFFF",
     paddingVertical: 12,
-    paddingHorizontal: 40,
-    borderRadius: 8,
-    marginBottom: 20, // Adds spacing before pagination dots
+    paddingHorizontal: 24,
+    borderRadius: 20,
   },
   buttonText: {
+    color: "#02C39A",
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#fff',
+    fontWeight: "500",
   },
-  paginationContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  paginationDotActive: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: '#00A886', // Green for active dot
-    marginHorizontal: 4,
-  },
-  paginationDotInactive: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: '#C4C4C4', // Gray for inactive dot
-    marginHorizontal: 4,
-  },
-});
+})
+
+export default LandingPage1

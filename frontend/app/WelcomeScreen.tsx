@@ -10,8 +10,11 @@ import {
   Animated,
   Easing,
 } from 'react-native';
+import { useRouter } from 'expo-router'; // Import useRouter
 
 const welcomeScreen = () => {
+  const router = useRouter(); // Initialize router for navigation
+
   // Animation values
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(0)).current;
@@ -67,7 +70,10 @@ const welcomeScreen = () => {
       friction: 3,
       tension: 40,
       useNativeDriver: true,
-    }).start();
+    }).start(() => {
+      // Navigate to landingPage_1 after animation completes
+      router.push('/landingPage_1');
+    });
   };
 
   return (
@@ -77,7 +83,7 @@ const welcomeScreen = () => {
               styles.content,
               {
                 opacity: fadeAnim,
-                transform: [{ scale: scaleAnim }]
+                transform: [{ scale: scaleAnim }],
               }
             ]}
         >
@@ -102,7 +108,7 @@ const welcomeScreen = () => {
           <Animated.View
               style={{
                 width: '100%',
-                transform: [{ scale: buttonBounceAnim }]
+                transform: [{ scale: buttonBounceAnim }],
               }}
           >
             <TouchableOpacity
@@ -169,8 +175,3 @@ const styles = StyleSheet.create({
 });
 
 export default welcomeScreen;
-
-
-
-
-
