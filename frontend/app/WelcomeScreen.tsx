@@ -10,11 +10,17 @@ import {
   Animated,
   Easing,
 } from 'react-native';
+<<<<<<< Updated upstream
 import { useRouter } from 'expo-router'; // Import useRouter
 
 const welcomeScreen = () => {
   const router = useRouter(); // Initialize router for navigation
 
+=======
+import { router } from 'expo-router';
+
+const LandingPage = () => {
+>>>>>>> Stashed changes
   // Animation values
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(0)).current;
@@ -25,14 +31,14 @@ const welcomeScreen = () => {
     // Fade in animation for logo and tagline
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 3000,
+      duration: 1000,
       useNativeDriver: true,
     }).start();
 
     // Scale animation for content
     Animated.spring(scaleAnim, {
       toValue: 1,
-      friction: 100,
+      friction: 8,
       tension: 40,
       useNativeDriver: true,
     }).start();
@@ -54,9 +60,9 @@ const welcomeScreen = () => {
           }),
         ])
     ).start();
-  }, []);
+  }, [fadeAnim, scaleAnim, dotPulseAnim]);
 
-  // Button press animation
+  // Button press animation and navigation
   const onPressIn = () => {
     Animated.spring(buttonBounceAnim, {
       toValue: 0.95,
@@ -88,7 +94,7 @@ const welcomeScreen = () => {
             ]}
         >
           <Image
-              source={require('../assets/images/GoviShakthi Logo (1).png')}
+              source={require('../assets/images/GoviShakthi Logo.png')}
               style={styles.logo}
               resizeMode="contain"
           />
@@ -120,6 +126,15 @@ const welcomeScreen = () => {
               <Text style={styles.buttonText}>Explore More</Text>
             </TouchableOpacity>
           </Animated.View>
+
+          <Animated.View
+              style={[
+                styles.paginationDot,
+                {
+                  transform: [{ scale: dotPulseAnim }]
+                }
+              ]}
+          />
         </View>
       </SafeAreaView>
   );
@@ -174,4 +189,8 @@ const styles = StyleSheet.create({
   },
 });
 
+<<<<<<< Updated upstream
 export default welcomeScreen;
+=======
+export default LandingPage;
+>>>>>>> Stashed changes
