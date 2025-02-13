@@ -16,7 +16,7 @@ const LandingPage2 = () => {
     const router = useRouter();
 
     const handleLogin = () => {
-        router.push("/login"); // Navigate to login page
+        router.push("/loginPage"); // Navigate to login page
     };
 
     return (
@@ -55,7 +55,7 @@ const LandingPage2 = () => {
                             <Text style={styles.buttonText}>Sign up with Google</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={handleLogin}>
                             <FontAwesome name="envelope" size={20} color="black" />
                             <Text style={styles.buttonText}>Log in with Your Account</Text>
                         </TouchableOpacity>
