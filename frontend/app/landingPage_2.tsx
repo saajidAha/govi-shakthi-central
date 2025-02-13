@@ -10,7 +10,7 @@ const IMAGES = [
     require("../assets/images/fruit basket-rafiki.png"),
 ];
 
-const { width: SCREEN_WIDTH } = Dimensions.get("window");
+const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 
 const LandingPage2 = () => {
     const router = useRouter();
@@ -60,7 +60,6 @@ const LandingPage2 = () => {
                             <Text style={styles.buttonText}>Log in with Your Account</Text>
                         </TouchableOpacity>
                     </View>
-
 
                     <TouchableOpacity onPress={handleLogin}>
                         <Text style={styles.loginText}>Don't have an Account? Sign up</Text>
@@ -138,18 +137,21 @@ const styles = StyleSheet.create({
     },
     textContent: {
         marginTop: 20,
+        alignItems: "center",
     },
     title: {
         fontSize: 24,
         fontWeight: "bold",
         color: "#000000",
         marginBottom: 10,
+        textAlign: "center",
     },
     description: {
-        fontSize:17,
+        fontSize: 17,
         color: "#FFFFFF",
         opacity: 0.9,
         lineHeight: 24,
+        textAlign: "center",
     },
     buttonsContainer: {
         alignItems: "center",
