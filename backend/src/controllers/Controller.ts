@@ -1,6 +1,7 @@
 import express from 'express';
 import { Repository } from '../repositories/Repository';
 import { LLMService } from '../services/LLMService';
+import {Authenticator} from "../services/Authenticator";
 
 /**
  * RESTful Controller Class Responsible for the Listening of HTTP requests
@@ -47,7 +48,7 @@ export class Controller{
                 let prediction = await this.llmService.fetchPricePrediction(this.repository);
                 res.status(200).json(prediction);
             }catch (e) {
-                res.status(500).json({message: "Error occured in the server"});
+                res.status(500).json({message: "Error occurred in the server"});
             }
         });
 
@@ -76,7 +77,7 @@ export class Controller{
             try{
                 console.log(String(req.query.fruit_type))
                 let product = await this.repository.findAlternatives({fruit_type: String(req.query.fruit_type)});
-                product.length!==0? res.status(200).json(product) : res.status(404).json({message:"could not find alternative for specified fruit" });
+                product.length!==0? res.status(200).json(product) : res.status(422).json({message:"could not find alternative for specified fruit. Please ensure that the fruit is spelled correctly." });
             }catch (error) {
                 console.log("Error occurred. Could not get result. : " + error)
                 res.status(500).json({message: "Error occurred in the server"});
@@ -87,7 +88,7 @@ export class Controller{
         app.get("/api/alternatives/market", async(req, res) => {
             try{
                 let marketPlaces = await this.repository.findMarket({alternative_product: String(req.query.alternative_product)}, "fruit_raw_material_marketplace_data");
-                marketPlaces.length!==0? res.status(200).json(marketPlaces) : res.status(404).json({message:"could not find market places for specified fruit" });
+                marketPlaces.length!==0? res.status(200).json(marketPlaces) : res.status(422).json({message:"could not find market places for specified fruit. Please ensure that the fruit is spelled correctly." });
             }catch (error) {
                 console.log("Error occurred. Could not get result. : " + error)
                 res.status(500).json({message: "Error occurred in the server"});
@@ -98,7 +99,7 @@ export class Controller{
         app.get("/api/alternatives/rawMaterialMarket", async(req, res) => {
             try{
                 let marketPlaces = await this.repository.findMarket({alternative_product: String(req.query.alternative_product)}, "fruit_marketplace_data" );
-                marketPlaces.length!==0? res.status(200).json(marketPlaces) : res.status(404).json({message:"could not find raw material market places for specified fruit" });
+                marketPlaces.length!==0? res.status(200).json(marketPlaces) : res.status(422).json({message:"could not find raw material market places for specified fruit. Please ensure that the fruit is spelled correctly." });
             }catch (error) {
                 console.log("Error occurred. Could not get result. : " + error)
                 res.status(500).json({message: "Error occurred in the server"});
@@ -109,7 +110,8 @@ export class Controller{
         app.post("/api/register", async(req, res) => {
             let {username, password} = req.body;
             try{
-                await this.repository.registerUser({username, password});
+                let hashedPassword = await Authenticator.hashPassword(password);
+                await this.repository.registerUser({username, hashedPassword});
                 console.log("User credentials saved successfully.");
                 res.status(201).json({username: username, password: password});
             }catch (error) {
@@ -119,14 +121,20 @@ export class Controller{
         } )
 
         // check login status
-        app.get("/api/login", async (req, res) => {
-            const username = String(req.query.username);
-            const password = String(req.query.password);
+        app.post("/api/login", async (req, res) => {
+            const username = String(req.body.username);
+            const password = String(req.body.password);
             try{
-                let response = await this.repository.checkCredentials({username, password});
-                response? res.status(200).json({message: "user exists within the system"}) : res.status(404).json({message:"could not find user" });
+                let response = await this.repository.checkCredentials({username});
+                if (response === null ) {
+                    res.status(401).json({message: "Access denied. User not registered in the system."})
+                }
+                else{
+                    let hashResponse = await Authenticator.compareHashes(password, response.hashedPassword);
+                    hashResponse? res.status(200).json({message: "Access granted. User exists within the system"}) : res.status(401).json({message: "Access denied. User not registered in the system."});
+                }
             }catch (e){
-                console.log("Error while checking login credentials")
+                console.log("Error while checking login credentials" + e)
                 res.status(500).json({message: "Error occurred in the server"});
             }
         })
