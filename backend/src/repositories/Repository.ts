@@ -68,7 +68,7 @@ export class Repository {
      * @param criteria criteria in {}
      */
     public async findAlternatives(criteria:{fruit_type: string}){
-        return await this.db.collection("sri_lanka_fruit_data").find(criteria, { projection: { "fruit_type": 1, "alternative_product": 1 } }).toArray();
+        return await this.db.collection("sri_lanka_fruit_data").find(criteria, { projection: { "fruit_type": 1, "location" : 1, "alternative_product": 1 } }).toArray();
     }
 
     /**
