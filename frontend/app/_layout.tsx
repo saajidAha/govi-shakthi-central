@@ -1,6 +1,25 @@
-import React from 'react';
-import { Slot } from 'expo-router';
+import React, { useEffect } from 'react';
+import { Slot, Stack } from 'expo-router'; // Updated import
+import { StatusBar } from 'expo-status-bar';
 
-export default function Layout() {
-  return <Slot />;
+declare global {
+  interface Window{
+    frameworkReady?: () => void;
+  }
+}
+
+export default function RootLayout() {
+  useEffect(()=>{
+    window.frameworkReady?.();
+  },[]);
+
+  return (
+    <>
+    <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="+not-found" />
+      </Stack>
+      <StatusBar style="auto" />
+    </>
+  )
 }

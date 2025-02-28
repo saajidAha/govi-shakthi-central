@@ -13,6 +13,7 @@ const LoginPage = () => {
     const handleLogin = () => {
         // Implement authentication logic here
         console.log("Logging in with", username, password);
+        router.push("/(tabs)/home"); // Navigate to home.tsx page
     };
 
     return (
