@@ -20,7 +20,7 @@ export default function TabLayout() {
           title: 'Home',
           tabBarIcon: ({ color, size }) => (
             <Image
-              source={require('assets/images/homeicon.png')}
+              source={require('../../assets/images/homeicon.png')}
               style={{ width: size, height: size, tintColor: color }}
             />
           ),
@@ -32,7 +32,7 @@ export default function TabLayout() {
           title: 'Analytics',
           tabBarIcon: ({ color, size }) => (
             <Image
-              source={require('assets/images/analyticsicon.png')}
+              source={require('../../assets/images/analytics.png')}
               style={{ width: size, height: size, tintColor: color }}
             />
           ),
@@ -44,7 +44,7 @@ export default function TabLayout() {
           title: 'Market',
           tabBarIcon: ({ color, size }) => (
             <Image
-              source={require('assets/images/marketplaces.png')}
+              source={require('../../assets/images/marketplaces.png')}
               style={{ width: size, height: size, tintColor: color }}
             />
           ),
@@ -56,7 +56,7 @@ export default function TabLayout() {
           title: 'Profile',
           tabBarIcon: ({ color, size }) => (
             <Image
-              source={require('assets/images/profileicon.png')}
+              source={require('../../assets/images/profileicon.png')}
               style={{ width: size, height: size, tintColor: color }}
             />
           ),

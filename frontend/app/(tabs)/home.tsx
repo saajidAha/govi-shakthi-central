@@ -30,7 +30,7 @@ export default function HomeScreen(){
             <TouchableOpacity style={styles.card}>
               <Text style={styles.cardTitle}>Select Fruit</Text>
               <Image
-                source={require('assets/images/Home1.png')}
+                source={require('../../assets/images/Home1.jpeg')}
                 style={styles.cardImage}
                 resizeMode="cover"
               />
@@ -40,7 +40,7 @@ export default function HomeScreen(){
               <Text style={styles.cardTitle}>Current Market Trends</Text>
               <View style={styles.trendIconContainer}>
                 <Image
-                  source={require('assets/images/Home2.png')}
+                  source={require('../../assets/images/Home2.jpeg')}
                   style={styles.trendIcon}
                 />
               </View>
@@ -52,7 +52,7 @@ export default function HomeScreen(){
             <TouchableOpacity style={styles.card}>
               <Text style={styles.cardTitle}>Crop Yield Prediction</Text>
               <Image
-                source={require('assets/images/Home3.png')}
+                source={require('../../assets/images/Home3.jpeg')}
                 style={styles.cardImage}
                 resizeMode="cover"
               />
@@ -61,7 +61,7 @@ export default function HomeScreen(){
             <TouchableOpacity style={styles.card}>
               <Text style={styles.cardTitle}>Market Demand Prediction</Text>
               <Image
-                source={require('assets/images/Home4.png')}
+                source={require('../../assets/images/Home4.jpeg')}
                 style={styles.cardImage}
                 resizeMode="cover"
               />
@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
   },
   greenHeader: {
     backgroundColor: '#00A67E',
-    padding: 16,
-    borderRadius: 8,
+    padding: 32,
+    borderRadius: 20,
     marginBottom: 16,
   },
   greetingContainer: {
