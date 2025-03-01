@@ -37,14 +37,12 @@ export default function HomeScreen(){
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.card}>
-              <Text style={styles.cardTitle}>Current Market Trends</Text>
-              <View style={styles.trendIconContainer}>
-                <Image
-                  source={require('../../assets/images/Home2.jpeg')}
-                  style={styles.trendIcon}
-                />
-              </View>
-              <View style={styles.trendLine} />
+              <Text style={styles.cardTitle}>Price Prediction</Text>
+              <Image
+                source={require('../../assets/images/Home2.jpeg')}
+                style={styles.cardImage}
+                resizeMode="cover"
+              />
             </TouchableOpacity>
           </View>
 
@@ -84,19 +82,21 @@ const styles = StyleSheet.create({
   },
   greenHeader: {
     backgroundColor: '#00A67E',
-    padding: 32,
-    borderRadius: 20,
+    padding: 80,
+    borderBottomLeftRadius: 40,
+    borderBottomRightRadius: 40,
     marginBottom: 16,
   },
   greetingContainer: {
     marginBottom: 16,
   },
   greeting: {
-    fontSize: 24,
+    fontSize: 36,
     fontWeight: 'bold',
     color: '#fff',
   },
   location: {
+    marginTop: 8,
     fontSize: 18,
     color: '#fff',
   },
@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
   },
   cardsContainer: {
     flex: 1,
+    padding: 16,
   },
   row: {
     flexDirection: 'row',
@@ -116,7 +117,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     borderRadius: 8,
-    padding: 16,
     margin: 8,
     alignItems: 'center',
     justifyContent: 'center',
@@ -125,28 +125,24 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 2,
+    height: 200,
+    overflow: 'hidden',
   },
   cardTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 8,
+    color: '#fff',
+    position: 'absolute',
+    top: 16,
+    left: 16,
+    zIndex: 1,
   },
   cardImage: {
-    width: 50,
-    height: 50,
-  },
-  trendIconContainer: {
-    marginTop: 8,
-  },
-  trendIcon: {
-    width: 24,
-    height: 24,
-    marginBottom: 8,
-  },
-  trendLine: {
-    width: '100%',
-    height: 2,
-    backgroundColor: '#FFD700',
-    marginTop: 8,
+    width: '100%', // Fill the card with the image
+    height: '100%', 
+    borderRadius: 8,
+    position: 'absolute',
+    top: 0,
+    left: 0,
   },
 });
