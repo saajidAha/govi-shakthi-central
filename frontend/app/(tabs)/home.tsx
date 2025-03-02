@@ -75,10 +75,11 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
+  
   container: {
     flex: 1,
-    padding: 16,
   },
   greenHeader: {
     backgroundColor: '#00A67E',

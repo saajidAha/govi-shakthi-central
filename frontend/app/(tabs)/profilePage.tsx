@@ -12,11 +12,11 @@ import{
 
 export default function ProfilePage() {
     const menuItems = [
-        {title: 'Personal Details', latUpdated: '2 days ago'},
-        {title: 'Statics', latUpdated: '5 days ago'},
-        {title: 'Produced Products', latUpdated: 'This Year'},
+        {title: 'Personal Details', lastUpdated: '2 days ago'},
+        {title: 'Statics', lastUpdated: '5 days ago'},
+        {title: 'Produced Products', lastUpdated: 'This Year'},
         {title: 'History', lastUpdated: '3 days ago'},
-        {title: 'Predictions', latUpdated: '3 days ago'},
+        {title: 'Predictions', lastUpdated: '3 days ago'},
     ];
 
     return(
@@ -34,7 +34,7 @@ export default function ProfilePage() {
                     </View>
 
                     <View style={styles.profileInfo}>
-                        <Image source={require('../../assets/images/profileicon.png')} style={styles.profileImage}/>
+                        <Image source={require('../../assets/images/Profile Pic.jpg')} style={styles.profileImage}/>
                         <Text style={styles.profileName}>Profile</Text>
                         <Text style={styles.userName}>Dudley Sirisena</Text>
                         <Text style={styles.location}>Anuradhapura, Sri Lanka</Text>
@@ -64,7 +64,7 @@ export default function ProfilePage() {
                                 <Text style={styles.menuItemTitle}>{item.title}</Text>
                                 <Text style={styles.menuItemSubtitle}>{item.lastUpdated}</Text>
                             </View>
-                            <Image source={require('../../assets/images/chevronright.png')} style={styles.icon}/>
+                            <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
                             {index<menuItems.length-1 && <View style={styles.divider}/>}
                         </TouchableOpacity>
                     ))}
@@ -89,9 +89,9 @@ const styles = StyleSheet.create({
 
     greenHeader: {
         backgroundColor: '#00A67E',
-        borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30,
-        paddingBottom: 30,
+        borderBottomLeftRadius: 40,
+        borderBottomRightRadius: 40,
+        marginBottom: 16,
     },
       
     topNav: {
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     },
       
     userName: {
-        fontSize: 18,
+        fontSize: 30,
         color: '#fff',
         fontWeight: '500',
     },
@@ -212,6 +212,13 @@ const styles = StyleSheet.create({
         width: 24,
         height: 24,
         tintColor: '#fff',
-    }
+    },
+
+    chevronIcon: {
+        width: 24,
+        height: 24,
+        tintColor: '#333',
+    },
+
 });
 
