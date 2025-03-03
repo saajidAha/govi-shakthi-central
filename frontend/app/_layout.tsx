@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Slot, Stack } from 'expo-router'; // Updated import
+import { Slot, Stack } from 'expo-router'; 
 import { StatusBar } from 'expo-status-bar';
 
 declare global {
@@ -18,6 +18,7 @@ export default function RootLayout() {
     <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="edit-profile" options={{headerShown: false}} />
       </Stack>
       <StatusBar style="auto" />
     </>

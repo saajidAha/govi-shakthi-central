@@ -8,15 +8,42 @@ import{
     ScrollView,
     SafeAreaView,
     Platform,
+    Alert,
 } from 'react-native';
+import {useRouter} from 'expo-router';
 
 export default function ProfilePage() {
+    const router = useRouter();
     const menuItems = [
-        {title: 'Personal Details', lastUpdated: '2 days ago'},
-        {title: 'Statics', lastUpdated: '5 days ago'},
-        {title: 'Produced Products', lastUpdated: 'This Year'},
-        {title: 'History', lastUpdated: '3 days ago'},
-        {title: 'Predictions', lastUpdated: '3 days ago'},
+        {
+            title: 'Personal Details',
+            lastUpdated: '2 days ago',
+            onPress: () => router.push('/edit-profile')
+        },
+
+        {
+            title: 'Statics',
+            lastUpdated: '5 days ago',
+            onPress: () => Alert.alert('Statictics', 'This feature is not available yet.')
+        },
+
+        {
+            title: 'Produced Products',
+            lastUpdated: 'This Year',
+            onPress: () => Alert.alert('Products', 'This feature is not available yet.')
+        },
+
+        {
+            title: 'History',
+            lastUpdated: '3 days ago',
+            onPress: () => Alert.alert('History', 'This feature is not available yet.')
+        },
+
+        {
+            title: 'Predictions',
+            lastUpdated: '3 days ago',
+            onPress: () => Alert.alert('Predictions', 'This feature is not available yet.')
+        },
     ];
 
     return(
@@ -25,10 +52,10 @@ export default function ProfilePage() {
 
                 <View style={styles.greenHeader}>
                     <View style={styles.topNav}>
-                        <TouchableOpacity style={styles.backButton}>
+                        <TouchableOpacity style={styles.backButton} onPress={()=>router.back()}>
                             <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.settingsButton}>
+                        <TouchableOpacity style={styles.settingsButton} onPress={()=>router.push('/settings')}>
                             <Image source={require('../../assets/images/settings.png')} style={styles.icon}/>
                         </TouchableOpacity>
                     </View>
@@ -43,15 +70,15 @@ export default function ProfilePage() {
 
                 <View style={styles.resourcesContainer}>
                     <View style={styles.resourcesRow}>
-                        <TouchableOpacity style={styles.resourceCard}>
+                        <TouchableOpacity style={styles.resourceCard} onPress={()=>Alert.alert('/Resources', 'This feature is not available yet.')}>
                             <Text style={styles.resourceTitle}>Available Resources</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.resourceCard}>
+                        <TouchableOpacity style={styles.resourceCard} onPress={()=>Alert.alert('/Resources', 'This feature is not available yet.')}>
                             <Text style={styles.resourceTitle}>Available Resources</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.resourceCard}>
+                        <TouchableOpacity style={styles.resourceCard} onPress={()=>Alert.alert('/Resources', 'This feature is not available yet.')}>
                             <Text style={styles.resourceTitle}>Available Resources</Text>
                         </TouchableOpacity>
                     </View>
@@ -59,7 +86,7 @@ export default function ProfilePage() {
 
                 <View style={styles.menuContainer}>
                     {menuItems.map((item, index)=> (
-                        <TouchableOpacity key={index} style={styles.menuItem}>
+                        <TouchableOpacity key={index} style={styles.menuItem} onPress={item.onPress}>
                             <View style={styles.menuItemLeft}>
                                 <Text style={styles.menuItemTitle}>{item.title}</Text>
                                 <Text style={styles.menuItemSubtitle}>{item.lastUpdated}</Text>
