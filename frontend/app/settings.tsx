@@ -24,7 +24,7 @@ export default function SettingsScreen() {
     { 
       title: 'Agri Profile', 
       description: 'Manage your Farming information',
-      onPress: () => router.push('/WelcomeScreen')
+      onPress: () => router.push('/agri-profile')
     },
     { 
       title: 'Privacy', 
