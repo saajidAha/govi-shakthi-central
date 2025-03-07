@@ -9,8 +9,11 @@ import {
   SafeAreaView,
   Platform,
 } from 'react-native';
+import { useRouter } from 'expo-router';
 
 export default function HomeScreen(){
+  const router = useRouter();
+
   return(
     <SafeAreaView style={styles.safeArea}>
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
@@ -36,7 +39,8 @@ export default function HomeScreen(){
               />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.card}>
+            <TouchableOpacity style={[styles.card, styles.marketCard]}
+              onPress={()=> router.push('../price-prediction')}>
               <Text style={styles.cardTitle}>Price Prediction</Text>
               <Image
                 source={require('../../assets/images/Home2.jpeg')}
@@ -129,6 +133,24 @@ const styles = StyleSheet.create({
     height: 200,
     overflow: 'hidden',
   },
+
+  fruitCard: {
+    backgroundColor: '#FFB6C1',
+  },
+
+  marketCard: {
+    backgroundColor: '#1E5F74',
+    justifyContent: 'space-between',
+  },
+
+  cropCard: {
+    backgroundColor: '#4A6D7C',
+  },
+
+  demandCard: {
+    backgroundColor: '#FFD700',
+  },
+
   cardTitle: {
     fontSize: 16,
     fontWeight: 'bold',
