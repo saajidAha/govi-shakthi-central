@@ -60,7 +60,7 @@ export default function PricePredictionScreen() {
               style={styles.backButton}
               onPress={() => router.back()}
             >
-              <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
+              <Image source={require('../assets/images/back.png')} style={styles.icon}/>
             </TouchableOpacity>
             <Text style={styles.headerTitle}>Price Prediction</Text>
           </View>
@@ -75,7 +75,7 @@ export default function PricePredictionScreen() {
               <Text style={styles.dropdownText}>
                 {selectedDistrict || 'Choose a district'}
               </Text>
-              <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
+              <Image source={require('../assets/images/chevronright.png')} style={styles.chevronIcon}/>
             </TouchableOpacity>
   
             {isDropdownOpen && (
@@ -147,7 +147,7 @@ export default function PricePredictionScreen() {
 const styles = StyleSheet.create({
     SafeArea:{
         flex: 1,
-        backgroundColor: '#f8f8f8',
+        backgroundColor: '#00A67E',
         paddingTop: Platform.OS === 'android' ? 25 : 0,
     },
 

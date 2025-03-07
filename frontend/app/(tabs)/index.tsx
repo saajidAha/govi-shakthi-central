@@ -2,13 +2,16 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, SafeAreaView } from 'react-native';
 import WelcomeScreen from '../WelcomeScreen';
+import { MarketProvider } from '../context/MarketContext';
 
 export default function App() {
     return (
-        <SafeAreaView style={styles.container}>
-            <StatusBar style="auto" />
-            <WelcomeScreen />
-        </SafeAreaView>
+        <MarketProvider>
+            <SafeAreaView style={styles.container}>
+                <StatusBar style="auto" />
+                <WelcomeScreen />
+            </SafeAreaView>
+        </MarketProvider>
     );
 }
 
