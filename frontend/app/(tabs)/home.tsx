@@ -60,7 +60,7 @@ export default function HomeScreen(){
               />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.card}>
+            <TouchableOpacity style={styles.card} onPress={() => router.push('../market-demand-prediction')}>
               <Text style={styles.cardTitle}>Market Demand Prediction</Text>
               <Image
                 source={require('../../assets/images/Home4.jpeg')}
@@ -133,24 +133,19 @@ const styles = StyleSheet.create({
     height: 200,
     overflow: 'hidden',
   },
-
   fruitCard: {
     backgroundColor: '#FFB6C1',
   },
-
   marketCard: {
     backgroundColor: '#1E5F74',
     justifyContent: 'space-between',
   },
-
   cropCard: {
     backgroundColor: '#4A6D7C',
   },
-
   demandCard: {
     backgroundColor: '#FFD700',
   },
-
   cardTitle: {
     fontSize: 16,
     fontWeight: 'bold',
@@ -161,7 +156,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   cardImage: {
-    width: '100%', // Fill the card with the image
+    width: '100%',
     height: '100%', 
     borderRadius: 8,
     position: 'absolute',
