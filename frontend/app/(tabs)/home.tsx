@@ -51,8 +51,9 @@ export default function HomeScreen(){
           </View>
 
           <View style={styles.row}>
-            <TouchableOpacity style={styles.card}>
-              <Text style={styles.cardTitle}>Crop Yield Prediction</Text>
+            <TouchableOpacity style={[styles.card, styles.cropCard]}
+              onPress={()=> router.push('../yield-prediction')}>
+              <Text style={styles.cardTitle}>Crop Yield Prediction</Text>s
               <Image
                 source={require('../../assets/images/Home3.jpeg')}
                 style={styles.cardImage}
