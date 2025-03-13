@@ -8,3 +8,6 @@ const mainController: Controller = Controller.getInstance(Repository.getInstance
 
 // Inject controller dependency and start the server
 Server.getInstance(mainController).start();
+
+
+//for testing purposes only
