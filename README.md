@@ -1,5 +1,3 @@
-
-
 ---
 
 # Govishakthi App
@@ -15,6 +13,7 @@ Govishakthi is a mobile application designed to [insert a brief description of y
 - [Running the App](#running-the-app)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
+- [Testing Instructions](testing-instructions)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -25,6 +24,7 @@ Govishakthi is a mobile application designed to [insert a brief description of y
 ### Prerequisites
 
 Ensure that you have the following tools installed:
+
 - **Node.js** (LTS version recommended)
 - **Expo CLI** (optional, but recommended for Expo commands)
   ```bash
@@ -34,6 +34,7 @@ Ensure that you have the following tools installed:
 ### Clone the Repository
 
 Clone the repository to your local machine:
+
 ```bash
 git clone https://github.com/yourusername/govishakthi-app.git
 ```
@@ -41,12 +42,14 @@ git clone https://github.com/yourusername/govishakthi-app.git
 ### Install Dependencies
 
 Navigate to the frontend directory and install the required dependencies:
+
 ```bash
 cd govishakthi-app/frontend
 npm install
 ```
 
 OR if you prefer Yarn:
+
 ```bash
 yarn install
 ```
@@ -62,6 +65,7 @@ Make sure you have **Node.js** and **npm** installed on your system.
 ### Navigate to Backend Directory
 
 After cloning the repository, navigate to the backend directory:
+
 ```bash
 cd govishakthi-app/backend
 ```
@@ -69,6 +73,7 @@ cd govishakthi-app/backend
 ### Install Dependencies
 
 Install the required backend dependencies:
+
 ```bash
 npm install
 ```
@@ -80,6 +85,7 @@ npm install
 ### Frontend (React Native with Expo)
 
 To run the frontend, navigate to the **frontend** directory and start the Expo server:
+
 ```bash
 cd frontend
 npm start
@@ -87,11 +93,11 @@ npm start
 
 This will open the Expo development server. You can scan the QR code with the **Expo Go app** on your phone or use a simulator/emulator.
 
-- For **iOS**: 
+- For **iOS**:
   ```bash
   npx expo start --ios
   ```
-- For **Android**: 
+- For **Android**:
   ```bash
   npx expo start --android
   ```
@@ -99,6 +105,7 @@ This will open the Expo development server. You can scan the QR code with the **
 ### Backend (Node.js with Express)
 
 To start the backend server, navigate to the **backend** directory and run:
+
 ```bash
 cd backend
 npm run dev // Compiles the .ts files to .js and run
@@ -141,6 +148,7 @@ The server will be running on `http://localhost:7000` (or a different port if yo
 ## Technologies Used
 
 ### Frontend
+
 - **React Native**: Framework for building mobile apps.
 - **Expo**: Platform and tools for building React Native apps.
 - **React Navigation**: For routing and navigation.
@@ -149,10 +157,32 @@ The server will be running on `http://localhost:7000` (or a different port if yo
 - **Styled Components**: (optional) for styling the components.
 
 ### Backend
+
 - **Node.js**: JavaScript runtime environment.
 - **Express.js**: Web framework for Node.js.
 - **MongoDB/Mongoose**: Database solution (optional, modify as needed).
+
 ---
+
+## Testing Instructions
+
+### Frontend Testing
+
+- Unit Testing: Run Jest tests using:
+
+  npm test
+
+- Manual Testing: Use Expo Go or an emulator to manually verify UI functionality.
+
+### Backend Testing
+
+- API Testing with Postman:
+
+  Send GET, POST, PUT, and DELETE requests to verify API endpoints.
+
+-Automated Testing with Jest:
+
+npm run test
 
 ## Contributing
 
