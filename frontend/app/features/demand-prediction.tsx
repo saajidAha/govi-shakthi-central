@@ -11,39 +11,39 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useYield } from './context/YieldContext';
+import { useDemand } from '../context/DemandContext';
 
 const districts = [
   'Colombo',
-  'Gampaha',
-  'Kalutara',
-  'Kandy',
-  'Matale',
-  'Nuwara Eliya',
-  'Galle',
-  'Matara',
-  'Hambantota',
-  'Jaffna',
-  'Kilinochchi',
-  'Mannar',
-  'Vavuniya',
-  'Mulativu',
-  'Batticaloa',
-  'Ampara',
-  'Trincomalee',
-  'Kurunegala',
-  'Puttalam',
-  'Anuradhapura',
-  'Polonnaruwa',
-  'Badulla',
-  'Monaragala',
-  'Ratnapura',
-  'Kegalle',
+    'Gampaha',
+    'Kalutara',
+    'Kandy',
+    'Matale',
+    'Nuwara Eliya',
+    'Galle',
+    'Matara',
+    'Hambantota',
+    'Jaffna',
+    'Kilinochchi',
+    'Mannar',
+    'Vavuniya',
+    'Mulativu',
+    'Batticaloa',
+    'Ampara',
+    'Trincomalee',
+    'Kurunegala',
+    'Puttalam',
+    'Anuradhapura',
+    'Polonnaruwa',
+    'Badulla',
+    'Monaragala',
+    'Ratnapura',
+    'Kegalle',
 ];
 
-export default function YieldPredictionScreen() {
+export default function DemandPredictionScreen() {
   const router = useRouter();
-  const { selectedDistrict = '', setSelectedDistrict, crops = [], isLoading } = useYield();
+  const { selectedDistrict, setSelectedDistrict, fruits, isLoading } = useDemand();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDistrictSelect = (district: string) => {
@@ -60,9 +60,9 @@ export default function YieldPredictionScreen() {
             style={styles.backButton}
             onPress={() => router.back()}
           >
-            <Image source={require('../assets/images/back.png')} style={styles.icon}/>
+            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Yield Prediction</Text>
+          <Text style={styles.headerTitle}>Demand Prediction</Text>
         </View>
 
         {/* District Selector */}
@@ -75,7 +75,7 @@ export default function YieldPredictionScreen() {
             <Text style={styles.dropdownText}>
               {selectedDistrict || 'Choose a district'}
             </Text>
-            <Image source={require('../assets/images/chevronright.png')} style={styles.chevronIcon}/>
+            <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
           </TouchableOpacity>
 
           {isDropdownOpen && (
@@ -101,33 +101,33 @@ export default function YieldPredictionScreen() {
           )}
         </View>
 
-        {/* Crop Cards */}
-        <View style={styles.cropsContainer}>
+        {/* Fruit Cards */}
+        <View style={styles.fruitsContainer}>
           {isLoading ? (
             <View style={styles.loaderContainer}>
               <ActivityIndicator size="large" color="#fff" />
-              <Text style={styles.loaderText}>Loading crops...</Text>
+              <Text style={styles.loaderText}>Loading demand data...</Text>
             </View>
-          ) : crops.length > 0 ? (
-            crops.map((crop) => (
+          ) : fruits.length > 0 ? (
+            fruits.map((fruit) => (
               <View
-                key={crop.id}
-                style={[styles.cropCard, { backgroundColor: crop.backgroundColor || '#ffffff' }]}
+                key={fruit.id}
+                style={[styles.fruitCard, { backgroundColor: fruit.backgroundColor }]}
               >
-                <View style={styles.cropImageContainer}>
+                <View style={styles.fruitImageContainer}>
                   <Image
-                    source={{ uri: crop.image }}
-                    style={styles.cropImage}
+                    source={{ uri: fruit.image }}
+                    style={styles.fruitImage}
                     resizeMode="cover"
                   />
                 </View>
-                <View style={styles.cropInfo}>
-                  <Text style={styles.cropName}>{crop.name}</Text>
-                  <Text style={styles.predictedYield}>
-                    Yield Prediction: {crop.predictedYield.toFixed(2)} kg
+                <View style={styles.fruitInfo}>
+                  <Text style={styles.fruitName}>{fruit.name}</Text>
+                  <Text style={styles.predictedDemand}>
+                    Demand Prediction: {fruit.predictedDemand.toFixed(2)} kg
                   </Text>
                   <Text style={styles.marketName}>
-                    Market: {crop.market}
+                    Market: {fruit.market}
                   </Text>
                 </View>
               </View>
@@ -136,8 +136,8 @@ export default function YieldPredictionScreen() {
             <View style={styles.emptyContainer}>
               <Text style={styles.emptyText}>
                 {selectedDistrict 
-                  ? 'No crops available in this district'
-                  : 'Select a district to view crop predictions'}
+                  ? 'No demand data available for this district'
+                  : 'Select a district to view demand predictions'}
               </Text>
             </View>
           )}
@@ -218,10 +218,10 @@ const styles = StyleSheet.create({
     color: '#00A67E',
     fontWeight: 'bold',
   },
-  cropsContainer: {
+  fruitsContainer: {
     padding: 20,
   },
-  cropCard: {
+  fruitCard: {
     flexDirection: 'row',
     borderRadius: 15,
     marginBottom: 15,
@@ -232,26 +232,26 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
   },
-  cropImageContainer: {
+  fruitImageContainer: {
     width: 120,
     height: 120,
   },
-  cropImage: {
+  fruitImage: {
     width: '100%',
     height: '100%',
   },
-  cropInfo: {
+  fruitInfo: {
     flex: 1,
     padding: 15,
     justifyContent: 'center',
   },
-  cropName: {
+  fruitName: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 8,
   },
-  predictedYield: {
+  predictedDemand: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#00A67E',
@@ -279,14 +279,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
-  icon: {
+
+  icon:{
     width: 24,
     height: 24,
     tintColor: '#fff',
   },
-  chevronIcon: {
+
+chevronIcon: {
     width: 24,
     height: 24,
     tintColor: '#333',
   },
+
 });

@@ -13,16 +13,17 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 
-export default function EditProfileScreen() {
+export default function AgriProfileScreen() {
   const router = useRouter();
-  const [name, setName] = useState('Dudely Sirisena');
-  const [email, setEmail] = useState('dudely@example.com');
-  const [phone, setPhone] = useState('+94 77 123 4567');
-  const [location, setLocation] = useState('Anuradhapura, Sri Lanka');
+  const [farmName, setFarmName] = useState('Green Valley Farm');
+  const [farmSize, setFarmSize] = useState('5 acres');
+  const [mainCrops, setMainCrops] = useState('Rice, Vegetables, Fruits');
+  const [farmingExperience, setFarmingExperience] = useState('15 years');
+  const [farmLocation, setFarmLocation] = useState('Anuradhapura, Sri Lanka');
 
   const handleSave = () => {
-    // add backend API call to update user profile
-    Alert.alert('Profile Updated', 'Your profile has been successfully updated.');
+    // Backend Logic
+    Alert.alert('Agri Profile Updated', 'Your farming profile has been successfully updated.');
     router.back();
   };
 
@@ -35,52 +36,60 @@ export default function EditProfileScreen() {
             style={styles.backButton}
             onPress={() => router.back()}
           >
-          <Image source={require('../assets/images/back.png')} style={styles.icon}/>  
+            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Edit Profile</Text>
+          <Text style={styles.headerTitle}>Agri Profile</Text>
         </View>
 
         {/* Form */}
         <View style={styles.formContainer}>
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Full Name</Text>
+            <Text style={styles.label}>Farm Name</Text>
             <TextInput
               style={styles.input}
-              value={name}
-              onChangeText={setName}
-              placeholder="Enter your full name"
+              value={farmName}
+              onChangeText={setFarmName}
+              placeholder="Enter your farm name"
             />
           </View>
 
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Email</Text>
+            <Text style={styles.label}>Farm Size</Text>
             <TextInput
               style={styles.input}
-              value={email}
-              onChangeText={setEmail}
-              placeholder="Enter your email"
-              keyboardType="email-address"
+              value={farmSize}
+              onChangeText={setFarmSize}
+              placeholder="Enter your farm size"
             />
           </View>
 
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Phone Number</Text>
+            <Text style={styles.label}>Main Crops</Text>
             <TextInput
               style={styles.input}
-              value={phone}
-              onChangeText={setPhone}
-              placeholder="Enter your phone number"
-              keyboardType="phone-pad"
+              value={mainCrops}
+              onChangeText={setMainCrops}
+              placeholder="Enter your main crops"
             />
           </View>
 
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Location</Text>
+            <Text style={styles.label}>Farming Experience</Text>
             <TextInput
               style={styles.input}
-              value={location}
-              onChangeText={setLocation}
-              placeholder="Enter your location"
+              value={farmingExperience}
+              onChangeText={setFarmingExperience}
+              placeholder="Enter your farming experience"
+            />
+          </View>
+
+          <View style={styles.inputGroup}>
+            <Text style={styles.label}>Farm Location</Text>
+            <TextInput
+              style={styles.input}
+              value={farmLocation}
+              onChangeText={setFarmLocation}
+              placeholder="Enter your farm location"
             />
           </View>
 
@@ -150,11 +159,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-
   icon:{
     width: 24,
     height: 24,
     tintColor: '#000000',
   },
-
 });

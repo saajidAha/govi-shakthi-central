@@ -13,17 +13,16 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 
-export default function AgriProfileScreen() {
+export default function EditProfileScreen() {
   const router = useRouter();
-  const [farmName, setFarmName] = useState('Green Valley Farm');
-  const [farmSize, setFarmSize] = useState('5 acres');
-  const [mainCrops, setMainCrops] = useState('Rice, Vegetables, Fruits');
-  const [farmingExperience, setFarmingExperience] = useState('15 years');
-  const [farmLocation, setFarmLocation] = useState('Anuradhapura, Sri Lanka');
+  const [name, setName] = useState('Dudely Sirisena');
+  const [email, setEmail] = useState('dudely@example.com');
+  const [phone, setPhone] = useState('+94 77 123 4567');
+  const [location, setLocation] = useState('Anuradhapura, Sri Lanka');
 
   const handleSave = () => {
-    // Backend Logic
-    Alert.alert('Agri Profile Updated', 'Your farming profile has been successfully updated.');
+    // add backend API call to update user profile
+    Alert.alert('Profile Updated', 'Your profile has been successfully updated.');
     router.back();
   };
 
@@ -36,60 +35,52 @@ export default function AgriProfileScreen() {
             style={styles.backButton}
             onPress={() => router.back()}
           >
-            <Image source={require('../assets/images/back.png')} style={styles.icon}/>
+          <Image source={require('../../assets/images/back.png')} style={styles.icon}/>  
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Agri Profile</Text>
+          <Text style={styles.headerTitle}>Edit Profile</Text>
         </View>
 
         {/* Form */}
         <View style={styles.formContainer}>
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Farm Name</Text>
+            <Text style={styles.label}>Full Name</Text>
             <TextInput
               style={styles.input}
-              value={farmName}
-              onChangeText={setFarmName}
-              placeholder="Enter your farm name"
+              value={name}
+              onChangeText={setName}
+              placeholder="Enter your full name"
             />
           </View>
 
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Farm Size</Text>
+            <Text style={styles.label}>Email</Text>
             <TextInput
               style={styles.input}
-              value={farmSize}
-              onChangeText={setFarmSize}
-              placeholder="Enter your farm size"
+              value={email}
+              onChangeText={setEmail}
+              placeholder="Enter your email"
+              keyboardType="email-address"
             />
           </View>
 
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Main Crops</Text>
+            <Text style={styles.label}>Phone Number</Text>
             <TextInput
               style={styles.input}
-              value={mainCrops}
-              onChangeText={setMainCrops}
-              placeholder="Enter your main crops"
+              value={phone}
+              onChangeText={setPhone}
+              placeholder="Enter your phone number"
+              keyboardType="phone-pad"
             />
           </View>
 
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Farming Experience</Text>
+            <Text style={styles.label}>Location</Text>
             <TextInput
               style={styles.input}
-              value={farmingExperience}
-              onChangeText={setFarmingExperience}
-              placeholder="Enter your farming experience"
-            />
-          </View>
-
-          <View style={styles.inputGroup}>
-            <Text style={styles.label}>Farm Location</Text>
-            <TextInput
-              style={styles.input}
-              value={farmLocation}
-              onChangeText={setFarmLocation}
-              placeholder="Enter your farm location"
+              value={location}
+              onChangeText={setLocation}
+              placeholder="Enter your location"
             />
           </View>
 
@@ -159,9 +150,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+
   icon:{
     width: 24,
     height: 24,
     tintColor: '#000000',
   },
+
 });
