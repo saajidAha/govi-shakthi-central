@@ -60,6 +60,15 @@ export default function AlternativeProductsScreen() {
     return price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
+  const handleNext = (item: ProductData) => {
+    router.push({
+      pathname: '/MarketplaceScreen',
+      params: {
+        alternativeProduct: item.alternative_product.name
+      }
+    });
+  };
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.header}>
@@ -81,61 +90,71 @@ export default function AlternativeProductsScreen() {
           <ActivityIndicator size="large" color="#00A67E" />
         </View>
       ) : (
-        <ScrollView style={styles.container}>
-          {alternatives
-            .filter(item => item.location === params.district)
-            .length === 0 ? (
-            <View style={styles.errorContainer}>
-              <Text style={styles.errorText}>
-                The data is not available yet, we will update soon.
-              </Text>
-              <TouchableOpacity 
-                style={styles.backToDetailsButton}
-                onPress={() => router.back()}
-              >
-                <Text style={styles.backToDetailsText}>Back to Details</Text>
-              </TouchableOpacity>
-            </View>
-          ) : (
-            alternatives
+        <View style={styles.mainContainer}>
+          <ScrollView style={styles.container}>
+            {alternatives
               .filter(item => item.location === params.district)
-              .map((item, index) => (
-                <View key={item._id} style={styles.productCard}>
-                  <Text style={styles.productName}>{item.alternative_product.name}</Text>
-                  
-                  <View style={styles.priceRow}>
-                    <View style={styles.priceItem}>
-                      <Text style={styles.priceLabel}>Wholesale Price</Text>
-                      <Text style={styles.priceValue}>
-                        LKR {formatPrice(item.alternative_product.wholesale_price.value)}
-                      </Text>
+              .length === 0 ? (
+              <View style={styles.errorContainer}>
+                <Text style={styles.errorText}>
+                  The data is not available yet, we will update soon.
+                </Text>
+                <TouchableOpacity 
+                  style={styles.backToDetailsButton}
+                  onPress={() => router.back()}
+                >
+                  <Text style={styles.backToDetailsText}>Back to Details</Text>
+                </TouchableOpacity>
+              </View>
+            ) : (
+              alternatives
+                .filter(item => item.location === params.district)
+                .map((item, index) => (
+                  <TouchableOpacity
+                    key={item._id}
+                    style={styles.productCard}
+                    onPress={() => handleNext(item)}
+                  >
+                    <Text style={styles.productName}>{item.alternative_product.name}</Text>
+                    
+                    <View style={styles.priceRow}>
+                      <View style={styles.priceItem}>
+                        <Text style={styles.priceLabel}>Wholesale Price</Text>
+                        <Text style={styles.priceValue}>
+                          LKR {formatPrice(item.alternative_product.wholesale_price.value)}
+                        </Text>
+                      </View>
+                      <View style={styles.priceItem}>
+                        <Text style={styles.priceLabel}>Retail Price</Text>
+                        <Text style={styles.priceValue}>
+                          LKR {formatPrice(item.alternative_product.retail_price.value)}
+                        </Text>
+                      </View>
                     </View>
-                    <View style={styles.priceItem}>
-                      <Text style={styles.priceLabel}>Retail Price</Text>
-                      <Text style={styles.priceValue}>
-                        LKR {formatPrice(item.alternative_product.retail_price.value)}
-                      </Text>
-                    </View>
-                  </View>
 
-                  <View style={styles.profitRow}>
-                    <View style={styles.profitItem}>
-                      <Text style={styles.profitLabel}>Expected Wholesale Profit</Text>
-                      <Text style={styles.profitValue}>
-                        LKR {formatPrice(item.alternative_product.expected_wholesale_profit.value)}
-                      </Text>
+                    <View style={styles.profitRow}>
+                      <View style={styles.profitItem}>
+                        <Text style={styles.profitLabel}>Expected Wholesale Profit</Text>
+                        <Text style={styles.profitValue}>
+                          LKR {formatPrice(item.alternative_product.expected_wholesale_profit.value)}
+                        </Text>
+                      </View>
+                      <View style={styles.profitItem}>
+                        <Text style={styles.profitLabel}>Expected Retail Profit</Text>
+                        <Text style={styles.profitValue}>
+                          LKR {formatPrice(item.alternative_product.expected_retail_profit.value)}
+                        </Text>
+                      </View>
                     </View>
-                    <View style={styles.profitItem}>
-                      <Text style={styles.profitLabel}>Expected Retail Profit</Text>
-                      <Text style={styles.profitValue}>
-                        LKR {formatPrice(item.alternative_product.expected_retail_profit.value)}
-                      </Text>
+                    
+                    <View style={styles.nextButtonContainer}>
+                      <Text style={styles.nextButtonText}>View Marketplaces →</Text>
                     </View>
-                  </View>
-                </View>
-              ))
-          )}
-        </ScrollView>
+                  </TouchableOpacity>
+                ))
+            )}
+          </ScrollView>
+        </View>
       )}
     </SafeAreaView>
   );
@@ -258,6 +277,21 @@ const styles = StyleSheet.create({
   },
   backToDetailsText: {
     color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  mainContainer: {
+    flex: 1,
+  },
+  nextButtonContainer: {
+    marginTop: 16,
+    alignItems: 'flex-end',
+    borderTopWidth: 1,
+    borderTopColor: '#E0E0E0',
+    paddingTop: 12,
+  },
+  nextButtonText: {
+    color: '#00A67E',
     fontSize: 16,
     fontWeight: 'bold',
   },
