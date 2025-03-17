@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { usePathname } from 'expo-router'; 
 
 // Types
 export interface CropYield {
@@ -73,6 +74,15 @@ const mockYieldsByDistrict: Record<string, CropYield[]> = {
     const [selectedDistrict, setSelectedDistrict] = useState<string>('');
     const [crops, setCrops] = useState<CropYield[]>([]);
     const [isLoading, setIsLoading] = useState(false);
+    const pathname = usePathname();
+
+    //Reset state when navigating away from the Yield prediction screen
+      useEffect(()=>{
+        if(pathname !== '/features/demand-prediction'){
+          setSelectedDistrict('');
+          setCrops([]);
+        }
+      }, [pathname]);
   
     useEffect(() => {
       if (selectedDistrict) {
