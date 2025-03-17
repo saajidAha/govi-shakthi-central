@@ -12,8 +12,10 @@ import {
     ImageSourcePropType,
     TextInput,
     Modal,
+    StatusBar,
 } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
+import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Define the Fruit interface
 interface Fruit {
@@ -41,6 +43,7 @@ export default function FruitDetailsScreen() {
     const router = useRouter();
     const params = useLocalSearchParams();
     const fruit: Fruit = JSON.parse(params.fruit as string);
+    const insets = useSafeAreaInsets();
     
     const [amount, setAmount] = useState('');
     const [selectedMonth, setSelectedMonth] = useState('');
@@ -66,156 +69,163 @@ export default function FruitDetailsScreen() {
     };
 
     return (
-        <SafeAreaView style={styles.safeArea}>
-            <ScrollView 
-                style={styles.container}
-                contentContainerStyle={{ flexGrow: 1 }}
-                showsVerticalScrollIndicator={false}
-            >
-                <View style={{ flex: 1 }}>
-                    {/* Header */}
-                    <View style={styles.header}>
-                        <TouchableOpacity 
-                            style={styles.backButton}
-                            onPress={() => router.back()}
-                        >
-                            <Text style={styles.backButtonText}>←</Text>
-                        </TouchableOpacity>
-                        <Text style={styles.headerTitle}>Enter the details</Text>
-                    </View>
+        <SafeAreaProvider>
+            <View style={{ flex: 1, backgroundColor: '#fff' }}>
+                <View style={{ backgroundColor: '#fff', paddingTop: insets.top }}>
+                    <StatusBar backgroundColor="#fff" barStyle="dark-content" />
+                </View>
+                <SafeAreaView style={styles.safeArea}>
+                    <ScrollView 
+                        style={styles.container}
+                        contentContainerStyle={{ flexGrow: 1 }}
+                        showsVerticalScrollIndicator={false}
+                    >
+                        <View style={{ flex: 1 }}>
+                            {/* Header */}
+                            <View style={styles.header}>
+                                <TouchableOpacity 
+                                    style={styles.backButton}
+                                    onPress={() => router.back()}
+                                >
+                                    <Text style={styles.backButtonText}>←</Text>
+                                </TouchableOpacity>
+                                <Text style={styles.headerTitle}>Enter the details</Text>
+                            </View>
 
-                    {/* Fruit Card */}
-                    <View style={styles.fruitCard}>
-                        <View style={styles.imageFrame}>
-                            <Image source={fruit.image} style={styles.fruitImage} resizeMode="cover" />
-                        </View>
-                        <Text style={styles.fruitName}>{fruit.name}</Text>
-                    </View>
-
-                    {/* Form Section */}
-                    <View style={styles.formContainer}>
-                        {/* Amount Input */}
-                        <View style={styles.inputGroup}>
-                            <Text style={styles.label}>Enter the Amount of Crop</Text>
-                            <View style={styles.amountContainer}>
-                                <TextInput
-                                    style={styles.amountInput}
-                                    value={amount}
-                                    onChangeText={setAmount}
-                                    keyboardType="numeric"
-                                    placeholder="Enter amount"
-                                />
-                                <View style={styles.unitContainer}>
-                                    <Text style={styles.unitText}>KG</Text>
+                            {/* Fruit Card */}
+                            <View style={styles.fruitCard}>
+                                <View style={styles.imageFrame}>
+                                    <Image source={fruit.image} style={styles.fruitImage} resizeMode="cover" />
                                 </View>
+                                <Text style={styles.fruitName}>{fruit.name}</Text>
+                            </View>
+
+                            {/* Form Section */}
+                            <View style={styles.formContainer}>
+                                {/* Amount Input */}
+                                <View style={styles.inputGroup}>
+                                    <Text style={styles.label}>Enter the Amount of Crop</Text>
+                                    <View style={styles.amountContainer}>
+                                        <TextInput
+                                            style={styles.amountInput}
+                                            value={amount}
+                                            onChangeText={setAmount}
+                                            keyboardType="numeric"
+                                            placeholder="Enter amount"
+                                        />
+                                        <View style={styles.unitContainer}>
+                                            <Text style={styles.unitText}>KG</Text>
+                                        </View>
+                                    </View>
+                                </View>
+
+                                {/* Month Selection */}
+                                <View style={styles.inputGroup}>
+                                    <Text style={styles.label}>Harvesting Month</Text>
+                                    <TouchableOpacity 
+                                        style={styles.picker}
+                                        onPress={() => setShowMonthPicker(true)}
+                                    >
+                                        <Text style={styles.pickerText}>
+                                            {selectedMonth || 'Select month'}
+                                        </Text>
+                                        <Text style={styles.dropdownIcon}>▼</Text>
+                                    </TouchableOpacity>
+                                </View>
+
+                                {/* District Selection */}
+                                <View style={styles.inputGroup}>
+                                    <Text style={styles.label}>Enter Your District</Text>
+                                    <TouchableOpacity 
+                                        style={styles.picker}
+                                        onPress={() => setShowDistrictPicker(true)}
+                                    >
+                                        <Text style={styles.pickerText}>
+                                            {selectedDistrict || 'Select district'}
+                                        </Text>
+                                        <Text style={styles.dropdownIcon}>▼</Text>
+                                    </TouchableOpacity>
+                                </View>
+
+                                {/* Submit Button */}
+                                <TouchableOpacity 
+                                    style={styles.submitButton}
+                                    onPress={handleSubmit}
+                                >
+                                    <Text style={styles.submitButtonText}>Submit</Text>
+                                </TouchableOpacity>
                             </View>
                         </View>
+                    </ScrollView>
 
-                        {/* Month Selection */}
-                        <View style={styles.inputGroup}>
-                            <Text style={styles.label}>Harvesting Month</Text>
-                            <TouchableOpacity 
-                                style={styles.picker}
-                                onPress={() => setShowMonthPicker(true)}
-                            >
-                                <Text style={styles.pickerText}>
-                                    {selectedMonth || 'Select month'}
-                                </Text>
-                                <Text style={styles.dropdownIcon}>▼</Text>
-                            </TouchableOpacity>
-                        </View>
-
-                        {/* District Selection */}
-                        <View style={styles.inputGroup}>
-                            <Text style={styles.label}>Enter Your District</Text>
-                            <TouchableOpacity 
-                                style={styles.picker}
-                                onPress={() => setShowDistrictPicker(true)}
-                            >
-                                <Text style={styles.pickerText}>
-                                    {selectedDistrict || 'Select district'}
-                                </Text>
-                                <Text style={styles.dropdownIcon}>▼</Text>
-                            </TouchableOpacity>
-                        </View>
-
-                        {/* Submit Button */}
-                        <TouchableOpacity 
-                            style={styles.submitButton}
-                            onPress={handleSubmit}
-                        >
-                            <Text style={styles.submitButtonText}>Submit</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </ScrollView>
-
-            {/* Month Picker Modal */}
-            <Modal
-                visible={showMonthPicker}
-                transparent={true}
-                animationType="slide"
-            >
-                <View style={styles.modalContainer}>
-                    <View style={styles.modalContent}>
-                        <Text style={styles.modalTitle}>Select Month</Text>
-                        <ScrollView>
-                            {months.map((month) => (
+                    {/* Month Picker Modal */}
+                    <Modal
+                        visible={showMonthPicker}
+                        transparent={true}
+                        animationType="slide"
+                    >
+                        <View style={styles.modalContainer}>
+                            <View style={styles.modalContent}>
+                                <Text style={styles.modalTitle}>Select Month</Text>
+                                <ScrollView>
+                                    {months.map((month) => (
+                                        <TouchableOpacity
+                                            key={month}
+                                            style={styles.modalItem}
+                                            onPress={() => {
+                                                setSelectedMonth(month);
+                                                setShowMonthPicker(false);
+                                            }}
+                                        >
+                                            <Text style={styles.modalItemText}>{month}</Text>
+                                        </TouchableOpacity>
+                                    ))}
+                                </ScrollView>
                                 <TouchableOpacity
-                                    key={month}
-                                    style={styles.modalItem}
-                                    onPress={() => {
-                                        setSelectedMonth(month);
-                                        setShowMonthPicker(false);
-                                    }}
+                                    style={styles.modalCloseButton}
+                                    onPress={() => setShowMonthPicker(false)}
                                 >
-                                    <Text style={styles.modalItemText}>{month}</Text>
+                                    <Text style={styles.modalCloseButtonText}>Cancel</Text>
                                 </TouchableOpacity>
-                            ))}
-                        </ScrollView>
-                        <TouchableOpacity
-                            style={styles.modalCloseButton}
-                            onPress={() => setShowMonthPicker(false)}
-                        >
-                            <Text style={styles.modalCloseButtonText}>Cancel</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </Modal>
+                            </View>
+                        </View>
+                    </Modal>
 
-            {/* District Picker Modal */}
-            <Modal
-                visible={showDistrictPicker}
-                transparent={true}
-                animationType="slide"
-            >
-                <View style={styles.modalContainer}>
-                    <View style={styles.modalContent}>
-                        <Text style={styles.modalTitle}>Select District</Text>
-                        <ScrollView>
-                            {districts.map((district) => (
+                    {/* District Picker Modal */}
+                    <Modal
+                        visible={showDistrictPicker}
+                        transparent={true}
+                        animationType="slide"
+                    >
+                        <View style={styles.modalContainer}>
+                            <View style={styles.modalContent}>
+                                <Text style={styles.modalTitle}>Select District</Text>
+                                <ScrollView>
+                                    {districts.map((district) => (
+                                        <TouchableOpacity
+                                            key={district}
+                                            style={styles.modalItem}
+                                            onPress={() => {
+                                                setSelectedDistrict(district);
+                                                setShowDistrictPicker(false);
+                                            }}
+                                        >
+                                            <Text style={styles.modalItemText}>{district}</Text>
+                                        </TouchableOpacity>
+                                    ))}
+                                </ScrollView>
                                 <TouchableOpacity
-                                    key={district}
-                                    style={styles.modalItem}
-                                    onPress={() => {
-                                        setSelectedDistrict(district);
-                                        setShowDistrictPicker(false);
-                                    }}
+                                    style={styles.modalCloseButton}
+                                    onPress={() => setShowDistrictPicker(false)}
                                 >
-                                    <Text style={styles.modalItemText}>{district}</Text>
+                                    <Text style={styles.modalCloseButtonText}>Cancel</Text>
                                 </TouchableOpacity>
-                            ))}
-                        </ScrollView>
-                        <TouchableOpacity
-                            style={styles.modalCloseButton}
-                            onPress={() => setShowDistrictPicker(false)}
-                        >
-                            <Text style={styles.modalCloseButtonText}>Cancel</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </Modal>
-        </SafeAreaView>
+                            </View>
+                        </View>
+                    </Modal>
+                </SafeAreaView>
+            </View>
+        </SafeAreaProvider>
     );
 }
 
@@ -223,7 +233,6 @@ const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
         backgroundColor: '#fff',
-        paddingTop: Platform.OS === 'android' ? 25 : 0,
     },
     container: {
         flex: 1,

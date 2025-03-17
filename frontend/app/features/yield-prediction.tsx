@@ -9,6 +9,7 @@ import {
   ScrollView,
   Image,
   ActivityIndicator,
+  Modal,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useYield } from '../context/YieldContext';
@@ -43,7 +44,7 @@ const districts = [
 
 export default function YieldPredictionScreen() {
   const router = useRouter();
-  const { selectedDistrict = '', setSelectedDistrict, crops = [], isLoading } = useYield();
+  const { selectedDistrict, setSelectedDistrict, crops, isLoading } = useYield();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDistrictSelect = (district: string) => {
@@ -51,16 +52,20 @@ export default function YieldPredictionScreen() {
     setIsDropdownOpen(false);
   };
 
+  const handleCancel = () => {
+    setIsDropdownOpen(false);
+  };
+
   return (
     <SafeAreaView style={styles.safeArea}>
-      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      <View style={styles.container}>
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity 
             style={styles.backButton}
             onPress={() => router.back()}
           >
-            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
+            <Text style={styles.backButtonText}>←</Text>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Yield Prediction</Text>
         </View>
@@ -70,79 +75,102 @@ export default function YieldPredictionScreen() {
           <Text style={styles.selectorLabel}>Select Your District</Text>
           <TouchableOpacity
             style={styles.dropdown}
-            onPress={() => setIsDropdownOpen(!isDropdownOpen)}
+            onPress={() => setIsDropdownOpen(true)}
           >
             <Text style={styles.dropdownText}>
               {selectedDistrict || 'Choose a district'}
             </Text>
-            <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
+            <Text style={styles.dropdownIcon}>▼</Text>
           </TouchableOpacity>
-
-          {isDropdownOpen && (
-            <View style={styles.dropdownList}>
-              {districts.map((district) => (
-                <TouchableOpacity
-                  key={district}
-                  style={[
-                    styles.dropdownItem,
-                    selectedDistrict === district && styles.dropdownItemSelected,
-                  ]}
-                  onPress={() => handleDistrictSelect(district)}
-                >
-                  <Text style={[
-                    styles.dropdownItemText,
-                    selectedDistrict === district && styles.dropdownItemTextSelected,
-                  ]}>
-                    {district}
-                  </Text>
-                </TouchableOpacity>
-              ))}
-            </View>
-          )}
         </View>
+
+        {/* District Selector Modal */}
+        <Modal
+          visible={isDropdownOpen}
+          transparent={true}
+          animationType="slide"
+        >
+          <View style={styles.modalContainer}>
+            <View style={styles.modalContent}>
+              <Text style={styles.modalTitle}>Select Your District</Text>
+              <ScrollView style={styles.modalList}>
+                {districts.map((district) => (
+                  <TouchableOpacity
+                    key={district}
+                    style={styles.modalItem}
+                    onPress={() => handleDistrictSelect(district)}
+                  >
+                    <Text style={styles.modalItemText}>{district}</Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+              <TouchableOpacity
+                style={styles.modalCloseButton}
+                onPress={handleCancel}
+              >
+                <Text style={styles.modalCloseButtonText}>Cancel</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
 
         {/* Crop Cards */}
-        <View style={styles.cropsContainer}>
-          {isLoading ? (
-            <View style={styles.loaderContainer}>
-              <ActivityIndicator size="large" color="#fff" />
-              <Text style={styles.loaderText}>Loading crops...</Text>
-            </View>
-          ) : crops.length > 0 ? (
-            crops.map((crop) => (
-              <View
-                key={crop.id}
-                style={[styles.cropCard, { backgroundColor: crop.backgroundColor || '#ffffff' }]}
-              >
-                <View style={styles.cropImageContainer}>
-                  <Image
-                    source={{ uri: crop.image }}
-                    style={styles.cropImage}
-                    resizeMode="cover"
-                  />
-                </View>
-                <View style={styles.cropInfo}>
-                  <Text style={styles.cropName}>{crop.name}</Text>
-                  <Text style={styles.predictedYield}>
-                    Yield Prediction: {crop.predictedYield.toFixed(2)} kg
-                  </Text>
-                  <Text style={styles.marketName}>
-                    Market: {crop.market}
-                  </Text>
-                </View>
+        <ScrollView 
+          style={styles.cropsScrollView}
+          showsVerticalScrollIndicator={true}
+          nestedScrollEnabled={true}
+        >
+          <View style={styles.cropsContainer}>
+            {isLoading ? (
+              <View style={styles.loaderContainer}>
+                <ActivityIndicator size="large" color="#fff" />
+                <Text style={styles.loaderText}>Loading crops...</Text>
               </View>
-            ))
-          ) : (
-            <View style={styles.emptyContainer}>
-              <Text style={styles.emptyText}>
-                {selectedDistrict 
-                  ? 'No crops available in this district'
-                  : 'Select a district to view crop predictions'}
-              </Text>
-            </View>
-          )}
-        </View>
-      </ScrollView>
+            ) : crops.length > 0 ? (
+              crops.map((crop) => (
+                <View
+                  key={crop.id}
+                  style={[styles.cropCard, { backgroundColor: crop.backgroundColor || '#ffffff' }]}
+                >
+                  <View style={styles.cropImageContainer}>
+                    <Image
+                      source={{ uri: crop.image }}
+                      style={styles.cropImage}
+                      resizeMode="cover"
+                    />
+                  </View>
+                  <View style={styles.cropInfo}>
+                    <Text style={styles.cropName}>{crop.name}</Text>
+                    <Text style={styles.predictedYield}>
+                      Yield Prediction: {crop.predictedYield.toFixed(2)} kg
+                    </Text>
+                    <Text style={styles.marketName}>
+                      Market: {crop.market}
+                    </Text>
+                  </View>
+                </View>
+              ))
+            ) : (
+              <View style={styles.emptyContainer}>
+                <Text style={styles.emptyText}>
+                  {selectedDistrict 
+                    ? 'No crops available in this district'
+                    : 'Select a district to view crop predictions'}
+                </Text>
+              </View>
+            )}
+          </View>
+        </ScrollView>
+
+        {/* Home Button */}
+        <TouchableOpacity
+          style={styles.homeButton}
+          onPress={() => router.push('/(tabs)/home')}
+        >
+          <Text style={styles.homeButtonText}>Back to Home</Text>
+        </TouchableOpacity>
+        
+      </View>  
     </SafeAreaView>
   );
 }
@@ -165,6 +193,12 @@ const styles = StyleSheet.create({
   backButton: {
     padding: 5,
   },
+
+  backButtonText: {
+    fontSize: 24,
+    color: '#000',
+  },
+
   headerTitle: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -173,6 +207,7 @@ const styles = StyleSheet.create({
   },
   selectorContainer: {
     padding: 20,
+    zIndex: 1,
   },
   selectorLabel: {
     fontSize: 18,
@@ -191,35 +226,60 @@ const styles = StyleSheet.create({
   dropdownText: {
     fontSize: 16,
     color: '#333',
+    fontWeight: '600',
   },
-  dropdownList: {
+  dropdownIcon: {
+    fontSize: 16,
+    color: '#666',
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalContent: {
+    width: '80%',
     backgroundColor: '#fff',
     borderRadius: 10,
-    marginTop: 5,
-    elevation: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    padding: 20,
+    alignItems: 'center',
   },
-  dropdownItem: {
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  modalList: {
+    width: '100%',
+    maxHeight: 300,
+  },
+  modalItem: {
     padding: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#E0E0E0',
   },
-  dropdownItemSelected: {
-    backgroundColor: '#E8F5E9',
-  },
-  dropdownItemText: {
+  modalItemText: {
     fontSize: 16,
     color: '#333',
   },
-  dropdownItemTextSelected: {
-    color: '#00A67E',
-    fontWeight: 'bold',
+  modalCloseButton: {
+    marginTop: 10,
+    padding: 10,
+    backgroundColor: '#f8f8f8',
+    borderRadius: 5,
+  },
+  modalCloseButtonText: {
+    color: '#666',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  cropsScrollView: {
+    flex: 1,
   },
   cropsContainer: {
     padding: 20,
+    paddingBottom: 80,
   },
   cropCard: {
     flexDirection: 'row',
@@ -279,14 +339,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
-  icon: {
-    width: 24,
-    height: 24,
-    tintColor: '#fff',
+  homeButton: {
+    position: 'absolute',
+    bottom: 20,
+    left: 20,
+    right: 20,
+    padding: 15,
+    backgroundColor: '#f5f5f5',
+    borderRadius: 8,
+    alignItems: 'center',
   },
-  chevronIcon: {
-    width: 24,
-    height: 24,
-    tintColor: '#333',
+  homeButtonText: {
+    color: '#666',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });

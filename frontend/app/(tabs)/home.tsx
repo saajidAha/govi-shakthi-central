@@ -8,77 +8,87 @@ import {
   Image,
   SafeAreaView,
   Platform,
+  StatusBar,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 
-export default function HomeScreen(){
+export default function HomeScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
 
-  return(
-    <SafeAreaView style={styles.safeArea}>
-      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-        {/* Green header section */}
-        <View style={styles.greenHeader}>
-          {/* User greeting section */}
-          <View style={styles.greetingContainer}>
-            <Text style={styles.greeting}>Hello Dudley!</Text>
-            <Text style={styles.location}>Dudely Sirisena</Text>
-            <Text style={styles.subLocation}>Anuradhapura, Sri Lanka</Text>
-          </View>
+  return (
+    <SafeAreaProvider>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
+        <View style={{ backgroundColor: '#00A67E', paddingTop: insets.top }}>
+          <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
         </View>
+        <SafeAreaView style={styles.safeArea}>
+          <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+            {/* Green header section */}
+            <View style={styles.greenHeader}>
+              {/* User greeting section */}
+              <View style={styles.greetingContainer}>
+                <Text style={styles.greeting}>Hello Dudley!</Text>
+                <Text style={styles.location}>Dudely Sirisena</Text>
+                <Text style={styles.subLocation}>Anuradhapura, Sri Lanka</Text>
+              </View>
+            </View>
 
-        {/* Feature cards grid */}
-        <View style={styles.cardsContainer}>
-          <View style={styles.row}>
-            <TouchableOpacity 
-              style={styles.card}
-              onPress={() => router.push('/FruitSelectionScreen')}
-            >
-              <Text style={styles.cardTitle}>Select Fruit</Text>
-              <Image
-                source={require('../../assets/images/Home1.jpeg')}
-                style={styles.cardImage}
-                resizeMode="cover"
-              />
-            </TouchableOpacity>
+            {/* Feature cards grid */}
+            <View style={styles.cardsContainer}>
+              <View style={styles.row}>
+                <TouchableOpacity
+                  style={styles.card}
+                  onPress={() => router.push('/FruitSelectionScreen')}
+                >
+                  <Text style={styles.cardTitle}>Select Fruit</Text>
+                  <Image
+                    source={require('../../assets/images/Home1.jpeg')}
+                    style={styles.cardImage}
+                    resizeMode="cover"
+                  />
+                </TouchableOpacity>
 
-            <TouchableOpacity style={[styles.card, styles.marketCard]}
-              onPress={()=> router.push('/features/price-prediction')}>
-              <Text style={styles.cardTitle}>Price Prediction</Text>
-              <Image
-                source={require('../../assets/images/Home2.jpeg')}
-                style={styles.cardImage}
-                resizeMode="cover"
-              />
-            </TouchableOpacity>
-          </View>
+                <TouchableOpacity style={[styles.card, styles.marketCard]}
+                  onPress={() => router.push('/features/price-prediction')}>
+                  <Text style={styles.cardTitle}>Price Prediction</Text>
+                  <Image
+                    source={require('../../assets/images/Home2.jpeg')}
+                    style={styles.cardImage}
+                    resizeMode="cover"
+                  />
+                </TouchableOpacity>
+              </View>
 
-          <View style={styles.row}>
-            <TouchableOpacity style={[styles.card, styles.cropCard]}
-              onPress={()=> router.push('/features/yield-prediction')}>
-              <Text style={styles.cardTitle}>Crop Yield Prediction</Text>
-              <Image
-                source={require('../../assets/images/Home3.jpeg')}
-                style={styles.cardImage}
-                resizeMode="cover"
-              />
-            </TouchableOpacity>
+              <View style={styles.row}>
+                <TouchableOpacity style={[styles.card, styles.cropCard]}
+                  onPress={() => router.push('/features/yield-prediction')}>
+                  <Text style={styles.cardTitle}>Crop Yield Prediction</Text>
+                  <Image
+                    source={require('../../assets/images/Home3.jpeg')}
+                    style={styles.cardImage}
+                    resizeMode="cover"
+                  />
+                </TouchableOpacity>
 
-            <TouchableOpacity 
-              style={[styles.card, styles.demandCard]}
-              onPress={() => router.push('/features/demand-prediction')}
-            >
-              <Text style={styles.cardTitle}>Market Demand Prediction</Text>
-              <Image
-                source={require('../../assets/images/Home4.jpeg')}
-                style={styles.cardImage}
-                resizeMode="cover"
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+                <TouchableOpacity
+                  style={[styles.card, styles.demandCard]}
+                  onPress={() => router.push('/features/demand-prediction')}
+                >
+                  <Text style={styles.cardTitle}>Market Demand Prediction</Text>
+                  <Image
+                    source={require('../../assets/images/Home4.jpeg')}
+                    style={styles.cardImage}
+                    resizeMode="cover"
+                  />
+                </TouchableOpacity>
+              </View>
+            </View>
+          </ScrollView>
+        </SafeAreaView>
+      </View>
+    </SafeAreaProvider>
   );
 }
 
@@ -86,9 +96,7 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
-  
   container: {
     flex: 1,
   },
@@ -164,7 +172,7 @@ const styles = StyleSheet.create({
   },
   cardImage: {
     width: '100%',
-    height: '100%', 
+    height: '100%',
     borderRadius: 8,
     position: 'absolute',
     top: 0,

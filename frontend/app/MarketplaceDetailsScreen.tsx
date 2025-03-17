@@ -7,8 +7,10 @@ import {
   TouchableOpacity,
   ScrollView,
   Platform,
+  StatusBar,
 } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
+import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface BaseMarketplace {
   _id: string;
@@ -37,55 +39,68 @@ export default function MarketplaceDetailsScreen() {
   const params = useLocalSearchParams();
   const marketplace = JSON.parse(params.marketplace as string);
   const marketplaceType = params.marketplaceType as 'raw' | 'selling';
+  const insets = useSafeAreaInsets();
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <View style={styles.header}>
-        <TouchableOpacity 
-          style={styles.backButton}
-          onPress={() => router.back()}
-        >
-          <Text style={styles.backButtonText}>←</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>
-          {marketplaceType === 'raw' ? 'Raw Material' : 'Selling'} Marketplace
-        </Text>
-      </View>
-
-      <ScrollView style={styles.container}>
-        <View style={styles.card}>
-          <Text style={styles.marketplaceName}>{marketplace.marketplace_name}</Text>
-          <Text style={styles.shopName}>{marketplace.shop_name}</Text>
-
-          <View style={styles.detailsContainer}>
-            <DetailItem label="Location" value={marketplace.location} />
-            <DetailItem label="Type" value={marketplace.marketplace_type} />
-            <DetailItem label="Target Audience" value={marketplace.target_audience} />
-            <DetailItem label="Price Range" value={marketplace.price_range} />
-            <DetailItem label="Selling Strategy" value={marketplace.selling_strategy} />
-            <DetailItem label="Seasonality" value={marketplace.seasonality} />
-            <DetailItem label="Promotion Method" value={marketplace.promotion_method} />
-            
-            {marketplaceType === 'selling' && (
-              <>
-                <DetailItem 
-                  label="Supplier Relationship" 
-                  value={(marketplace as SellingMarketplace).supplier_relationship} 
-                />
-                {(marketplace as SellingMarketplace).ingredients_required.length > 0 && (
-                  <View style={styles.ingredientsContainer}>
-                    <Text style={styles.ingredientsLabel}>Required Ingredients:</Text>
-                    {(marketplace as SellingMarketplace).ingredients_required.map((ingredient, index) => (
-                      <Text key={index} style={styles.ingredientItem}>• {ingredient}</Text>
-                    ))}
-                  </View>
-                )}
-              </>
-            )}
-          </View>
+    <SafeAreaProvider>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
+        <View style={{ backgroundColor: '#00A67E', height: insets.top }}>
+          <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
         </View>
-      </ScrollView>
-    </SafeAreaView>
+        <SafeAreaView style={styles.safeArea}>
+          <View style={styles.headerContainer}>
+            <View style={styles.header}>
+              <TouchableOpacity 
+                style={styles.backButton}
+                onPress={() => router.back()}
+              >
+                <Text style={styles.backButtonText}>←</Text>
+              </TouchableOpacity>
+              <Text style={styles.headerTitle}>
+                {marketplaceType === 'raw' ? 'Raw Material' : 'Selling'} Marketplace
+              </Text>
+            </View>
+            <View style={styles.locationHeader}>
+              <Text style={styles.locationText}>{marketplace.fruit_type} - {marketplace.location}</Text>
+            </View>
+          </View>
+
+          <ScrollView style={styles.container}>
+            <View style={styles.card}>
+              <Text style={styles.marketplaceName}>{marketplace.marketplace_name}</Text>
+              <Text style={styles.shopName}>{marketplace.shop_name}</Text>
+
+              <View style={styles.detailsContainer}>
+                <DetailItem label="Location" value={marketplace.location} />
+                <DetailItem label="Type" value={marketplace.marketplace_type} />
+                <DetailItem label="Target Audience" value={marketplace.target_audience} />
+                <DetailItem label="Price Range" value={marketplace.price_range} />
+                <DetailItem label="Selling Strategy" value={marketplace.selling_strategy} />
+                <DetailItem label="Seasonality" value={marketplace.seasonality} />
+                <DetailItem label="Promotion Method" value={marketplace.promotion_method} />
+                
+                {marketplaceType === 'selling' && (
+                  <>
+                    <DetailItem 
+                      label="Supplier Relationship" 
+                      value={(marketplace as SellingMarketplace).supplier_relationship} 
+                    />
+                    {(marketplace as SellingMarketplace).ingredients_required.length > 0 && (
+                      <View style={styles.ingredientsContainer}>
+                        <Text style={styles.ingredientsLabel}>Required Ingredients:</Text>
+                        {(marketplace as SellingMarketplace).ingredients_required.map((ingredient, index) => (
+                          <Text key={index} style={styles.ingredientItem}>• {ingredient}</Text>
+                        ))}
+                      </View>
+                    )}
+                  </>
+                )}
+              </View>
+            </View>
+          </ScrollView>
+        </SafeAreaView>
+      </View>
+    </SafeAreaProvider>
   );
 }
 
@@ -100,17 +115,19 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
-  container: {
-    flex: 1,
-    padding: 16,
+  headerContainer: {
+    backgroundColor: '#00A67E',
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+    paddingBottom: 20,
+    marginBottom: 16,
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#00A67E',
+    paddingTop: Platform.OS === 'android' ? 20 : 45, // Increased top padding, especially for iOS
   },
   backButton: {
     padding: 8,
@@ -120,10 +137,22 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   headerTitle: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
     color: '#fff',
     marginLeft: 16,
+  },
+  locationHeader: {
+    paddingHorizontal: 24,
+  },
+  locationText: {
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: '600',
+  },
+  container: {
+    flex: 1,
+    padding: 16,
   },
   card: {
     backgroundColor: '#fff',
@@ -188,4 +217,4 @@ const styles = StyleSheet.create({
     color: '#000',
     paddingVertical: 4,
   },
-}); 
+});
