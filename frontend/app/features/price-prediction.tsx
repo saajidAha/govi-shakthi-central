@@ -1,107 +1,125 @@
-import React, {useState} from 'react';
-import{
-    View,
-    Text,
-    StyleSheet,
-    TouchableOpacity,
-    SafeAreaView,
-    Platform,
-    ScrollView,
-    Image,
-    ActivityIndicator,
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  SafeAreaView,
+  Platform,
+  ScrollView,
+  Image,
+  ActivityIndicator,
+  Modal,
 } from 'react-native';
-import{useRouter} from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useMarket } from '../context/MarketContext';
 
-const districts=[
-    'Colombo',
-    'Gampaha',
-    'Kalutara',
-    'Kandy',
-    'Matale',
-    'Nuwara Eliya',
-    'Galle',
-    'Matara',
-    'Hambantota',
-    'Jaffna',
-    'Kilinochchi',
-    'Mannar',
-    'Vavuniya',
-    'Mulativu',
-    'Batticaloa',
-    'Ampara',
-    'Trincomalee',
-    'Kurunegala',
-    'Puttalam',
-    'Anuradhapura',
-    'Polonnaruwa',
-    'Badulla',
-    'Monaragala',
-    'Ratnapura',
-    'Kegalle',
+const districts = [
+  'Colombo',
+  'Gampaha',
+  'Kalutara',
+  'Kandy',
+  'Matale',
+  'Nuwara Eliya',
+  'Galle',
+  'Matara',
+  'Hambantota',
+  'Jaffna',
+  'Kilinochchi',
+  'Mannar',
+  'Vavuniya',
+  'Mulativu',
+  'Batticaloa',
+  'Ampara',
+  'Trincomalee',
+  'Kurunegala',
+  'Puttalam',
+  'Anuradhapura',
+  'Polonnaruwa',
+  'Badulla',
+  'Monaragala',
+  'Ratnapura',
+  'Kegalle',
 ];
 
 export default function PricePredictionScreen() {
-    const router = useRouter();
-    const { selectedDistrict, setSelectedDistrict, fruits, isLoading } = useMarket();
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
-    const handleDistrictSelect = (district: string) => {
-      setSelectedDistrict(district);
-      setIsDropdownOpen(false);
-    };
-  
-    return (
-      <SafeAreaView style={styles.SafeArea}>
-        <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-          {/* Header */}
-          <View style={styles.header}>
-            <TouchableOpacity 
-              style={styles.backButton}
-              onPress={() => router.back()}
-            >
-              <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
-            </TouchableOpacity>
-            <Text style={styles.headerTitle}>Price Prediction</Text>
-          </View>
-  
-          {/* District Selector */}
-          <View style={styles.selectorContainer}>
-            <Text style={styles.selectorLabel}>Select Your District</Text>
-            <TouchableOpacity
-              style={styles.dropdown}
-              onPress={() => setIsDropdownOpen(!isDropdownOpen)}
-            >
-              <Text style={styles.dropdownText}>
-                {selectedDistrict || 'Choose a district'}
-              </Text>
-              <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
-            </TouchableOpacity>
-  
-            {isDropdownOpen && (
-              <View style={styles.dropdownList}>
+  const router = useRouter();
+  const { selectedDistrict, setSelectedDistrict, fruits, isLoading } = useMarket();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDistrictSelect = (district: string) => {
+    setSelectedDistrict(district);
+    setIsDropdownOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsDropdownOpen(false);
+  };
+
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        {/* Header */}
+        <View style={styles.header}>
+          <TouchableOpacity 
+            style={styles.backButton}
+            onPress={() => router.back()}
+          >
+            <Text style={styles.backButtonText}>←</Text>
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>Price Prediction</Text>
+        </View>
+
+        {/* District Selector */}
+        <View style={styles.selectorContainer}>
+          <Text style={styles.selectorLabel}>Select Your District</Text>
+          <TouchableOpacity
+            style={styles.dropdown}
+            onPress={() => setIsDropdownOpen(true)}
+          >
+            <Text style={styles.dropdownText}>
+              {selectedDistrict || 'Choose a district'}
+            </Text>
+              <Text style={styles.dropdownIcon}>▼</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* District Selector Modal */}
+        <Modal
+          visible={isDropdownOpen}
+          transparent={true}
+          animationType="slide"
+        >
+          <View style={styles.modalContainer}>
+            <View style={styles.modalContent}>
+              <Text style={styles.modalTitle}>Select Your District</Text>
+              <ScrollView style={styles.modalList}>
                 {districts.map((district) => (
                   <TouchableOpacity
                     key={district}
-                    style={[
-                      styles.dropdownItem,
-                      selectedDistrict === district && styles.dropdownItemSelected,
-                    ]}
+                    style={styles.modalItem}
                     onPress={() => handleDistrictSelect(district)}
                   >
-                    <Text style={[
-                      styles.dropdownItemText,
-                      selectedDistrict === district && styles.dropdownItemTextSelected,
-                    ]}>
-                      {district}
-                    </Text>
+                    <Text style={styles.modalItemText}>{district}</Text>
                   </TouchableOpacity>
                 ))}
-              </View>
-            )}
+              </ScrollView>
+              <TouchableOpacity
+                style={styles.modalCloseButton}
+                onPress={handleCancel}
+              >
+                <Text style={styles.modalCloseButtonText}>Cancel</Text>
+              </TouchableOpacity>
+            </View>
           </View>
-  
-          {/* Fruit Cards */}
+        </Modal>
+
+        {/* Fruit Cards */}
+        <ScrollView 
+          style={styles.fruitsScrollView}
+          showsVerticalScrollIndicator={true}
+          nestedScrollEnabled={true}
+        >
           <View style={styles.fruitsContainer}>
             {isLoading ? (
               <View style={styles.loaderContainer}>
@@ -140,171 +158,193 @@ export default function PricePredictionScreen() {
             )}
           </View>
         </ScrollView>
-      </SafeAreaView>
-    );
-  }
+
+        {/* Home Button */}
+        <TouchableOpacity
+          style={styles.homeButton}
+          onPress={() => router.push('/(tabs)/home')}
+        >
+          <Text style={styles.homeButtonText}>Back to Home</Text>
+        </TouchableOpacity>
+        
+      </View>  
+    </SafeAreaView>
+  );
+}
 
 const styles = StyleSheet.create({
-    SafeArea:{
-        flex: 1,
-        backgroundColor: '#00A67E',
-        paddingTop: Platform.OS === 'android' ? 25 : 0,
-    },
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#00A67E',
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
+  },
+  container: {
+    flex: 1,
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+  },
+  backButton: {
+    padding: 5,
+  },
 
-    container:{
-        flex: 1,
-    },
+  backButtonText: {
+    fontSize: 24,
+    color: '#000',
+  },
 
-    header:{
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingHorizontal: 20,
-        paddingVertical: 15,
-    },
+  headerTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
+    marginLeft: 15,
+  },
+  selectorContainer: {
+    padding: 20,
+    zIndex: 1,
+  },
+  selectorLabel: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#fff',
+    marginBottom: 10,
+  },
+  dropdown: {
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 15,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  dropdownText: {
+    fontSize: 16,
+    color: '#333',
+    fontWeight: '600',
+  },
 
-    backButton: {
-        padding: 5,
-    },
-      
-    headerTitle: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        color: '#fff',
-        marginLeft: 15,
-    },
-      
-    selectorContainer: {
-        padding: 20,
-    },
-      
-    selectorLabel: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#fff',
-        marginBottom: 10,
-    },
-    
-    dropdown: {
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        padding: 15,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-      
-    dropdownText: {
-        fontSize: 16,
-        color: '#333',
-    },
-      
-    dropdownList: {
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        marginTop: 5,
-        elevation: 5,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-    },
-      
-    dropdownItem: {
-        padding: 15,
-        borderBottomWidth: 1,
-        borderBottomColor: '#f0f0f0',
-    },
-      
-    dropdownItemSelected: {
-        backgroundColor: '#E8F5E9',
-    },
-      
-    dropdownItemText: {
-        fontSize: 16,
-        color: '#333',
-    },
-      
-    dropdownItemTextSelected: {
-        color: '#00A67E',
-        fontWeight: 'bold',
-    },
-      
-    fruitsContainer: {
-        padding: 20,
-    },
-      
-    fruitCard: {
-        flexDirection: 'row',
-        borderRadius: 15,
-        marginBottom: 15,
-        overflow: 'hidden',
-        elevation: 3,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-    },
-      
-    fruitImageContainer: {
-        width: 120,
-        height: 120,
-    },
-      
-    fruitImage: {
-        width: '100%',
-        height: '100%',
-    },
-      
-    fruitInfo: {
-        flex: 1,
-        padding: 15,
-        justifyContent: 'center',
-    },
-      
-    fruitName: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#333',
-        marginBottom: 10,
-    },
-      
-    predictedPrice: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: '#00A67E',
-    },
-      
-    loaderContainer: {
-        padding: 20,
-        alignItems: 'center',
-    },
-      
-    loaderText: {
-        color: '#fff',
-        marginTop: 10,
-        fontSize: 16,
-    },
-      
-    emptyContainer: {
-        padding: 20,
-        alignItems: 'center',
-    },
-      
-    emptyText: {
-        color: '#fff',
-        fontSize: 16,
-        textAlign: 'center',
-    },
-
-    icon:{
-        width: 24,
-        height: 24,
-        tintColor: '#fff',
-    },
-
-    chevronIcon: {
-        width: 24,
-        height: 24,
-        tintColor: '#333',
-    },
+  dropdownIcon: {
+    fontSize: 16,
+    color: '#666',
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalContent: {
+    width: '80%',
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 20,
+    alignItems: 'center',
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  modalList: {
+    width: '100%',
+    maxHeight: 300,
+  },
+  modalItem: {
+    padding: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E0E0E0',
+  },
+  modalItemText: {
+    fontSize: 16,
+    color: '#333',
+  },
+  modalCloseButton: {
+    marginTop: 10,
+    padding: 10,
+    backgroundColor: '#f8f8f8',
+    borderRadius: 5,
+  },
+  modalCloseButtonText: {
+    color: '#666',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  fruitsScrollView: {
+    flex: 1,
+  },
+  fruitsContainer: {
+    padding: 20,
+    paddingBottom: 80,
+  },
+  fruitCard: {
+    flexDirection: 'row',
+    borderRadius: 15,
+    marginBottom: 15,
+    overflow: 'hidden',
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  fruitImageContainer: {
+    width: 120,
+    height: 120,
+  },
+  fruitImage: {
+    width: '100%',
+    height: '100%',
+  },
+  fruitInfo: {
+    flex: 1,
+    padding: 15,
+    justifyContent: 'center',
+  },
+  fruitName: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 8,
+  },
+  predictedPrice: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#00A67E',
+  },
+  loaderContainer: {
+    padding: 20,
+    alignItems: 'center',
+  },
+  loaderText: {
+    color: '#fff',
+    marginTop: 10,
+    fontSize: 16,
+  },
+  emptyContainer: {
+    padding: 20,
+    alignItems: 'center',
+  },
+  emptyText: {
+    color: '#fff',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  homeButton: {
+    position: 'absolute',
+    bottom: 20,
+    left: 20,
+    right: 20,
+    padding: 15,
+    backgroundColor: '#f5f5f5',
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  homeButtonText: {
+    color: '#666',
+    fontSize: 16,
+    fontWeight: '600',
+  },
 });

@@ -65,7 +65,7 @@ export default function YieldPredictionScreen() {
             style={styles.backButton}
             onPress={() => router.back()}
           >
-            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
+            <Text style={styles.backButtonText}>←</Text>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Yield Prediction</Text>
         </View>
@@ -80,7 +80,7 @@ export default function YieldPredictionScreen() {
             <Text style={styles.dropdownText}>
               {selectedDistrict || 'Choose a district'}
             </Text>
-            <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
+            <Text style={styles.dropdownIcon}>▼</Text>
           </TouchableOpacity>
         </View>
 
@@ -193,11 +193,12 @@ const styles = StyleSheet.create({
   backButton: {
     padding: 5,
   },
-  icon: {
-    width: 24,
-    height: 24,
-    tintColor: '#fff',
+
+  backButtonText: {
+    fontSize: 24,
+    color: '#000',
   },
+
   headerTitle: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -227,10 +228,9 @@ const styles = StyleSheet.create({
     color: '#333',
     fontWeight: '600',
   },
-  chevronIcon: {
-    width: 24,
-    height: 24,
-    tintColor: '#333',
+  dropdownIcon: {
+    fontSize: 16,
+    color: '#666',
   },
   modalContainer: {
     flex: 1,
