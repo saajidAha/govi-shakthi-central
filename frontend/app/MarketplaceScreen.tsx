@@ -8,8 +8,10 @@ import {
   ScrollView,
   Platform,
   ActivityIndicator,
+  StatusBar,
 } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
+import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface BaseMarketplace {
   _id: string;
@@ -39,6 +41,7 @@ export default function MarketplaceScreen() {
   const [rawMarketplaces, setRawMarketplaces] = useState<RawMarketplace[]>([]);
   const [sellingMarketplaces, setSellingMarketplaces] = useState<SellingMarketplace[]>([]);
   const [loading, setLoading] = useState(true);
+  const insets = useSafeAreaInsets();
 
   useEffect(() => {
     Promise.all([
@@ -117,62 +120,69 @@ export default function MarketplaceScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <View style={styles.header}>
-        <TouchableOpacity 
-          style={styles.backButton}
-          onPress={() => router.back()}
-        >
-          <Text style={styles.backButtonText}>←</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Marketplaces</Text>
-      </View>
-
-      <View style={styles.subHeader}>
-        <Text style={styles.subHeaderText}>{params.alternativeProduct}</Text>
-      </View>
-
-      {loading ? (
-        <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#00A67E" />
+    <SafeAreaProvider>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
+        <View style={{ backgroundColor: '#00A67E', paddingTop: insets.top }}>
+          <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
         </View>
-      ) : rawMarketplaces.length === 0 && sellingMarketplaces.length === 0 ? (
-        <View style={styles.errorContainer}>
-          <Text style={styles.errorText}>
-            The marketplace data is not available yet, we will update soon.
-          </Text>
-          <TouchableOpacity 
-            style={styles.backToDetailsButton}
-            onPress={() => router.back()}
-          >
-            <Text style={styles.backToDetailsButtonText}>Back</Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
-        <View style={styles.mainContainer}>
-          <ScrollView style={styles.container}>
-            <MarketplaceSection 
-              title="Raw Material Marketplaces" 
-              marketplaces={rawMarketplaces}
-              type="raw"
-            />
-            <MarketplaceSection 
-              title="Selling Marketplaces" 
-              marketplaces={sellingMarketplaces}
-              type="selling"
-            />
-          </ScrollView>
-          <View style={styles.homeButtonContainer}>
+        <SafeAreaView style={styles.safeArea}>
+          <View style={styles.header}>
             <TouchableOpacity 
-              style={styles.homeButton}
-              onPress={() => router.push('/FruitSelectionScreen')}
+              style={styles.backButton}
+              onPress={() => router.back()}
             >
-              <Text style={styles.homeButtonText}>Go Back Home</Text>
+              <Text style={styles.backButtonText}>←</Text>
             </TouchableOpacity>
+            <Text style={styles.headerTitle}>Marketplaces</Text>
           </View>
-        </View>
-      )}
-    </SafeAreaView>
+
+          <View style={styles.subHeader}>
+            <Text style={styles.subHeaderText}>{params.alternativeProduct}</Text>
+          </View>
+
+          {loading ? (
+            <View style={styles.loadingContainer}>
+              <ActivityIndicator size="large" color="#00A67E" />
+            </View>
+          ) : rawMarketplaces.length === 0 && sellingMarketplaces.length === 0 ? (
+            <View style={styles.errorContainer}>
+              <Text style={styles.errorText}>
+                The marketplace data is not available yet, we will update soon.
+              </Text>
+              <TouchableOpacity 
+                style={styles.backToDetailsButton}
+                onPress={() => router.back()}
+              >
+                <Text style={styles.backToDetailsButtonText}>Back</Text>
+              </TouchableOpacity>
+            </View>
+          ) : (
+            <View style={styles.mainContainer}>
+              <ScrollView style={styles.container}>
+                <MarketplaceSection 
+                  title="Raw Material Marketplaces" 
+                  marketplaces={rawMarketplaces}
+                  type="raw"
+                />
+                <MarketplaceSection 
+                  title="Selling Marketplaces" 
+                  marketplaces={sellingMarketplaces}
+                  type="selling"
+                />
+              </ScrollView>
+              <View style={styles.homeButtonContainer}>
+                <TouchableOpacity 
+                  style={styles.homeButton}
+                  onPress={() => router.push('/FruitSelectionScreen')}
+                >
+                  <Text style={styles.homeButtonText}>Go Back Home</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          )}
+        </SafeAreaView>
+      </View>
+    </SafeAreaProvider>
   );
 }
 
@@ -180,7 +190,6 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
   container: {
     flex: 1,
@@ -317,4 +326,4 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-}); 
+});
