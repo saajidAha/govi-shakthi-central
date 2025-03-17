@@ -30,7 +30,10 @@ export default function HomeScreen(){
         {/* Feature cards grid */}
         <View style={styles.cardsContainer}>
           <View style={styles.row}>
-            <TouchableOpacity style={styles.card}>
+            <TouchableOpacity 
+              style={styles.card}
+              onPress={() => router.push('/FruitSelectionScreen')}
+            >
               <Text style={styles.cardTitle}>Select Fruit</Text>
               <Image
                 source={require('../../assets/images/Home1.jpeg')}

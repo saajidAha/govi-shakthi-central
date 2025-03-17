@@ -7,311 +7,322 @@ import {
     StyleSheet,
     SafeAreaView,
     TouchableOpacity,
+    Platform,
+    ScrollView,
+    ImageSourcePropType,
     TextInput,
-    StatusBar,
-    Dimensions
+    Modal,
 } from 'react-native';
+import { useRouter, useLocalSearchParams } from 'expo-router';
 
 // Define the Fruit interface
 interface Fruit {
     id: number;
     name: string;
-    imageUrl: string;
-    description?: string;
+    description: string;
+    image: ImageSourcePropType;
+    backgroundColor: string;
 }
 
-interface FruitDetailsScreenProps {
-    route: {
-        params: {
-            fruit: Fruit
-        }
-    };
-    navigation: any;
-}
+const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+];
 
-const FruitDetailsScreen: React.FC<FruitDetailsScreenProps> = ({ route, navigation }) => {
-    // Get the selected fruit from route params
-    const { fruit } = route.params;
+const districts = [
+    'Colombo', 'Gampaha', 'Kalutara', 'Kandy', 'Matale', 'Nuwara Eliya',
+    'Galle', 'Matara', 'Hambantota', 'Jaffna', 'Kilinochchi', 'Mannar',
+    'Vavuniya', 'Mullaitivu', 'Batticaloa', 'Ampara', 'Trincomalee',
+    'Kurunegala', 'Puttalam', 'Anuradhapura', 'Polonnaruwa', 'Badulla',
+    'Monaragala', 'Ratnapura', 'Kegalle'
+];
 
+export default function FruitDetailsScreen() {
+    const router = useRouter();
+    const params = useLocalSearchParams();
+    const fruit: Fruit = JSON.parse(params.fruit as string);
+    
     const [amount, setAmount] = useState('');
-    const [unit, setUnit] = useState('LBS');
-    const [harvestingDistrict, setHarvestingDistrict] = useState('');
-    const [sellingDistrict, setSellingDistrict] = useState('');
-
-    const handleBack = () => {
-        navigation.goBack();
-    };
-
-    const handleUnitToggle = (newUnit: string) => {
-        setUnit(newUnit);
-    };
+    const [selectedMonth, setSelectedMonth] = useState('');
+    const [selectedDistrict, setSelectedDistrict] = useState('');
+    const [showMonthPicker, setShowMonthPicker] = useState(false);
+    const [showDistrictPicker, setShowDistrictPicker] = useState(false);
 
     return (
-        <SafeAreaView style={styles.container}>
-            {/* Status Bar */}
-            <View style={styles.statusBar}>
-                <Text style={styles.statusText}>9:30</Text>
-                <View style={styles.statusDot} />
-                <Text style={styles.statusText}>4G</Text>
-            </View>
+        <SafeAreaView style={styles.safeArea}>
+            <ScrollView style={styles.container}>
+                {/* Header */}
+                <View style={styles.header}>
+                    <TouchableOpacity 
+                        style={styles.backButton}
+                        onPress={() => router.back()}
+                    >
+                        <Text style={styles.backButtonText}>←</Text>
+                    </TouchableOpacity>
+                    <Text style={styles.headerTitle}>Enter the details</Text>
+                </View>
 
-            {/* Header */}
-            <View style={styles.header}>
-                <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-                    <Text style={styles.backButtonText}>{'<'}</Text>
-                </TouchableOpacity>
-                <Text style={styles.headerText}>Enter the details</Text>
-            </View>
-
-            {/* Selected Fruit Card */}
-            <View style={styles.fruitCard}>
-                <Image
-                    source={{ uri: fruit.imageUrl }}
-                    style={styles.fruitImage}
-                />
-                <View style={styles.fruitNameContainer}>
+                {/* Fruit Card */}
+                <View style={styles.fruitCard}>
+                    <Image source={fruit.image} style={styles.fruitImage} />
                     <Text style={styles.fruitName}>{fruit.name}</Text>
                 </View>
-            </View>
 
-            {/* Form Section */}
-            <View style={styles.formContainer}>
-                <View style={styles.formField}>
-                    <Text style={styles.formLabel}>Enter the Amount of Crop</Text>
+                {/* Form Section */}
+                <View style={styles.formContainer}>
+                    {/* Amount Input */}
                     <View style={styles.inputGroup}>
-                        <TextInput
-                            style={styles.amountInput}
-                            value={amount}
-                            onChangeText={setAmount}
-                            placeholder="Enter amount"
-                            keyboardType="numeric"
-                            placeholderTextColor="#999"
-                        />
-                        <View style={styles.unitToggle}>
-                            <TouchableOpacity
-                                style={[
-                                    styles.unitButton,
-                                    unit === 'LBS' && styles.activeUnitButton
-                                ]}
-                                onPress={() => handleUnitToggle('LBS')}
-                            >
-                                <Text style={[
-                                    styles.unitButtonText,
-                                    unit === 'LBS' && styles.activeUnitButtonText
-                                ]}>LBS</Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity
-                                style={[
-                                    styles.unitButton,
-                                    unit === 'KG' && styles.activeUnitButton
-                                ]}
-                                onPress={() => handleUnitToggle('KG')}
-                            >
-                                <Text style={[
-                                    styles.unitButtonText,
-                                    unit === 'KG' && styles.activeUnitButtonText
-                                ]}>KG</Text>
-                            </TouchableOpacity>
+                        <Text style={styles.label}>Enter the Amount of Crop</Text>
+                        <View style={styles.amountContainer}>
+                            <TextInput
+                                style={styles.amountInput}
+                                value={amount}
+                                onChangeText={setAmount}
+                                keyboardType="numeric"
+                                placeholder="Enter amount"
+                            />
+                            <View style={styles.unitContainer}>
+                                <Text style={styles.unitText}>KG</Text>
+                            </View>
                         </View>
                     </View>
-                </View>
 
-                <View style={styles.formField}>
-                    <Text style={styles.formLabel}>Enter Your Harvesting District</Text>
-                    <TouchableOpacity style={styles.dropdownInput}>
-                        <Text style={styles.dropdownText}>
-                            {harvestingDistrict || 'Select district'}
-                        </Text>
-                        <Text style={styles.dropdownIcon}>▼</Text>
-                    </TouchableOpacity>
-                </View>
+                    {/* Month Selection */}
+                    <View style={styles.inputGroup}>
+                        <Text style={styles.label}>Harvesting Month</Text>
+                        <TouchableOpacity 
+                            style={styles.picker}
+                            onPress={() => setShowMonthPicker(true)}
+                        >
+                            <Text style={styles.pickerText}>
+                                {selectedMonth || 'Select month'}
+                            </Text>
+                            <Text style={styles.dropdownIcon}>▼</Text>
+                        </TouchableOpacity>
+                    </View>
 
-                <View style={styles.formField}>
-                    <Text style={styles.formLabel}>Enter Your Selling District</Text>
-                    <TouchableOpacity style={styles.dropdownInput}>
-                        <Text style={styles.dropdownText}>
-                            {sellingDistrict || 'Select district'}
-                        </Text>
-                        <Text style={styles.dropdownIcon}>▼</Text>
-                    </TouchableOpacity>
+                    {/* District Selection */}
+                    <View style={styles.inputGroup}>
+                        <Text style={styles.label}>Enter Your District</Text>
+                        <TouchableOpacity 
+                            style={styles.picker}
+                            onPress={() => setShowDistrictPicker(true)}
+                        >
+                            <Text style={styles.pickerText}>
+                                {selectedDistrict || 'Select district'}
+                            </Text>
+                            <Text style={styles.dropdownIcon}>▼</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
-            </View>
+            </ScrollView>
 
-            {/* Navigation Bar */}
-            <View style={styles.navBar}>
-                <TouchableOpacity style={styles.navItem}>
-                    <Text style={styles.navIcon}>🏠</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.navItem, styles.activeNavItem]}>
-                    <Text style={styles.navIcon}>🕒</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.navItem}>
-                    <Text style={styles.navIcon}>🛒</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.navItem}>
-                    <Text style={styles.navIcon}>👤</Text>
-                </TouchableOpacity>
-            </View>
+            {/* Month Picker Modal */}
+            <Modal
+                visible={showMonthPicker}
+                transparent={true}
+                animationType="slide"
+            >
+                <View style={styles.modalContainer}>
+                    <View style={styles.modalContent}>
+                        <Text style={styles.modalTitle}>Select Month</Text>
+                        <ScrollView>
+                            {months.map((month) => (
+                                <TouchableOpacity
+                                    key={month}
+                                    style={styles.modalItem}
+                                    onPress={() => {
+                                        setSelectedMonth(month);
+                                        setShowMonthPicker(false);
+                                    }}
+                                >
+                                    <Text style={styles.modalItemText}>{month}</Text>
+                                </TouchableOpacity>
+                            ))}
+                        </ScrollView>
+                        <TouchableOpacity
+                            style={styles.modalCloseButton}
+                            onPress={() => setShowMonthPicker(false)}
+                        >
+                            <Text style={styles.modalCloseButtonText}>Cancel</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </Modal>
+
+            {/* District Picker Modal */}
+            <Modal
+                visible={showDistrictPicker}
+                transparent={true}
+                animationType="slide"
+            >
+                <View style={styles.modalContainer}>
+                    <View style={styles.modalContent}>
+                        <Text style={styles.modalTitle}>Select District</Text>
+                        <ScrollView>
+                            {districts.map((district) => (
+                                <TouchableOpacity
+                                    key={district}
+                                    style={styles.modalItem}
+                                    onPress={() => {
+                                        setSelectedDistrict(district);
+                                        setShowDistrictPicker(false);
+                                    }}
+                                >
+                                    <Text style={styles.modalItemText}>{district}</Text>
+                                </TouchableOpacity>
+                            ))}
+                        </ScrollView>
+                        <TouchableOpacity
+                            style={styles.modalCloseButton}
+                            onPress={() => setShowDistrictPicker(false)}
+                        >
+                            <Text style={styles.modalCloseButtonText}>Cancel</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </Modal>
         </SafeAreaView>
     );
-};
+}
 
 const styles = StyleSheet.create({
-    // Styles remain the same as in previous code
+    safeArea: {
+        flex: 1,
+        backgroundColor: '#fff',
+        paddingTop: Platform.OS === 'android' ? 25 : 0,
+    },
     container: {
         flex: 1,
-        backgroundColor: 'white',
-    },
-    statusBar: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: 16,
-        paddingVertical: 8,
-    },
-    statusText: {
-        color: 'black',
-        fontWeight: '500',
-    },
-    statusDot: {
-        width: 8,
-        height: 8,
-        borderRadius: 4,
-        backgroundColor: 'black',
     },
     header: {
         flexDirection: 'row',
         alignItems: 'center',
-        paddingHorizontal: 16,
-        paddingVertical: 12,
+        padding: 16,
+        backgroundColor: '#fff',
     },
     backButton: {
-        marginRight: 10,
+        padding: 8,
     },
     backButtonText: {
-        fontSize: 22,
-        fontWeight: 'bold',
+        fontSize: 24,
+        color: '#000',
     },
-    headerText: {
+    headerTitle: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: 'black',
+        color: '#000',
+        marginLeft: 16,
     },
     fruitCard: {
         flexDirection: 'row',
-        backgroundColor: 'white',
-        borderRadius: 12,
-        padding: 12,
-        margin: 16,
-        marginBottom: 0,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
-        elevation: 2,
+        alignItems: 'center',
+        padding: 16,
+        backgroundColor: '#fff',
+        marginBottom: 16,
     },
     fruitImage: {
-        width: 100,
-        height: 100,
-        borderRadius: 8,
-        backgroundColor: '#FFCC00',
-    },
-    fruitNameContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        paddingLeft: 16,
+        width: 80,
+        height: 80,
+        borderRadius: 12,
+        marginRight: 16,
     },
     fruitName: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: 'black',
+        color: '#000',
     },
     formContainer: {
         flex: 1,
-        backgroundColor: '#00BFA5',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        backgroundColor: '#00A67E',
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
         padding: 20,
-        marginTop: 20,
-    },
-    formField: {
-        marginBottom: 20,
-    },
-    formLabel: {
-        color: 'white',
-        fontSize: 16,
-        fontWeight: 'bold',
-        marginBottom: 10,
     },
     inputGroup: {
+        marginBottom: 24,
+    },
+    label: {
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#fff',
+        marginBottom: 8,
+    },
+    amountContainer: {
         flexDirection: 'row',
         alignItems: 'center',
     },
     amountInput: {
         flex: 1,
-        backgroundColor: '#e0e0e0',
+        backgroundColor: '#fff',
         borderRadius: 8,
         padding: 12,
         fontSize: 16,
     },
-    unitToggle: {
-        flexDirection: 'row',
-        backgroundColor: '#e0e0e0',
+    unitContainer: {
+        backgroundColor: '#E0E0E0',
+        padding: 12,
+        borderTopRightRadius: 8,
+        borderBottomRightRadius: 8,
+    },
+    unitText: {
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#000',
+    },
+    picker: {
+        backgroundColor: '#fff',
         borderRadius: 8,
-        marginLeft: 10,
-        overflow: 'hidden',
-    },
-    unitButton: {
-        paddingVertical: 12,
-        paddingHorizontal: 16,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    activeUnitButton: {
-        backgroundColor: 'black',
-    },
-    unitButtonText: {
-        fontWeight: 'bold',
-        color: 'black',
-    },
-    activeUnitButtonText: {
-        color: 'white',
-    },
-    dropdownInput: {
+        padding: 12,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#e0e0e0',
-        borderRadius: 8,
-        padding: 14,
     },
-    dropdownText: {
+    pickerText: {
         fontSize: 16,
-        color: '#777',
+        color: '#666',
     },
     dropdownIcon: {
-        fontSize: 14,
+        fontSize: 16,
+        color: '#666',
     },
-    navBar: {
-        flexDirection: 'row',
-        backgroundColor: 'black',
-        paddingVertical: 12,
-        justifyContent: 'space-around',
+    modalContainer: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        backgroundColor: 'rgba(0,0,0,0.5)',
     },
-    navItem: {
+    modalContent: {
+        backgroundColor: '#fff',
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        padding: 20,
+        maxHeight: '80%',
+    },
+    modalTitle: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 16,
+        textAlign: 'center',
+    },
+    modalItem: {
+        padding: 16,
+        borderBottomWidth: 1,
+        borderBottomColor: '#E0E0E0',
+    },
+    modalItemText: {
+        fontSize: 16,
+        color: '#000',
+    },
+    modalCloseButton: {
+        marginTop: 16,
+        padding: 16,
+        backgroundColor: '#f5f5f5',
+        borderRadius: 8,
         alignItems: 'center',
-        justifyContent: 'center',
-        width: 50,
-        height: 50,
     },
-    activeNavItem: {
-        backgroundColor: 'white',
-        borderRadius: 25,
-    },
-    navIcon: {
-        fontSize: 24,
+    modalCloseButtonText: {
+        fontSize: 16,
+        color: '#666',
+        fontWeight: '600',
     },
 });
-
-export default FruitDetailsScreen;
