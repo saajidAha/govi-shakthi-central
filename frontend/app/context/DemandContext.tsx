@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { usePathname } from 'expo-router'; 
 
 // Types
 export interface FruitDemand {
@@ -73,6 +74,15 @@ export function DemandProvider({ children }: { children: React.ReactNode }) {
   const [selectedDistrict, setSelectedDistrict] = useState('');
   const [fruits, setFruits] = useState<FruitDemand[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const pathname = usePathname();
+
+  //Reset state when navigating away from the demand prediction screen
+  useEffect(()=>{
+    if(pathname !== '/features/demand-prediction'){
+      setSelectedDistrict('');
+      setFruits([]);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (selectedDistrict) {
