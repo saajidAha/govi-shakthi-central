@@ -1,0 +1,1 @@
+NOTE: The raw_material.py & selling_market_data.py scripts require the unique_fruit_data.json file to be generated first using the fruit_data.py script. If that unique_fruit_data.json does not exist. please generate it first before running other scripts.
