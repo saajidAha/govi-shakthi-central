@@ -70,7 +70,7 @@ export default function AlternativeProductsScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={[styles.safeArea, { backgroundColor: '#00A67E' }]}>
       <View style={styles.headerContainer}>
         <View style={styles.header}>
           <TouchableOpacity 
@@ -86,73 +86,75 @@ export default function AlternativeProductsScreen() {
         </View>
       </View>
 
-      {loading ? (
-        <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#00A67E" />
-        </View>
-      ) : alternatives.filter(item => item.location === params.district).length === 0 ? (
-        <View style={styles.errorContainer}>
-          <Text style={styles.errorText}>
-            The data is not available yet, we will update soon.
-          </Text>
-          <TouchableOpacity 
-            style={styles.backToDetailsButton}
-            onPress={() => router.back()}
-          >
-            <Text style={styles.backToDetailsButtonText}>Back</Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
-        <View style={styles.mainContainer}>
-          <ScrollView style={styles.container}>
-            {alternatives
-              .filter(item => item.location === params.district)
-              .map((item, index) => (
-                <TouchableOpacity
-                  key={item._id}
-                  style={styles.productCard}
-                  onPress={() => handleNext(item)}
-                >
-                  <Text style={styles.productName}>{item.alternative_product.name}</Text>
-                  
-                  <View style={styles.priceRow}>
-                    <View style={styles.priceItem}>
-                      <Text style={styles.priceLabel}>Wholesale Price</Text>
-                      <Text style={styles.priceValue}>
-                        LKR {formatPrice(item.alternative_product.wholesale_price.value)}
-                      </Text>
+      <View style={styles.mainContainer}>
+        {loading ? (
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator size="large" color="#00A67E" />
+          </View>
+        ) : alternatives.filter(item => item.location === params.district).length === 0 ? (
+          <View style={styles.errorContainer}>
+            <Text style={styles.errorText}>
+              The data is not available yet, we will update soon.
+            </Text>
+            <TouchableOpacity 
+              style={styles.backToDetailsButton}
+              onPress={() => router.back()}
+            >
+              <Text style={styles.backToDetailsButtonText}>Back</Text>
+            </TouchableOpacity>
+          </View>
+        ) : (
+          <View style={styles.mainContainer}>
+            <ScrollView style={styles.container}>
+              {alternatives
+                .filter(item => item.location === params.district)
+                .map((item, index) => (
+                  <TouchableOpacity
+                    key={item._id}
+                    style={styles.productCard}
+                    onPress={() => handleNext(item)}
+                  >
+                    <Text style={styles.productName}>{item.alternative_product.name}</Text>
+                    
+                    <View style={styles.priceRow}>
+                      <View style={styles.priceItem}>
+                        <Text style={styles.priceLabel}>Wholesale Price</Text>
+                        <Text style={styles.priceValue}>
+                          LKR {formatPrice(item.alternative_product.wholesale_price.value)}
+                        </Text>
+                      </View>
+                      <View style={styles.priceItem}>
+                        <Text style={styles.priceLabel}>Retail Price</Text>
+                        <Text style={styles.priceValue}>
+                          LKR {formatPrice(item.alternative_product.retail_price.value)}
+                        </Text>
+                      </View>
                     </View>
-                    <View style={styles.priceItem}>
-                      <Text style={styles.priceLabel}>Retail Price</Text>
-                      <Text style={styles.priceValue}>
-                        LKR {formatPrice(item.alternative_product.retail_price.value)}
-                      </Text>
-                    </View>
-                  </View>
 
-                  <View style={styles.profitRow}>
-                    <View style={styles.profitItem}>
-                      <Text style={styles.profitLabel}>Expected Wholesale Profit</Text>
-                      <Text style={styles.profitValue}>
-                        LKR {formatPrice(item.alternative_product.expected_wholesale_profit.value)}
-                      </Text>
+                    <View style={styles.profitRow}>
+                      <View style={styles.profitItem}>
+                        <Text style={styles.profitLabel}>Expected Wholesale Profit</Text>
+                        <Text style={styles.profitValue}>
+                          LKR {formatPrice(item.alternative_product.expected_wholesale_profit.value)}
+                        </Text>
+                      </View>
+                      <View style={styles.profitItem}>
+                        <Text style={styles.profitLabel}>Expected Retail Profit</Text>
+                        <Text style={styles.profitValue}>
+                          LKR {formatPrice(item.alternative_product.expected_retail_profit.value)}
+                        </Text>
+                      </View>
                     </View>
-                    <View style={styles.profitItem}>
-                      <Text style={styles.profitLabel}>Expected Retail Profit</Text>
-                      <Text style={styles.profitValue}>
-                        LKR {formatPrice(item.alternative_product.expected_retail_profit.value)}
-                      </Text>
+                    
+                    <View style={styles.nextButtonContainer}>
+                      <Text style={styles.nextButtonText}>View Marketplaces →</Text>
                     </View>
-                  </View>
-                  
-                  <View style={styles.nextButtonContainer}>
-                    <Text style={styles.nextButtonText}>View Marketplaces →</Text>
-                  </View>
-                </TouchableOpacity>
-              ))}
-          </ScrollView>
-        </View>
-      )}
+                  </TouchableOpacity>
+                ))}
+            </ScrollView>
+          </View>
+        )}
+      </View>
     </SafeAreaView>
   );
 }
@@ -160,15 +162,16 @@ export default function AlternativeProductsScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
+    // Change backgroundColor to match the header
+    backgroundColor: '#00A67E',
+    paddingTop: 0, // Remove the paddingTop
   },
   headerContainer: {
     backgroundColor: '#00A67E',
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
     paddingBottom: 20,
-    marginBottom: 16,
+    marginBottom: 0, // Adjust this if needed
   },
   header: {
     flexDirection: 'row',
@@ -199,6 +202,10 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     flex: 1,
+    backgroundColor: '#fff',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    marginTop: 16,
   },
   container: {
     flex: 1,
@@ -296,4 +303,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-}); 
+});
