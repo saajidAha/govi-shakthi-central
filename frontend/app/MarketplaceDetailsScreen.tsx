@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 
-interface Marketplace {
+interface BaseMarketplace {
   _id: string;
   fruit_type: string;
   alternative_product: string;
@@ -25,10 +25,18 @@ interface Marketplace {
   promotion_method: string;
 }
 
+interface RawMarketplace extends BaseMarketplace {}
+
+interface SellingMarketplace extends BaseMarketplace {
+  supplier_relationship: string;
+  ingredients_required: string[];
+}
+
 export default function MarketplaceDetailsScreen() {
   const router = useRouter();
   const params = useLocalSearchParams();
-  const marketplace: Marketplace = JSON.parse(params.marketplace as string);
+  const marketplace = JSON.parse(params.marketplace as string);
+  const marketplaceType = params.marketplaceType as 'raw' | 'selling';
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -39,7 +47,9 @@ export default function MarketplaceDetailsScreen() {
         >
           <Text style={styles.backButtonText}>←</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Marketplace Details</Text>
+        <Text style={styles.headerTitle}>
+          {marketplaceType === 'raw' ? 'Raw Material' : 'Selling'} Marketplace
+        </Text>
       </View>
 
       <ScrollView style={styles.container}>
@@ -55,6 +65,23 @@ export default function MarketplaceDetailsScreen() {
             <DetailItem label="Selling Strategy" value={marketplace.selling_strategy} />
             <DetailItem label="Seasonality" value={marketplace.seasonality} />
             <DetailItem label="Promotion Method" value={marketplace.promotion_method} />
+            
+            {marketplaceType === 'selling' && (
+              <>
+                <DetailItem 
+                  label="Supplier Relationship" 
+                  value={(marketplace as SellingMarketplace).supplier_relationship} 
+                />
+                {(marketplace as SellingMarketplace).ingredients_required.length > 0 && (
+                  <View style={styles.ingredientsContainer}>
+                    <Text style={styles.ingredientsLabel}>Required Ingredients:</Text>
+                    {(marketplace as SellingMarketplace).ingredients_required.map((ingredient, index) => (
+                      <Text key={index} style={styles.ingredientItem}>• {ingredient}</Text>
+                    ))}
+                  </View>
+                )}
+              </>
+            )}
           </View>
         </View>
       </ScrollView>
@@ -144,5 +171,21 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     flex: 1,
     textAlign: 'right',
+  },
+  ingredientsContainer: {
+    marginTop: 16,
+    paddingTop: 16,
+    borderTopWidth: 1,
+    borderTopColor: '#E0E0E0',
+  },
+  ingredientsLabel: {
+    fontSize: 16,
+    color: '#666',
+    marginBottom: 8,
+  },
+  ingredientItem: {
+    fontSize: 16,
+    color: '#000',
+    paddingVertical: 4,
   },
 }); 
