@@ -18,7 +18,7 @@ export default function ProfilePage() {
         {
             title: 'Personal Details',
             lastUpdated: '2 days ago',
-            onPress: () => router.push('/edit-profile')
+            onPress: () => router.push('/settings/edit-profile')
         },
 
         {
@@ -55,7 +55,7 @@ export default function ProfilePage() {
                         <TouchableOpacity style={styles.backButton} onPress={()=>router.back()}>
                             <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.settingsButton} onPress={()=>router.push('/settings')}>
+                        <TouchableOpacity style={styles.settingsButton} onPress={()=>router.push('/settings/settings')}>
                             <Image source={require('../../assets/images/settings.png')} style={styles.icon}/>
                         </TouchableOpacity>
                     </View>

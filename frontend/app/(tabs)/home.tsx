@@ -40,7 +40,7 @@ export default function HomeScreen(){
             </TouchableOpacity>
 
             <TouchableOpacity style={[styles.card, styles.marketCard]}
-              onPress={()=> router.push('../price-prediction')}>
+              onPress={()=> router.push('/features/price-prediction')}>
               <Text style={styles.cardTitle}>Price Prediction</Text>
               <Image
                 source={require('../../assets/images/Home2.jpeg')}
@@ -51,7 +51,8 @@ export default function HomeScreen(){
           </View>
 
           <View style={styles.row}>
-            <TouchableOpacity style={styles.card}>
+            <TouchableOpacity style={[styles.card, styles.cropCard]}
+              onPress={()=> router.push('/features/yield-prediction')}>
               <Text style={styles.cardTitle}>Crop Yield Prediction</Text>
               <Image
                 source={require('../../assets/images/Home3.jpeg')}
@@ -60,7 +61,10 @@ export default function HomeScreen(){
               />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.card} onPress={() => router.push('../market-demand-prediction')}>
+            <TouchableOpacity 
+              style={[styles.card, styles.demandCard]}
+              onPress={() => router.push('/features/demand-prediction')}
+            >
               <Text style={styles.cardTitle}>Market Demand Prediction</Text>
               <Image
                 source={require('../../assets/images/Home4.jpeg')}
