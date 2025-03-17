@@ -11,7 +11,7 @@ import{
     ActivityIndicator,
 } from 'react-native';
 import{useRouter} from 'expo-router';
-import { useMarket } from './context/MarketContext';
+import { useMarket } from '../context/MarketContext';
 
 const districts=[
     'Colombo',
@@ -60,7 +60,7 @@ export default function PricePredictionScreen() {
               style={styles.backButton}
               onPress={() => router.back()}
             >
-              <Image source={require('../assets/images/back.png')} style={styles.icon}/>
+              <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
             </TouchableOpacity>
             <Text style={styles.headerTitle}>Price Prediction</Text>
           </View>
@@ -75,7 +75,7 @@ export default function PricePredictionScreen() {
               <Text style={styles.dropdownText}>
                 {selectedDistrict || 'Choose a district'}
               </Text>
-              <Image source={require('../assets/images/chevronright.png')} style={styles.chevronIcon}/>
+              <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
             </TouchableOpacity>
   
             {isDropdownOpen && (

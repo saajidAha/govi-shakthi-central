@@ -19,12 +19,12 @@ export default function SettingsScreen() {
     { 
       title: 'Edit Profile', 
       description: 'Update your personal information',
-      onPress: () => router.push('/edit-profile')
+      onPress: () => router.push('/settings/edit-profile')
     },
     { 
       title: 'Agri Profile', 
       description: 'Manage your Farming information',
-      onPress: () => router.push('/agri-profile')
+      onPress: () => router.push('/settings/agri-profile')
     },
     { 
       title: 'Privacy', 
@@ -105,7 +105,7 @@ export default function SettingsScreen() {
             style={styles.backButton}
             onPress={() => router.back()}
           >
-            <Image source={require('../assets/images/back.png')} style={styles.icon}/>
+            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Settings</Text>
         </View>
@@ -126,7 +126,7 @@ export default function SettingsScreen() {
                     <Text style={styles.settingTitle}>{item.title}</Text>
                     <Text style={styles.settingDescription}>{item.description}</Text>
                   </View>
-                  <Image source={require('../assets/images/chevronright.png')} style={styles.chevronIcon}/>
+                  <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
                   {index < accountSettings.length - 1 && <View style={styles.divider} />}
                 </TouchableOpacity>
               ))}
@@ -147,7 +147,7 @@ export default function SettingsScreen() {
                     <Text style={styles.settingTitle}>{item.title}</Text>
                     {item.description ? <Text style={styles.settingDescription}>{item.description}</Text> : null}
                   </View>
-                  <Image source={require('../assets/images/chevronright.png')} style={styles.chevronIcon}/>
+                  <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
                   {index < notificationSettings.length - 1 && <View style={styles.divider} />}
                 </TouchableOpacity>
               ))}
@@ -168,7 +168,7 @@ export default function SettingsScreen() {
                     <Text style={styles.settingTitle}>{item.title}</Text>
                     <Text style={styles.settingDescription}>{item.description}</Text>
                   </View>
-                  <Image source={require('../assets/images/chevronright.png')} style={styles.chevronIcon}/>
+                  <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
                   {index < appPreferences.length - 1 && <View style={styles.divider} />}
                 </TouchableOpacity>
               ))}

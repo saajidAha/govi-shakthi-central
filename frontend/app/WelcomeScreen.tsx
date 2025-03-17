@@ -117,7 +117,7 @@ const welcomeScreen = () => {
                 onPressOut={onPressOut}
                 activeOpacity={1}
             >
-              <Text style={styles.buttonText}>Explore More</Text>
+              <Text style={styles.buttonText}>Explore More.</Text>
             </TouchableOpacity>
           </Animated.View>
         </View>
