@@ -55,19 +55,14 @@ export default function FruitDetailsScreen() {
             return;
         }
 
-        // Here you can handle the submission of data
-        const data = {
-            fruit: fruit.name,
-            amount: parseFloat(amount),
-            harvestingMonth: selectedMonth,
-            district: selectedDistrict
-        };
-        
-        console.log('Submitting data:', data);
-        // You can add API call here
-        
-        // Navigate back or to next screen
-        router.back();
+        // Navigate to AlternativeProductsScreen with the fruit type and district
+        router.push({
+            pathname: '/AlternativeProductsScreen',
+            params: {
+                fruitType: fruit.name,
+                district: selectedDistrict
+            }
+        });
     };
 
     return (
