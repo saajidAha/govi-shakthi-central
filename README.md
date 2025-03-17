@@ -14,6 +14,7 @@ Govishakthi is a mobile application designed to [insert a brief description of y
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Testing Instructions](testing-instructions)
+- [Troubleshooting Guide](troubleshooting-guide)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -182,7 +183,35 @@ The server will be running on `http://localhost:7000` (or a different port if yo
 
 -Automated Testing with Jest:
 
-npm run test
+  npm run test
+
+## Troubleshooting Guide
+
+### Common Issues and Solutions
+
+1. Expo Not Starting
+
+- Ensure you have installed Expo CLI globally:
+
+  npm install -g expo-cli
+
+- Try clearing the cache:
+
+  expo start -c
+
+2. Backend Server Not Running
+
+- Ensure all dependencies are installed:
+
+  npm install
+
+- Check for TypeScript compilation errors before running:
+
+  npm run build
+
+3. Database Connection Failing
+
+- Ensure MongoDB is running and the connection string is correct in your configuration file.
 
 ## Contributing
 
