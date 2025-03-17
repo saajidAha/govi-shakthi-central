@@ -48,70 +48,108 @@ export default function FruitDetailsScreen() {
     const [showMonthPicker, setShowMonthPicker] = useState(false);
     const [showDistrictPicker, setShowDistrictPicker] = useState(false);
 
+    const handleSubmit = () => {
+        // Validate inputs
+        if (!amount || !selectedMonth || !selectedDistrict) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        // Here you can handle the submission of data
+        const data = {
+            fruit: fruit.name,
+            amount: parseFloat(amount),
+            harvestingMonth: selectedMonth,
+            district: selectedDistrict
+        };
+        
+        console.log('Submitting data:', data);
+        // You can add API call here
+        
+        // Navigate back or to next screen
+        router.back();
+    };
+
     return (
         <SafeAreaView style={styles.safeArea}>
-            <ScrollView style={styles.container}>
-                {/* Header */}
-                <View style={styles.header}>
-                    <TouchableOpacity 
-                        style={styles.backButton}
-                        onPress={() => router.back()}
-                    >
-                        <Text style={styles.backButtonText}>←</Text>
-                    </TouchableOpacity>
-                    <Text style={styles.headerTitle}>Enter the details</Text>
-                </View>
+            <ScrollView 
+                style={styles.container}
+                contentContainerStyle={{ flexGrow: 1 }}
+                showsVerticalScrollIndicator={false}
+            >
+                <View style={{ flex: 1 }}>
+                    {/* Header */}
+                    <View style={styles.header}>
+                        <TouchableOpacity 
+                            style={styles.backButton}
+                            onPress={() => router.back()}
+                        >
+                            <Text style={styles.backButtonText}>←</Text>
+                        </TouchableOpacity>
+                        <Text style={styles.headerTitle}>Enter the details</Text>
+                    </View>
 
-                {/* Fruit Card */}
-                <View style={styles.fruitCard}>
-                    <Image source={fruit.image} style={styles.fruitImage} />
-                    <Text style={styles.fruitName}>{fruit.name}</Text>
-                </View>
+                    {/* Fruit Card */}
+                    <View style={styles.fruitCard}>
+                        <View style={styles.imageFrame}>
+                            <Image source={fruit.image} style={styles.fruitImage} resizeMode="cover" />
+                        </View>
+                        <Text style={styles.fruitName}>{fruit.name}</Text>
+                    </View>
 
-                {/* Form Section */}
-                <View style={styles.formContainer}>
-                    {/* Amount Input */}
-                    <View style={styles.inputGroup}>
-                        <Text style={styles.label}>Enter the Amount of Crop</Text>
-                        <View style={styles.amountContainer}>
-                            <TextInput
-                                style={styles.amountInput}
-                                value={amount}
-                                onChangeText={setAmount}
-                                keyboardType="numeric"
-                                placeholder="Enter amount"
-                            />
-                            <View style={styles.unitContainer}>
-                                <Text style={styles.unitText}>KG</Text>
+                    {/* Form Section */}
+                    <View style={styles.formContainer}>
+                        {/* Amount Input */}
+                        <View style={styles.inputGroup}>
+                            <Text style={styles.label}>Enter the Amount of Crop</Text>
+                            <View style={styles.amountContainer}>
+                                <TextInput
+                                    style={styles.amountInput}
+                                    value={amount}
+                                    onChangeText={setAmount}
+                                    keyboardType="numeric"
+                                    placeholder="Enter amount"
+                                />
+                                <View style={styles.unitContainer}>
+                                    <Text style={styles.unitText}>KG</Text>
+                                </View>
                             </View>
                         </View>
-                    </View>
 
-                    {/* Month Selection */}
-                    <View style={styles.inputGroup}>
-                        <Text style={styles.label}>Harvesting Month</Text>
-                        <TouchableOpacity 
-                            style={styles.picker}
-                            onPress={() => setShowMonthPicker(true)}
-                        >
-                            <Text style={styles.pickerText}>
-                                {selectedMonth || 'Select month'}
-                            </Text>
-                            <Text style={styles.dropdownIcon}>▼</Text>
-                        </TouchableOpacity>
-                    </View>
+                        {/* Month Selection */}
+                        <View style={styles.inputGroup}>
+                            <Text style={styles.label}>Harvesting Month</Text>
+                            <TouchableOpacity 
+                                style={styles.picker}
+                                onPress={() => setShowMonthPicker(true)}
+                            >
+                                <Text style={styles.pickerText}>
+                                    {selectedMonth || 'Select month'}
+                                </Text>
+                                <Text style={styles.dropdownIcon}>▼</Text>
+                            </TouchableOpacity>
+                        </View>
 
-                    {/* District Selection */}
-                    <View style={styles.inputGroup}>
-                        <Text style={styles.label}>Enter Your District</Text>
+                        {/* District Selection */}
+                        <View style={styles.inputGroup}>
+                            <Text style={styles.label}>Enter Your District</Text>
+                            <TouchableOpacity 
+                                style={styles.picker}
+                                onPress={() => setShowDistrictPicker(true)}
+                            >
+                                <Text style={styles.pickerText}>
+                                    {selectedDistrict || 'Select district'}
+                                </Text>
+                                <Text style={styles.dropdownIcon}>▼</Text>
+                            </TouchableOpacity>
+                        </View>
+
+                        {/* Submit Button */}
                         <TouchableOpacity 
-                            style={styles.picker}
-                            onPress={() => setShowDistrictPicker(true)}
+                            style={styles.submitButton}
+                            onPress={handleSubmit}
                         >
-                            <Text style={styles.pickerText}>
-                                {selectedDistrict || 'Select district'}
-                            </Text>
-                            <Text style={styles.dropdownIcon}>▼</Text>
+                            <Text style={styles.submitButtonText}>Submit</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -215,22 +253,31 @@ const styles = StyleSheet.create({
         marginLeft: 16,
     },
     fruitCard: {
-        flexDirection: 'row',
         alignItems: 'center',
         padding: 16,
         backgroundColor: '#fff',
         marginBottom: 16,
     },
+    imageFrame: {
+        width: 120,
+        height: 120,
+        borderRadius: 20,
+        padding: 2,
+        backgroundColor: '#000',
+        marginBottom: 12,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     fruitImage: {
-        width: 80,
-        height: 80,
-        borderRadius: 12,
-        marginRight: 16,
+        width: '100%',
+        height: '100%',
+        borderRadius: 18,
     },
     fruitName: {
-        fontSize: 20,
+        fontSize: 24,
         fontWeight: 'bold',
         color: '#000',
+        textAlign: 'center',
     },
     formContainer: {
         flex: 1,
@@ -238,6 +285,8 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         padding: 20,
+        paddingBottom: Platform.OS === 'android' ? 40 : 20,
+        minHeight: '100%',
     },
     inputGroup: {
         marginBottom: 24,
@@ -324,5 +373,22 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#666',
         fontWeight: '600',
+    },
+    submitButton: {
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        padding: 16,
+        alignItems: 'center',
+        marginTop: 32,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 3,
+    },
+    submitButtonText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#00A67E',
     },
 });
