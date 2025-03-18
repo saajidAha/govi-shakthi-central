@@ -289,14 +289,19 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
+    backgroundColor: 'ffffff',
+    alignItems: 'center',
   },
   fruitImageContainer: {
     width: 120,
     height: 120,
+    overflow: 'hidden',
+    backgroundColor: '#f0f0f0',
   },
   fruitImage: {
     width: '100%',
     height: '100%',
+    resizeMode: 'cover',
   },
   fruitInfo: {
     flex: 1,

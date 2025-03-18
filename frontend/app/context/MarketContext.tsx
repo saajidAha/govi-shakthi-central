@@ -32,7 +32,7 @@ const fruitImages: Record<string, string> = {
   WoodApple: 'https://images.unsplash.com/photo-1591300327588-9eb28f1be037',
   Strawberry: 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2',
   Kiwi: 'https://images.unsplash.com/photo-1585059895524-72359e06133a',
-  Lychee: 'https://images.unsplash.com/photo-1626663011185-d2bd8eea1c39'
+  Lychee: 'https://cdn.pixabay.com/photo/2018/05/08/20/19/lychee-3383825_1280.jpg',
 };
 
 export function MarketProvider({ children }: { children: React.ReactNode }) {
@@ -42,9 +42,9 @@ export function MarketProvider({ children }: { children: React.ReactNode }) {
   const [error, setError] = useState<string | null>(null); 
   const pathname = usePathname();
 
-  //Reset state when navigating away from the demand prediction screen
+  //Reset state when navigating away from the price prediction screen
   useEffect(()=>{
-    if(pathname !== '/features/demand-prediction'){
+    if(pathname !== '/features/price-prediction'){
       setSelectedDistrict('');
       setFruits([]);
     }
@@ -67,7 +67,7 @@ export function MarketProvider({ children }: { children: React.ReactNode }) {
           console.log('API Response: ', data);
 
           if(!data || !data.predictions || !Array.isArray(data.predictions)){
-            throw new Error('Invalid data format recieved');
+            throw new Error('Invalid data format received');
           }
 
           const filteredFruits=data.predictions
@@ -85,7 +85,7 @@ export function MarketProvider({ children }: { children: React.ReactNode }) {
         })
 
         .catch((err)=>{
-          console.error('Error fetching fuits', err);
+          console.error('Error fetching fruits', err);
           setError(err.message);
           setIsLoading(false);
         });
