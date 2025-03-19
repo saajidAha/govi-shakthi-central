@@ -40,14 +40,14 @@ const fruits: Fruit[] = [
     id: 3,
     name: 'Strawberry',
     description: 'A citrus fruit and a great source of vitamin C.',
-    image: { uri: 'https://images.unsplash.com/photo-1557800636-894a64c1696f' },
+    image: { uri: 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2' },
     backgroundColor: '#E6E6FA',
   },
   {
     id: 4,
     name: 'Woodapple',
     description: 'A hard fruit with a hard shell and aromatic, tangy pulp.',
-    image: { uri: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf' },
+    image: { uri: 'https://images.unsplash.com/photo-1591300327588-9eb28f1be037' },
     backgroundColor: '#E6E6FA',
   },
   {
