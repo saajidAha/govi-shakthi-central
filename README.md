@@ -4,7 +4,10 @@
 
 ## Introduction
 
-Govishakthi is a mobile application designed to [insert a brief description of your app's purpose]. The project consists of a **frontend** built with **React Native** and **Expo** and a **backend** powered by **Node.js** with **Express.js** for handling API requests and data management.
+Govishakthi is a mobile application designed to empower farmers by providing decision support for agricultural product optimization and market intelligence. The project aims to help small and medium-scale farmers tackle price instability, market inefficiencies, and post-harvest losses by leveraging real-time market data, predictive analytics, and alternative product suggestions.
+
+The frontend of Govishakthi is built using **React Native** with **Expo**, ensuring a smooth cross-platform experience for both Android and iOS users. The backend is powered by **Node.js** with **Express.js**, enabling efficient API management and data processing. Additionally, the system integrates a Large Language Model (LLM) to provide personalized recommendations, price forecasting, and alternative product insights to farmers, helping them make data-driven decisions.
+
 
 ## Table of Contents
 
@@ -183,7 +186,7 @@ The server will be running on `http://localhost:7000` (or a different port if yo
 
 -Automated Testing with Jest:
 
-  npm run test
+npm run test
 
 ## Troubleshooting Guide
 
