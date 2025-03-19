@@ -31,7 +31,7 @@ export class Repository {
      * add user info to database
      * @param credentials credentials of the user
      */
-    public async registerUser(credentials: { username: string, hashedPassword: string }){
+    public async registerUser(credentials: { username: string, hashedPassword: string, location: string }){
         await this.db.collection("user_credentials").insertOne(credentials);
     }
 
@@ -40,7 +40,7 @@ export class Repository {
      * @param credentials credentials of the user
      */
     public async checkCredentials(credentials: {username: string}){
-        return await this.db.collection("user_credentials").findOne({username: credentials.username},{ projection: { hashedPassword: 1} });
+        return await this.db.collection("user_credentials").findOne({username: credentials.username},{ projection: { username:1, hashedPassword: 1, location:1} });
     }
 
     /**
