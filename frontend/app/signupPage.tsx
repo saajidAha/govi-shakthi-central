@@ -15,15 +15,39 @@ const SignupPage = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    const handleSignup = () => {
-        // Implement signup logic here
-        console.log("Signing up with", name, username, email, phoneNumber, location, password, confirmPassword);
-        if (password === confirmPassword) {
-            // Passwords match, proceed with signup
-            router.push("/(tabs)/home"); // Navigate to home.tsx page after successful signup
-        } else {
-            // Passwords do not match, display an error message
+    const handleSignup = async () => {
+        if (password !== confirmPassword) {
             alert("Passwords do not match");
+            return;
+        }
+
+        try {
+            const response = await fetch('https://saajid-govishakthi-backend-47235930830.asia-south1.run.app/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username,
+                    password,
+                    name,
+                    location,
+                    email,
+                    phone: phoneNumber
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert(data.message);
+                router.push("/(tabs)/home");
+            } else {
+                alert(data.message || 'Registration failed');
+            }
+        } catch (error) {
+            console.error('Error during registration:', error);
+            alert('Failed to register. Please try again.');
         }
     };
 
