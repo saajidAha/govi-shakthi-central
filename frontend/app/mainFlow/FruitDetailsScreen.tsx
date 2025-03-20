@@ -60,7 +60,7 @@ export default function FruitDetailsScreen() {
 
         // Navigate to AlternativeProductsScreen with the fruit type and district
         router.push({
-            pathname: '/AlternativeProductsScreen',
+            pathname: '/mainFlow/AlternativeProductsScreen',
             params: {
                 fruitType: fruit.name,
                 district: selectedDistrict

@@ -40,7 +40,7 @@ export default function HomeScreen() {
               <View style={styles.row}>
                 <TouchableOpacity
                   style={styles.card}
-                  onPress={() => router.push('/FruitSelectionScreen')}
+                  onPress={() => router.push('/mainFlow/FruitSelectionScreen')}
                 >
                   <Text style={styles.cardTitle}>Select Fruit</Text>
                   <Image

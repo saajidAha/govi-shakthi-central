@@ -76,7 +76,7 @@ export default function MarketplaceScreen() {
 
   const handleMarketplaceSelect = (marketplace: BaseMarketplace, type: 'raw' | 'selling') => {
     router.push({
-      pathname: '/MarketplaceDetailsScreen',
+      pathname: '/mainFlow/MarketplaceDetailsScreen',
       params: { 
         marketplace: JSON.stringify(marketplace),
         marketplaceType: type
@@ -173,7 +173,7 @@ export default function MarketplaceScreen() {
               <View style={styles.homeButtonContainer}>
                 <TouchableOpacity 
                   style={styles.homeButton}
-                  onPress={() => router.push('/FruitSelectionScreen')}
+                  onPress={() => router.push('/mainFlow/FruitSelectionScreen')}
                 >
                   <Text style={styles.homeButtonText}>Go Back Home</Text>
                 </TouchableOpacity>

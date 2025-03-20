@@ -65,7 +65,7 @@ export default function AlternativeProductsScreen() {
 
   const handleNext = (item: ProductData) => {
     router.push({
-      pathname: '/MarketplaceScreen',
+      pathname: '/mainFlow/MarketplaceScreen',
       params: {
         alternativeProduct: item.alternative_product.name
       }

@@ -71,7 +71,7 @@ export default function FruitSelectionScreen() {
 
   const handleFruitSelect = (fruit: Fruit) => {
     router.push({
-      pathname: '/FruitDetailsScreen',
+      pathname: '/mainFlow/FruitDetailsScreen',
       params: { fruit: JSON.stringify(fruit) }
     });
   };
