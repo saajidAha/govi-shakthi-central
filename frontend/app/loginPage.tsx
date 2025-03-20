@@ -10,10 +10,31 @@ const LoginPage = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleLogin = () => {
-        // Implement authentication logic here
-        console.log("Logging in with", username, password);
-        router.push("/(tabs)/home"); // Navigate to home.tsx page
+    const handleLogin = async () => {
+        try {
+            const response = await fetch('https://saajid-govishakthi-backend-47235930830.asia-south1.run.app/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username,
+                    password
+                })
+            });
+
+            const data = await response.json();
+            
+            if (data.message === "Access granted. User exists within the system") {
+                console.log("Login successful:", data);
+                router.push("/(tabs)/home");
+            } else {
+                alert("Login failed. Please check your credentials.");
+            }
+        } catch (error) {
+            console.error("Login error:", error);
+            alert("An error occurred during login. Please try again.");
+        }
     };
 
     return (
