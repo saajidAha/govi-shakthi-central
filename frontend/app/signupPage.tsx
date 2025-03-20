@@ -5,35 +5,49 @@ import { AntDesign } from "@expo/vector-icons";
 
 const { width } = Dimensions.get("window");
 
-const LoginPage = () => {
+const SignupPage = () => {
     const router = useRouter();
+    const [name, setName] = useState("");
     const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [location, setLocation] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
-    const handleLogin = async () => {
+    const handleSignup = async () => {
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+        }
+
         try {
-            const response = await fetch('https://saajid-govishakthi-backend-47235930830.asia-south1.run.app/api/login', {
+            const response = await fetch('https://saajid-govishakthi-backend-47235930830.asia-south1.run.app/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     username,
-                    password
+                    password,
+                    name,
+                    location,
+                    email,
+                    phone: phoneNumber
                 })
             });
 
             const data = await response.json();
-            
-            if (data.message === "Access granted. User exists within the system") {
-                console.log("Login successful:", data);
+
+            if (response.ok) {
+                alert(data.message);
                 router.push("/(tabs)/home");
             } else {
-                alert("Login failed. Please check your credentials.");
+                alert(data.message || 'Registration failed');
             }
         } catch (error) {
-            console.error("Login error:", error);
-            alert("An error occurred during login. Please try again.");
+            console.error('Error during registration:', error);
+            alert('Failed to register. Please try again.');
         }
     };
 
@@ -43,10 +57,45 @@ const LoginPage = () => {
                 <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
                     <AntDesign name="arrowleft" size={24} color="black" />
                 </TouchableOpacity>
-                <Text style={styles.title}>Continue with Account Details</Text>
-                <Text style={styles.subtitle}>Sign in with your User name and Password.</Text>
+                <Text style={styles.title}>Create Account</Text>
+                <Text style={styles.subtitle}>Sign up with your details below.</Text>
 
                 <View style={styles.inputContainer}>
+                    <Text style={styles.label}>Name</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Name"
+                        value={name}
+                        onChangeText={setName}
+                    />
+
+                    <Text style={styles.label}>Email</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Enter your email"
+                        value={email}
+                        onChangeText={setEmail}
+                        keyboardType="email-address"
+                        autoCapitalize="none"
+                    />
+
+                    <Text style={styles.label}>Phone Number</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Enter your phone number"
+                        value={phoneNumber}
+                        onChangeText={setPhoneNumber}
+                        keyboardType="phone-pad"
+                    />
+
+                    <Text style={styles.label}>Location</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Enter your location (e.g., Galle, Sri Lanka)"
+                        value={location}
+                        onChangeText={setLocation}
+                    />
+
                     <Text style={styles.label}>User Name</Text>
                     <TextInput
                         style={styles.input}
@@ -63,10 +112,19 @@ const LoginPage = () => {
                         value={password}
                         onChangeText={setPassword}
                     />
+
+                    <Text style={styles.label}>Confirm Password</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Confirm Password"
+                        secureTextEntry
+                        value={confirmPassword}
+                        onChangeText={setConfirmPassword}
+                    />
                 </View>
 
-                <TouchableOpacity style={styles.button} onPress={handleLogin}>
-                    <Text style={styles.buttonText}>Continue</Text>
+                <TouchableOpacity style={styles.button} onPress={handleSignup}>
+                    <Text style={styles.buttonText}>Sign Up</Text>
                 </TouchableOpacity>
             </SafeAreaView>
         </View>
@@ -124,7 +182,7 @@ const styles = StyleSheet.create({
         color: "#FFFFFF",
         fontSize: 18,
         fontWeight: "bold",
-    },
+    }
 });
 
-export default LoginPage;
+export default SignupPage;
