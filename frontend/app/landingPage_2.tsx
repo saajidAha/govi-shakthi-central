@@ -19,6 +19,10 @@ const LandingPage2 = () => {
         router.push("/loginPage"); // Navigate to login page
     };
 
+    const handleSignup = () => {
+        router.push("/signupPage"); // Navigate to signup page
+    };
+
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.content}>
@@ -61,7 +65,7 @@ const LandingPage2 = () => {
                         </TouchableOpacity>
                     </View>
 
-                    <TouchableOpacity onPress={handleLogin}>
+                    <TouchableOpacity onPress={handleSignup}>
                         <Text style={styles.loginText}>Don't have an Account? Sign up</Text>
                     </TouchableOpacity>
                 </View>
