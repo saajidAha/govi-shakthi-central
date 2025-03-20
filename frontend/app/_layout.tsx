@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Slot, Stack } from 'expo-router'; 
+import { Slot, Stack, Redirect } from 'expo-router'; 
 import { StatusBar } from 'expo-status-bar';
 import { MarketProvider } from './context/MarketContext';
 import { YieldProvider } from './context/YieldContext';
@@ -22,6 +22,12 @@ export default function RootLayout() {
       <YieldProvider>
         <DemandProvider>
         <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="welcome" options={{ headerShown: false }} />
+          <Stack.Screen name="WelcomeScreen" options={{ 
+            headerShown: false, 
+            animation: 'none',
+            contentStyle: { backgroundColor: 'white' }
+          }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="+not-found" />
           <Stack.Screen name="edit-profile" options={{headerShown: false}} />
@@ -34,4 +40,9 @@ export default function RootLayout() {
       </YieldProvider>
     </MarketProvider>
   )
+}
+
+// Define the root route to redirect to the welcome screen
+export function Root() {
+  return <Redirect href="/WelcomeScreen" />;
 }

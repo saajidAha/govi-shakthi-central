@@ -5,31 +5,27 @@ import {
   Text,
   Image,
   TouchableOpacity,
-  SafeAreaView,
   Dimensions,
   Animated,
   Easing,
 } from 'react-native';
-import { useRouter } from 'expo-router'; // Import useRouter
+import { useRouter } from 'expo-router';
 
 const welcomeScreen = () => {
-  const router = useRouter(); // Initialize router for navigation
+  const router = useRouter();
 
-  // Animation values
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(0)).current;
   const buttonBounceAnim = useRef(new Animated.Value(1)).current;
   const dotPulseAnim = useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
-    // Fade in animation for logo and tagline
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 3000,
       useNativeDriver: true,
     }).start();
 
-    // Scale animation for content
     Animated.spring(scaleAnim, {
       toValue: 1,
       friction: 100,
@@ -37,7 +33,6 @@ const welcomeScreen = () => {
       useNativeDriver: true,
     }).start();
 
-    // Continuous pulse animation for dot
     Animated.loop(
         Animated.sequence([
           Animated.timing(dotPulseAnim, {
@@ -56,7 +51,6 @@ const welcomeScreen = () => {
     ).start();
   }, []);
 
-  // Button press animation
   const onPressIn = () => {
     Animated.spring(buttonBounceAnim, {
       toValue: 0.95,
@@ -71,13 +65,12 @@ const welcomeScreen = () => {
       tension: 40,
       useNativeDriver: true,
     }).start(() => {
-      // Navigate to landingPage_1 after animation completes
       router.push('/landingPage_1');
     });
   };
 
   return (
-      <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
         <Animated.View
             style={[
               styles.content,
@@ -121,7 +114,7 @@ const welcomeScreen = () => {
             </TouchableOpacity>
           </Animated.View>
         </View>
-      </SafeAreaView>
+      </View>
   );
 };
 
