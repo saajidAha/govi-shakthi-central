@@ -108,10 +108,10 @@ export class Controller{
 
         // register user
         app.post("/api/register", async(req, res) => {
-            let {username, password, location} = req.body;
+            let {username, password, name, location, email, phone} = req.body;
             try{
                 let hashedPassword = await Authenticator.hashPassword(password);
-                await this.repository.registerUser({username, hashedPassword, location});
+                await this.repository.registerUser({username, hashedPassword, name, location, email,  phone});
                 console.log("User credentials saved successfully.");
                 res.status(201).json({message: "user registered successfully."});
             }catch (error) {
@@ -131,7 +131,7 @@ export class Controller{
                 }
                 else{
                     let hashResponse = await Authenticator.compareHashes(password, response.hashedPassword);
-                    hashResponse? res.status(200).json({message: "Access granted. User exists within the system", username:response.username, location: response.location}) : res.status(401).json({message: "Access denied. User not registered in the system."});
+                    hashResponse? res.status(200).json({message: "Access granted. User exists within the system", username:response.username, name: response.name, location: response.location, email:response.email, phone:response.phone}) : res.status(401).json({message: "Access denied. User not registered in the system."});
                 }
             }catch (e){
                 console.log("Error while checking login credentials" + e)
