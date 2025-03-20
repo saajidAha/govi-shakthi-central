@@ -1,30 +1,23 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, TextInput, TouchableOpacity, SafeAreaView, Platform, Dimensions, Modal, ScrollView } from "react-native";
+import { StyleSheet, View, Text, TextInput, TouchableOpacity, SafeAreaView, Platform, Dimensions } from "react-native";
 import { useRouter } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
 
 const { width } = Dimensions.get("window");
 
-const districts = [
-    'Colombo', 'Gampaha', 'Kalutara', 'Kandy', 'Matale', 'Nuwara Eliya',
-    'Galle', 'Matara', 'Hambantota', 'Jaffna', 'Kilinochchi', 'Mannar',
-    'Vavuniya', 'Mullaitivu', 'Batticaloa', 'Ampara', 'Trincomalee',
-    'Kurunegala', 'Puttalam', 'Anuradhapura', 'Polonnaruwa', 'Badulla',
-    'Monaragala', 'Ratnapura', 'Kegalle'
-];
-
 const SignupPage = () => {
     const router = useRouter();
     const [name, setName] = useState("");
     const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [location, setLocation] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [selectedDistrict, setSelectedDistrict] = useState('');
-    const [showDistrictPicker, setShowDistrictPicker] = useState(false);
 
     const handleSignup = () => {
         // Implement signup logic here
-        console.log("Signing up with", name, username, password, confirmPassword, selectedDistrict);
+        console.log("Signing up with", name, username, email, phoneNumber, location, password, confirmPassword);
         if (password === confirmPassword) {
             // Passwords match, proceed with signup
             router.push("/(tabs)/home"); // Navigate to home.tsx page after successful signup
@@ -41,11 +34,10 @@ const SignupPage = () => {
                     <AntDesign name="arrowleft" size={24} color="black" />
                 </TouchableOpacity>
                 <Text style={styles.title}>Create Account</Text>
-                <Text style={styles.subtitle}>Sign up with your Name, District, User name, and Password.</Text>
+                <Text style={styles.subtitle}>Sign up with your details below.</Text>
 
                 <View style={styles.inputContainer}>
-                     {/* Name Input */}
-                     <Text style={styles.label}>Name</Text>
+                    <Text style={styles.label}>Name</Text>
                     <TextInput
                         style={styles.input}
                         placeholder="Name"
@@ -53,17 +45,32 @@ const SignupPage = () => {
                         onChangeText={setName}
                     />
 
-                    {/* District Selection */}
-                    <Text style={styles.label}>Enter Your District</Text>
-                    <TouchableOpacity
-                        style={styles.picker}
-                        onPress={() => setShowDistrictPicker(true)}
-                    >
-                        <Text style={styles.pickerText}>
-                            {selectedDistrict || 'Select district'}
-                        </Text>
-                        <Text style={styles.dropdownIcon}>▼</Text>
-                    </TouchableOpacity>
+                    <Text style={styles.label}>Email</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Enter your email"
+                        value={email}
+                        onChangeText={setEmail}
+                        keyboardType="email-address"
+                        autoCapitalize="none"
+                    />
+
+                    <Text style={styles.label}>Phone Number</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Enter your phone number"
+                        value={phoneNumber}
+                        onChangeText={setPhoneNumber}
+                        keyboardType="phone-pad"
+                    />
+
+                    <Text style={styles.label}>Location</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Enter your location (e.g., Galle, Sri Lanka)"
+                        value={location}
+                        onChangeText={setLocation}
+                    />
 
                     <Text style={styles.label}>User Name</Text>
                     <TextInput
@@ -90,47 +97,12 @@ const SignupPage = () => {
                         value={confirmPassword}
                         onChangeText={setConfirmPassword}
                     />
-
-                   
                 </View>
 
                 <TouchableOpacity style={styles.button} onPress={handleSignup}>
                     <Text style={styles.buttonText}>Sign Up</Text>
                 </TouchableOpacity>
             </SafeAreaView>
-
-            {/* District Picker Modal */}
-            <Modal
-                visible={showDistrictPicker}
-                transparent={true}
-                animationType="slide"
-            >
-                <View style={styles.modalContainer}>
-                    <View style={styles.modalContent}>
-                        <Text style={styles.modalTitle}>Select District</Text>
-                        <ScrollView>
-                            {districts.map((district) => (
-                                <TouchableOpacity
-                                    key={district}
-                                    style={styles.modalItem}
-                                    onPress={() => {
-                                        setSelectedDistrict(district);
-                                        setShowDistrictPicker(false);
-                                    }}
-                                >
-                                    <Text style={styles.modalItemText}>{district}</Text>
-                                </TouchableOpacity>
-                            ))}
-                        </ScrollView>
-                        <TouchableOpacity
-                            style={styles.modalCloseButton}
-                            onPress={() => setShowDistrictPicker(false)}
-                        >
-                            <Text style={styles.modalCloseButtonText}>Cancel</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </Modal>
         </View>
     );
 };
@@ -186,63 +158,7 @@ const styles = StyleSheet.create({
         color: "#FFFFFF",
         fontSize: 18,
         fontWeight: "bold",
-    },
-    picker: {
-        backgroundColor: '#fff',
-        borderRadius: 8,
-        padding: 12,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: 15,
-    },
-    pickerText: {
-        fontSize: 16,
-        color: '#666',
-    },
-    dropdownIcon: {
-        fontSize: 16,
-        color: '#666',
-    },
-    modalContainer: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        backgroundColor: 'rgba(0,0,0,0.5)',
-    },
-    modalContent: {
-        backgroundColor: '#fff',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        padding: 20,
-        maxHeight: '80%',
-    },
-    modalTitle: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginBottom: 16,
-        textAlign: 'center',
-    },
-    modalItem: {
-        padding: 16,
-        borderBottomWidth: 1,
-        borderBottomColor: '#E0E0E0',
-    },
-    modalItemText: {
-        fontSize: 16,
-        color: '#000',
-    },
-    modalCloseButton: {
-        marginTop: 16,
-        padding: 16,
-        backgroundColor: '#f5f5f5',
-        borderRadius: 8,
-        alignItems: 'center',
-    },
-    modalCloseButtonText: {
-        fontSize: 16,
-        color: '#666',
-        fontWeight: '600',
-    },
+    }
 });
 
 export default SignupPage;
