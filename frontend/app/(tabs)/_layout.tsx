@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
-import { Image, View, StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
 export default function TabLayout() {
   return (
@@ -42,26 +42,20 @@ export default function TabLayout() {
       />
       
       <Tabs.Screen
-        name="logo"
+        name="profilePage"
         options={{
-          title: '',
-          tabBarIcon: () => (
-            <View style={styles.logoContainer}>
-              <Image 
-                source={require('../../assets/images/GoviShakthi Logo.png')} 
-                style={styles.logo} 
-                resizeMode="contain"
-              />
-            </View>
+          title: 'Profile',
+          tabBarIcon: ({ focused }) => (
+            <Image 
+              source={require('../../assets/images/profileicon.png')} 
+              style={[
+                styles.tabIcon,
+                { tintColor: focused ? '#2E6D28' : '#888888' }
+              ]} 
+              resizeMode="contain"
+            />
           ),
-          tabBarButton: () => null, // Makes the tab non-clickable
         }}
-        listeners={() => ({
-          tabPress: (e) => {
-            // Prevent default action
-            e.preventDefault();
-          },
-        })}
       />
       
       <Tabs.Screen
@@ -88,39 +82,11 @@ export default function TabLayout() {
           },
         })}
       />
-      
-      <Tabs.Screen
-        name="profilePage"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ focused }) => (
-            <Image 
-              source={require('../../assets/images/profileicon.png')} 
-              style={[
-                styles.tabIcon,
-                { tintColor: focused ? '#2E6D28' : '#888888' }
-              ]} 
-              resizeMode="contain"
-            />
-          ),
-        }}
-      />
     </Tabs>
   );
 }
 
 const styles = StyleSheet.create({
-  logoContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: 40,
-    width: 40,
-    marginTop: -5,
-  },
-  logo: {
-    width: 40,
-    height: 40,
-  },
   tabIcon: {
     width: 24,
     height: 24,
