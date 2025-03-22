@@ -38,10 +38,20 @@ export default function SubscriptionPlan() {
           </Text>
         </View>
 
-        {/* Tagline Section */}
         <View style={styles.taglineContainer}>
           <Text style={styles.taglineText}>Grow smarter, earn better.</Text>
           <Text style={styles.offerText}>Try one month for free with Govi Shakthi!</Text>
+        </View>
+
+        <View style={styles.featuresContainer}>
+          {premiumFeatures.map((feature, index) => (
+            <View key={index} style={styles.featureRow}>
+              <View style={styles.checkCircle}>
+                <Text style={styles.checkmark}>✓</Text>
+              </View>
+              <Text style={styles.featureText}>{feature}</Text>
+            </View>
+          ))}
         </View>
 
 
@@ -128,7 +138,43 @@ safeArea: {
         color: '#00A67E',
       },
 
+      featuresContainer: {
+        backgroundColor: '#D9D9D9',
+        borderRadius: 15,
+        margin: 20,
+        padding: 20,
+      },
+
+
+      featureRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 15,
+      },
       
+
+      checkCircle: {
+        width: 24,
+        height: 24,
+        borderRadius: 12,
+        backgroundColor: '#5BC8A8',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 10,
+      },
+      
+      checkmark: {
+        color: '#fff',
+        fontWeight: 'bold',
+      },
+
+      featureText: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: '#333',
+        flex: 1,
+      },
+
 
 
 });
