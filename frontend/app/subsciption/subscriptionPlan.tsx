@@ -16,7 +16,6 @@ export default function SubscriptionPlan() {
   const router = useRouter();
 
   const navigateToPayment = (planType: string) => {
-    // Using router.push to navigate to the payment gateway with plan parameter
     router.push({
       pathname: '/subsciption/paymentGateway',
       params: { plan: planType }
@@ -104,7 +103,7 @@ export default function SubscriptionPlan() {
             <View style={styles.pricingContent}>
               <Text style={styles.pricingDuration}>Yearly</Text>
               <Text style={styles.pricingAmount}>1000 LKR</Text>
-              <Text style={styles.discountText}>16% discount</Text>
+              <Text style={styles.discountText}>17% discount</Text>
             </View>
 
           </TouchableOpacity>

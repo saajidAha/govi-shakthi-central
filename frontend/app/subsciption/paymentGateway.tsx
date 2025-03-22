@@ -54,8 +54,9 @@ export default function SubscriptionPlan() {
   };
 
   const handlePayment = () => {
-    // Add payment processing logic here
+    
     alert('Payment submitted');
+    router.push('/paymentSuccess');
     
   };
 
@@ -108,7 +109,7 @@ export default function SubscriptionPlan() {
             </TouchableOpacity>
           </View>
 
-          {/* Card Details Form */}
+    
           <View style={styles.formContainer}>
             <View style={styles.inputContainer}>
               <Text style={styles.inputLabel}>Name on card</Text>
