@@ -89,6 +89,16 @@ export default function News() {
                   <Text style={styles.liveText}>LIVE</Text>
                 </View>
               )}
+
+{feature.isNew && (
+                <View style={styles.newTag}>
+                  <Text style={styles.newText}>NEW</Text>
+                </View>
+              )}
+              <Text style={styles.featureIcon}>{feature.icon}</Text>
+              <View style={styles.featureTextContainer}>
+                <Text style={styles.featureSinhalaTitle}>{feature.title}</Text>
+                <Text style={styles.featureEnglishTitle}>{feature.subTitle}</Text>
      
               </View>
             </TouchableOpacity>
