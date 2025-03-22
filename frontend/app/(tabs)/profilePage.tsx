@@ -14,6 +14,10 @@ import {useRouter} from 'expo-router';
 
 export default function ProfilePage() {
     const router = useRouter();
+
+    const subscriptionData = {
+    };
+    
     const menuItems = [
         {
             title: 'Personal Details',
@@ -44,6 +48,8 @@ export default function ProfilePage() {
             lastUpdated: '3 days ago',
             onPress: () => Alert.alert('Predictions', 'This feature is not available yet.')
         },
+
+        
     ];
 
     return(
@@ -55,6 +61,7 @@ export default function ProfilePage() {
                         <TouchableOpacity style={styles.backButton} onPress={()=>router.back()}>
                             <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
                         </TouchableOpacity>
+                        
                         <TouchableOpacity style={styles.settingsButton} onPress={()=>router.push('/settings/settings')}>
                             <Image source={require('../../assets/images/settings.png')} style={styles.icon}/>
                         </TouchableOpacity>
@@ -67,6 +74,20 @@ export default function ProfilePage() {
                         <Text style={styles.location}>Anuradhapura, Sri Lanka</Text>
                     </View>
                 </View>
+
+                <View style={styles.subscriptionContainer}>
+                    <View style={styles.subscriptionCard}>
+                        <View style={styles.subscriptionHeader}>
+                            <Text style={styles.subscriptionTitle}>Subscription Plan</Text>
+                            <View style={styles.statusBadge}>
+                                <Text style={styles.statusText}>{subscriptionData.status}</Text>
+                            </View>
+                        </View>
+                    {'view details'}
+                        
+                    </View>
+                </View>
+
 
                 <View style={styles.resourcesContainer}>
                     <View style={styles.resourcesRow}>
@@ -247,5 +268,62 @@ const styles = StyleSheet.create({
         tintColor: '#333',
     },
 
+    subscriptionContainer: {
+        paddingHorizontal: 20,
+        marginTop: 5,
+        marginBottom: 10,
+    },
+    
+    subscriptionCard: {
+        backgroundColor: '#F9F9F9',
+        borderRadius: 15,
+        padding: 15,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 3,
+        borderWidth: 1,
+        borderColor: '#E5E5E5',
+    },
+    
+    subscriptionHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 10,
+    },
+
+    subscriptionTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#333',
+    },
+    
+
+    subscriptionButtonsRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+
+    viewDetailsButton: {
+        flex: 1,
+        borderWidth: 1,
+        borderColor: '#00A67E',
+        borderRadius: 12,
+        paddingVertical: 10,
+        alignItems: 'center',
+        marginRight: 10,
+    },
+    
+    viewDetailsText: {
+        color: '#00A67E',
+        fontWeight: 'bold',
+        fontSize: 14,
+    },
+    
+
+    
 });
+
 
