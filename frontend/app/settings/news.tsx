@@ -187,4 +187,20 @@ const styles = StyleSheet.create({
     color: '#000',
     marginLeft: 15,
    },
+
+   featureTextContainer: {
+    marginTop: 8,
+  },
+
+  featureSinhalaTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+
+  featureEnglishTitle: {
+    fontSize: 14,
+    color: '#bbb',
+    marginTop: 2,
+  },
 });
