@@ -18,10 +18,18 @@ export default function SubscriptionPlan() {
         <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
-            <Text style={styles.backButtonText}>‹</Text>
+            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
+            
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Explore Premium</Text>
         </View>
+
+        <View style={styles.bannerContainer}>
+          <Text style={styles.bannerText}>
+          Unlock the Power of Govishakthi Premium Today!
+          </Text>
+        </View>
+
         </ScrollView>
     </SafeAreaView>
   )
@@ -43,11 +51,11 @@ safeArea: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
-    paddingVertical: 15,
-    backgroundColor: '#5BC8A8',
+    paddingVertical: 30,
+    backgroundColor: '#00A67E',
   },
   backButton: {
-    marginRight: 10,
+    padding: 5,
   },
   backButtonText: {
     fontSize: 30,
@@ -58,5 +66,29 @@ safeArea: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#000',
+    marginLeft: 15,
   },
+
+  bannerContainer: {
+    backgroundColor: '#00A67E',
+    paddingHorizontal: 20,
+
+    paddingBottom: 50,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+  },
+  bannerText: {
+    fontSize: 16,
+    color: '#000',
+    lineHeight: 20,
+    marginLeft: 20,
+    paddingVertical : 40
+  },
+
+  icon:{
+    width: 24,
+    height: 24,
+    tintColor: '#000000',
+    },
+
 });
