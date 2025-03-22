@@ -55,7 +55,7 @@ export default function SubscriptionPlan() {
   const handlePayment = () => {
     // Add payment processing logic here
     alert('Payment submitted');
-    router.push('/payment-success'); // Navigate to success page
+    
   };
 
   return (
@@ -72,9 +72,8 @@ export default function SubscriptionPlan() {
         
         <View style={styles.paymentContainer}>
           <View style={styles.merchantInfo}>
-            <Text style={styles.merchantName}>Dialog Axiata PLC</Text>
-            <Text style={styles.merchantAddress}>475, Colombo 02</Text>
-            <Text style={styles.amount}>Rs 95.00</Text>
+            <Text style={styles.merchantName}>GoviShakthi PLC</Text>
+            <Text style={styles.merchantAddress}>07, Colombo 07</Text>
           </View>
 
           
@@ -86,9 +85,11 @@ export default function SubscriptionPlan() {
               ]}
               onPress={() => setSelectedPaymentMethod('visa')}
             >
-              <View style={styles.cardLogoContainer}>
-                <Text style={styles.cardLogoText}>VISA</Text>
-              </View>
+              <Image 
+                source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png' }}
+                style={styles.cardLogo}
+                resizeMode="contain"
+              />
             </TouchableOpacity>
             
             <TouchableOpacity 
@@ -98,9 +99,11 @@ export default function SubscriptionPlan() {
               ]}
               onPress={() => setSelectedPaymentMethod('mastercard')}
             >
-              <View style={[styles.cardLogoContainer, styles.masterCardLogo]}>
-                <Text style={[styles.cardLogoText, styles.mastercardText]}>mastercard</Text>
-              </View>
+              <Image 
+                source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png' }}
+                style={styles.cardLogo}
+                resizeMode="contain"
+              />
             </TouchableOpacity>
           </View>
 
@@ -177,17 +180,14 @@ export default function SubscriptionPlan() {
                 style={styles.dropdownIcon}
               />
             </View>
-            
-
-
-            
-            
-            
+          </View>
         </View>
-        </View>
-        </ScrollView> 
+
+       
+        <View style={styles.bottomSpace} />
+      </ScrollView>
     </SafeAreaView>
-  )
+  );
 }
 
 
@@ -199,10 +199,12 @@ const styles = StyleSheet.create({
       backgroundColor: '#00A67E',
       paddingTop: Platform.OS === 'android' ? 25 : 0,
     },
+
     container: {
       flex: 1,
       backgroundColor: '#fff',
     },
+
     header: {
       flexDirection: 'row',
       alignItems: 'center',
@@ -210,45 +212,55 @@ const styles = StyleSheet.create({
       paddingVertical: 30,
       backgroundColor: '#00A67E',
     },
+
     backButton: {
       padding: 5,
     },
+
     icon: {
       width: 24,
       height: 24,
       tintColor: '#000000',
     },
+
     headerTitle: {
       fontSize: 24,
       fontWeight: 'bold',
       color: '#000',
       marginLeft: 15,
     },
+
     paymentContainer: {
       padding: 20,
     },
+
     merchantInfo: {
       marginBottom: 20,
     },
+
     merchantName: {
       fontSize: 18,
       fontWeight: 'bold',
       marginBottom: 5,
     },
+
     merchantAddress: {
       fontSize: 14,
       color: '#666',
       marginBottom: 15,
     },
+
     amount: {
       fontSize: 28,
       fontWeight: 'bold',
       marginBottom: 20,
     },
+
     paymentMethodContainer: {
       flexDirection: 'row',
       marginBottom: 20,
     },
+
     paymentMethodButton: {
       borderWidth: 1,
       borderColor: '#ddd',
@@ -260,59 +272,72 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
     },
+
     selectedPaymentMethod: {
       borderColor: '#00A67E',
       borderWidth: 2,
     },
+
     cardLogoContainer: {
       backgroundColor: '#1A1F71',
       paddingHorizontal: 10,
       paddingVertical: 5,
       borderRadius: 4,
     },
+
     masterCardLogo: {
       backgroundColor: '#EB001B',
     },
+
     cardLogoText: {
       color: 'white',
       fontWeight: 'bold',
       fontSize: 12,
     },
+
     mastercardText: {
       fontSize: 10,
     },
+
     formContainer: {
       marginTop: 10,
     },
+
     inputContainer: {
       marginBottom: 15,
     },
+
     rowContainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginBottom: 15,
     },
+
     inputLabel: {
       fontSize: 14,
       color: '#777',
       marginBottom: 5,
     },
+
     input: {
       borderBottomWidth: 1,
       borderBottomColor: '#ccc',
       paddingVertical: 10,
       fontSize: 16,
     },
+
     rememberCardContainer: {
       flexDirection: 'row',
       alignItems: 'center',
       marginBottom: 20,
     },
+
     rememberCardText: {
       marginLeft: 10,
       fontSize: 14,
       color: '#555',
     },
+
     payButton: {
       backgroundColor: '#888',
       borderRadius: 8,
@@ -320,27 +345,38 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       marginBottom: 20,
     },
+
     payButtonText: {
       color: 'white',
       fontSize: 18,
       fontWeight: 'bold',
     },
+
     languageSelector: {
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
     },
+
     languageText: {
       fontSize: 14,
       color: '#555',
       marginRight: 5,
     },
+
     dropdownIcon: {
       width: 12,
       height: 12,
       tintColor: '#555',
     },
+
     bottomSpace: {
       height: 40,
     },
+
+    cardLogo: {
+        width: 60,
+        height: 30,
+      },
+    
   });
