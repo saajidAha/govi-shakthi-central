@@ -30,6 +30,10 @@ export default function PaymentSuccess() {
           <Text style={styles.successText}>Thank you for your purchase!</Text>
           <Text style={styles.subText}>Your transaction was successful.</Text>
 
+          <TouchableOpacity style={styles.button} onPress={() => router.push('/home')}>
+            <Text style={styles.buttonText}>Go to Home</Text>
+          </TouchableOpacity>
+
           
         </View>
         
@@ -96,6 +100,22 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 30,
   },
+
+  button: {
+    backgroundColor: '#00A67E',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 10,
+    width: '80%',
+    alignItems: 'center',
+    marginTop: 20,
+  },
+
+  buttonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  }
 
 
 });
