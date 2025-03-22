@@ -54,6 +54,32 @@ export default function SubscriptionPlan() {
           ))}
         </View>
 
+        <View style={styles.pricingContainer}>
+          <View style={styles.pricingCard}>
+            <View style={styles.pricingHeader}>
+              <Text style={styles.pricingType}>Premium</Text>
+            </View>
+            <View style={styles.pricingContent}>
+              <Text style={styles.pricingDuration}>Monthly</Text>
+              <Text style={styles.pricingAmount}>100 LKR</Text>
+              <Text style={styles.discountText}></Text>
+            </View>
+
+          </View>
+          <View style={styles.pricingCard}>
+            <View style={styles.pricingHeader}>
+              <Text style={styles.pricingType}>Premium</Text>
+            </View>
+            <View style={styles.pricingContent}>
+              <Text style={styles.pricingDuration}>Yearly</Text>
+              <Text style={styles.pricingAmount}>1000 LKR</Text>
+              <Text style={styles.discountText}>16% discount</Text>
+            </View>
+          </View>
+        </View>
+
+        
+          <View style={styles.bottomSpace} />
 
         </ScrollView>
     </SafeAreaView>
@@ -175,6 +201,61 @@ safeArea: {
         flex: 1,
       },
 
+      pricingContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20,
+        marginBottom: 20,
+      },
+
+      pricingCard: {
+        width: '48%',
+        borderRadius: 15,
+        overflow: 'hidden',
+        backgroundColor: '#fff',
+        borderWidth: 1,
+        borderColor: '#F0F0C0',
+      },
+
+      pricingHeader: {
+        backgroundColor: '#F0F0C0',
+        padding: 10,
+        alignItems: 'center',
+      },
+
+      pricingType: {
+        color: '#5BC8A8',
+        fontWeight: 'bold',
+        fontSize: 16,
+      },
+
+      pricingContent: {
+        backgroundColor: '#F0F0C0',
+        padding: 15,
+        alignItems: 'center',
+      },
+
+      pricingDuration: {
+        fontSize: 14,
+        color: '#666',
+        marginBottom: 5,
+      },
+
+      pricingAmount: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#5BC8A8',
+      },
+
+      discountText: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: '#333',
+        marginTop: 5,
+      },
+      bottomSpace: {
+        height: 40,
+      },
 
 
 });
