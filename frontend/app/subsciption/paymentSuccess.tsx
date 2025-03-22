@@ -25,7 +25,13 @@ export default function PaymentSuccess() {
           <Text style={styles.headerTitle}>Payment Success</Text>
         </View>
 
-        {/* Success Message */}
+        <View style={styles.content}>
+          <Ionicons name="checkmark-circle" size={100} color="#00A67E" style={styles.successIcon} />
+          <Text style={styles.successText}>Thank you for your purchase!</Text>
+          <Text style={styles.subText}>Your transaction was successful.</Text>
+
+          
+        </View>
         
         
       </ScrollView>
@@ -62,6 +68,33 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
     marginLeft: 15,
+  },
+
+  content: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 50,
+    paddingHorizontal: 20,
+  },
+
+  successIcon: {
+    marginBottom: 20,
+  },
+
+  successText: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#00A67E',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+
+  subText: {
+    fontSize: 16,
+    color: '#555',
+    textAlign: 'center',
+    marginBottom: 30,
   },
 
 
