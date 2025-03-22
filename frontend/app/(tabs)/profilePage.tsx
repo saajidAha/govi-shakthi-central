@@ -1,5 +1,5 @@
 import React from 'react';
-import{
+import {
     View,
     Text,
     StyleSheet,
@@ -10,72 +10,61 @@ import{
     Platform,
     Alert,
 } from 'react-native';
-import {useRouter} from 'expo-router';
+import { useRouter } from 'expo-router';
 
 export default function ProfilePage() {
     const router = useRouter();
 
-    const subscriptionData = {
-    };
-    
     const menuItems = [
         {
             title: 'Personal Details',
             lastUpdated: '2 days ago',
             onPress: () => router.push('/settings/edit-profile')
         },
-
         {
-            title: 'Statics',
+            title: 'Statistics',
             lastUpdated: '5 days ago',
-            onPress: () => Alert.alert('Statictics', 'This feature is not available yet.')
+            onPress: () => Alert.alert('Statistics', 'This feature is not available yet.')
         },
-
         {
             title: 'Produced Products',
             lastUpdated: 'This Year',
             onPress: () => Alert.alert('Products', 'This feature is not available yet.')
         },
-
         {
             title: 'History',
             lastUpdated: '3 days ago',
             onPress: () => Alert.alert('History', 'This feature is not available yet.')
         },
-
         {
             title: 'Predictions',
             lastUpdated: '3 days ago',
             onPress: () => Alert.alert('Predictions', 'This feature is not available yet.')
         },
-
-
         {
             title: 'Subscription Plan',
             lastUpdated: 'Updated today',
-            onPress: () => router.push('/subsciption/subscriptionPlan')
+            onPress: () => router.push('/subscription/subscriptionPlan')
         },
-
-        
     ];
 
-    return(
+    return (
         <SafeAreaView style={styles.safeArea}>
             <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
 
                 <View style={styles.greenHeader}>
                     <View style={styles.topNav}>
-                        <TouchableOpacity style={styles.backButton} onPress={()=>router.back()}>
-                            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
+                        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+                            <Image source={require('../../assets/images/back.png')} style={styles.icon} />
                         </TouchableOpacity>
-                        
-                        <TouchableOpacity style={styles.settingsButton} onPress={()=>router.push('/settings/settings')}>
-                            <Image source={require('../../assets/images/settings.png')} style={styles.icon}/>
+
+                        <TouchableOpacity style={styles.settingsButton} onPress={() => router.push('/settings/settings')}>
+                            <Image source={require('../../assets/images/settings.png')} style={styles.icon} />
                         </TouchableOpacity>
                     </View>
 
                     <View style={styles.profileInfo}>
-                        <Image source={require('../../assets/images/Profile Pic.jpg')} style={styles.profileImage}/>
+                        <Image source={require('../../assets/images/Profile Pic.jpg')} style={styles.profileImage} />
                         <Text style={styles.profileName}>Profile</Text>
                         <Text style={styles.userName}>Dudley Sirisena</Text>
                         <Text style={styles.location}>Anuradhapura, Sri Lanka</Text>
@@ -86,95 +75,93 @@ export default function ProfilePage() {
                     <View style={styles.subscriptionCard}>
                         <View style={styles.subscriptionHeader}>
                             <Text style={styles.subscriptionTitle}>Subscription Plan</Text>
-
                         </View>
 
                         <View style={styles.subscriptionButtonsRow}>
-                        <TouchableOpacity 
-                        style={styles.viewDetailsButton}
-                        onPress={() => router.push('/subsciption/subscriptionPlan')}>
-                            <Text style={styles.viewDetailsText}>View Details</Text>
+                            <TouchableOpacity
+                                style={styles.viewDetailsButton}
+                                onPress={() => router.push('/subscription/subscriptionPlan')}>
+                                <Text style={styles.viewDetailsText}>View Details</Text>
                             </TouchableOpacity>
                         </View>
-                    
-                        
                     </View>
                 </View>
 
-
                 <View style={styles.resourcesContainer}>
                     <View style={styles.resourcesRow}>
-                        <TouchableOpacity style={styles.resourceCard} onPress={()=>Alert.alert('/Resources', 'This feature is not available yet.')}>
+                        {/* First Resource Card - Weather */}
+                        <TouchableOpacity
+                            style={styles.resourceCard}
+                            onPress={() => router.push('/settings/weather')}>
+                            <Text style={styles.resourceTitle}>Weather</Text>
+                        </TouchableOpacity>
+
+                        {/* Second Resource Card - Placeholder */}
+                        <TouchableOpacity
+                            style={styles.resourceCard}
+                            onPress={() => Alert.alert('Resources', 'This feature is not available yet.')}>
                             <Text style={styles.resourceTitle}>Available Resources</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.resourceCard} onPress={()=>Alert.alert('/Resources', 'This feature is not available yet.')}>
-                            <Text style={styles.resourceTitle}>Available Resources</Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity style={styles.resourceCard} onPress={()=>Alert.alert('/Resources', 'This feature is not available yet.')}>
+                        {/* Third Resource Card - Placeholder */}
+                        <TouchableOpacity
+                            style={styles.resourceCard}
+                            onPress={() => Alert.alert('Resources', 'This feature is not available yet.')}>
                             <Text style={styles.resourceTitle}>Available Resources</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
 
                 <View style={styles.menuContainer}>
-                    {menuItems.map((item, index)=> (
+                    {menuItems.map((item, index) => (
                         <TouchableOpacity key={index} style={styles.menuItem} onPress={item.onPress}>
                             <View style={styles.menuItemLeft}>
                                 <Text style={styles.menuItemTitle}>{item.title}</Text>
                                 <Text style={styles.menuItemSubtitle}>{item.lastUpdated}</Text>
                             </View>
-                            <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon}/>
-                            {index<menuItems.length-1 && <View style={styles.divider}/>}
+                            <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon} />
+                            {index < menuItems.length - 1 && <View style={styles.divider} />}
                         </TouchableOpacity>
                     ))}
                 </View>
 
             </ScrollView>
-        </SafeAreaView> 
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
-    safeArea:{
+    safeArea: {
         flex: 1,
         backgroundColor: '#fff',
         paddingTop: Platform.OS === 'android' ? 25 : 0,
     },
-
-    container:{
+    container: {
         flex: 1,
         backgroundColor: '#fff',
     },
-
     greenHeader: {
         backgroundColor: '#00A67E',
         borderBottomLeftRadius: 40,
         borderBottomRightRadius: 40,
         marginBottom: 16,
     },
-      
     topNav: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingHorizontal: 20,
         paddingTop: 20,
     },
-      
     backButton: {
         padding: 5,
     },
-    
     settingsButton: {
         padding: 5,
     },
-    
     profileInfo: {
         alignItems: 'center',
         paddingVertical: 20,
     },
-      
     profileImage: {
         width: 100,
         height: 100,
@@ -183,37 +170,31 @@ const styles = StyleSheet.create({
         borderColor: '#fff',
         marginBottom: 15,
     },
-      
     profileName: {
         fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
         marginBottom: 5,
     },
-      
     userName: {
         fontSize: 30,
         color: '#fff',
         fontWeight: '500',
     },
-      
     location: {
         fontSize: 16,
         color: '#fff',
         opacity: 0.8,
     },
-      
     resourcesContainer: {
         paddingHorizontal: 20,
         paddingTop: 30,
     },
-      
     resourcesRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginBottom: 20,
     },
-      
     resourceCard: {
         width: '30%',
         height: 80,
@@ -223,19 +204,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
     },
-      
     resourceTitle: {
         color: '#fff',
         fontSize: 14,
         fontWeight: 'bold',
         textAlign: 'center',
     },
-      
     menuContainer: {
         paddingHorizontal: 20,
         paddingBottom: 30,
     },
-      
     menuItem: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -243,23 +221,19 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
         position: 'relative',
     },
-      
     menuItemLeft: {
         flex: 1,
     },
-      
     menuItemTitle: {
         fontSize: 16,
         fontWeight: 'bold',
         color: '#333',
     },
-      
     menuItemSubtitle: {
         fontSize: 14,
         color: '#666',
         marginTop: 4,
     },
-      
     divider: {
         position: 'absolute',
         bottom: 0,
@@ -268,67 +242,33 @@ const styles = StyleSheet.create({
         height: 1,
         backgroundColor: '#E0E0E0',
     },
-
-    icon:{
+    icon: {
         width: 24,
         height: 24,
         tintColor: '#fff',
     },
-
     chevronIcon: {
         width: 24,
         height: 24,
         tintColor: '#333',
     },
-
     subscriptionContainer: {
         paddingHorizontal: 20,
         marginTop: 5,
         marginBottom: 10,
     },
-    
     subscriptionCard: {
         backgroundColor: '#F9F9F9',
         borderRadius: 15,
         padding: 15,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
-        elevation: 3,
-        borderWidth: 1,
-        borderColor: '#E5E5E5',
     },
-    
-    subscriptionHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: 10,
-    },
-
-    subscriptionTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#333',
-    },
-    
-
-    subscriptionButtonsRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
-
     viewDetailsButton: {
-        flex: 1,
         borderWidth: 1,
         borderColor: '#00A67E',
         borderRadius: 12,
         paddingVertical: 10,
         alignItems: 'center',
-        marginRight: 10,
     },
-    
     viewDetailsText: {
         color: '#00A67E',
         fontWeight: 'bold',
