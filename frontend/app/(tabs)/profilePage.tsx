@@ -49,6 +49,15 @@ export default function ProfilePage() {
             onPress: () => Alert.alert('Predictions', 'This feature is not available yet.')
         },
 
+
+        {
+            title: 'Subscription Plan',
+            lastUpdated: 'Updated today',
+            hasIcon: true,
+            
+            onPress: () => router.push('/subsciption')
+        },
+
         
     ];
 
@@ -83,7 +92,16 @@ export default function ProfilePage() {
                                 <Text style={styles.statusText}>{subscriptionData.status}</Text>
                             </View>
                         </View>
-                    {'view details'}
+
+                        <View style={styles.subscriptionButtonsRow}>
+                            <TouchableOpacity 
+                                style={styles.viewDetailsButton}
+                                onPress={() => router.push('/subsciption/subscriptionPlan')}
+                            >
+                                <Text style={styles.viewDetailsText}>View Details</Text>
+                            </TouchableOpacity>
+                        </View>
+                    
                         
                     </View>
                 </View>
