@@ -13,6 +13,14 @@ import { useRouter } from 'expo-router';
 
 export default function SubscriptionPlan() {
   const router = useRouter();
+
+  const premiumFeatures = [
+    'Marketplace Insights and Recommendations',
+    'Alternative Product and Resource Suggestions',
+    'Real-Time Fruit Price Forecasts',
+    'Personalized Farming Plan',
+  ];
+
   return (
     <SafeAreaView style={styles.safeArea}>
         <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
@@ -30,6 +38,13 @@ export default function SubscriptionPlan() {
           </Text>
         </View>
 
+        {/* Tagline Section */}
+        <View style={styles.taglineContainer}>
+          <Text style={styles.taglineText}>Grow smarter, earn better.</Text>
+          <Text style={styles.offerText}>Try one month for free with Govi Shakthi!</Text>
+        </View>
+
+
         </ScrollView>
     </SafeAreaView>
   )
@@ -43,10 +58,12 @@ safeArea: {
     backgroundColor: '#fff',
     paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
   },
+
   header: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -54,14 +71,17 @@ safeArea: {
     paddingVertical: 30,
     backgroundColor: '#00A67E',
   },
+
   backButton: {
     padding: 5,
   },
+
   backButtonText: {
     fontSize: 30,
     fontWeight: 'bold',
     color: '#000',
   },
+
   headerTitle: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -72,11 +92,11 @@ safeArea: {
   bannerContainer: {
     backgroundColor: '#00A67E',
     paddingHorizontal: 20,
-
-    paddingBottom: 50,
+    paddingBottom: 30,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
   },
+
   bannerText: {
     fontSize: 16,
     color: '#000',
@@ -90,5 +110,25 @@ safeArea: {
     height: 24,
     tintColor: '#000000',
     },
+
+    taglineContainer: {
+        alignItems: 'center',
+        paddingVertical: 30,
+      },
+
+      taglineText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#00A67E',
+        marginBottom: 5,
+      },
+
+      offerText: {
+        fontSize: 16,
+        color: '#00A67E',
+      },
+
+      
+
 
 });
