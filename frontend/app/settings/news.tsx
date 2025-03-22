@@ -15,6 +15,50 @@ import { useRouter } from 'expo-router';
 export default function News() {
   const router = useRouter();
 
+
+  const currentDate = new Date();
+  const formattedDate = `${currentDate.getFullYear()}.${String(currentDate.getMonth() + 1).padStart(2, '0')}.${String(currentDate.getDate()).padStart(2, '0')}`;
+  const currentTime = `${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}`;
+  
+  const premiumFeatures = [
+    {
+      title: 'Market Price Analytics',
+      subTitle: 'Real-time Price Trends',
+      icon: '📊',
+
+    },
+    {
+      title: 'Premium Crop Insights',
+      subTitle: 'Expert Recommendations',
+      icon: '🌿',
+
+    },
+    {
+      title: 'Weather Forecasts',
+      subTitle: 'Advanced Predictions',
+      icon: '🌤️',
+
+    },
+    {
+      title: 'Soil Analysis Reports',
+      subTitle: 'Detailed Insights',
+      icon: '🌱',
+   
+    },
+    {
+      title: 'Farming Community',
+      subTitle: 'Connect With Experts',
+      icon: '👨‍🌾',
+
+    },
+    {
+      title: 'Subsidies Tracker',
+      subTitle: 'Government Schemes',
+      icon: '💰',
+
+    },
+  ];
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle="light-content" />
