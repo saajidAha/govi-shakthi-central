@@ -54,8 +54,7 @@ export default function PaymentGateway() {
   };
 
   const handlePayment = () => {
-    
-    alert('Payment submitted');
+
     router.push('/subsciption/paymentSuccess');
     
   };

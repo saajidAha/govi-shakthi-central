@@ -7,21 +7,27 @@ import {
   ScrollView,
   SafeAreaView,
   Platform,
-  Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function PaymentSuccess() {
-  const router = useRouter(); 
+  const router = useRouter();
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
-            <Image source={require('../../assets/images/back.png')} style={styles.icon} />
+            <Ionicons name="arrow-back" size={28} color="#000" />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Visa / Master</Text>
+          <Text style={styles.headerTitle}>Payment Success</Text>
         </View>
+
+        {/* Success Message */}
+        
+        
       </ScrollView>
     </SafeAreaView>
   );
@@ -51,16 +57,12 @@ const styles = StyleSheet.create({
     padding: 5,
   },
 
-  icon: {
-    width: 24,
-    height: 24,
-    tintColor: '#000000',
-  },
-
   headerTitle: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#000',
     marginLeft: 15,
   },
+
+
 });
