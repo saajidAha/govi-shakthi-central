@@ -183,9 +183,10 @@ export default function SubscriptionPlan() {
           </View>
         </View>
 
-       
         <View style={styles.bottomSpace} />
+
       </ScrollView>
+
     </SafeAreaView>
   );
 }
@@ -339,7 +340,7 @@ const styles = StyleSheet.create({
     },
 
     payButton: {
-      backgroundColor: '#888',
+      backgroundColor: '#7d7878',
       borderRadius: 8,
       paddingVertical: 15,
       alignItems: 'center',
