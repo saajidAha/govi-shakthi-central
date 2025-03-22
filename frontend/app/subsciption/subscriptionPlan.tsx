@@ -91,7 +91,7 @@ export default function SubscriptionPlan() {
 const styles = StyleSheet.create({
 safeArea: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#00A67E',
     paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
 
@@ -165,7 +165,7 @@ safeArea: {
       },
 
       featuresContainer: {
-        backgroundColor: '#D9D9D9',
+        backgroundColor: '#c4c0c0',
         borderRadius: 15,
         margin: 20,
         padding: 20,
@@ -183,7 +183,7 @@ safeArea: {
         width: 24,
         height: 24,
         borderRadius: 12,
-        backgroundColor: '#5BC8A8',
+        backgroundColor: '#00A67E',
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 10,
@@ -209,50 +209,53 @@ safeArea: {
       },
 
       pricingCard: {
-        width: '48%',
-        borderRadius: 15,
-        overflow: 'hidden',
         backgroundColor: '#fff',
         borderWidth: 1,
         borderColor: '#F0F0C0',
+        width: '48%',
+        borderRadius: 15,
+        overflow: 'hidden',
+        
       },
 
       pricingHeader: {
-        backgroundColor: '#F0F0C0',
+        backgroundColor: '#e4f0a3',
         padding: 10,
         alignItems: 'center',
       },
 
       pricingType: {
-        color: '#5BC8A8',
+        color: '#00A67E',
         fontWeight: 'bold',
         fontSize: 16,
       },
 
       pricingContent: {
         backgroundColor: '#F0F0C0',
-        padding: 15,
+        padding: 10,
         alignItems: 'center',
       },
 
       pricingDuration: {
         fontSize: 14,
-        color: '#666',
+        color: '#000',
         marginBottom: 5,
+        fontWeight: 'bold',
       },
 
       pricingAmount: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#5BC8A8',
+        color: '#00A67E',
       },
 
       discountText: {
+        marginTop: 5,
         fontSize: 14,
         fontWeight: 'bold',
         color: '#333',
-        marginTop: 5,
       },
+
       bottomSpace: {
         height: 40,
       },
