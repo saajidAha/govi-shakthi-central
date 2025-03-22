@@ -112,95 +112,115 @@ export default function News() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: '#000',
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
-  },
-
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-  },
-
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 30,
-    backgroundColor: '#00A67E',
-
-  },
-
-   headerTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#000',
-    marginLeft: 15,
-  },
-
-  subTitle: {
-    fontSize: 14,
-    color: '#d0f0e8',
-    marginTop: 4,
-    paddingVirtical : 20,
-  },
-
-  dateTimeBar: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 10,
-  },
-
-  currentTimeText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#fff',
-  },
-
-  dateText: {
-    fontSize: 14,
-    color: '#fff',
-  },
-
-  icon: {
-    width: 24,
-    height: 24,
-    tintColor: '#000000',
-  },
-
-  backButton: {
-    padding: 5,
-  },
-
-
-  yellowBanner: {
-    backgroundColor: '#FFD600',
-    padding: 16,
-    margin: 16,
-    borderRadius: 15,
-  },
-
-  bannerTitle:{
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#000',
-    marginLeft: 15,
-   },
-
-   featureTextContainer: {
-    marginTop: 8,
-  },
-
-  featureSinhalaTitle: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#fff',
-  },
-
-  featureEnglishTitle: {
-    fontSize: 14,
-    color: '#bbb',
-    marginTop: 2,
-  },
-});
+    safeArea: {
+      flex: 1,
+      backgroundColor: '#000',
+      paddingTop: Platform.OS === 'android' ? 25 : 0,
+    },
+  
+    container: {
+      flex: 1,
+      backgroundColor: '#000',
+    },
+  
+    header: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingHorizontal: 20,
+      paddingVertical: 30,
+      backgroundColor: '#00A67E',
+  
+    },
+  
+     headerTitle: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: '#000',
+      marginLeft: 15,
+    },
+  
+    subTitle: {
+      fontSize: 14,
+      color: '#d0f0e8',
+      marginTop: 4,
+      paddingVirtical : 20,
+    },
+  
+    dateTimeBar: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginTop: 10,
+    },
+  
+    currentTimeText: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: '#fff',
+    },
+  
+    dateText: {
+      fontSize: 14,
+      color: '#fff',
+    },
+  
+    yellowBanner: {
+      backgroundColor: '#FFD600',
+      padding: 16,
+      margin: 16,
+      borderRadius: 15,
+    },
+  
+    bannerTitle:{
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#000',
+      marginLeft: 15,
+     },
+  
+    featuresGrid: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+      paddingHorizontal: 16,
+    },
+  
+    featureCard: {
+      width: '48%',
+      backgroundColor: '#222',
+      borderRadius: 12,
+      padding: 16,
+      marginBottom: 16,
+      position: 'relative',
+    },
+  
+    featureIcon: {
+      fontSize: 28,
+      marginBottom: 12,
+    },
+  
+    featureTextContainer: {
+      marginTop: 8,
+    },
+  
+    featureSinhalaTitle: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: '#fff',
+    },
+  
+    featureEnglishTitle: {
+      fontSize: 14,
+      color: '#bbb',
+      marginTop: 2,
+    },
+  
+    icon: {
+      width: 24,
+      height: 24,
+      tintColor: '#000000',
+    },
+  
+    backButton: {
+      padding: 5,
+    },
+  });
