@@ -53,9 +53,7 @@ export default function ProfilePage() {
         {
             title: 'Subscription Plan',
             lastUpdated: 'Updated today',
-            hasIcon: true,
-            
-            onPress: () => router.push('/subsciption')
+            onPress: () => router.push('/subsciption/subscriptionPlan')
         },
 
         
@@ -88,17 +86,14 @@ export default function ProfilePage() {
                     <View style={styles.subscriptionCard}>
                         <View style={styles.subscriptionHeader}>
                             <Text style={styles.subscriptionTitle}>Subscription Plan</Text>
-                            <View style={styles.statusBadge}>
-                                <Text style={styles.statusText}>{subscriptionData.status}</Text>
-                            </View>
+
                         </View>
 
                         <View style={styles.subscriptionButtonsRow}>
-                            <TouchableOpacity 
-                                style={styles.viewDetailsButton}
-                                onPress={() => router.push('/subsciption/subscriptionPlan')}
-                            >
-                                <Text style={styles.viewDetailsText}>View Details</Text>
+                        <TouchableOpacity 
+                        style={styles.viewDetailsButton}
+                        onPress={() => router.push('/subsciption/subscriptionPlan')}>
+                            <Text style={styles.viewDetailsText}>View Details</Text>
                             </TouchableOpacity>
                         </View>
                     
@@ -339,9 +334,4 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 14,
     },
-    
-
-    
 });
-
-
