@@ -80,6 +80,20 @@ export default function News() {
         <View style={styles.yellowBanner}>
           <Text style={styles.bannerTitle}>Today</Text>
         </View>
+
+        <View style={styles.featuresGrid}>
+          {premiumFeatures.map((feature, index) => (
+            <TouchableOpacity key={index} style={styles.featureCard}>
+              {feature.isLive && (
+                <View style={styles.liveTag}>
+                  <Text style={styles.liveText}>LIVE</Text>
+                </View>
+              )}
+     
+              </View>
+            </TouchableOpacity>
+          ))}
+        </View>
           
         
       </ScrollView>
