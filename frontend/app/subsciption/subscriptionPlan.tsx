@@ -14,6 +14,13 @@ import { useRouter } from 'expo-router';
 export default function SubscriptionPlan() {
   const router = useRouter();
 
+  const navigateToPayment = (planType) => {
+    router.push({
+      pathname: '/paymentGateway',
+      params: { plan: planType }
+    });
+  };
+
   const premiumFeatures = [
     'Marketplace Insights and Recommendations',
     'Alternative Product and Resource Suggestions',
@@ -54,8 +61,13 @@ export default function SubscriptionPlan() {
           ))}
         </View>
 
+        
         <View style={styles.pricingContainer}>
-          <View style={styles.pricingCard}>
+          <TouchableOpacity 
+            style={styles.pricingCard}
+            activeOpacity={0.7}
+            onPress={() => navigateToPayment('monthly')}
+          >
             <View style={styles.pricingHeader}>
               <Text style={styles.pricingType}>Premium</Text>
             </View>
@@ -64,9 +76,14 @@ export default function SubscriptionPlan() {
               <Text style={styles.pricingAmount}>100 LKR</Text>
               <Text style={styles.discountText}></Text>
             </View>
+          </TouchableOpacity>
 
-          </View>
-          <View style={styles.pricingCard}>
+
+          <TouchableOpacity 
+            style={styles.pricingCard}
+            activeOpacity={0.7}
+            onPress={() => navigateToPayment('yearly')}
+          >
             <View style={styles.pricingHeader}>
               <Text style={styles.pricingType}>Premium</Text>
             </View>
@@ -75,7 +92,9 @@ export default function SubscriptionPlan() {
               <Text style={styles.pricingAmount}>1000 LKR</Text>
               <Text style={styles.discountText}>16% discount</Text>
             </View>
-          </View>
+
+          </TouchableOpacity>
+
         </View>
 
         
