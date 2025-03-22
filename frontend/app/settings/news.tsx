@@ -1,0 +1,287 @@
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+  SafeAreaView,
+  Platform,
+  Image,
+  StatusBar,
+} from 'react-native';
+import { useRouter } from 'expo-router';
+import { WebView } from 'react-native-webview';
+
+export default function News() {
+  const router = useRouter();
+  const [currentUrl, setCurrentUrl] = useState(null);
+  
+  const currentDate = new Date();
+  const formattedDate = `${currentDate.getFullYear()}.${String(currentDate.getMonth() + 1).padStart(2, '0')}.${String(currentDate.getDate()).padStart(2, '0')}`;
+  
+  // Updated premium features with Sri Lankan government news feed links
+  const premiumFeatures = [
+    {
+      title: 'Market Price Analytics',
+      subTitle: 'Real-time Price Trends',
+      icon: '📊',
+      url: 'https://jas.sljol.info/',
+    },
+    {
+      title: 'Premium Crop Insights',
+      subTitle: 'Expert Recommendations',
+      icon: '🌿',
+      url: 'https://www.agrimin.gov.lk/web/index.php/news-scroll?lang=en',
+    },
+    {
+      title: 'Weather Forecasts',
+      subTitle: 'Advanced Predictions',
+      icon: '🌤️',
+      url: 'https://infohub.doa.gov.lk/news-en/',
+    },
+    {
+      title: 'Soil Analysis Reports',
+      subTitle: 'Detailed Insights',
+      icon: '🌱',
+      url: 'https://www.fao.org/srilanka/news/en/',
+    },
+    {
+      title: 'Farming Community',
+      subTitle: 'Connect With Experts',
+      icon: '👨‍🌾',
+      url: 'https://landmin.gov.lk/web/en/news-and-events/',
+    },
+    {
+      title: 'Subsidies Tracker',
+      subTitle: 'Government Schemes',
+      icon: '💰',
+      url: 'https://sapp.lk/author/sapp/',
+    },
+  ];
+
+  // Function to open URL in the in-app WebView
+  const openURL = (url) => {
+    setCurrentUrl(url);
+  };
+
+  // Function to go back to the main view
+  const goBackToMain = () => {
+    setCurrentUrl(null);
+  };
+
+  // If a URL is set, show the WebView with a back button
+  if (currentUrl) {
+    return (
+      <SafeAreaView style={styles.safeArea}>
+        <StatusBar barStyle="light-content" />
+        <View style={styles.webViewHeader}>
+          <TouchableOpacity style={styles.backButton} onPress={goBackToMain}>
+            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
+            <Text style={styles.backText}>Back to Govishakthi</Text>
+          </TouchableOpacity>
+        </View>
+        <WebView 
+          source={{ uri: currentUrl }} 
+          style={styles.webView}
+        />
+      </SafeAreaView>
+    );
+  }
+
+  // Main app view
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <StatusBar barStyle="light-content" />
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        {/* Header Section */}
+        <View style={styles.header}>
+          <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
+          </TouchableOpacity>
+          <View style={styles.titleContainer}>
+            <Text style={styles.headerTitle}>GOVISHAKTHI</Text>
+            <Text style={styles.subTitle}>The country's leading farmer information center</Text>
+          </View>
+        </View>
+          
+        <View style={styles.dateTimeBar}>
+          <Text style={styles.dateText}>{formattedDate}</Text>
+        </View>
+        
+        {/* Yellow Banner */}
+        <View style={styles.yellowBanner}>
+          <Text style={styles.bannerTitle}>Today's Government Updates</Text>
+        </View>
+
+        {/* Premium Features with links to government news feeds */}
+        <View style={styles.featuresGrid}>
+          {premiumFeatures.map((feature, index) => (
+            <TouchableOpacity 
+              key={index} 
+              style={styles.featureCard}
+              onPress={() => openURL(feature.url)}
+            >
+              <Text style={styles.featureIcon}>{feature.icon}</Text>
+              <View style={styles.featureTextContainer}>
+                <Text style={styles.featureSinhalaTitle}>{feature.title}</Text>
+                <Text style={styles.featureEnglishTitle}>{feature.subTitle}</Text>
+              </View>
+              <View style={styles.linkIndicator}>
+                <Text style={styles.linkText}>View Updates</Text>
+              </View>
+            </TouchableOpacity>
+          ))}
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#000',
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
+  },
+
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 30,
+    backgroundColor: '#00A67E',
+  },
+
+  titleContainer: {
+    flexDirection: 'column',
+    marginLeft: 15,
+  },
+
+  headerTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+
+  subTitle: {
+    fontSize: 14,
+    color: '#d0f0e8',
+    marginTop: 4,
+    paddingVertical: 5,
+  },
+
+  dateTimeBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
+    paddingHorizontal: 16,
+  },
+
+  dateText: {
+    fontSize: 14,
+    color: '#fff',
+  },
+
+  yellowBanner: {
+    backgroundColor: '#FFD600',
+    padding: 16,
+    margin: 16,
+    borderRadius: 15,
+  },
+
+  bannerTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000',
+    textAlign: 'center',
+  },
+
+  featuresGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+  },
+
+  featureCard: {
+    width: '48%',
+    backgroundColor: '#222',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    position: 'relative',
+  },
+
+  featureIcon: {
+    fontSize: 28,
+    marginBottom: 12,
+  },
+
+  featureTextContainer: {
+    marginTop: 8,
+  },
+
+  featureSinhalaTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+
+  featureEnglishTitle: {
+    fontSize: 14,
+    color: '#bbb',
+    marginTop: 2,
+  },
+
+  icon: {
+    width: 24,
+    height: 24,
+    tintColor: '#000000',
+  },
+
+  backButton: {
+    padding: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  
+  linkIndicator: {
+    marginTop: 12,
+    backgroundColor: 'rgba(0, 166, 126, 0.3)',
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+    borderRadius: 4,
+    alignSelf: 'flex-start',
+  },
+  
+  linkText: {
+    color: '#00A67E',
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
+
+  // Styles for WebView component
+  webView: {
+    flex: 1,
+  },
+
+  webViewHeader: {
+    backgroundColor: '#00A67E',
+    padding: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  backText: {
+    color: '#000',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 10,
+  },
+});
