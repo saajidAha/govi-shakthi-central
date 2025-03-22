@@ -14,7 +14,7 @@ import {
 import { useRouter } from 'expo-router';
 
 export default function SubscriptionPlan() {
-    const router = useRouter();
+  const router = useRouter();
   const [name, setName] = useState('');
   const [cardNumber, setCardNumber] = useState('');
   const [expiry, setExpiry] = useState('');
@@ -22,14 +22,13 @@ export default function SubscriptionPlan() {
   const [rememberCard, setRememberCard] = useState(false);
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('visa');
 
-  
-
+  // Format card number with spaces every 4 digits
   const formatCardNumber = (text) => {
     const formattedText = text.replace(/\s/g, '').replace(/(\d{4})/g, '$1 ').trim();
     return formattedText;
   };
 
-
+  // Format expiry date MM/YY
   const formatExpiry = (text) => {
     const cleaned = text.replace(/\D/g, '');
     if (cleaned.length <= 2) {
@@ -53,15 +52,16 @@ export default function SubscriptionPlan() {
     setCvv(text.slice(0, 3));
   };
 
-
-
-
+  const handlePayment = () => {
+    // Add payment processing logic here
+    alert('Payment submitted');
+    router.push('/payment-success'); // Navigate to success page
+  };
 
   return (
     <SafeAreaView style={styles.safeArea}>
-        <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-        showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
             <Image source={require('../../assets/images/back.png')} style={styles.icon} />
@@ -69,15 +69,16 @@ export default function SubscriptionPlan() {
           <Text style={styles.headerTitle}>Visa / Master</Text>
         </View>
 
-
+        
         <View style={styles.paymentContainer}>
           <View style={styles.merchantInfo}>
-            <Text style={styles.merchantName}>GoviShakthi PLC</Text>
+            <Text style={styles.merchantName}>Dialog Axiata PLC</Text>
             <Text style={styles.merchantAddress}>475, Colombo 02</Text>
             <Text style={styles.amount}>Rs 95.00</Text>
-        </View>
+          </View>
 
-        <View style={styles.paymentMethodContainer}>
+          
+          <View style={styles.paymentMethodContainer}>
             <TouchableOpacity 
               style={[
                 styles.paymentMethodButton, 
@@ -103,6 +104,57 @@ export default function SubscriptionPlan() {
             </TouchableOpacity>
           </View>
 
+          {/* Card Details Form */}
+          <View style={styles.formContainer}>
+            <View style={styles.inputContainer}>
+              <Text style={styles.inputLabel}>Name on card</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="Enter cardholder name"
+                value={name}
+                onChangeText={setName}
+                autoCapitalize="words"
+              />
+            </View>
+
+            <View style={styles.inputContainer}>
+              <Text style={styles.inputLabel}>Card Number</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="1234 5678 9012 3456"
+                value={cardNumber}
+                onChangeText={handleCardNumberChange}
+                keyboardType="numeric"
+                maxLength={19}
+              />
+            </View>
+
+            <View style={styles.rowContainer}>
+              <View style={[styles.inputContainer, { flex: 1, marginRight: 10 }]}>
+                <Text style={styles.inputLabel}>MM/YY</Text>
+                <TextInput
+                  style={styles.input}
+                  placeholder="MM/YY"
+                  value={expiry}
+                  onChangeText={handleExpiryChange}
+                  keyboardType="numeric"
+                  maxLength={5}
+                />
+              </View>
+
+              <View style={[styles.inputContainer, { flex: 1 }]}>
+                <Text style={styles.inputLabel}>CVV</Text>
+                <TextInput
+                  style={styles.input}
+                  placeholder="123"
+                  value={cvv}
+                  onChangeText={handleCvvChange}
+                  keyboardType="numeric"
+                  maxLength={3}
+                  secureTextEntry
+                />
+              </View>
+            </View>
             
 
 
