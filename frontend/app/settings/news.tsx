@@ -28,6 +28,14 @@ export default function News() {
           <Text style={styles.subTitle}>The country's leading farmer information center</Text>
         </View>
       </View>
+
+      <View style={styles.dateTimeBar}>
+          <Text style={styles.dateText}>{formattedDate}</Text>
+        </View>
+        {/* Yellow Banner */}
+        <View style={styles.yellowBanner}>
+          <Text style={styles.bannerTitle}>Today</Text>
+        </View>
           
         
       </ScrollView>
@@ -96,4 +104,19 @@ const styles = StyleSheet.create({
   backButton: {
     padding: 5,
   },
+
+
+  yellowBanner: {
+    backgroundColor: '#FFD600',
+    padding: 16,
+    margin: 16,
+    borderRadius: 15,
+  },
+
+  bannerTitle:{
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000',
+    marginLeft: 15,
+   },
 });
