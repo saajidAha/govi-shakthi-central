@@ -155,6 +155,28 @@ export default function SubscriptionPlan() {
                 />
               </View>
             </View>
+
+            <View style={styles.rememberCardContainer}>
+              <Switch
+                value={rememberCard}
+                onValueChange={setRememberCard}
+                trackColor={{ false: '#D9D9D9', true: '#00A67E' }}
+                thumbColor="#FFFFFF"
+              />
+              <Text style={styles.rememberCardText}>Remember my card</Text>
+            </View>
+
+            <TouchableOpacity style={styles.payButton} onPress={handlePayment}>
+              <Text style={styles.payButtonText}>Pay</Text>
+            </TouchableOpacity>
+
+            <View style={styles.languageSelector}>
+              <Text style={styles.languageText}>English</Text>
+              <Image 
+                source={{ uri: 'https://cdn-icons-png.flaticon.com/512/32/32195.png' }} 
+                style={styles.dropdownIcon}
+              />
+            </View>
             
 
 
