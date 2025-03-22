@@ -100,7 +100,7 @@ export default function ProfilePage() {
                         <TouchableOpacity
                             style={styles.resourceCard}
                             onPress={() => Alert.alert('Resources', 'This feature is not available yet.')}>
-                            <Text style={styles.resourceTitle}>Available Resources</Text>
+                            <Text style={styles.resourceTitle}>News</Text>
                         </TouchableOpacity>
 
                         {/* Third Resource Card - Placeholder */}
