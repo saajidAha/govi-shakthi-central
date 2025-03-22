@@ -14,7 +14,7 @@ import {
 import { useRouter } from 'expo-router';
 
 
-export default function SubscriptionPlan() {
+export default function PaymentGateway() {
   const router = useRouter();
   const [name, setName] = useState('');
   const [cardNumber, setCardNumber] = useState('');
@@ -23,13 +23,13 @@ export default function SubscriptionPlan() {
   const [rememberCard, setRememberCard] = useState(false);
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('visa');
 
-  // Format card number with spaces every 4 digits
+
   const formatCardNumber = (text) => {
     const formattedText = text.replace(/\s/g, '').replace(/(\d{4})/g, '$1 ').trim();
     return formattedText;
   };
 
-  // Format expiry date MM/YY
+
   const formatExpiry = (text) => {
     const cleaned = text.replace(/\D/g, '');
     if (cleaned.length <= 2) {
@@ -56,7 +56,7 @@ export default function SubscriptionPlan() {
   const handlePayment = () => {
     
     alert('Payment submitted');
-    router.push('/paymentSuccess');
+    router.push('/subsciption/paymentSuccess');
     
   };
 
