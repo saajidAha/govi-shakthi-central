@@ -99,7 +99,9 @@ export default function ProfilePage() {
                         {/* Second Resource Card - Placeholder */}
                         <TouchableOpacity
                             style={styles.resourceCard}
-                            onPress={() => Alert.alert('Resources', 'This feature is not available yet.')}>
+                            
+                            onPress={() => router.push('/settings/news')}>
+
                             <Text style={styles.resourceTitle}>News</Text>
                         </TouchableOpacity>
 
