@@ -14,9 +14,10 @@ import { useRouter } from 'expo-router';
 export default function SubscriptionPlan() {
   const router = useRouter();
 
-  const navigateToPayment = (planType) => {
+  const navigateToPayment = (planType: string) => {
+    // Using router.push to navigate to the payment gateway with plan parameter
     router.push({
-      pathname: '/paymentGateway',
+      pathname: '/subsciption/paymentGateway',
       params: { plan: planType }
     });
   };
