@@ -44,7 +44,7 @@ export default function ProfilePage() {
         {
             title: 'Subscription Plan',
             lastUpdated: 'Updated today',
-            onPress: () => router.push('/subscription/subscriptionPlan')
+            onPress: () => router.push('/subsciption/subscriptionPlan')
         },
     ];
 
@@ -80,7 +80,7 @@ export default function ProfilePage() {
                         <View style={styles.subscriptionButtonsRow}>
                             <TouchableOpacity
                                 style={styles.viewDetailsButton}
-                                onPress={() => router.push('/subscription/subscriptionPlan')}>
+                                onPress={() => router.push('/subsciption/subscriptionPlan')}>
                                 <Text style={styles.viewDetailsText}>View Details</Text>
                             </TouchableOpacity>
                         </View>
