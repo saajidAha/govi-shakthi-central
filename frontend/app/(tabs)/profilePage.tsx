@@ -121,6 +121,7 @@ export default function ProfilePage() {
     );
 }
 
+
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
@@ -137,14 +138,128 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 40,
         marginBottom: 16,
     },
+    topNav: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20,
+        paddingTop: 20,
+    },
+    backButton: {
+        padding: 5,
+    },
+    settingsButton: {
+        padding: 5,
+    },
+    profileInfo: {
+        alignItems: 'center',
+        paddingVertical: 20,
+    },
+    profileImage: {
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+        borderWidth: 3,
+        borderColor: '#fff',
+        marginBottom: 15,
+    },
+    profileName: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#fff',
+        marginBottom: 5,
+    },
+    userName: {
+        fontSize: 30,
+        color: '#fff',
+        fontWeight: '500',
+    },
+    location: {
+        fontSize: 16,
+        color: '#fff',
+        opacity: 0.8,
+    },
+    resourcesContainer: {
+        paddingHorizontal: 20,
+        paddingTop: 30,
+    },
+    resourcesRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 20,
+    },
     resourceCard: {
         width: '30%',
         height: 80,
         borderRadius: 15,
-        backgroundColor: '#00A67E',
+        backgroundColor: '#000',
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
+    },
+    resourceTitle: {
+        color: '#fff',
+        fontSize: 14,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    icon: {
+        width: 24,
+        height: 24,
+        tintColor: '#fff',
+    },
+    chevronIcon: {
+        width: 24,
+        height: 24,
+        tintColor: '#333',
+    },
+    menuContainer: {
+        paddingHorizontal: 20,
+        paddingBottom: 30,
+    },
+    menuItem: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingVertical: 15,
+        position: 'relative',
+    },
+    menuItemLeft: {
+        flex: 1,
+    },
+    menuItemTitle: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#333',
+    },
+    menuItemSubtitle: {
+        fontSize: 14,
+        color: '#666',
+        marginTop: 4,
+    },
+    divider: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: 1,
+        backgroundColor: '#E0E0E0',
+    },
+    subscriptionContainer: {
+        paddingHorizontal: 20,
+        marginTop: 5,
+        marginBottom: 10,
+    },
+    subscriptionCard: {
+        backgroundColor: '#ecf0e9',
+        borderRadius: 15,
+        padding: 15,
+    },
+    subscriptionHeader: {
+        marginBottom: 10,
+    },
+    subscriptionButtonsRow: {
+        flexDirection: 'row',
+        justifyContent: 'center',
     },
     viewDetailsButton: {
         borderWidth: 1,
@@ -154,17 +269,15 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         alignItems: 'center',
         width: '100%',
-        backgroundColor: '#00A67E',
     },
     viewDetailsText: {
-        color: '#fff',
+        color: '#00A67E',
         fontWeight: 'bold',
         fontSize: 14,
     },
-    resourceTitle: {
-        color: '#fff',
-        fontSize: 14,
+    subscriptionTitle: {
+        fontSize: 16,
         fontWeight: 'bold',
-        textAlign: 'center',
-    },
+        marginBottom: 5,
+    }
 });
