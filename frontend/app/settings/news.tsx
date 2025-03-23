@@ -68,10 +68,12 @@ export default function News() {
 
   const goBackToMain = () => {
     setCurrentUrl(null);
-    //
+    setShowGoogleSearch(false);
   };
 
-//
+  const openGoogleSearch = () => {
+    setShowGoogleSearch(true);
+  };
 
   
   if (currentUrl) {
