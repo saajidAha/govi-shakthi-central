@@ -44,6 +44,24 @@ export class Repository {
     }
 
     /**
+     * Updates user credentials in the database
+     * @param username username of the user
+     * @param updatedCredentials updated credentials of the user
+     */
+    public async updateUserCredentials(updatedCredentials: { username: string,  name?: string, location?: string, email?: string, phone?: string }){
+        const {username, name, location, email, phone} = updatedCredentials;
+        await this.db.collection("user_credentials").updateOne({ username: username }, { $set: updatedCredentials });
+    }
+
+    /**
+     * Deletes user credentials from the database
+     * @param username username of the user
+     */
+    public async deleteUserCredentials(username: string){
+        await this.db.collection("user_credentials").deleteOne({ username: username });
+    }
+
+    /**
      * Fetches fruit data
      */
     public async getFruitData(){
