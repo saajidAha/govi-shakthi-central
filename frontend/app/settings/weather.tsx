@@ -51,16 +51,15 @@ export default function HomeScreen() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
         <View style={{ flex: 1, backgroundColor: '#fff' }}>
-          {/* Header with Back Button */}
-          <View style={styles.headerContainer}>
+          {/* Green Header with Back Button */}
+          <View style={styles.greenHeader}>
+            <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
+
+            {/* Back Button */}
             <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
               <Image source={require('../../assets/images/back.png')} style={styles.icon} />
             </TouchableOpacity>
-            <Text style={styles.headerTitle}>Weather</Text>
-          </View>
 
-          <View style={styles.greenHeader}>
-            <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
             {loading ? (
               <ActivityIndicator size="large" color="#fff" />
             ) : error ? (
@@ -74,6 +73,7 @@ export default function HomeScreen() {
             )}
           </View>
 
+          {/* Search Section */}
           <View style={styles.searchContainer}>
             <TextInput
               style={styles.searchInput}
@@ -96,25 +96,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  headerContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 15,
-  },
-  backButton: {
-    padding: 5,
-  },
-  icon: {
-    width: 24,
-    height: 24,
-    tintColor: '#000000',
-  },
-  headerTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginLeft: 15,
-  },
   greenHeader: {
     backgroundColor: '#00A67E',
     height: 200,
@@ -123,6 +104,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 20,
+    position: 'relative',
+  },
+  backButton: {
+    position: 'absolute',
+    left: 20,
+    top: 20,
+    padding: 5,
+  },
+  icon: {
+    width: 24,
+    height: 24,
+    tintColor: '#fff',
   },
   weatherContainer: {
     alignItems: 'center',
@@ -174,3 +167,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
