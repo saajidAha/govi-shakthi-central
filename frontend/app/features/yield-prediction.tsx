@@ -15,32 +15,17 @@ import { useRouter } from 'expo-router';
 import { useYield } from '../context/YieldContext';
 
 const districts = [
-  'Colombo',
-  'Gampaha',
-  'Kalutara',
-  'Kandy',
-  'Matale',
-  'Nuwara Eliya',
-  'Galle',
-  'Matara',
-  'Hambantota',
-  'Jaffna',
-  'Kilinochchi',
-  'Mannar',
-  'Vavuniya',
-  'Mulativu',
-  'Batticaloa',
-  'Ampara',
-  'Trincomalee',
-  'Kurunegala',
-  'Puttalam',
-  'Anuradhapura',
-  'Polonnaruwa',
-  'Badulla',
-  'Monaragala',
-  'Ratnapura',
-  'Kegalle',
-];
+      "Colombo",
+      "Jaffna",
+      "Matara",
+      "Badulla",
+      "Anuradhapura",
+      "Kandy",
+      "Ratnapura",
+      "Galle",
+      "Kurunegala"
+    ]
+;
 
 export default function YieldPredictionScreen() {
   const router = useRouter();
