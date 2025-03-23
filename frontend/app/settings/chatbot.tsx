@@ -43,9 +43,6 @@ export default function ChatbotScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
-      <View style={styles.greenHeader}>
-        <Text style={styles.headerText}>Chat with GoviShakthi</Text>
-      </View>
       <ScrollView contentContainerStyle={styles.container}>
         <FlatList
           data={messages}
@@ -83,19 +80,6 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#fff',
-  },
-  greenHeader: {
-    backgroundColor: '#00A67E',
-    padding: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderBottomLeftRadius: 30,
-    borderBottomRightRadius: 30,
-  },
-  headerText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#fff',
   },
   container: {
     flexGrow: 1,
