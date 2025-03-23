@@ -165,7 +165,7 @@ export default function News() {
             <Text style={styles.buttonText}>Search</Text>
           </TouchableOpacity>
         </View>
-        
+
 
         
       </ScrollView>
@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
   },
   backText: {
     color: '#000',
-    fontSize: 16,
+    fontSize: 30,
     fontWeight: 'bold',
     marginLeft: 10,
   },
