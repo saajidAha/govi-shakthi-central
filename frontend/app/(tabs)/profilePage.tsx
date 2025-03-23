@@ -174,7 +174,7 @@ export default function ProfilePage() {
                             onPress={() => router.push('/settings/news')}>
                             <Text style={styles.resourceTitle}>News</Text>
                         </TouchableOpacity>
-                        
+
                         <TouchableOpacity
                             style={styles.resourceCard}
                             onPress={() => router.push('/settings/chatbot')}>
@@ -274,7 +274,7 @@ const styles = StyleSheet.create({
         width: '30%',
         height: 80,
         borderRadius: 15,
-        backgroundColor: '#000',
+        backgroundColor: '#00A67E',
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
