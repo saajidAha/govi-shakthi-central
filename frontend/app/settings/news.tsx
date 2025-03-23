@@ -195,11 +195,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 10,
     paddingHorizontal: 16,
+    fontWeight: 'bold',
+
+
   },
 
   dateText: {
     fontSize: 14,
     color: '#fff',
+    fontWeight: 'bold',
+    paddingVertical: 5,
+    padding: 0,
+    margin: 10,
+
+   
+
   },
 
   yellowBanner: {
