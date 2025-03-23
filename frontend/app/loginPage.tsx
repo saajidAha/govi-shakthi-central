@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, SafeAreaView, Platform, Dimensions } from "react-native";
 import { useRouter } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const { width } = Dimensions.get("window");
 
@@ -27,6 +28,11 @@ const LoginPage = () => {
             
             if (data.message === "Access granted. User exists within the system") {
                 console.log("Login successful:", data);
+                
+                // Store the username in AsyncStorage
+                await AsyncStorage.setItem('currentUsername', username);
+                console.log("Username saved to storage:", username);
+                
                 router.push("/(tabs)/home");
             } else {
                 alert("Login failed. Please check your credentials.");

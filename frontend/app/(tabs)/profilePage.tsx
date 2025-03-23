@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     View,
     Text,
@@ -11,15 +11,41 @@ import {
     Alert,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function ProfilePage() {
     const router = useRouter();
+    const [currentUsername, setCurrentUsername] = useState('');
+
+    useEffect(() => {
+        // Get the current username when component mounts
+        const getUsernameFromStorage = async () => {
+            try {
+                const username = await AsyncStorage.getItem('currentUsername');
+                if (username) {
+                    setCurrentUsername(username);
+                    console.log('Retrieved username from storage:', username);
+                }
+            } catch (error) {
+                console.error('Error retrieving username:', error);
+            }
+        };
+
+        getUsernameFromStorage();
+    }, []);
+
+    const navigateToEditProfile = () => {
+        router.push({
+            pathname: '/settings/edit-profile',
+            params: { username: currentUsername || 'sasindu123' }
+        });
+    };
 
     const menuItems = [
         {
             title: 'Personal Details',
             lastUpdated: '2 days ago',
-            onPress: () => router.push('/settings/edit-profile')
+            onPress: navigateToEditProfile
         },
         {
             title: 'Statistics',
@@ -120,7 +146,6 @@ export default function ProfilePage() {
         </SafeAreaView>
     );
 }
-
 
 const styles = StyleSheet.create({
     safeArea: {
