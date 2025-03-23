@@ -139,6 +139,56 @@ export class Controller{
             }
         })
 
+    // Update user credentials
+    app.put("/api/updateUser", async (req, res) => {
+        const { username, name, location, email, phone } = req.body;
+        try {
+            const user = await this.repository.checkCredentials({ username });
+            if (user) {
+                await this.repository.updateUserCredentials( { username, name, location, email, phone });
+                res.status(200).json({ message: "User credentials updated successfully." });
+            } else {
+                res.status(404).json({ message: "User not found." });
+            }
+        } catch (error) {
+            console.log("Error occurred while updating user credentials: " + error);
+            res.status(500).json({ message: "Error occurred in the server" });
+        }
+    });
+
+    // Delete user credentials
+    app.delete("/api/deleteUser", async (req, res) => {
+        const { username } = req.body;
+        try {
+            const user = await this.repository.checkCredentials({ username });
+            if (user) {
+                await this.repository.deleteUserCredentials(username);
+                res.status(200).json({ message: "User credentials deleted successfully." });
+            } else {
+                res.status(404).json({ message: "User not found." });
+            }
+        } catch (error) {
+            console.log("Error occurred while deleting user credentials: " + error);
+            res.status(500).json({ message: "Error occurred in the server" });
+        }
+    });
+
+    // get user info with only the username
+    app.get("/api/user", async (req, res) => {
+        const username = String(req.query.username);
+        try{
+            const response = await this.repository.checkCredentials({username: username});
+            if (response !== null) {
+                res.status(200).json({ message: "user exists within the system.", username: response.username, name: response.name, location: response.location, email: response.email, phone: response.phone});
+            } else {
+                res.status(404).json({ message: "User not found." });
+            }
+        }catch (e) {
+            console.log("Error while checking login credentials" + e)
+            res.status(500).json({message: "Error occurred in the server"});
+        }
+    })
+
         // listen at specified port
         app.listen(this.port, ()=> {
             console.log(`Server listening on port ${this.port}`);
