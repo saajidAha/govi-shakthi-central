@@ -54,11 +54,15 @@ export default function PaymentGateway() {
     setCvv(text.slice(0, 3));
   };
 
+  
+
   const handlePayment = () => {
 
     router.push('/subsciption/paymentSuccess');
     
   };
+
+  
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -189,12 +193,16 @@ export default function PaymentGateway() {
               <Text style={styles.payButtonText}>Pay</Text>
             </TouchableOpacity>
 
+            
+
             <View style={styles.languageSelector}>
               <Text style={styles.languageText}>English</Text>
               <Image 
                 source={{ uri: 'https://cdn-icons-png.flaticon.com/512/32/32195.png' }} 
                 style={styles.dropdownIcon}
               />
+
+
             </View>
           </View>
         </View>
@@ -215,11 +223,13 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#00A67E',
       paddingTop: Platform.OS === 'android' ? 25 : 0,
+      
     },
 
     container: {
       flex: 1,
       backgroundColor: '#fff',
+      
     },
 
     header: {
@@ -228,16 +238,19 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
       paddingVertical: 30,
       backgroundColor: '#00A67E',
+
     },
 
     backButton: {
       padding: 5,
+
     },
 
     icon: {
       width: 24,
       height: 24,
       tintColor: '#000000',
+
     },
 
     headerTitle: {
@@ -245,37 +258,44 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       color: '#000',
       marginLeft: 15,
+
     },
 
     paymentContainer: {
       padding: 20,
+
     },
 
     merchantInfo: {
       marginBottom: 20,
+
     },
 
     merchantName: {
       fontSize: 18,
       fontWeight: 'bold',
       marginBottom: 5,
+
     },
 
     merchantAddress: {
       fontSize: 14,
       color: '#666',
       marginBottom: 15,
+
     },
 
     amount: {
       fontSize: 28,
       fontWeight: 'bold',
       marginBottom: 20,
+
     },
 
     paymentMethodContainer: {
       flexDirection: 'row',
       marginBottom: 20,
+
     },
 
     paymentMethodButton: {
@@ -288,11 +308,13 @@ const styles = StyleSheet.create({
       width: 80,
       justifyContent: 'center',
       alignItems: 'center',
+
     },
 
     selectedPaymentMethod: {
       borderColor: '#00A67E',
       borderWidth: 2,
+
     },
 
     cardLogoContainer: {
@@ -300,40 +322,48 @@ const styles = StyleSheet.create({
       paddingHorizontal: 10,
       paddingVertical: 5,
       borderRadius: 4,
+
     },
 
     masterCardLogo: {
       backgroundColor: '#EB001B',
+
     },
 
     cardLogoText: {
       color: 'white',
       fontWeight: 'bold',
       fontSize: 12,
+
     },
 
     mastercardText: {
       fontSize: 10,
+
     },
 
     formContainer: {
       marginTop: 10,
+
     },
 
     inputContainer: {
       marginBottom: 15,
+
     },
 
     rowContainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginBottom: 15,
+
     },
 
     inputLabel: {
       fontSize: 14,
       color: '#777',
       marginBottom: 5,
+
     },
 
     input: {
@@ -341,18 +371,21 @@ const styles = StyleSheet.create({
       borderBottomColor: '#ccc',
       paddingVertical: 10,
       fontSize: 16,
+
     },
 
     rememberCardContainer: {
       flexDirection: 'row',
       alignItems: 'center',
       marginBottom: 20,
+
     },
 
     rememberCardText: {
       marginLeft: 10,
       fontSize: 14,
       color: '#555',
+
     },
 
     payButton: {
@@ -361,39 +394,46 @@ const styles = StyleSheet.create({
       paddingVertical: 15,
       alignItems: 'center',
       marginBottom: 20,
+
     },
 
     payButtonText: {
       color: 'white',
       fontSize: 18,
       fontWeight: 'bold',
+
     },
 
     languageSelector: {
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
+
     },
 
     languageText: {
       fontSize: 14,
       color: '#555',
       marginRight: 5,
+
     },
 
     dropdownIcon: {
       width: 12,
       height: 12,
       tintColor: '#555',
+
     },
 
     bottomSpace: {
       height: 40,
+
     },
 
     cardLogo: {
         width: 60,
         height: 30,
+
       },
       
     

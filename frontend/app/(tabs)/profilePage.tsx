@@ -269,6 +269,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         alignItems: 'center',
         width: '100%',
+        backgroundColor: '#ecf0e9',
     },
     viewDetailsText: {
         color: '#00A67E',

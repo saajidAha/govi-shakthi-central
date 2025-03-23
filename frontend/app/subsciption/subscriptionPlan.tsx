@@ -123,6 +123,7 @@ safeArea: {
     flex: 1,
     backgroundColor: '#00A67E',
     paddingTop: Platform.OS === 'android' ? 25 : 0,
+    
   },
 
   container: {
