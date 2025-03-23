@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
     View,
     Text,
@@ -9,17 +9,86 @@ import {
     SafeAreaView,
     Platform,
     Alert,
+    ActivityIndicator,
 } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, useFocusEffect } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function ProfilePage() {
     const router = useRouter();
+    const [currentUsername, setCurrentUsername] = useState('');
+    const [userData, setUserData] = useState({
+        name: '',
+        location: '',
+        username: ''
+    });
+    const [loading, setLoading] = useState(true);
+
+    // Use useFocusEffect to refresh data when screen comes into focus
+    useFocusEffect(
+        useCallback(() => {
+            fetchUserData();
+        }, [])
+    );
+
+    const fetchUserData = async () => {
+        try {
+            setLoading(true);
+            
+            // Get the current username from AsyncStorage
+            const username = await AsyncStorage.getItem('currentUsername');
+            console.log('ProfilePage - Retrieved username from storage:', username);
+            
+            if (!username) {
+                console.log('ProfilePage - No username found in storage, using default');
+                setLoading(false);
+                return;
+            }
+            
+            setCurrentUsername(username);
+            
+            console.log('ProfilePage - Fetching user data for:', username);
+            
+            const url = `https://saajid-govishakthi-backend-47235930830.asia-south1.run.app/api/user?username=${username}`;
+            console.log('ProfilePage - API URL:', url);
+            
+            const response = await fetch(url);
+            console.log('ProfilePage - API response status:', response.status);
+            
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error('ProfilePage - Error response:', errorText);
+                throw new Error(`Failed to fetch user data: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            console.log('ProfilePage - User data received:', JSON.stringify(data));
+            
+            setUserData({
+                name: data.name || 'User',
+                location: data.location || 'Location not set',
+                username: data.username || username
+            });
+            
+            setLoading(false);
+        } catch (error: any) {
+            console.error('ProfilePage - Error fetching user data:', error);
+            setLoading(false);
+        }
+    };
+
+    const navigateToEditProfile = () => {
+        router.push({
+            pathname: '/settings/edit-profile',
+            params: { username: currentUsername || 'sasindu123' }
+        });
+    };
 
     const menuItems = [
         {
             title: 'Personal Details',
             lastUpdated: '2 days ago',
-            onPress: () => router.push('/settings/edit-profile')
+            onPress: navigateToEditProfile
         },
         {
             title: 'Statistics',
@@ -44,30 +113,33 @@ export default function ProfilePage() {
         {
             title: 'Subscription Plan',
             lastUpdated: 'Updated today',
-            onPress: () => router.push('/subscription/subscriptionPlan')
+            onPress: () => router.push('/subsciption/subscriptionPlan')
         },
     ];
 
     return (
         <SafeAreaView style={styles.safeArea}>
             <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-
                 <View style={styles.greenHeader}>
                     <View style={styles.topNav}>
-                        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+                        <TouchableOpacity style={styles.backButton} onPress={() => router.replace('/(tabs)/home')}>
                             <Image source={require('../../assets/images/back.png')} style={styles.icon} />
                         </TouchableOpacity>
-
                         <TouchableOpacity style={styles.settingsButton} onPress={() => router.push('/settings/settings')}>
                             <Image source={require('../../assets/images/settings.png')} style={styles.icon} />
                         </TouchableOpacity>
                     </View>
-
                     <View style={styles.profileInfo}>
                         <Image source={require('../../assets/images/Profile Pic.jpg')} style={styles.profileImage} />
                         <Text style={styles.profileName}>Profile</Text>
-                        <Text style={styles.userName}>Dudley Sirisena</Text>
-                        <Text style={styles.location}>Anuradhapura, Sri Lanka</Text>
+                        {loading ? (
+                            <ActivityIndicator size="small" color="#FFFFFF" />
+                        ) : (
+                            <>
+                                <Text style={styles.userName}>{userData.name || 'User'}</Text>
+                                <Text style={styles.location}>{userData.location || 'Location not set'}</Text>
+                            </>
+                        )}
                     </View>
                 </View>
 
@@ -80,7 +152,7 @@ export default function ProfilePage() {
                         <View style={styles.subscriptionButtonsRow}>
                             <TouchableOpacity
                                 style={styles.viewDetailsButton}
-                                onPress={() => router.push('/subscription/subscriptionPlan')}>
+                                onPress={() => router.push('/subsciption/subscriptionPlan')}>
                                 <Text style={styles.viewDetailsText}>View Details</Text>
                             </TouchableOpacity>
                         </View>
@@ -89,27 +161,20 @@ export default function ProfilePage() {
 
                 <View style={styles.resourcesContainer}>
                     <View style={styles.resourcesRow}>
-                        {/* First Resource Card - Weather */}
                         <TouchableOpacity
                             style={styles.resourceCard}
                             onPress={() => router.push('/settings/weather')}>
                             <Text style={styles.resourceTitle}>Weather</Text>
                         </TouchableOpacity>
-
-                        {/* Second Resource Card - Placeholder */}
                         <TouchableOpacity
                             style={styles.resourceCard}
-                            
                             onPress={() => router.push('/settings/news')}>
-
                             <Text style={styles.resourceTitle}>News</Text>
                         </TouchableOpacity>
-
-                        {/* Third Resource Card - Placeholder */}
                         <TouchableOpacity
                             style={styles.resourceCard}
-                            onPress={() => Alert.alert('Resources', 'This feature is not available yet.')}>
-                            <Text style={styles.resourceTitle}>Available Resources</Text>
+                            onPress={() => router.push('/settings/chatbot')}>
+                            <Text style={styles.resourceTitle}>Chatbot</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -126,7 +191,6 @@ export default function ProfilePage() {
                         </TouchableOpacity>
                     ))}
                 </View>
-
             </ScrollView>
         </SafeAreaView>
     );
@@ -188,6 +252,11 @@ const styles = StyleSheet.create({
         color: '#fff',
         opacity: 0.8,
     },
+    username: {
+        fontSize: 16,
+        color: '#fff',
+        opacity: 0.8,
+    },
     resourcesContainer: {
         paddingHorizontal: 20,
         paddingTop: 30,
@@ -211,6 +280,16 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: 'bold',
         textAlign: 'center',
+    },
+    icon: {
+        width: 24,
+        height: 24,
+        tintColor: '#fff',
+    },
+    chevronIcon: {
+        width: 24,
+        height: 24,
+        tintColor: '#333',
     },
     menuContainer: {
         paddingHorizontal: 20,
@@ -244,36 +323,41 @@ const styles = StyleSheet.create({
         height: 1,
         backgroundColor: '#E0E0E0',
     },
-    icon: {
-        width: 24,
-        height: 24,
-        tintColor: '#fff',
-    },
-    chevronIcon: {
-        width: 24,
-        height: 24,
-        tintColor: '#333',
-    },
     subscriptionContainer: {
         paddingHorizontal: 20,
         marginTop: 5,
         marginBottom: 10,
     },
     subscriptionCard: {
-        backgroundColor: '#F9F9F9',
+        backgroundColor: '#ecf0e9',
         borderRadius: 15,
         padding: 15,
+    },
+    subscriptionHeader: {
+        marginBottom: 10,
+    },
+    subscriptionButtonsRow: {
+        flexDirection: 'row',
+        justifyContent: 'center',
     },
     viewDetailsButton: {
         borderWidth: 1,
         borderColor: '#00A67E',
         borderRadius: 12,
         paddingVertical: 10,
+        paddingHorizontal: 20,
         alignItems: 'center',
+        width: '100%',
+        backgroundColor: '#ecf0e9',
     },
     viewDetailsText: {
         color: '#00A67E',
         fontWeight: 'bold',
         fontSize: 14,
     },
+    subscriptionTitle: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 5,
+    }
 });

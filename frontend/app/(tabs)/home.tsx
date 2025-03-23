@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   View,
   Text,
@@ -9,13 +9,93 @@ import {
   SafeAreaView,
   Platform,
   StatusBar,
+  ActivityIndicator,
 } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, useFocusEffect } from 'expo-router';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function HomeScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const [userData, setUserData] = useState({
+    name: '',
+    location: '',
+    username: ''
+  });
+  const [loading, setLoading] = useState(true);
+
+  // Use useFocusEffect to refresh data when screen comes into focus
+  useFocusEffect(
+    useCallback(() => {
+      fetchUserData();
+    }, [])
+  );
+
+  const fetchUserData = async () => {
+    try {
+      setLoading(true);
+      
+      // Get the current username from AsyncStorage
+      const username = await AsyncStorage.getItem('currentUsername');
+      console.log('HomePage - Retrieved username from storage:', username);
+      
+      if (!username) {
+        console.log('HomePage - No username found in storage, using default');
+        setUserData({
+          name: 'User',
+          location: 'Location not set',
+          username: ''
+        });
+        setLoading(false);
+        return;
+      }
+      
+      console.log('HomePage - Fetching user data for:', username);
+      
+      const url = `https://saajid-govishakthi-backend-47235930830.asia-south1.run.app/api/user?username=${username}`;
+      console.log('HomePage - API URL:', url);
+      
+      const response = await fetch(url);
+      console.log('HomePage - API response status:', response.status);
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('HomePage - Error response:', errorText);
+        throw new Error(`Failed to fetch user data: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      console.log('HomePage - User data received:', JSON.stringify(data));
+      
+      // Check if we actually have the name property
+      if (!data.name) {
+        console.log('HomePage - No name found in API response');
+      }
+      
+      setUserData({
+        name: data.name || 'User',
+        location: data.location || 'Location not set',
+        username: data.username || username
+      });
+      
+      console.log('HomePage - Updated user data state:', {
+        name: data.name || 'User',
+        location: data.location || 'Location not set',
+        username: data.username || username
+      });
+      
+      setLoading(false);
+    } catch (error: any) {
+      console.error('HomePage - Error fetching user data:', error);
+      setUserData({
+        name: 'User',
+        location: 'Location not set',
+        username: ''
+      });
+      setLoading(false);
+    }
+  };
 
   return (
     <SafeAreaProvider>
@@ -29,9 +109,15 @@ export default function HomeScreen() {
             <View style={styles.greenHeader}>
               {/* User greeting section */}
               <View style={styles.greetingContainer}>
-                <Text style={styles.greeting}>Hello Dudley!</Text>
-                <Text style={styles.location}>Dudely Sirisena</Text>
-                <Text style={styles.subLocation}>Anuradhapura, Sri Lanka</Text>
+                {loading ? (
+                  <ActivityIndicator size="small" color="#FFFFFF" />
+                ) : (
+                  <>
+                    <Text style={styles.greeting}>Hello {userData.name ? userData.name.split(' ')[0] : 'User'}!</Text>
+                    <Text style={styles.location}>{userData.name || 'User'}</Text>
+                    <Text style={styles.subLocation}>{userData.location || 'Location not set'}</Text>
+                  </>
+                )}
               </View>
             </View>
 
@@ -147,9 +233,6 @@ const styles = StyleSheet.create({
     elevation: 2,
     height: 200,
     overflow: 'hidden',
-  },
-  fruitCard: {
-    backgroundColor: '#FFB6C1',
   },
   marketCard: {
     backgroundColor: '#1E5F74',

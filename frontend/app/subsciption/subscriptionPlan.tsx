@@ -10,6 +10,7 @@ import {
   Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function SubscriptionPlan() {
   const router = useRouter();
@@ -20,6 +21,12 @@ export default function SubscriptionPlan() {
     'Real-Time Fruit Price Forecasts',
     'Personalized Farming Plan',
   ];
+
+  
+
+  const navigateToPaymentGateway = () => {
+    router.push('/subsciption/paymentGateway');
+  };
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -43,7 +50,12 @@ export default function SubscriptionPlan() {
           <Text style={styles.offerText}>Try one month for free with Govi Shakthi!</Text>
         </View>
 
-        <View style={styles.featuresContainer}>
+        
+        <TouchableOpacity 
+          style={styles.featuresContainer}
+          onPress={navigateToPaymentGateway}
+          activeOpacity={0.7}
+        >
           {premiumFeatures.map((feature, index) => (
             <View key={index} style={styles.featureRow}>
               <View style={styles.checkCircle}>
@@ -52,30 +64,47 @@ export default function SubscriptionPlan() {
               <Text style={styles.featureText}>{feature}</Text>
             </View>
           ))}
-        </View>
+        </TouchableOpacity>
 
         <View style={styles.pricingContainer}>
-          <View style={styles.pricingCard}>
+          
+          <TouchableOpacity 
+            style={styles.pricingCard}
+            onPress={navigateToPaymentGateway}
+            activeOpacity={0.7}
+          >
             <View style={styles.pricingHeader}>
               <Text style={styles.pricingType}>Premium</Text>
+            </View>
+            <View style={styles.calendarIconContainer}>
+              <Ionicons name="calendar-outline" size={24} color="#00A67E" />
             </View>
             <View style={styles.pricingContent}>
               <Text style={styles.pricingDuration}>Monthly</Text>
               <Text style={styles.pricingAmount}>100 LKR</Text>
               <Text style={styles.discountText}></Text>
             </View>
+          </TouchableOpacity>
 
-          </View>
-          <View style={styles.pricingCard}>
+          <TouchableOpacity 
+            style={styles.pricingCard}
+            onPress={navigateToPaymentGateway}
+            activeOpacity={0.7}
+          >
             <View style={styles.pricingHeader}>
               <Text style={styles.pricingType}>Premium</Text>
             </View>
+
+            <View style={styles.calendarIconContainer}>
+              <Ionicons name="calendar-sharp" size={24} color="#00A67E" />
+            </View>
+            
             <View style={styles.pricingContent}>
               <Text style={styles.pricingDuration}>Yearly</Text>
               <Text style={styles.pricingAmount}>1000 LKR</Text>
-              <Text style={styles.discountText}>16% discount</Text>
+              <Text style={styles.discountText}>17% discount</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
 
         
@@ -88,16 +117,19 @@ export default function SubscriptionPlan() {
 
 
 
+
 const styles = StyleSheet.create({
 safeArea: {
     flex: 1,
     backgroundColor: '#00A67E',
     paddingTop: Platform.OS === 'android' ? 25 : 0,
+    
   },
 
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f0f0e9',
+
   },
 
   header: {
@@ -106,16 +138,19 @@ safeArea: {
     paddingHorizontal: 20,
     paddingVertical: 30,
     backgroundColor: '#00A67E',
+
   },
 
   backButton: {
     padding: 5,
+
   },
 
   backButtonText: {
     fontSize: 30,
     fontWeight: 'bold',
     color: '#000',
+
   },
 
   headerTitle: {
@@ -123,6 +158,7 @@ safeArea: {
     fontWeight: 'bold',
     color: '#000',
     marginLeft: 15,
+
   },
 
   bannerContainer: {
@@ -131,37 +167,44 @@ safeArea: {
     paddingBottom: 30,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
+
   },
 
   bannerText: {
     fontSize: 16,
+    fontWeight: 'bold',
     color: '#000',
     lineHeight: 20,
     marginLeft: 20,
     paddingVertical : 40
+
   },
 
   icon:{
     width: 24,
     height: 24,
     tintColor: '#000000',
+
     },
 
     taglineContainer: {
         alignItems: 'center',
         paddingVertical: 30,
+
       },
 
       taglineText: {
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: 'bold',
         color: '#00A67E',
         marginBottom: 5,
+
       },
 
       offerText: {
         fontSize: 16,
         color: '#00A67E',
+
       },
 
       featuresContainer: {
@@ -169,6 +212,7 @@ safeArea: {
         borderRadius: 15,
         margin: 20,
         padding: 20,
+
       },
 
 
@@ -176,6 +220,7 @@ safeArea: {
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 15,
+
       },
       
 
@@ -187,11 +232,13 @@ safeArea: {
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 10,
+
       },
       
       checkmark: {
         color: '#fff',
         fontWeight: 'bold',
+
       },
 
       featureText: {
@@ -199,6 +246,7 @@ safeArea: {
         fontWeight: 'bold',
         color: '#333',
         flex: 1,
+
       },
 
       pricingContainer: {
@@ -206,6 +254,7 @@ safeArea: {
         justifyContent: 'space-between',
         paddingHorizontal: 20,
         marginBottom: 20,
+
       },
 
       pricingCard: {
@@ -215,6 +264,7 @@ safeArea: {
         width: '48%',
         borderRadius: 15,
         overflow: 'hidden',
+
         
       },
 
@@ -222,18 +272,21 @@ safeArea: {
         backgroundColor: '#e4f0a3',
         padding: 10,
         alignItems: 'center',
+
       },
 
       pricingType: {
         color: '#00A67E',
         fontWeight: 'bold',
         fontSize: 16,
+
       },
 
       pricingContent: {
         backgroundColor: '#F0F0C0',
         padding: 10,
         alignItems: 'center',
+
       },
 
       pricingDuration: {
@@ -241,12 +294,14 @@ safeArea: {
         color: '#000',
         marginBottom: 5,
         fontWeight: 'bold',
+
       },
 
       pricingAmount: {
         fontSize: 20,
         fontWeight: 'bold',
         color: '#00A67E',
+
       },
 
       discountText: {
@@ -254,11 +309,22 @@ safeArea: {
         fontSize: 14,
         fontWeight: 'bold',
         color: '#333',
+
       },
 
       bottomSpace: {
         height: 40,
+
       },
 
+
+      calendarIconContainer: {
+        backgroundColor: '#F0F0C0', 
+        alignItems: 'center',
+        paddingVertical: 8,
+        borderTopWidth: 1,
+        borderColor: '#e0e0a0',
+
+      },
 
 });

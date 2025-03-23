@@ -47,7 +47,7 @@ const fruits: Fruit[] = [
     id: 4,
     name: 'Woodapple',
     description: 'A hard fruit with a hard shell and aromatic, tangy pulp.',
-    image: { uri: 'https://images.unsplash.com/photo-1591300327588-9eb28f1be037' },
+    image: require('../../assets/images/wood-apple.png'),
     backgroundColor: '#E6E6FA',
   },
   {
