@@ -50,11 +50,10 @@ export default function HomeScreen() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
-        <View style={{ flex: 1, backgroundColor: '#fff' }}>
+        <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
+        <View style={styles.container}>
           {/* Green Header with Back Button */}
           <View style={styles.greenHeader}>
-            <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
-
             {/* Back Button */}
             <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
               <Image source={require('../../assets/images/back.png')} style={styles.icon} />
@@ -95,6 +94,9 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  container: {
+    flex: 1,
   },
   greenHeader: {
     backgroundColor: '#00A67E',
