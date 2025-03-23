@@ -4,6 +4,7 @@ import {
   SafeAreaView, StatusBar, Image, Platform
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 interface Message {
   id: number;
@@ -52,52 +53,54 @@ export default function ChatbotScreen() {
   ];
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.safeArea}>
+        <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
 
-      {/* Header with Back Button */}
-      <View style={styles.header}>
-        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
-          <Image source={require('../../assets/images/back.png')} style={styles.icon} />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Chat with GoviShakthi</Text>
-      </View>
-
-      {/* Chat Messages */}
-      <FlatList
-        data={messages}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <View style={[styles.messageBubble, item.sender === 'user' ? styles.userMessage : styles.botMessage]}>
-            <Text style={styles.messageText}>{item.text}</Text>
-          </View>
-        )}
-        contentContainerStyle={styles.messagesContainer}
-        inverted
-      />
-
-      {/* Quick Replies */}
-      <View style={styles.quickReplyContainer}>
-        {quickReplies.map((reply, index) => (
-          <TouchableOpacity key={index} style={styles.quickReplyButton} onPress={() => generateBotResponse(reply)}>
-            <Text style={styles.quickReplyText}>{reply}</Text>
+        {/* Header with Back Button */}
+        <View style={styles.header}>
+          <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+            <Image source={require('../../assets/images/back.png')} style={styles.icon} />
           </TouchableOpacity>
-        ))}
-      </View>
+          <Text style={styles.headerTitle}>Chat with GoviShakthi</Text>
+        </View>
 
-      {/* Input Field & Send Button */}
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Type a message..."
-          value={input}
-          onChangeText={setInput}
+        {/* Chat Messages */}
+        <FlatList
+          data={messages}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={({ item }) => (
+            <View style={[styles.messageBubble, item.sender === 'user' ? styles.userMessage : styles.botMessage]}>
+              <Text style={styles.messageText}>{item.text}</Text>
+            </View>
+          )}
+          contentContainerStyle={styles.messagesContainer}
+          inverted
         />
-        <TouchableOpacity style={styles.sendButton} onPress={handleSend}>
-          <Text style={styles.sendButtonText}>Send</Text>
-        </TouchableOpacity>
-      </View>
-    </SafeAreaView>
+
+        {/* Quick Replies */}
+        <View style={styles.quickReplyContainer}>
+          {quickReplies.map((reply, index) => (
+            <TouchableOpacity key={index} style={styles.quickReplyButton} onPress={() => generateBotResponse(reply)}>
+              <Text style={styles.quickReplyText}>{reply}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+
+        {/* Input Field & Send Button */}
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Type a message..."
+            value={input}
+            onChangeText={setInput}
+          />
+          <TouchableOpacity style={styles.sendButton} onPress={handleSend}>
+            <Text style={styles.sendButtonText}>Send</Text>
+          </TouchableOpacity>
+        </View>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
@@ -105,7 +108,6 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#FFFFFF',
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
   header: {
     flexDirection: 'row',
@@ -192,4 +194,3 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
