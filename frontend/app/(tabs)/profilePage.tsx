@@ -201,6 +201,16 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
     },
+    icon: {
+        width: 24,
+        height: 24,
+        tintColor: '#fff',
+    },
+    chevronIcon: {
+        width: 24,
+        height: 24,
+        tintColor: '#333',
+    },
     menuContainer: {
         paddingHorizontal: 20,
         paddingBottom: 30,
@@ -232,16 +242,6 @@ const styles = StyleSheet.create({
         right: 0,
         height: 1,
         backgroundColor: '#E0E0E0',
-    },
-    icon: {
-        width: 24,
-        height: 24,
-        tintColor: '#fff',
-    },
-    chevronIcon: {
-        width: 24,
-        height: 24,
-        tintColor: '#333',
     },
     subscriptionContainer: {
         paddingHorizontal: 20,
