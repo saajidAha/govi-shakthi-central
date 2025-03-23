@@ -157,6 +157,13 @@ export default function News() {
             </TouchableOpacity>
           ))}
         </View>
+
+        <View style={styles.content}>
+          <TouchableOpacity style={styles.button} onPress={() => router.push('/home')}>
+            <Text style={styles.buttonText}>Go to Home</Text>
+          </TouchableOpacity>
+        </View>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -257,7 +264,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 16,
   },
-  
+
 
   featureIcon: {
     fontSize: 28,
@@ -324,5 +331,33 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginLeft: 10,
+  },
+
+  content: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+    paddingHorizontal: 20,
+
+  },
+
+  button: {
+    backgroundColor: '#00A67E',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    width: '80%',
+    alignItems: 'center',
+    marginBottom: 20,
+
+  },
+
+
+  buttonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+
   },
 });
