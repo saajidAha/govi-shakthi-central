@@ -76,6 +76,9 @@ export default function News() {
   };
 
   
+  
+
+
   if (currentUrl) {
     return (
       <SafeAreaView style={styles.safeArea}>
@@ -93,6 +96,8 @@ export default function News() {
       </SafeAreaView>
     );
   }
+
+  
 
   //
 
