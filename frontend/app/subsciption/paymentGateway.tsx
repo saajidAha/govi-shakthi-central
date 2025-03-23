@@ -95,7 +95,7 @@ export default function PaymentGateway() {
                 resizeMode="contain"
               />
 
-              
+
             </TouchableOpacity>
             
             <TouchableOpacity 
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
     },
 
     payButton: {
-      backgroundColor: '#7d7878',
+      backgroundColor: '#00A67E',
       borderRadius: 8,
       paddingVertical: 15,
       alignItems: 'center',
