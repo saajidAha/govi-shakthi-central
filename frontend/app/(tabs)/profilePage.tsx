@@ -51,18 +51,15 @@ export default function ProfilePage() {
     return (
         <SafeAreaView style={styles.safeArea}>
             <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-
                 <View style={styles.greenHeader}>
                     <View style={styles.topNav}>
                         <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
                             <Image source={require('../../assets/images/back.png')} style={styles.icon} />
                         </TouchableOpacity>
-
                         <TouchableOpacity style={styles.settingsButton} onPress={() => router.push('/settings/settings')}>
                             <Image source={require('../../assets/images/settings.png')} style={styles.icon} />
                         </TouchableOpacity>
                     </View>
-
                     <View style={styles.profileInfo}>
                         <Image source={require('../../assets/images/Profile Pic.jpg')} style={styles.profileImage} />
                         <Text style={styles.profileName}>Profile</Text>
@@ -89,25 +86,20 @@ export default function ProfilePage() {
 
                 <View style={styles.resourcesContainer}>
                     <View style={styles.resourcesRow}>
-                        {/* First Resource Card - Weather */}
                         <TouchableOpacity
                             style={styles.resourceCard}
                             onPress={() => router.push('/settings/weather')}>
                             <Text style={styles.resourceTitle}>Weather</Text>
                         </TouchableOpacity>
-
-                        {/* Second Resource Card - News */}
                         <TouchableOpacity
                             style={styles.resourceCard}
                             onPress={() => router.push('/settings/news')}>
                             <Text style={styles.resourceTitle}>News</Text>
                         </TouchableOpacity>
-
-                        {/* Third Resource Card - Placeholder */}
                         <TouchableOpacity
                             style={styles.resourceCard}
-                            onPress={() => Alert.alert('Resources', 'This feature is not available yet.')}>
-                            <Text style={styles.resourceTitle}>Available Resources</Text>
+                            onPress={() => router.push('/settings/chatbot')}>
+                            <Text style={styles.resourceTitle}>Chatbot</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -124,7 +116,6 @@ export default function ProfilePage() {
                         </TouchableOpacity>
                     ))}
                 </View>
-
             </ScrollView>
         </SafeAreaView>
     );
@@ -136,39 +127,32 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         paddingTop: Platform.OS === 'android' ? 25 : 0,
     },
-    
     container: {
         flex: 1,
         backgroundColor: '#fff',
     },
-
     greenHeader: {
         backgroundColor: '#00A67E',
         borderBottomLeftRadius: 40,
         borderBottomRightRadius: 40,
         marginBottom: 16,
     },
-
     topNav: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingHorizontal: 20,
         paddingTop: 20,
     },
-
     backButton: {
         padding: 5,
     },
-
     settingsButton: {
         padding: 5,
     },
-
     profileInfo: {
         alignItems: 'center',
         paddingVertical: 20,
     },
-
     profileImage: {
         width: 100,
         height: 100,
@@ -177,37 +161,31 @@ const styles = StyleSheet.create({
         borderColor: '#fff',
         marginBottom: 15,
     },
-
     profileName: {
         fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
         marginBottom: 5,
     },
-
     userName: {
         fontSize: 30,
         color: '#fff',
         fontWeight: '500',
     },
-
     location: {
         fontSize: 16,
         color: '#fff',
         opacity: 0.8,
     },
-
     resourcesContainer: {
         paddingHorizontal: 20,
         paddingTop: 30,
     },
-
     resourcesRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginBottom: 20,
     },
-
     resourceCard: {
         width: '30%',
         height: 80,
@@ -217,19 +195,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
     },
-
     resourceTitle: {
         color: '#fff',
         fontSize: 14,
         fontWeight: 'bold',
         textAlign: 'center',
     },
-
     menuContainer: {
         paddingHorizontal: 20,
         paddingBottom: 30,
     },
-
     menuItem: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -237,23 +212,19 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
         position: 'relative',
     },
-
     menuItemLeft: {
         flex: 1,
     },
-
     menuItemTitle: {
         fontSize: 16,
         fontWeight: 'bold',
         color: '#333',
     },
-
     menuItemSubtitle: {
         fontSize: 14,
         color: '#666',
         marginTop: 4,
     },
-
     divider: {
         position: 'absolute',
         bottom: 0,
@@ -262,40 +233,33 @@ const styles = StyleSheet.create({
         height: 1,
         backgroundColor: '#E0E0E0',
     },
-
     icon: {
         width: 24,
         height: 24,
         tintColor: '#fff',
     },
-
     chevronIcon: {
         width: 24,
         height: 24,
         tintColor: '#333',
     },
-
     subscriptionContainer: {
         paddingHorizontal: 20,
         marginTop: 5,
         marginBottom: 10,
     },
-
     subscriptionCard: {
         backgroundColor: '#ecf0e9',
         borderRadius: 15,
         padding: 15,
     },
-
     subscriptionHeader: {
         marginBottom: 10,
     },
-
     subscriptionButtonsRow: {
         flexDirection: 'row',
         justifyContent: 'center',
     },
-
     viewDetailsButton: {
         borderWidth: 1,
         borderColor: '#00A67E',
@@ -305,13 +269,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
     },
-
     viewDetailsText: {
         color: '#00A67E',
         fontWeight: 'bold',
         fontSize: 14,
     },
-
     subscriptionTitle: {
         fontSize: 16,
         fontWeight: 'bold',

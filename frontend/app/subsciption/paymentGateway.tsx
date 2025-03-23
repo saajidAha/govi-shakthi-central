@@ -62,7 +62,7 @@ export default function PaymentGateway() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-        {/* Header */}
+        
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
             <Image source={require('../../assets/images/back.png')} style={styles.icon} />
