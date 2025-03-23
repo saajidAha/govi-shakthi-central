@@ -17,8 +17,10 @@ export default function PaymentSuccess() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         
+      
       <View style={styles.header}>
           <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
             <Image source={require('../../assets/images/back.png')} style={styles.icon} />
@@ -27,7 +29,6 @@ export default function PaymentSuccess() {
         </View>
 
         
-
         <View style={styles.content}>
           <Ionicons name="checkmark-circle" size={100} color="#00A67E" style={styles.successIcon} />
           <Text style={styles.successText}>Thank you for your purchase!</Text>
