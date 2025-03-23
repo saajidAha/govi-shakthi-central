@@ -29,38 +29,44 @@ export default function News() {
       title: 'Market Price Analytics',
       subTitle: 'Real-time Price Trends',
       icon: '📊',
-      url: 'https://jas.sljol.info/',
+      url: 'https://www.statista.com/outlook/cmo/food/fruits-nuts/fresh-fruits/sri-lanka',
     },
+
     {
       title: 'Premium Crop Insights',
       subTitle: 'Expert Recommendations',
       icon: '🌿',
       url: 'https://www.agrimin.gov.lk/web/index.php/news-scroll?lang=en',
     },
+
     {
       title: 'Weather Forecasts',
       subTitle: 'Advanced Predictions',
       icon: '🌤️',
-      url: 'https://infohub.doa.gov.lk/news-en/',
+      url: 'https://www.accuweather.com/en/lk/sri-lanka-weather',
     },
+
     {
       title: 'Soil Analysis Reports',
       subTitle: 'Detailed Insights',
       icon: '🌱',
-      url: 'https://www.fao.org/srilanka/news/en/',
+      url: 'https://doa.gov.lk/hordi-services/',
     },
+
     {
       title: 'Farming Community',
       subTitle: 'Connect With Experts',
       icon: '👨‍🌾',
-      url: 'https://landmin.gov.lk/web/en/news-and-events/',
+      url: 'https://sapp.lk/author/sapp/ ',
     },
+
     {
       title: 'Subsidies Tracker',
       subTitle: 'Government Schemes',
       icon: '💰',
-      url: 'https://sapp.lk/author/sapp/',
+      url: 'https://www.srilankabusiness.com/fruits-and-vegetables/',
     },
+
   ];
 
   
@@ -87,7 +93,7 @@ export default function News() {
             <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
             <Text style={styles.backText}>Back to Govishakthi</Text>
           </TouchableOpacity>
-          
+
         </View>
         <WebView 
           source={{ uri: currentUrl }} 
