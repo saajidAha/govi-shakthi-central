@@ -97,7 +97,7 @@ export default function News() {
     );
   }
 
-  
+
   if (showGoogleSearch) {
     return (
       <SafeAreaView style={styles.safeArea}>
@@ -159,6 +159,13 @@ export default function News() {
             </TouchableOpacity>
           ))}
         </View>
+
+        <View style={styles.content}>
+          <TouchableOpacity style={styles.button} onPress={openGoogleSearch}>
+            <Text style={styles.buttonText}>Search</Text>
+          </TouchableOpacity>
+        </View>
+        
 
         
       </ScrollView>
