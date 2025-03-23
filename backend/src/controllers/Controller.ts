@@ -173,6 +173,22 @@ export class Controller{
         }
     });
 
+    // get user info with only the username
+    app.get("/api/user", async (req, res) => {
+        const username = String(req.query.username);
+        try{
+            const response = await this.repository.checkCredentials({username: username});
+            if (response !== null) {
+                res.status(200).json({ message: "user exists within the system.", username: response.username, location: response.location, email: response.email, phone: response.phone});
+            } else {
+                res.status(404).json({ message: "User not found." });
+            }
+        }catch (e) {
+            console.log("Error while checking login credentials" + e)
+            res.status(500).json({message: "Error occurred in the server"});
+        }
+    })
+
         // listen at specified port
         app.listen(this.port, ()=> {
             console.log(`Server listening on port ${this.port}`);
