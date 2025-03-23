@@ -32,11 +32,13 @@ const months = [
 ];
 
 const districts = [
-    'Colombo', 'Gampaha', 'Kalutara', 'Kandy', 'Matale', 'Nuwara Eliya',
-    'Galle', 'Matara', 'Hambantota', 'Jaffna', 'Kilinochchi', 'Mannar',
-    'Vavuniya', 'Mullaitivu', 'Batticaloa', 'Ampara', 'Trincomalee',
-    'Kurunegala', 'Puttalam', 'Anuradhapura', 'Polonnaruwa', 'Badulla',
-    'Monaragala', 'Ratnapura', 'Kegalle'
+    "Colombo",
+    "Kandy",
+    "Galle",
+    "Jaffna",
+    "Anuradhapura",
+    "Ratnapura",
+    "Matara"
 ];
 
 export default function FruitDetailsScreen() {

@@ -15,32 +15,15 @@ import { useRouter } from 'expo-router';
 import { useMarket } from '../context/MarketContext';
 
 const districts = [
-  'Colombo',
-  'Gampaha',
-  'Kalutara',
-  'Kandy',
-  'Matale',
-  'Nuwara Eliya',
-  'Galle',
-  'Matara',
-  'Hambantota',
-  'Jaffna',
-  'Kilinochchi',
-  'Mannar',
-  'Vavuniya',
-  'Mulativu',
-  'Batticaloa',
-  'Ampara',
-  'Trincomalee',
-  'Kurunegala',
-  'Puttalam',
-  'Anuradhapura',
-  'Polonnaruwa',
-  'Badulla',
-  'Monaragala',
-  'Ratnapura',
-  'Kegalle',
-];
+      "Kandy",
+      "Jaffna",
+      "Colombo",
+      "Anuradhapura",
+      "Galle",
+      "Matara",
+      "Ratnapura"
+    ]
+;
 
 export default function PricePredictionScreen() {
   const router = useRouter();

@@ -15,32 +15,17 @@ import { useRouter } from 'expo-router';
 import { useDemand } from '../context/DemandContext';
 
 const districts = [
-  'Colombo',
-  'Gampaha',
-  'Kalutara',
-  'Kandy',
-  'Matale',
-  'Nuwara Eliya',
-  'Galle',
-  'Matara',
-  'Hambantota',
-  'Jaffna',
-  'Kilinochchi',
-  'Mannar',
-  'Vavuniya',
-  'Mulativu',
-  'Batticaloa',
-  'Ampara',
-  'Trincomalee',
-  'Kurunegala',
-  'Puttalam',
-  'Anuradhapura',
-  'Polonnaruwa',
-  'Badulla',
-  'Monaragala',
-  'Ratnapura',
-  'Kegalle',
+  "Matara",
+  "Ratnapura",
+  "Badulla",
+  "Colombo",
+  "Jaffna",
+  "Kandy",
+  "Kurunegala",
+  "Galle",
+  "Anuradhapura"
 ];
+;
 
 export default function DemandPredictionScreen() {
   const router = useRouter();
