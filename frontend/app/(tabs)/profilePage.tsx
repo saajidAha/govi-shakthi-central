@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
     View,
     Text,
@@ -11,7 +11,7 @@ import {
     Alert,
     ActivityIndicator,
 } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, useFocusEffect } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function ProfilePage() {
@@ -24,10 +24,12 @@ export default function ProfilePage() {
     });
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        // Get the current username when component mounts and fetch user data
-        fetchUserData();
-    }, []);
+    // Use useFocusEffect to refresh data when screen comes into focus
+    useFocusEffect(
+        useCallback(() => {
+            fetchUserData();
+        }, [])
+    );
 
     const fetchUserData = async () => {
         try {
@@ -120,7 +122,7 @@ export default function ProfilePage() {
             <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
                 <View style={styles.greenHeader}>
                     <View style={styles.topNav}>
-                        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+                        <TouchableOpacity style={styles.backButton} onPress={() => router.replace('/(tabs)/home')}>
                             <Image source={require('../../assets/images/back.png')} style={styles.icon} />
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.settingsButton} onPress={() => router.push('/settings/settings')}>

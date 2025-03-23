@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   View,
   Text,
@@ -11,7 +11,7 @@ import {
   ScrollView,
   ActivityIndicator,
 } from 'react-native';
-import { useRouter, useLocalSearchParams } from 'expo-router';
+import { useRouter, useLocalSearchParams, useFocusEffect } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function EditProfileScreen() {
@@ -26,6 +26,13 @@ export default function EditProfileScreen() {
   const [location, setLocation] = useState('');
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);
+
+  // Use useFocusEffect to refresh data when screen comes into focus
+  useFocusEffect(
+    useCallback(() => {
+      fetchUserData();
+    }, [])
+  );
 
   useEffect(() => {
     const initializeUsername = async () => {
@@ -56,43 +63,47 @@ export default function EditProfileScreen() {
 
   const fetchUserData = async () => {
     try {
-      if (!usernameParam) {
-        console.log('No username available yet, waiting...');
+      setLoading(true);
+      
+      // Get the current username from AsyncStorage or params
+      const storedUsername = await AsyncStorage.getItem('currentUsername');
+      const username = usernameParam || storedUsername;
+      
+      console.log('EditProfile - Retrieved username:', username);
+      
+      if (!username) {
+        console.log('EditProfile - No username found, cannot fetch data');
+        setLoading(false);
         return;
       }
       
-      setLoading(true);
-      const url = `https://saajid-govishakthi-backend-47235930830.asia-south1.run.app/api/user?username=${usernameParam}`;
-      console.log('Fetching user data from:', url);
+      console.log('EditProfile - Fetching user data for:', username);
+      
+      const url = `https://saajid-govishakthi-backend-47235930830.asia-south1.run.app/api/user?username=${username}`;
+      console.log('EditProfile - API URL:', url);
       
       const response = await fetch(url);
-      
-      console.log('Response status:', response.status);
+      console.log('EditProfile - API response status:', response.status);
       
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error('EditProfile - Error response:', errorText);
         throw new Error(`Failed to fetch user data: ${response.status}`);
       }
       
-      const userData = await response.json();
-      console.log('User data received:', userData);
+      const data = await response.json();
+      console.log('EditProfile - User data received:', JSON.stringify(data));
       
-      // Check if we have the expected data structure
-      if (userData) {
-        setEmail(userData.email || '');
-        setPhone(userData.phone || '');
-        setLocation(userData.location || '');
-        setName(userData.name || '');
-        setUsername(userData.username || usernameParam);
-        console.log('User data set to state');
-      } else {
-        console.error('Invalid user data structure:', userData);
-        Alert.alert('Error', 'Invalid user data received from server');
-      }
+      // Update state with fetched user data
+      setUsername(data.username || '');
+      setName(data.name || '');
+      setEmail(data.email || '');
+      setPhone(data.phone || '');
+      setLocation(data.location || '');
       
       setLoading(false);
     } catch (error: any) {
-      console.error('Error fetching user data:', error);
-      Alert.alert('Error', `Failed to load user data: ${error.message || 'Unknown error'}`);
+      console.error('EditProfile - Error fetching user data:', error);
       setLoading(false);
     }
   };
