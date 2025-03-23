@@ -24,7 +24,8 @@ export default function ProfilePage() {
     });
     const [loading, setLoading] = useState(true);
 
-    // Use useFocusEffect to refresh data when screen comes into focus
+    
+
     useFocusEffect(
         useCallback(() => {
             fetchUserData();
@@ -35,7 +36,8 @@ export default function ProfilePage() {
         try {
             setLoading(true);
             
-            // Get the current username from AsyncStorage
+            
+
             const username = await AsyncStorage.getItem('currentUsername');
             console.log('ProfilePage - Retrieved username from storage:', username);
             
@@ -166,11 +168,13 @@ export default function ProfilePage() {
                             onPress={() => router.push('/settings/weather')}>
                             <Text style={styles.resourceTitle}>Weather</Text>
                         </TouchableOpacity>
+                        
                         <TouchableOpacity
                             style={styles.resourceCard}
                             onPress={() => router.push('/settings/news')}>
                             <Text style={styles.resourceTitle}>News</Text>
                         </TouchableOpacity>
+
                         <TouchableOpacity
                             style={styles.resourceCard}
                             onPress={() => router.push('/settings/chatbot')}>
@@ -270,7 +274,7 @@ const styles = StyleSheet.create({
         width: '30%',
         height: 80,
         borderRadius: 15,
-        backgroundColor: '#000',
+        backgroundColor: '#00A67E',
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
