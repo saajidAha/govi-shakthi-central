@@ -122,6 +122,8 @@ export default function PaymentGateway() {
               />
             </View>
 
+            
+
             <View style={styles.inputContainer}>
               <Text style={styles.inputLabel}>Card Number</Text>
               <TextInput
@@ -133,6 +135,8 @@ export default function PaymentGateway() {
                 maxLength={19}
               />
             </View>
+
+
 
             <View style={styles.rowContainer}>
               <View style={[styles.inputContainer, { flex: 1, marginRight: 10 }]}>
@@ -147,6 +151,7 @@ export default function PaymentGateway() {
                 />
               </View>
 
+
               <View style={[styles.inputContainer, { flex: 1 }]}>
                 <Text style={styles.inputLabel}>CVV</Text>
                 <TextInput
@@ -160,6 +165,7 @@ export default function PaymentGateway() {
                 />
               </View>
             </View>
+            
 
             <View style={styles.rememberCardContainer}>
               <Switch
