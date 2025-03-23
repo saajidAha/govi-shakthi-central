@@ -82,10 +82,12 @@ export default function News() {
       <SafeAreaView style={styles.safeArea}>
         <StatusBar barStyle="light-content" />
         <View style={styles.webViewHeader}>
-          <TouchableOpacity style={styles.backButton} onPress={goBackToMain}>
+          
+        <TouchableOpacity style={styles.backButton} onPress={goBackToMain}>
             <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
             <Text style={styles.backText}>Back to Govishakthi</Text>
           </TouchableOpacity>
+          
         </View>
         <WebView 
           source={{ uri: currentUrl }} 
@@ -104,9 +106,12 @@ export default function News() {
         
 
         <View style={styles.header}>
-          <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+          
+        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
             <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
           </TouchableOpacity>
+
+
           <View style={styles.titleContainer}>
             <Text style={styles.headerTitle}>GoviShakthi</Text>
             <Text style={styles.subTitle}>The country's leading farmer information</Text>
