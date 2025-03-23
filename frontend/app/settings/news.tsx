@@ -98,8 +98,23 @@ export default function News() {
   }
 
   
-
-  //
+  if (showGoogleSearch) {
+    return (
+      <SafeAreaView style={styles.safeArea}>
+        <StatusBar barStyle="light-content" />
+        <View style={styles.webViewHeader}>
+          <TouchableOpacity style={styles.backButton} onPress={goBackToMain}>
+            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
+            <Text style={styles.backText}>Back to Govishakthi</Text>
+          </TouchableOpacity>
+        </View>
+        <WebView 
+          source={{ uri: 'https://www.google.com/' }} 
+          style={styles.webView}
+        />
+      </SafeAreaView>
+    );
+  }
 
 
   return (
