@@ -62,7 +62,7 @@ export default function PaymentGateway() {
     
   };
 
-  
+
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -361,7 +361,7 @@ const styles = StyleSheet.create({
 
     inputLabel: {
       fontSize: 14,
-      color: '#777',
+      color: '#000',
       marginBottom: 5,
 
     },
@@ -381,10 +381,11 @@ const styles = StyleSheet.create({
 
     },
 
+
     rememberCardText: {
       marginLeft: 10,
       fontSize: 14,
-      color: '#555',
+      color: '#000',
 
     },
 
