@@ -38,7 +38,9 @@ export default function PaymentSuccess() {
           <Text style={styles.subText}>Your transaction was successful.</Text>
 
           <TouchableOpacity style={styles.button} onPress={() => router.push('/home')}>
+
             <Text style={styles.buttonText}>Go to Home</Text>
+            
           </TouchableOpacity>
   
         </View>
@@ -143,7 +145,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     tintColor: '#000000',
-    
+
   },
 
 });
