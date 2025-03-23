@@ -34,8 +34,7 @@ export default function PaymentSuccess() {
           <TouchableOpacity style={styles.button} onPress={() => router.push('/home')}>
             <Text style={styles.buttonText}>Go to Home</Text>
           </TouchableOpacity>
-
-          
+  
         </View>
         
         
