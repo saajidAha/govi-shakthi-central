@@ -1,20 +1,31 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet, ScrollView, SafeAreaView, StatusBar } from 'react-native';
+import { 
+  View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet, 
+  SafeAreaView, StatusBar 
+} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
+interface Message {
+  id: number;
+  text: string;
+  sender: 'user' | 'bot';
+}
 
 export default function ChatbotScreen() {
-  const [messages, setMessages] = useState([]);
+  const navigation = useNavigation();
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
 
   const handleSend = () => {
     if (input.trim().length === 0) return;
 
-    const userMessage = { id: messages.length + 1, text: input, sender: 'user' };
-    setMessages([...messages, userMessage]);
+    const userMessage: Message = { id: messages.length + 1, text: input, sender: 'user' };
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
     generateBotResponse(input);
     setInput('');
   };
 
-  const generateBotResponse = (inputText) => {
+  const generateBotResponse = (inputText: string) => {
     let botResponse = '';
 
     if (inputText.toLowerCase().includes("what's this app")) {
@@ -29,7 +40,7 @@ export default function ChatbotScreen() {
       botResponse = 'I\'m not sure about that. Can you rephrase your question?';
     }
 
-    const botMessage = { id: messages.length + 2, text: botResponse, sender: 'G' };
+    const botMessage: Message = { id: messages.length + 2, text: botResponse, sender: 'bot' };
     setMessages((prevMessages) => [...prevMessages, botMessage]);
   };
 
@@ -43,27 +54,38 @@ export default function ChatbotScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
+
+      {/* Green Header with Back Button */}
       <View style={styles.greenHeader}>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+          <Text style={styles.backButtonText}>◀</Text>
+        </TouchableOpacity>
         <Text style={styles.headerText}>Chat with GoviShakthi</Text>
       </View>
-      <ScrollView contentContainerStyle={styles.container}>
-        <FlatList
-          data={messages}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => (
-            <View style={[styles.messageBubble, item.sender === 'user' ? styles.userMessage : styles.botMessage]}>
-              <Text style={styles.messageText}>{item.text}</Text>
-            </View>
-          )}
-        />
-        <View style={styles.quickReplyContainer}>
-          {quickReplies.map((reply, index) => (
-            <TouchableOpacity key={index} style={styles.quickReplyButton} onPress={() => generateBotResponse(reply)}>
-              <Text style={styles.quickReplyText}>{reply}</Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-      </ScrollView>
+
+      {/* FlatList handles scrolling */}
+      <FlatList
+        data={messages}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <View style={[styles.messageBubble, item.sender === 'user' ? styles.userMessage : styles.botMessage]}>
+            <Text style={styles.messageText}>{item.text}</Text>
+          </View>
+        )}
+        contentContainerStyle={styles.messagesContainer}
+        inverted // This makes messages appear from the bottom
+      />
+
+      {/* Quick Reply Buttons */}
+      <View style={styles.quickReplyContainer}>
+        {quickReplies.map((reply, index) => (
+          <TouchableOpacity key={index} style={styles.quickReplyButton} onPress={() => generateBotResponse(reply)}>
+            <Text style={styles.quickReplyText}>{reply}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
+      {/* Input Field & Send Button */}
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -85,21 +107,33 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   greenHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#00A67E',
     padding: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
   },
+  backButton: {
+    position: 'absolute',
+    left: 15,
+    padding: 5,
+  },
+  backButtonText: {
+    fontSize: 20,
+    color: '#fff',
+  },
   headerText: {
+    flex: 1,
+    textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
   },
-  container: {
+  messagesContainer: {
     flexGrow: 1,
     padding: 10,
+    justifyContent: 'flex-end',
   },
   messageBubble: {
     padding: 10,
@@ -162,3 +196,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
