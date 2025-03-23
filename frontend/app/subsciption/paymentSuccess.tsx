@@ -39,7 +39,7 @@ export default function PaymentSuccess() {
   
         </View>
 
-        
+
         
         
       </ScrollView>
@@ -49,9 +49,11 @@ export default function PaymentSuccess() {
 
 const styles = StyleSheet.create({
   safeArea: {
-    flex: 1,
     backgroundColor: '#00A67E',
     paddingTop: Platform.OS === 'android' ? 25 : 0,
+    flex: 1,
+    
+
   },
 
   container: {
