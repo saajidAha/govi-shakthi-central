@@ -8,12 +8,15 @@ import {
   StatusBar,
   ActivityIndicator,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useRouter } from 'expo-router';
 
 const API_KEY = '42f30d9ffad4c9ddc84d3bd908c10cf8'; // OpenWeatherMap API key
 
 export default function HomeScreen() {
+  const router = useRouter();
   const [city, setCity] = useState('Colombo'); // Default city
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -48,6 +51,14 @@ export default function HomeScreen() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
         <View style={{ flex: 1, backgroundColor: '#fff' }}>
+          {/* Header with Back Button */}
+          <View style={styles.headerContainer}>
+            <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+              <Image source={require('../../assets/images/back.png')} style={styles.icon} />
+            </TouchableOpacity>
+            <Text style={styles.headerTitle}>Weather</Text>
+          </View>
+
           <View style={styles.greenHeader}>
             <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
             {loading ? (
@@ -62,7 +73,7 @@ export default function HomeScreen() {
               </View>
             )}
           </View>
-          
+
           <View style={styles.searchContainer}>
             <TextInput
               style={styles.searchInput}
@@ -84,6 +95,25 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  headerContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+  },
+  backButton: {
+    padding: 5,
+  },
+  icon: {
+    width: 24,
+    height: 24,
+    tintColor: '#000000',
+  },
+  headerTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginLeft: 15,
   },
   greenHeader: {
     backgroundColor: '#00A67E',
