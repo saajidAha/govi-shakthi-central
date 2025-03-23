@@ -9,8 +9,11 @@ import {
   Platform,
   Image,
 } from 'react-native';
+
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+
+
 
 export default function PaymentSuccess() {
   const router = useRouter();
@@ -60,6 +63,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+
   },
 
 
@@ -68,6 +72,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
     marginLeft: 15,
+
   },
 
   content: {
@@ -76,10 +81,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 50,
     paddingHorizontal: 20,
+
   },
 
   successIcon: {
     marginBottom: 20,
+
   },
 
   successText: {
@@ -88,6 +95,7 @@ const styles = StyleSheet.create({
     color: '#00A67E',
     textAlign: 'center',
     marginBottom: 10,
+
   },
 
   subText: {
@@ -95,6 +103,7 @@ const styles = StyleSheet.create({
     color: '#555',
     textAlign: 'center',
     marginBottom: 30,
+
   },
 
   button: {
@@ -105,12 +114,14 @@ const styles = StyleSheet.create({
     width: '80%',
     alignItems: 'center',
     marginTop: 20,
+
   },
 
   buttonText: {
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
+
   },
   
   header : {
@@ -119,10 +130,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 30,
     backgroundColor: '#00A67E',
+
   },
 
   backButton: {
     padding: 5,
+
   },
 
 
@@ -130,6 +143,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     tintColor: '#000000',
+    
   },
 
 });
