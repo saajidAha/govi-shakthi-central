@@ -113,7 +113,7 @@ export default function News() {
           </View>
         </View>
           
-          
+
         <View style={styles.dateTimeBar}>
           <Text style={styles.dateText}>{formattedDate}</Text>
         </View>
@@ -176,9 +176,11 @@ const styles = StyleSheet.create({
   },
 
   headerTitle: {
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#000',
+    paddingVertical: 5,
+
   },
 
   subTitle: {
