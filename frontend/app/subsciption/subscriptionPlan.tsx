@@ -21,6 +21,12 @@ export default function SubscriptionPlan() {
     'Personalized Farming Plan',
   ];
 
+  
+
+  const navigateToPaymentGateway = () => {
+    router.push('/subsciption/paymentGateway');
+  };
+
   return (
     <SafeAreaView style={styles.safeArea}>
         <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
@@ -43,7 +49,12 @@ export default function SubscriptionPlan() {
           <Text style={styles.offerText}>Try one month for free with Govi Shakthi!</Text>
         </View>
 
-        <View style={styles.featuresContainer}>
+        
+        <TouchableOpacity 
+          style={styles.featuresContainer}
+          onPress={navigateToPaymentGateway}
+          activeOpacity={0.7}
+        >
           {premiumFeatures.map((feature, index) => (
             <View key={index} style={styles.featureRow}>
               <View style={styles.checkCircle}>
@@ -52,10 +63,15 @@ export default function SubscriptionPlan() {
               <Text style={styles.featureText}>{feature}</Text>
             </View>
           ))}
-        </View>
+        </TouchableOpacity>
 
         <View style={styles.pricingContainer}>
-          <View style={styles.pricingCard}>
+          
+          <TouchableOpacity 
+            style={styles.pricingCard}
+            onPress={navigateToPaymentGateway}
+            activeOpacity={0.7}
+          >
             <View style={styles.pricingHeader}>
               <Text style={styles.pricingType}>Premium</Text>
             </View>
@@ -64,9 +80,13 @@ export default function SubscriptionPlan() {
               <Text style={styles.pricingAmount}>100 LKR</Text>
               <Text style={styles.discountText}></Text>
             </View>
+          </TouchableOpacity>
 
-          </View>
-          <View style={styles.pricingCard}>
+          <TouchableOpacity 
+            style={styles.pricingCard}
+            onPress={navigateToPaymentGateway}
+            activeOpacity={0.7}
+          >
             <View style={styles.pricingHeader}>
               <Text style={styles.pricingType}>Premium</Text>
             </View>
@@ -75,7 +95,7 @@ export default function SubscriptionPlan() {
               <Text style={styles.pricingAmount}>1000 LKR</Text>
               <Text style={styles.discountText}>16% discount</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
 
         
