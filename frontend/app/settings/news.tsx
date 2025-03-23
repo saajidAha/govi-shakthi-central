@@ -113,11 +113,13 @@ export default function News() {
           </View>
         </View>
           
+          
         <View style={styles.dateTimeBar}>
           <Text style={styles.dateText}>{formattedDate}</Text>
         </View>
         
-        
+  
+
 
         <View style={styles.yellowBanner}>
           <Text style={styles.bannerTitle}>Today's Government Updates</Text>
