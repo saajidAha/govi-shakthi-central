@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { 
   View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet, 
-  SafeAreaView, StatusBar 
+  SafeAreaView, StatusBar, Image, Platform
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useRouter } from 'expo-router';
 
 interface Message {
   id: number;
@@ -12,7 +12,7 @@ interface Message {
 }
 
 export default function ChatbotScreen() {
-  const navigation = useNavigation();
+  const router = useRouter();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
 
@@ -55,15 +55,15 @@ export default function ChatbotScreen() {
     <SafeAreaView style={styles.safeArea}>
       <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
 
-      {/* Green Header with Back Button */}
-      <View style={styles.greenHeader}>
-        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <Text style={styles.backButtonText}>◀</Text>
+      {/* Header with Back Button */}
+      <View style={styles.header}>
+        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+          <Image source={require('../../assets/images/back.png')} style={styles.icon} />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Chat with GoviShakthi</Text>
+        <Text style={styles.headerTitle}>Chat with GoviShakthi</Text>
       </View>
 
-      {/* FlatList handles scrolling */}
+      {/* Chat Messages */}
       <FlatList
         data={messages}
         keyExtractor={(item) => item.id.toString()}
@@ -73,10 +73,10 @@ export default function ChatbotScreen() {
           </View>
         )}
         contentContainerStyle={styles.messagesContainer}
-        inverted // This makes messages appear from the bottom
+        inverted
       />
 
-      {/* Quick Reply Buttons */}
+      {/* Quick Replies */}
       <View style={styles.quickReplyContainer}>
         {quickReplies.map((reply, index) => (
           <TouchableOpacity key={index} style={styles.quickReplyButton} onPress={() => generateBotResponse(reply)}>
@@ -104,31 +104,27 @@ export default function ChatbotScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFFFFF',
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
-  greenHeader: {
+  header: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#00A67E',
-    padding: 20,
-    borderBottomLeftRadius: 30,
-    borderBottomRightRadius: 30,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
   },
   backButton: {
-    position: 'absolute',
-    left: 15,
     padding: 5,
   },
-  backButtonText: {
-    fontSize: 20,
-    color: '#fff',
+  icon: {
+    width: 24,
+    height: 24,
+    tintColor: '#000000',
   },
-  headerText: {
-    flex: 1,
-    textAlign: 'center',
-    fontSize: 20,
+  headerTitle: {
+    fontSize: 24,
     fontWeight: 'bold',
-    color: '#fff',
+    marginLeft: 15,
   },
   messagesContainer: {
     flexGrow: 1,
@@ -151,6 +147,23 @@ const styles = StyleSheet.create({
   },
   messageText: {
     fontSize: 16,
+  },
+  quickReplyContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    marginVertical: 10,
+  },
+  quickReplyButton: {
+    backgroundColor: '#00A67E',
+    paddingVertical: 8,
+    paddingHorizontal: 15,
+    borderRadius: 20,
+    margin: 5,
+  },
+  quickReplyText: {
+    color: '#fff',
+    fontWeight: 'bold',
   },
   inputContainer: {
     flexDirection: 'row',
@@ -175,23 +188,6 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   sendButtonText: {
-    color: '#fff',
-    fontWeight: 'bold',
-  },
-  quickReplyContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    marginVertical: 10,
-  },
-  quickReplyButton: {
-    backgroundColor: '#00A67E',
-    paddingVertical: 8,
-    paddingHorizontal: 15,
-    borderRadius: 20,
-    margin: 5,
-  },
-  quickReplyText: {
     color: '#fff',
     fontWeight: 'bold',
   },
