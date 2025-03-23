@@ -87,11 +87,15 @@ export default function PaymentGateway() {
               ]}
               onPress={() => setSelectedPaymentMethod('visa')}
             >
+              
+
               <Image 
                 source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png' }}
                 style={styles.cardLogo}
                 resizeMode="contain"
               />
+
+              
             </TouchableOpacity>
             
             <TouchableOpacity 
@@ -101,11 +105,15 @@ export default function PaymentGateway() {
               ]}
               onPress={() => setSelectedPaymentMethod('mastercard')}
             >
+              
+
               <Image 
                 source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png' }}
                 style={styles.cardLogo}
                 resizeMode="contain"
               />
+
+
             </TouchableOpacity>
           </View>
 
@@ -165,7 +173,7 @@ export default function PaymentGateway() {
                 />
               </View>
             </View>
-            
+
 
             <View style={styles.rememberCardContainer}>
               <Switch
