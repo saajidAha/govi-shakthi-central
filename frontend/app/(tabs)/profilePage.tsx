@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
     View,
     Text,
@@ -9,17 +9,88 @@ import {
     SafeAreaView,
     Platform,
     Alert,
+    ActivityIndicator,
 } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, useFocusEffect } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function ProfilePage() {
     const router = useRouter();
+    const [currentUsername, setCurrentUsername] = useState('');
+    const [userData, setUserData] = useState({
+        name: '',
+        location: '',
+        username: ''
+    });
+    const [loading, setLoading] = useState(true);
+
+    
+
+    useFocusEffect(
+        useCallback(() => {
+            fetchUserData();
+        }, [])
+    );
+
+    const fetchUserData = async () => {
+        try {
+            setLoading(true);
+            
+            
+
+            const username = await AsyncStorage.getItem('currentUsername');
+            console.log('ProfilePage - Retrieved username from storage:', username);
+            
+            if (!username) {
+                console.log('ProfilePage - No username found in storage, using default');
+                setLoading(false);
+                return;
+            }
+            
+            setCurrentUsername(username);
+            
+            console.log('ProfilePage - Fetching user data for:', username);
+            
+            const url = `https://saajid-govishakthi-backend-47235930830.asia-south1.run.app/api/user?username=${username}`;
+            console.log('ProfilePage - API URL:', url);
+            
+            const response = await fetch(url);
+            console.log('ProfilePage - API response status:', response.status);
+            
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error('ProfilePage - Error response:', errorText);
+                throw new Error(`Failed to fetch user data: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            console.log('ProfilePage - User data received:', JSON.stringify(data));
+            
+            setUserData({
+                name: data.name || 'User',
+                location: data.location || 'Location not set',
+                username: data.username || username
+            });
+            
+            setLoading(false);
+        } catch (error: any) {
+            console.error('ProfilePage - Error fetching user data:', error);
+            setLoading(false);
+        }
+    };
+
+    const navigateToEditProfile = () => {
+        router.push({
+            pathname: '/settings/edit-profile',
+            params: { username: currentUsername || 'sasindu123' }
+        });
+    };
 
     const menuItems = [
         {
             title: 'Personal Details',
             lastUpdated: '2 days ago',
-            onPress: () => router.push('/settings/edit-profile')
+            onPress: navigateToEditProfile
         },
         {
             title: 'Statistics',
@@ -53,7 +124,7 @@ export default function ProfilePage() {
             <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
                 <View style={styles.greenHeader}>
                     <View style={styles.topNav}>
-                        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+                        <TouchableOpacity style={styles.backButton} onPress={() => router.replace('/(tabs)/home')}>
                             <Image source={require('../../assets/images/back.png')} style={styles.icon} />
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.settingsButton} onPress={() => router.push('/settings/settings')}>
@@ -63,8 +134,14 @@ export default function ProfilePage() {
                     <View style={styles.profileInfo}>
                         <Image source={require('../../assets/images/Profile Pic.jpg')} style={styles.profileImage} />
                         <Text style={styles.profileName}>Profile</Text>
-                        <Text style={styles.userName}>Dudley Sirisena</Text>
-                        <Text style={styles.location}>Anuradhapura, Sri Lanka</Text>
+                        {loading ? (
+                            <ActivityIndicator size="small" color="#FFFFFF" />
+                        ) : (
+                            <>
+                                <Text style={styles.userName}>{userData.name || 'User'}</Text>
+                                <Text style={styles.location}>{userData.location || 'Location not set'}</Text>
+                            </>
+                        )}
                     </View>
                 </View>
 
@@ -91,11 +168,13 @@ export default function ProfilePage() {
                             onPress={() => router.push('/settings/weather')}>
                             <Text style={styles.resourceTitle}>Weather</Text>
                         </TouchableOpacity>
+                        
                         <TouchableOpacity
                             style={styles.resourceCard}
                             onPress={() => router.push('/settings/news')}>
                             <Text style={styles.resourceTitle}>News</Text>
                         </TouchableOpacity>
+
                         <TouchableOpacity
                             style={styles.resourceCard}
                             onPress={() => router.push('/settings/chatbot')}>
@@ -120,7 +199,6 @@ export default function ProfilePage() {
         </SafeAreaView>
     );
 }
-
 
 const styles = StyleSheet.create({
     safeArea: {
@@ -178,6 +256,11 @@ const styles = StyleSheet.create({
         color: '#fff',
         opacity: 0.8,
     },
+    username: {
+        fontSize: 16,
+        color: '#fff',
+        opacity: 0.8,
+    },
     resourcesContainer: {
         paddingHorizontal: 20,
         paddingTop: 30,
@@ -191,7 +274,7 @@ const styles = StyleSheet.create({
         width: '30%',
         height: 80,
         borderRadius: 15,
-        backgroundColor: '#000',
+        backgroundColor: '#00A67E',
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
@@ -269,6 +352,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         alignItems: 'center',
         width: '100%',
+        backgroundColor: '#ecf0e9',
     },
     viewDetailsText: {
         color: '#00A67E',
