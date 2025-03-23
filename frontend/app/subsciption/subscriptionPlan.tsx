@@ -165,6 +165,7 @@ safeArea: {
 
   bannerText: {
     fontSize: 16,
+    fontWeight: 'bold',
     color: '#000',
     lineHeight: 20,
     marginLeft: 20,
@@ -183,7 +184,7 @@ safeArea: {
       },
 
       taglineText: {
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: 'bold',
         color: '#00A67E',
         marginBottom: 5,
