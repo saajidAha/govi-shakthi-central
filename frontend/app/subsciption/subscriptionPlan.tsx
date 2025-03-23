@@ -10,6 +10,7 @@ import {
   Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function SubscriptionPlan() {
   const router = useRouter();
@@ -75,6 +76,9 @@ export default function SubscriptionPlan() {
             <View style={styles.pricingHeader}>
               <Text style={styles.pricingType}>Premium</Text>
             </View>
+            <View style={styles.calendarIconContainer}>
+              <Ionicons name="calendar-outline" size={24} color="#00A67E" />
+            </View>
             <View style={styles.pricingContent}>
               <Text style={styles.pricingDuration}>Monthly</Text>
               <Text style={styles.pricingAmount}>100 LKR</Text>
@@ -90,10 +94,11 @@ export default function SubscriptionPlan() {
             <View style={styles.pricingHeader}>
               <Text style={styles.pricingType}>Premium</Text>
             </View>
+            
             <View style={styles.pricingContent}>
               <Text style={styles.pricingDuration}>Yearly</Text>
               <Text style={styles.pricingAmount}>1000 LKR</Text>
-              <Text style={styles.discountText}>16% discount</Text>
+              <Text style={styles.discountText}>17% discount</Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -105,6 +110,7 @@ export default function SubscriptionPlan() {
     </SafeAreaView>
   )
 }
+
 
 
 
@@ -280,5 +286,13 @@ safeArea: {
         height: 40,
       },
 
+
+      calendarIconContainer: {
+        backgroundColor: '#F0F0C0', 
+        alignItems: 'center',
+        paddingVertical: 8,
+        borderTopWidth: 1,
+        borderColor: '#e0e0a0',
+      },
 
 });
