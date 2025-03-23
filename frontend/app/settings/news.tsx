@@ -18,7 +18,7 @@ import { WebView } from 'react-native-webview';
 export default function News() {
   const router = useRouter();
   const [currentUrl, setCurrentUrl] = useState(null);
-  //
+  const [showGoogleSearch, setShowGoogleSearch] = useState(false);
   
   const currentDate = new Date();
   const formattedDate = `${currentDate.getFullYear()}.${String(currentDate.getMonth() + 1).padStart(2, '0')}.${String(currentDate.getDate()).padStart(2, '0')}`;
