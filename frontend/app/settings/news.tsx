@@ -108,8 +108,9 @@ export default function News() {
             <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
           </TouchableOpacity>
           <View style={styles.titleContainer}>
-            <Text style={styles.headerTitle}>GOVISHAKTHI</Text>
-            <Text style={styles.subTitle}>The country's leading farmer information center</Text>
+            <Text style={styles.headerTitle}>GoviShakthi</Text>
+            <Text style={styles.subTitle}>The country's leading farmer information</Text>
+            <Text style={styles.subTitle}>center.</Text>
           </View>
         </View>
           
@@ -151,11 +152,14 @@ export default function News() {
 }
 
 const styles = StyleSheet.create({
+  
   safeArea: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#00A67E',
     paddingTop: Platform.OS === 'android' ? 25 : 0,
+    
   },
+
 
   container: {
     flex: 1,
@@ -166,7 +170,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
-    paddingVertical: 30,
+    paddingVertical: 20,
     backgroundColor: '#00A67E',
   },
 
@@ -188,6 +192,7 @@ const styles = StyleSheet.create({
     color: '#d0f0e8',
     marginTop: 4,
     paddingVertical: 5,
+    fontWeight: 'bold',
   },
 
   dateTimeBar: {
