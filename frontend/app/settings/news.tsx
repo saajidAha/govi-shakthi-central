@@ -159,8 +159,8 @@ export default function News() {
         </View>
 
         <View style={styles.content}>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/home')}>
-            <Text style={styles.buttonText}>Go to Home</Text>
+          <TouchableOpacity style={styles.button} onPress={() => router.push('/search')}>
+            <Text style={styles.buttonText}>Go to search</Text>
           </TouchableOpacity>
         </View>
 
