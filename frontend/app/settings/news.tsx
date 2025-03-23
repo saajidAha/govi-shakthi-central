@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import {
   View,
   Text,
@@ -10,6 +11,7 @@ import {
   Image,
   StatusBar,
 } from 'react-native';
+
 import { useRouter } from 'expo-router';
 import { WebView } from 'react-native-webview';
 
@@ -20,7 +22,8 @@ export default function News() {
   const currentDate = new Date();
   const formattedDate = `${currentDate.getFullYear()}.${String(currentDate.getMonth() + 1).padStart(2, '0')}.${String(currentDate.getDate()).padStart(2, '0')}`;
   
-  // Updated premium features with Sri Lankan government news feed links
+  
+
   const premiumFeatures = [
     {
       title: 'Market Price Analytics',
@@ -60,17 +63,20 @@ export default function News() {
     },
   ];
 
-  // Function to open URL in the in-app WebView
+  
+
   const openURL = (url) => {
     setCurrentUrl(url);
   };
 
-  // Function to go back to the main view
+  
+
   const goBackToMain = () => {
     setCurrentUrl(null);
   };
 
-  // If a URL is set, show the WebView with a back button
+  
+
   if (currentUrl) {
     return (
       <SafeAreaView style={styles.safeArea}>
@@ -89,12 +95,14 @@ export default function News() {
     );
   }
 
-  // Main app view
+  
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle="light-content" />
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-        {/* Header Section */}
+        
+
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
             <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
@@ -109,12 +117,14 @@ export default function News() {
           <Text style={styles.dateText}>{formattedDate}</Text>
         </View>
         
-        {/* Yellow Banner */}
+        
+
         <View style={styles.yellowBanner}>
           <Text style={styles.bannerTitle}>Today's Government Updates</Text>
         </View>
 
-        {/* Premium Features with links to government news feeds */}
+        
+
         <View style={styles.featuresGrid}>
           {premiumFeatures.map((feature, index) => (
             <TouchableOpacity 
@@ -266,7 +276,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 
-  // Styles for WebView component
+  
   webView: {
     flex: 1,
   },
