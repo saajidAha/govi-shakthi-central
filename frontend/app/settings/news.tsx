@@ -228,6 +228,15 @@ const styles = StyleSheet.create({
 
   },
 
+  featureCard: {
+    width: '48%',
+    backgroundColor: '#222',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    position: 'relative',
+  },
+
   yellowBanner: {
     backgroundColor: '#FFD600',
     padding: 16,
@@ -248,15 +257,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 16,
   },
-
-  featureCard: {
-    width: '48%',
-    backgroundColor: '#222',
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 16,
-    position: 'relative',
-  },
+  
 
   featureIcon: {
     fontSize: 28,
