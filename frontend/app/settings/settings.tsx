@@ -9,11 +9,22 @@ import {
   Alert,
   Image,
   ScrollView,
+  StatusBar,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons'; // Import Ionicons for default arrow
 
 export default function SettingsScreen() {
   const router = useRouter();
+
+  // Add status bar configuration
+  React.useEffect(() => {
+    StatusBar.setBackgroundColor('#FFFFFF', true); // Set status bar background to white
+    StatusBar.setBarStyle('dark-content'); // Dark icons for white background
+    if (Platform.OS === 'android') {
+      StatusBar.setTranslucent(true); // Allow status bar to blend with background
+    }
+  }, []);
 
   const accountSettings = [
     { 
@@ -105,7 +116,7 @@ export default function SettingsScreen() {
             style={styles.backButton}
             onPress={() => router.back()}
           >
-            <Image source={require('../../assets/images/back.png')} style={styles.icon}/>
+            <Ionicons name="arrow-back" size={24} color="#000000" style={styles.icon}/>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Settings</Text>
         </View>
@@ -193,7 +204,7 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#FFFFFF',
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
+    paddingTop: Platform.OS === 'android' ? 0 : 0, // Remove any top padding
   },
   container: {
     flex: 1,
@@ -204,9 +215,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     paddingVertical: 15,
+    paddingTop: Platform.OS === 'android' ? 60 : 15, 
+    marginTop: Platform.OS === 'android' ? -10 : 0, 
   },
   backButton: {
-    padding: 5,
+    padding: 10, 
+    marginRight: 15, 
   },
   headerTitle: {
     fontSize: 24,
@@ -266,6 +280,8 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     alignItems: 'center',
     marginTop: 20,
+    marginHorizontal: 20,
+    width: 'auto',
   },
   logoutText: {
     color: '#FFFFFF',
@@ -276,7 +292,6 @@ const styles = StyleSheet.create({
   icon:{
     width: 24,
     height: 24,
-    tintColor: '#000000',
     },
 
   chevronIcon: {

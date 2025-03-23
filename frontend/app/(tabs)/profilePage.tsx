@@ -10,9 +10,11 @@ import {
     Platform,
     Alert,
     ActivityIndicator,
+    StatusBar,
 } from 'react-native';
 import { useRouter, useFocusEffect } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function ProfilePage() {
     const router = useRouter();
@@ -30,6 +32,15 @@ export default function ProfilePage() {
             fetchUserData();
         }, [])
     );
+
+    // Add status bar configuration
+    React.useEffect(() => {
+        StatusBar.setBackgroundColor('#00A67E', true); // Match green header color
+        StatusBar.setBarStyle('light-content'); // Light icons for green background
+        if (Platform.OS === 'android') {
+            StatusBar.setTranslucent(true); // Allow status bar to blend with background
+        }
+    }, []);
 
     const fetchUserData = async () => {
         try {
@@ -123,7 +134,7 @@ export default function ProfilePage() {
                 <View style={styles.greenHeader}>
                     <View style={styles.topNav}>
                         <TouchableOpacity style={styles.backButton} onPress={() => router.replace('/(tabs)/home')}>
-                            <Image source={require('../../assets/images/back.png')} style={styles.icon} />
+                            <Ionicons name="arrow-back" size={24} color="#FFFFFF" style={styles.icon} />
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.settingsButton} onPress={() => router.push('/settings/settings')}>
                             <Image source={require('../../assets/images/settings.png')} style={styles.icon} />
@@ -199,8 +210,8 @@ export default function ProfilePage() {
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        backgroundColor: '#fff',
-        paddingTop: Platform.OS === 'android' ? 25 : 0,
+        backgroundColor: '#00A67E', // Match the green header color
+        paddingTop: Platform.OS === 'android' ? 0 : 0, // Remove any top padding
     },
     container: {
         flex: 1,
@@ -217,12 +228,14 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 20,
         paddingTop: 20,
+        alignItems: 'center',
     },
     backButton: {
-        padding: 5,
+        padding: 10,
     },
     settingsButton: {
-        padding: 5,
+        padding: 10,
+        marginBottom: 5,
     },
     profileInfo: {
         alignItems: 'center',
@@ -284,7 +297,6 @@ const styles = StyleSheet.create({
     icon: {
         width: 24,
         height: 24,
-        tintColor: '#fff',
     },
     chevronIcon: {
         width: 24,
