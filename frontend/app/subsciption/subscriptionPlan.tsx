@@ -94,6 +94,10 @@ export default function SubscriptionPlan() {
             <View style={styles.pricingHeader}>
               <Text style={styles.pricingType}>Premium</Text>
             </View>
+
+            <View style={styles.calendarIconContainer}>
+              <Ionicons name="calendar-sharp" size={24} color="#00A67E" />
+            </View>
             
             <View style={styles.pricingContent}>
               <Text style={styles.pricingDuration}>Yearly</Text>
