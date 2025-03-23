@@ -1,20 +1,31 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet, ScrollView, SafeAreaView, StatusBar } from 'react-native';
+import { 
+  View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet, 
+  SafeAreaView, StatusBar, Image, Platform
+} from 'react-native';
+import { useRouter } from 'expo-router';
+
+interface Message {
+  id: number;
+  text: string;
+  sender: 'user' | 'bot';
+}
 
 export default function ChatbotScreen() {
-  const [messages, setMessages] = useState([]);
+  const router = useRouter();
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
 
   const handleSend = () => {
     if (input.trim().length === 0) return;
 
-    const userMessage = { id: messages.length + 1, text: input, sender: 'user' };
-    setMessages([...messages, userMessage]);
+    const userMessage: Message = { id: messages.length + 1, text: input, sender: 'user' };
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
     generateBotResponse(input);
     setInput('');
   };
 
-  const generateBotResponse = (inputText) => {
+  const generateBotResponse = (inputText: string) => {
     let botResponse = '';
 
     if (inputText.toLowerCase().includes("what's this app")) {
@@ -29,7 +40,7 @@ export default function ChatbotScreen() {
       botResponse = 'I\'m not sure about that. Can you rephrase your question?';
     }
 
-    const botMessage = { id: messages.length + 2, text: botResponse, sender: 'G' };
+    const botMessage: Message = { id: messages.length + 2, text: botResponse, sender: 'bot' };
     setMessages((prevMessages) => [...prevMessages, botMessage]);
   };
 
@@ -43,27 +54,38 @@ export default function ChatbotScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar backgroundColor="#00A67E" barStyle="light-content" />
-      <View style={styles.greenHeader}>
-        <Text style={styles.headerText}>Chat with GoviShakthi</Text>
+
+      {/* Header with Back Button */}
+      <View style={styles.header}>
+        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+          <Image source={require('../../assets/images/back.png')} style={styles.icon} />
+        </TouchableOpacity>
+        <Text style={styles.headerTitle}>Chat with GoviShakthi</Text>
       </View>
-      <ScrollView contentContainerStyle={styles.container}>
-        <FlatList
-          data={messages}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => (
-            <View style={[styles.messageBubble, item.sender === 'user' ? styles.userMessage : styles.botMessage]}>
-              <Text style={styles.messageText}>{item.text}</Text>
-            </View>
-          )}
-        />
-        <View style={styles.quickReplyContainer}>
-          {quickReplies.map((reply, index) => (
-            <TouchableOpacity key={index} style={styles.quickReplyButton} onPress={() => generateBotResponse(reply)}>
-              <Text style={styles.quickReplyText}>{reply}</Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-      </ScrollView>
+
+      {/* Chat Messages */}
+      <FlatList
+        data={messages}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <View style={[styles.messageBubble, item.sender === 'user' ? styles.userMessage : styles.botMessage]}>
+            <Text style={styles.messageText}>{item.text}</Text>
+          </View>
+        )}
+        contentContainerStyle={styles.messagesContainer}
+        inverted
+      />
+
+      {/* Quick Replies */}
+      <View style={styles.quickReplyContainer}>
+        {quickReplies.map((reply, index) => (
+          <TouchableOpacity key={index} style={styles.quickReplyButton} onPress={() => generateBotResponse(reply)}>
+            <Text style={styles.quickReplyText}>{reply}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
+      {/* Input Field & Send Button */}
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -82,24 +104,32 @@ export default function ChatbotScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFFFFF',
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
-  greenHeader: {
-    backgroundColor: '#00A67E',
-    padding: 20,
+  header: {
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    borderBottomLeftRadius: 30,
-    borderBottomRightRadius: 30,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
   },
-  headerText: {
-    fontSize: 20,
+  backButton: {
+    padding: 5,
+  },
+  icon: {
+    width: 24,
+    height: 24,
+    tintColor: '#000000',
+  },
+  headerTitle: {
+    fontSize: 24,
     fontWeight: 'bold',
-    color: '#fff',
+    marginLeft: 15,
   },
-  container: {
+  messagesContainer: {
     flexGrow: 1,
     padding: 10,
+    justifyContent: 'flex-end',
   },
   messageBubble: {
     padding: 10,
@@ -117,6 +147,23 @@ const styles = StyleSheet.create({
   },
   messageText: {
     fontSize: 16,
+  },
+  quickReplyContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    marginVertical: 10,
+  },
+  quickReplyButton: {
+    backgroundColor: '#00A67E',
+    paddingVertical: 8,
+    paddingHorizontal: 15,
+    borderRadius: 20,
+    margin: 5,
+  },
+  quickReplyText: {
+    color: '#fff',
+    fontWeight: 'bold',
   },
   inputContainer: {
     flexDirection: 'row',
@@ -144,21 +191,5 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
   },
-  quickReplyContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    marginVertical: 10,
-  },
-  quickReplyButton: {
-    backgroundColor: '#00A67E',
-    paddingVertical: 8,
-    paddingHorizontal: 15,
-    borderRadius: 20,
-    margin: 5,
-  },
-  quickReplyText: {
-    color: '#fff',
-    fontWeight: 'bold',
-  },
 });
+
