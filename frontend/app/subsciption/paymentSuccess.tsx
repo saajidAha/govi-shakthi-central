@@ -26,6 +26,8 @@ export default function PaymentSuccess() {
           <Text style={styles.headerTitle}>Payment Success</Text>
         </View>
 
+        
+
         <View style={styles.content}>
           <Ionicons name="checkmark-circle" size={100} color="#00A67E" style={styles.successIcon} />
           <Text style={styles.successText}>Thank you for your purchase!</Text>
@@ -36,6 +38,8 @@ export default function PaymentSuccess() {
           </TouchableOpacity>
   
         </View>
+
+        
         
         
       </ScrollView>
