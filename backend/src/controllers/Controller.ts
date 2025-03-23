@@ -179,7 +179,7 @@ export class Controller{
         try{
             const response = await this.repository.checkCredentials({username: username});
             if (response !== null) {
-                res.status(200).json({ message: "user exists within the system.", username: response.username, location: response.location, email: response.email, phone: response.phone});
+                res.status(200).json({ message: "user exists within the system.", username: response.username, name: response.name, location: response.location, email: response.email, phone: response.phone});
             } else {
                 res.status(404).json({ message: "User not found." });
             }
