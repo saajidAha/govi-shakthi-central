@@ -68,54 +68,7 @@ export default function ProfilePage() {
                     </View>
                 </View>
 
-                <View style={styles.subscriptionContainer}>
-                    <View style={styles.subscriptionCard}>
-                        <View style={styles.subscriptionHeader}>
-                            <Text style={styles.subscriptionTitle}>Subscription Plan</Text>
-                        </View>
-
-                        <View style={styles.subscriptionButtonsRow}>
-                            <TouchableOpacity
-                                style={styles.viewDetailsButton}
-                                onPress={() => router.push('/subsciption/subscriptionPlan')}>
-                                <Text style={styles.viewDetailsText}>View Details</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                </View>
-
-                <View style={styles.resourcesContainer}>
-                    <View style={styles.resourcesRow}>
-                        <TouchableOpacity
-                            style={styles.resourceCard}
-                            onPress={() => router.push('/settings/weather')}>
-                            <Text style={styles.resourceTitle}>Weather</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.resourceCard}
-                            onPress={() => router.push('/settings/news')}>
-                            <Text style={styles.resourceTitle}>News</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.resourceCard}
-                            onPress={() => router.push('/settings/chatbot')}>
-                            <Text style={styles.resourceTitle}>Chatbot</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-
-                <View style={styles.menuContainer}>
-                    {menuItems.map((item, index) => (
-                        <TouchableOpacity key={index} style={styles.menuItem} onPress={item.onPress}>
-                            <View style={styles.menuItemLeft}>
-                                <Text style={styles.menuItemTitle}>{item.title}</Text>
-                                <Text style={styles.menuItemSubtitle}>{item.lastUpdated}</Text>
-                            </View>
-                            <Image source={require('../../assets/images/chevronright.png')} style={styles.chevronIcon} />
-                            {index < menuItems.length - 1 && <View style={styles.divider} />}
-                        </TouchableOpacity>
-                    ))}
-                </View>
+                
             </ScrollView>
         </SafeAreaView>
     );
@@ -207,77 +160,5 @@ const styles = StyleSheet.create({
         height: 24,
         tintColor: '#fff',
     },
-    chevronIcon: {
-        width: 24,
-        height: 24,
-        tintColor: '#333',
-    },
-    menuContainer: {
-        paddingHorizontal: 20,
-        paddingBottom: 30,
-    },
-    menuItem: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingVertical: 15,
-        position: 'relative',
-    },
-    menuItemLeft: {
-        flex: 1,
-    },
-    menuItemTitle: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: '#333',
-    },
-    menuItemSubtitle: {
-        fontSize: 14,
-        color: '#666',
-        marginTop: 4,
-    },
-    divider: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: 1,
-        backgroundColor: '#E0E0E0',
-    },
-    subscriptionContainer: {
-        paddingHorizontal: 20,
-        marginTop: 5,
-        marginBottom: 10,
-    },
-    subscriptionCard: {
-        backgroundColor: '#ecf0e9',
-        borderRadius: 15,
-        padding: 15,
-    },
-    subscriptionHeader: {
-        marginBottom: 10,
-    },
-    subscriptionButtonsRow: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-    },
-    viewDetailsButton: {
-        borderWidth: 1,
-        borderColor: '#00A67E',
-        borderRadius: 12,
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        alignItems: 'center',
-        width: '100%',
-    },
-    viewDetailsText: {
-        color: '#00A67E',
-        fontWeight: 'bold',
-        fontSize: 14,
-    },
-    subscriptionTitle: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        marginBottom: 5,
-    }
+    
 });
