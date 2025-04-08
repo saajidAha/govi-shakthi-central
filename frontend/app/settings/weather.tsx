@@ -17,7 +17,7 @@ const API_KEY = '42f30d9ffad4c9ddc84d3bd908c10cf8'; // OpenWeatherMap API key
 
 export default function HomeScreen() {
   const router = useRouter();
-  const [city, setCity] = useState('Colombo'); // Default city
+  const [city, setCity] = useState('Matara'); // Default city
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
